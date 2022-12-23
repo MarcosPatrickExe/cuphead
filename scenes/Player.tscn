@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://player.gd" type="Script" id=1]
+[ext_resource path="res://Action RPG Resources/Player/Player.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 2.1815
+height = 9.77397
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( -155, 67 )
+rotation = 0.0559265
+scale = Vector2( 1.002, 1.00495 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Player2" type="Sprite" parent="."]
+position = Vector2( 261.015, -6.53613 )
+rotation = -0.0523599
+scale = Vector2( 1.03874, 0.998358 )
+texture = ExtResource( 2 )
+hframes = 60
+frame = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 261.654, 4.38109 )
+rotation = 1.47829
+z_index = 1
+shape = SubResource( 1 )
