@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var playerSpeed = Vector2(0, 0) # Vector2.ZERO;
 const speedConstant = 1;
-const ATRITO = 15;
+const ATRITO = 3;
 const ACELERACAO = 10;
 
 
@@ -12,6 +12,7 @@ var controll = {
 	'right': false,
 	'left': false
 }
+
 
 
 func _physics_process(delta):
@@ -40,9 +41,9 @@ func _physics_process(delta):
 	else:
 			speedResult.y = 0;
 			
-	speedResult.normalized();
+#	speedResult.normalized();
 
-
+ 
 	if (speedResult != Vector2.ZERO):
 		# playerSpeed = speedResult;
 		playerSpeed = playerSpeed.move_toward(speedResult, ACELERACAO * delta);
