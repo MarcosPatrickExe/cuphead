@@ -6,7 +6,7 @@
 [ext_resource path="res://Action RPG Resources/World/Grass.png" type="Texture" id=6]
 [ext_resource path="res://scenes/Tree.tscn" type="PackedScene" id=7]
 
-[node name="Background" type="Sprite"]
+[node name="Background1" type="Sprite"]
 
 [node name="GrassBackground" type="Sprite" parent="."]
 position = Vector2( 36, 34 )
@@ -122,10 +122,10 @@ position = Vector2( 219, 123 )
 position = Vector2( 312, 132 )
 
 [node name="Arbusto" parent="." instance=ExtResource( 5 )]
-position = Vector2( 149, 57 )
+position = Vector2( 143, 53 )
 
 [node name="Arbusto3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 134, 26 )
+position = Vector2( 126, 22 )
 
 [node name="Arbusto2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 66, 70 )
+position = Vector2( 74, 79 )

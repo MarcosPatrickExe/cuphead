@@ -1,28 +1,126 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://Action RPG Resources/Player/Player.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.1815
-height = 5.61704
+height = 7.62127
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Run_to_down"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 19, 20, 21, 22, 23, 18 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Run_to_left"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 13, 14, 15, 16, 17, 12 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Run_to_right"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 0 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Run_to_top"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 7, 8, 9, 10, 11, 6 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "idle"
+length = 0.06
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( -155, 67 )
+position = Vector2( -130, 63 )
 rotation = 0.0559265
 scale = Vector2( 1.002, 1.00495 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Player2" type="Sprite" parent="."]
-position = Vector2( 261.015, -6.53613 )
+[node name="PlayerSprite" type="Sprite" parent="."]
+position = Vector2( 262.052, 3.30947 )
 rotation = -0.0523599
 scale = Vector2( 1.03874, 0.998358 )
 texture = ExtResource( 2 )
 hframes = 60
-frame = 3
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 261.132, 4.3595 )
+position = Vector2( 261.631, 13.3273 )
 rotation = 1.51844
 z_index = 1
 shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 3 )
+anims/Run_to_down = SubResource( 4 )
+anims/Run_to_left = SubResource( 5 )
+anims/Run_to_right = SubResource( 6 )
+anims/Run_to_top = SubResource( 7 )
+anims/idle = SubResource( 2 )
