@@ -1,11 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://Action RPG Resources/Player/Player.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.1815
-height = 7.62127
+height = 9.60407
 
 [sub_resource type="Animation" id=3]
 length = 0.001
@@ -14,7 +14,7 @@ tracks/0/path = NodePath("PlayerSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
@@ -90,12 +90,8 @@ tracks/0/keys = {
 "values": [ 7, 8, 9, 10, 11, 6 ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "idle"
-length = 0.06
-
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( -130, 63 )
+position = Vector2( -261, -20 )
 rotation = 0.0559265
 scale = Vector2( 1.002, 1.00495 )
 script = ExtResource( 1 )
@@ -109,10 +105,10 @@ rotation = -0.0523599
 scale = Vector2( 1.03874, 0.998358 )
 texture = ExtResource( 2 )
 hframes = 60
-frame = 1
+frame = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 261.631, 13.3273 )
+position = Vector2( 261.634, 13.3041 )
 rotation = 1.51844
 z_index = 1
 shape = SubResource( 1 )
@@ -123,4 +119,3 @@ anims/Run_to_down = SubResource( 4 )
 anims/Run_to_left = SubResource( 5 )
 anims/Run_to_right = SubResource( 6 )
 anims/Run_to_top = SubResource( 7 )
-anims/idle = SubResource( 2 )

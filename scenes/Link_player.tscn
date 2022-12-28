@@ -1,0 +1,185 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Action RPG Resources/Enemies/Link_idle_run_to_down.png" type="Texture" id=1]
+[ext_resource path="res://Action RPG Resources/Enemies/Link_sprites.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Link_player.gd" type="Script" id=3]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 1.95053
+height = 10.099
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Run_to_down_sprites:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Run_to_left_sprites:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Run_to_right_sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Run_to_top_sprites:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "Run_to_down"
+length = 0.75
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Run_to_down_sprites:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 2, 3, 4, 5, 7, 6, 4, 2 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Run_to_left"
+length = 0.55
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Run_to_left_sprites:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 5, 4 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Run_to_right"
+length = 0.55
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Run_to_right_sprites:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Run_to_top"
+length = 0.75
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Run_to_top_sprites:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6 ]
+}
+
+[node name="Link_player" type="KinematicBody2D"]
+script = ExtResource( 3 )
+
+[node name="Run_to_left_sprites" type="Sprite" parent="."]
+visible = false
+position = Vector2( 150.406, 81.625 )
+scale = Vector2( 1.18207, 1.15441 )
+texture = ExtResource( 1 )
+hframes = 6
+frame = 2
+region_enabled = true
+region_rect = Rect2( -1, 0, 143, 34 )
+
+[node name="Run_to_right_sprites" type="Sprite" parent="."]
+visible = false
+position = Vector2( 151, 82 )
+scale = Vector2( 1.1413, 1.07353 )
+texture = ExtResource( 1 )
+hframes = 6
+region_enabled = true
+region_rect = Rect2( 142, 0, 142, 34 )
+
+[node name="Run_to_top_sprites" type="Sprite" parent="."]
+visible = false
+position = Vector2( 150, 81 )
+scale = Vector2( 1.13636, 1.10714 )
+texture = ExtResource( 1 )
+hframes = 8
+region_enabled = true
+region_rect = Rect2( 283, 2, 176, 28 )
+
+[node name="Run_to_down_sprites" type="Sprite" parent="."]
+position = Vector2( 0, 4.00001 )
+scale = Vector2( 1.13095, 1.15741 )
+texture = ExtResource( 2 )
+hframes = 8
+frame = 2
+region_enabled = true
+region_rect = Rect2( 145, 0, 168, 27 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 149, 89 )
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 3 )
+anims/Run_to_down = SubResource( 1 )
+anims/Run_to_left = SubResource( 4 )
+anims/Run_to_right = SubResource( 5 )
+anims/Run_to_top = SubResource( 6 )

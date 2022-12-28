@@ -6,13 +6,15 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 5.0
 
-[node name="Player2" type="KinematicBody2D"]
+[node name="Link_sprites" type="Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 14, 108 )
 shape = SubResource( 1 )
 
 [node name="Run_to_left_sprites" type="Sprite" parent="."]
+visible = false
 position = Vector2( 108, 55 )
 texture = ExtResource( 1 )
 hframes = 6
@@ -21,6 +23,7 @@ region_enabled = true
 region_rect = Rect2( -1, 0, 143, 34 )
 
 [node name="Run_to_right_sprites" type="Sprite" parent="."]
+visible = false
 position = Vector2( 169, 53 )
 texture = ExtResource( 1 )
 hframes = 6
@@ -29,6 +32,7 @@ region_enabled = true
 region_rect = Rect2( 142, 0, 142, 34 )
 
 [node name="Run_to_top_sprites" type="Sprite" parent="."]
+visible = false
 position = Vector2( 138, 28 )
 texture = ExtResource( 1 )
 hframes = 8
@@ -37,7 +41,7 @@ region_enabled = true
 region_rect = Rect2( 283, 2, 176, 28 )
 
 [node name="Run_to_down_sprites" type="Sprite" parent="."]
-position = Vector2( 138, 78 )
+position = Vector2( 138, 75 )
 scale = Vector2( 1.02381, 1 )
 texture = ExtResource( 2 )
 hframes = 8

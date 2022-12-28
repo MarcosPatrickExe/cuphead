@@ -24,37 +24,31 @@ func _physics_process(delta :float) -> void:
 	
 	var speedResult = Vector2.ZERO;
 	
-	if (Input.is_action_pressed("ui_right") || Input.is_action_pressed("d")):
+	if (Input.is_action_pressed("d")):
 			speedResult.x = speedConstant;
 			self.currentDirection = Directions.RIGHT;
 			playerAnimationInstance.play("Run_to_right");
 	#		print(self.get_children()[0].scale);
 
-	elif (Input.is_action_pressed("ui_left") || Input.is_action_pressed("a")):
+	elif (Input.is_action_pressed("a")):
 			speedResult.x = -speedConstant;
 			self.currentDirection = Directions.LEFT;
 			playerAnimationInstance.play("Run_to_left");
 	else:	
 			speedResult.x = 0;
-		#	playerAnimationInstance.stop();
 	
 			
-	if (Input.is_action_pressed("ui_up") || Input.is_action_pressed("w")):
+	if (Input.is_action_pressed("w")):
 			speedResult.y = -speedConstant;
 			self.currentDirection = Directions.UP;
 			playerAnimationInstance.play("Run_to_top");
 			
-	elif (Input.is_action_pressed("ui_down") || Input.is_action_pressed("s")):
+	elif (Input.is_action_pressed("s")):
 			speedResult.y = speedConstant;
 			self.currentDirection = Directions.DOWN;
 			playerAnimationInstance.play("Run_to_down");
 	else:
 			speedResult.y = 0;
-		#	playerAnimationInstance.stop();
-			
-			
-			
-#	speedResult.normalized();
 
  
 	if (speedResult != Vector2.ZERO):
@@ -82,16 +76,9 @@ func _physics_process(delta :float) -> void:
 				self.get_child(0).frame = 21;
 		
 		
-		
-		
-
-	#	print("speedX: ", str(speedResult.x));
-	#	print("speedY: ", str(speedResult.y));
-	#	print("ATRITO * delta: ", str((ATRITO * delta)));
-	#	print("ACELERACAO * delta: ", str((ACELERACAO * delta)));
+	#   print("ACELERACAO * delta: ", str((ACELERACAO * delta)));
 	#	print("delta: ", str(delta));
 	
-	
-	move_and_collide(playerSpeed);  # aplicando os valores de 'playerSpeed' para a funcao acumulativa
-#	self.position = self.position + playerSpeed;   TBM EQUIVALE À:
 
+	#	self.position = self.position + playerSpeed;   TBM EQUIVALE À:
+	move_and_collide(playerSpeed);  # aplicando os valores de 'playerSpeed' para a funcao acumulativa
