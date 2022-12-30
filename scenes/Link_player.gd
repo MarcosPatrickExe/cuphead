@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var playerSpeed :Vector2 = Vector2(0, 0); # Vector2.ZERO;
-const SPEED_MAX :int = 3;
+const SPEED_MAX :int = 2;
 const ATRITO :int = 10;
 const ACELERACAO :int = 10;
 onready var playerAnimationInstance = $AnimationPlayer; #Instancia o node dentro da funcao "ready()"
@@ -29,7 +29,10 @@ func _physics_process(delta :float) -> void:
 			# caso nada seja pressionado, o vetor 'playerSpeed' terá seus valorex X e Y 
 			# subtraídos pela expressao "ATRITO * delta" até chegarem à zero, como definido
 			# em "Vector2.ZERO"
-
+			
+			
+	# print("X: ", str(self.position.x), "/ Y: ",str(self.position.y));
+	print("Direction: ",str(self.currentDirection));
 
 
 	if(playerSpeed == Vector2.ZERO): #Caso o player esteja parado, ele recebe um frame estatico

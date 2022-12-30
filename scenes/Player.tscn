@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.1815
-height = 9.60407
+height = 9.62034
 
 [sub_resource type="Animation" id=3]
 length = 0.001
@@ -91,7 +91,7 @@ tracks/0/keys = {
 }
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( -261, -20 )
+position = Vector2( 38, 34 )
 rotation = 0.0559265
 scale = Vector2( 1.002, 1.00495 )
 script = ExtResource( 1 )
@@ -100,7 +100,7 @@ __meta__ = {
 }
 
 [node name="PlayerSprite" type="Sprite" parent="."]
-position = Vector2( 262.052, 3.30947 )
+position = Vector2( -0.000854492, 0.0042181 )
 rotation = -0.0523599
 scale = Vector2( 1.03874, 0.998358 )
 texture = ExtResource( 2 )
@@ -108,7 +108,7 @@ hframes = 60
 frame = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 261.634, 13.3041 )
+position = Vector2( -0.500122, 8.99666 )
 rotation = 1.51844
 z_index = 1
 shape = SubResource( 1 )
