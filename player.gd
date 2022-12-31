@@ -1,9 +1,9 @@
 extends KinematicBody2D
 
 var playerSpeed :Vector2 = Vector2(0, 0); # Vector2.ZERO;
-const speedConstant :int = 1;
-const ATRITO :int = 3;
-const ACELERACAO :int = 10;
+const SPEED :int = 1;
+const FRICTION :int = 6;
+const ACCELERATION :int = 10;
 onready var playerAnimationInstance = $AnimationPlayer; #Instancia o node dentro da funcao "ready()"
 enum Directions { RIGHT, DOWN, LEFT, UP }
 var currentDirection = Directions.RIGHT;
@@ -25,13 +25,13 @@ func _physics_process(delta :float) -> void:
 	var speedResult = Vector2.ZERO;
 	
 	if (Input.is_action_pressed("d")):
-			speedResult.x = speedConstant;
+			speedResult.x = SPEED;
 			self.currentDirection = Directions.RIGHT;
 			playerAnimationInstance.play("Run_to_right");
 	#		print(self.get_children()[0].scale);
 
 	elif (Input.is_action_pressed("a")):
-			speedResult.x = -speedConstant;
+			speedResult.x = -SPEED;
 			self.currentDirection = Directions.LEFT;
 			playerAnimationInstance.play("Run_to_left");
 	else:	
@@ -39,12 +39,12 @@ func _physics_process(delta :float) -> void:
 	
 			
 	if (Input.is_action_pressed("w")):
-			speedResult.y = -speedConstant;
+			speedResult.y = -SPEED;
 			self.currentDirection = Directions.UP;
 			playerAnimationInstance.play("Run_to_top");
 			
 	elif (Input.is_action_pressed("s")):
-			speedResult.y = speedConstant;
+			speedResult.y = SPEED;
 			self.currentDirection = Directions.DOWN;
 			playerAnimationInstance.play("Run_to_down");
 	else:
@@ -53,10 +53,10 @@ func _physics_process(delta :float) -> void:
  
 	if (speedResult != Vector2.ZERO):
 		# playerSpeed = speedResult;
-		playerSpeed = playerSpeed.move_toward(speedResult, ACELERACAO * delta);
+		playerSpeed = playerSpeed.move_toward(speedResult, self.ACCELERATION * delta);
 	else:
 		playerAnimationInstance.stop();
-		playerSpeed = playerSpeed.move_toward(Vector2.ZERO, ATRITO * delta);
+		playerSpeed = playerSpeed.move_toward(Vector2.ZERO, self.FRICTION * delta);
 			# caso nada seja pressionado, o vetor 'playerSpeed' terá seus valorex X e Y 
 			# subtraídos pela expressao "ATRITO * delta" até chegarem à zero, como definido
 			# em "Vector2.ZERO"

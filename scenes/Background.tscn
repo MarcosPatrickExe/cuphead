@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Action RPG Resources/World/DirtTileset.png" type="Texture" id=1]
 [ext_resource path="res://Action RPG Resources/World/GrassBackground.png" type="Texture" id=4]
-[ext_resource path="res://scenes/Arbusto.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Action RPG Resources/World/Grass.png" type="Texture" id=6]
-[ext_resource path="res://scenes/Tree.tscn" type="PackedScene" id=7]
 
 [node name="Background1" type="Sprite"]
 
@@ -102,30 +100,3 @@ offset = Vector2( -21.041, 12.0579 )
 position = Vector2( 116, 132 )
 scale = Vector2( 1.28906, 1.21843 )
 texture = ExtResource( 6 )
-
-[node name="Tree6" parent="." instance=ExtResource( 7 )]
-position = Vector2( 275, 18 )
-
-[node name="Tree" parent="." instance=ExtResource( 7 )]
-position = Vector2( 195, 48 )
-
-[node name="Tree3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 249, 32 )
-
-[node name="Tree4" parent="." instance=ExtResource( 7 )]
-position = Vector2( 12, 130 )
-
-[node name="Tree2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 219, 123 )
-
-[node name="Tree5" parent="." instance=ExtResource( 7 )]
-position = Vector2( 312, 132 )
-
-[node name="Arbusto" parent="." instance=ExtResource( 5 )]
-position = Vector2( 143, 53 )
-
-[node name="Arbusto3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 126, 22 )
-
-[node name="Arbusto2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 74, 79 )

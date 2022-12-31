@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/Background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Link_player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
-[ext_resource path="res://scenes/Arbusto.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Trees.tscn" type="PackedScene" id=5]
 
 [node name="mainScene" type="Node2D"]
 position = Vector2( 0, 1 )
@@ -17,23 +17,13 @@ __meta__ = {
 [node name="YSort" type="YSort" parent="."]
 position = Vector2( 1, 1 )
 
-[node name="Arbusto" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 102, 104 )
-
-[node name="Arbusto3" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 82, 17 )
-
-[node name="Arbusto4" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 24, 62 )
-
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 32, 31 )
 
+[node name="Trees" parent="YSort" instance=ExtResource( 5 )]
+
 [node name="Link_player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 210, 108 )
-__meta__ = {
-"_edit_group_": true
-}
+position = Vector2( 296, 69 )
 
 [node name="GodotIcon" type="Sprite" parent="."]
 visible = false
