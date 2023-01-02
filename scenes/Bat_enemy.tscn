@@ -245,10 +245,11 @@ blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachine" id=24]
 states/Parado/node = SubResource( 16 )
-states/Parado/position = Vector2( 273.667, 155.346 )
+states/Parado/position = Vector2( 265.667, 131.346 )
 states/Voando/node = SubResource( 21 )
-states/Voando/position = Vector2( 599, 156.333 )
+states/Voando/position = Vector2( 599, 131.461 )
 transitions = [ "Parado", "Voando", SubResource( 22 ), "Voando", "Parado", SubResource( 23 ) ]
+start_node = "Voando"
 graph_offset = Vector2( 5.4972, 14.1554 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=25]
@@ -257,7 +258,7 @@ graph_offset = Vector2( 5.4972, 14.1554 )
 script = ExtResource( 2 )
 
 [node name="Bat_sprites" type="Sprite" parent="."]
-position = Vector2( 0.750005, -0.666665 )
+position = Vector2( -1, -1 )
 scale = Vector2( 0.885417, 0.802083 )
 texture = ExtResource( 1 )
 hframes = 3
@@ -285,5 +286,5 @@ tree_root = SubResource( 24 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 25 )
-parameters/Parado/blend_position = Vector2( 0.0358362, -0.840807 )
-parameters/Voando/blend_position = Vector2( 0.0699658, -0.831839 )
+parameters/Parado/blend_position = Vector2( 0.656454, 0.215976 )
+parameters/Voando/blend_position = Vector2( 0.107443, 0.488166 )
