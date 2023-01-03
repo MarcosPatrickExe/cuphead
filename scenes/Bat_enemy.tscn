@@ -245,9 +245,9 @@ blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachine" id=24]
 states/Parado/node = SubResource( 16 )
-states/Parado/position = Vector2( 265.667, 131.346 )
+states/Parado/position = Vector2( 269.667, 123.346 )
 states/Voando/node = SubResource( 21 )
-states/Voando/position = Vector2( 599, 131.461 )
+states/Voando/position = Vector2( 600.333, 130.128 )
 transitions = [ "Parado", "Voando", SubResource( 22 ), "Voando", "Parado", SubResource( 23 ) ]
 start_node = "Voando"
 graph_offset = Vector2( 5.4972, 14.1554 )
@@ -286,5 +286,5 @@ tree_root = SubResource( 24 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 25 )
-parameters/Parado/blend_position = Vector2( 0.656454, 0.215976 )
-parameters/Voando/blend_position = Vector2( 0.107443, 0.488166 )
+parameters/Parado/blend_position = Vector2( 0.251501, 0.0502958 )
+parameters/Voando/blend_position = Vector2( 0.443577, -0.517751 )
