@@ -23,18 +23,20 @@ func _physics_process(delta :float) -> void:
 		count = 0.0;
 	
 	
-	directionResult = directionResult.normalized();
+	#directionResult = directionResult.normalized();
 			
 	animationTree.set("parameters/Parado/blend_position", directionResult);
 	animationTree.set("parameters/Voando/blend_position", directionResult);
-		
+
+	print("X: ",str(directionResult.x), " Y: ",str(directionResult.y));
+	
 		
 	if (directionResult != Vector2.ZERO):
 		playerSpeed = playerSpeed.move_toward(directionResult, self.ACCELERATION * delta);
-		animationState.travel("Voando");
+		animationState.travel("Flying");
 	else:
 		#if (animationState.is_playing()):
-		animationState.travel("Parado");
+		animationState.travel("Static");
 		playerSpeed = playerSpeed.move_toward(Vector2.ZERO, self.FRICTION * delta);
 	
 	
@@ -45,8 +47,8 @@ func _physics_process(delta :float) -> void:
 
 func generatePositionBat() -> Vector2:
 	var directionRandom = Vector2.ZERO;
-	directionRandom.x = -1 if (int(rand_range(0, 2))==0) else 1 ;
-	directionRandom.y =  -1 if (int(rand_range(0, 2))==0) else 1 ;
+	directionRandom.x = int(rand_range(-2, 2)); #-1 if (int(rand_range(0, 2))==0) else 1
+	directionRandom.y = int(rand_range(-2, 2));
 	# print("X: ",str(directionRandom.x), " Y: ",str(directionRandom.y));
 	
 	return directionRandom;
