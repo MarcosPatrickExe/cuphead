@@ -11,6 +11,7 @@
 position = Vector2( 0, 1 )
 
 [node name="Walls" type="StaticBody2D" parent="."]
+visible = false
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
@@ -32,17 +33,27 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Arena2" parent="." instance=ExtResource( 2 )]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Arena3" parent="." instance=ExtResource( 2 )]
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="YSort" type="YSort" parent="."]
 position = Vector2( 1, 1 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 32, 31 )
+position = Vector2( 55, 62 )
 
 [node name="Link_player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 294, 67 )
+position = Vector2( 302, 61 )
 
 [node name="Trees" parent="YSort" instance=ExtResource( 5 )]
-visible = false
 
 [node name="Bat_enemy" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 152, 89 )
