@@ -12,6 +12,7 @@ position = Vector2( 102, 104 )
 position = Vector2( 85, 25 )
 
 [node name="Arbusto4" parent="." instance=ExtResource( 1 )]
+visible = false
 position = Vector2( 24, 62 )
 
 [node name="Tree6" parent="." instance=ExtResource( 2 )]

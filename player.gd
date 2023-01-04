@@ -13,6 +13,7 @@ var currentDirection = Directions.RIGHT;
 func _ready():
 	print("helloo from ready");
 	# self.get_child(0).frame = 0;
+	# self.get_node("CollisionShape2D").disabled = true; # only works for main player!!
 
 
 func _physics_process(delta :float) -> void:

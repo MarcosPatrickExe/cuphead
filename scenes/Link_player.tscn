@@ -198,6 +198,7 @@ tracks/0/keys = {
 script = ExtResource( 3 )
 
 [node name="Run_to_left_sprites" type="Sprite" parent="."]
+visible = false
 position = Vector2( 1, 4 )
 scale = Vector2( 1.18207, 1.15441 )
 texture = ExtResource( 1 )
@@ -225,7 +226,6 @@ region_enabled = true
 region_rect = Rect2( 283, 2, 176, 28 )
 
 [node name="Run_to_down_sprites" type="Sprite" parent="."]
-visible = false
 position = Vector2( 0, 5 )
 scale = Vector2( 1.13095, 1.15741 )
 texture = ExtResource( 2 )

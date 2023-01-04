@@ -1,171 +1,415 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Action RPG Resources/World/DirtTileset.png" type="Texture" id=1]
+[ext_resource path="res://Action RPG Resources/World/The_legend_of_zelda_tileset.png" type="Texture" id=1]
+[ext_resource path="res://Action RPG Resources/World/rock.png" type="Texture" id=2]
+[ext_resource path="res://Action RPG Resources/World/The_legend_of_zelda_tileset2.png" type="Texture" id=3]
 [ext_resource path="res://Action RPG Resources/World/GrassBackground.png" type="Texture" id=4]
+[ext_resource path="res://Action RPG Resources/World/tileset_pokemon_resurgent.png" type="Texture" id=5]
 [ext_resource path="res://Action RPG Resources/World/Grass.png" type="Texture" id=6]
 
-[node name="Arena3" type="Sprite"]
+[node name="Arena1" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
 
 [node name="GrassBackground" type="Sprite" parent="."]
-position = Vector2( 213.781, 59.878 )
-scale = Vector2( 4.31934, 2.87119 )
+position = Vector2( 520, 208 )
+scale = Vector2( 1, 1.00734 )
 texture = ExtResource( 4 )
-
-[node name="GrassBackground4" type="Sprite" parent="."]
-position = Vector2( -27, 79 )
-scale = Vector2( 4.31934, 2.87119 )
-texture = ExtResource( 4 )
-
-[node name="DirtTileset" type="Sprite" parent="."]
-position = Vector2( 264, 136 )
-rotation = 1.5708
-scale = Vector2( 2.17515, 2.18461 )
-texture = ExtResource( 1 )
-
-[node name="DirtTileset2" type="Sprite" parent="."]
-position = Vector2( 6.00001, 136 )
-rotation = 1.5708
-scale = Vector2( 2.19318, 2.66875 )
-texture = ExtResource( 1 )
-
-[node name="DirtTileset3" type="Sprite" parent="."]
-position = Vector2( 96, 136 )
-rotation = 1.5708
-scale = Vector2( 2.19318, 2.31875 )
-texture = ExtResource( 1 )
-
-[node name="DirtTileset4" type="Sprite" parent="."]
-position = Vector2( 240, 136 )
-rotation = 1.5708
-scale = Vector2( 2.19318, 2.31875 )
-texture = ExtResource( 1 )
 
 [node name="GrassBackground3" type="Sprite" parent="."]
-position = Vector2( -9, 112 )
+position = Vector2( -192, 144 )
 scale = Vector2( 0.951173, 0.845036 )
 texture = ExtResource( 4 )
 
 [node name="GrassBackground5" type="Sprite" parent="."]
-position = Vector2( 24, 165 )
+position = Vector2( -272, 288 )
 scale = Vector2( 0.76953, 0.959495 )
 texture = ExtResource( 4 )
 
 [node name="GrassBackground2" type="Sprite" parent="."]
-position = Vector2( -9.56248, 17.756 )
-scale = Vector2( 0.951172, 0.898626 )
+position = Vector2( 95.8906, 28 )
+scale = Vector2( 1.00342, 0.886813 )
+texture = ExtResource( 4 )
+
+[node name="GrassBackground4" type="Sprite" parent="."]
+position = Vector2( 31.8906, 27.689 )
+scale = Vector2( 1.00342, 0.865282 )
+texture = ExtResource( 4 )
+
+[node name="GrassBackground8" type="Sprite" parent="."]
+position = Vector2( -32, 28 )
+scale = Vector2( 1.00342, 0.865282 )
 texture = ExtResource( 4 )
 
 [node name="GrassBackground6" type="Sprite" parent="."]
-position = Vector2( 72, 165 )
+position = Vector2( -240, 192 )
 scale = Vector2( 0.76953, 0.959495 )
 texture = ExtResource( 4 )
 
 [node name="GrassBackground7" type="Sprite" parent="."]
-position = Vector2( 96, -8 )
-scale = Vector2( 0.777345, 0.734751 )
+position = Vector2( 148.438, 32 )
+scale = Vector2( 0.638673, 0.734751 )
 texture = ExtResource( 4 )
 
 [node name="GrassBackground9" type="Sprite" parent="."]
-position = Vector2( 120, 165 )
+position = Vector2( 544, 56 )
 scale = Vector2( 0.76953, 0.959495 )
 texture = ExtResource( 4 )
 
 [node name="GrassBackground10" type="Sprite" parent="."]
-position = Vector2( 45, -8 )
+position = Vector2( 128.875, 9.00025 )
 scale = Vector2( 0.777345, 0.734751 )
 texture = ExtResource( 4 )
 
 [node name="GrassBackground12" type="Sprite" parent="."]
-position = Vector2( 168, 165 )
+position = Vector2( 520, 144 )
 scale = Vector2( 0.76953, 0.959495 )
 texture = ExtResource( 4 )
 
 [node name="GrassBackground13" type="Sprite" parent="."]
-position = Vector2( 144, -8 )
+position = Vector2( 352, 104 )
 scale = Vector2( 0.777345, 0.734751 )
 texture = ExtResource( 4 )
 
 [node name="GrassBackground14" type="Sprite" parent="."]
-position = Vector2( 192, -8 )
+position = Vector2( 273.875, 9.00025 )
 scale = Vector2( 0.777345, 0.734751 )
 texture = ExtResource( 4 )
 
 [node name="GrassBackground17" type="Sprite" parent="."]
-position = Vector2( 240, -8 )
+position = Vector2( 384, 328 )
+scale = Vector2( 0.777345, 0.734751 )
+texture = ExtResource( 4 )
+
+[node name="GrassBackground23" type="Sprite" parent="."]
+position = Vector2( 252.656, -38 )
+scale = Vector2( 0.777345, 0.734751 )
+texture = ExtResource( 4 )
+
+[node name="GrassBackground24" type="Sprite" parent="."]
+position = Vector2( 140.656, -38 )
 scale = Vector2( 0.777345, 0.734751 )
 texture = ExtResource( 4 )
 
 [node name="GrassBackground22" type="Sprite" parent="."]
-position = Vector2( 288, -8 )
+position = Vector2( 376, 184 )
 scale = Vector2( 0.777345, 0.734751 )
 texture = ExtResource( 4 )
 
 [node name="GrassBackground15" type="Sprite" parent="."]
-position = Vector2( 217, 166 )
+position = Vector2( 448, 352 )
 scale = Vector2( 0.76953, 0.959495 )
 texture = ExtResource( 4 )
 
+[node name="sand_floor" type="Sprite" parent="."]
+position = Vector2( 14.8781, 73 )
+scale = Vector2( 0.713412, 0.732713 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 303.384, 127.976, 48.613, 47.9073 )
+
+[node name="sand_floor6" type="Sprite" parent="."]
+position = Vector2( -19, 73 )
+scale = Vector2( 0.713412, 0.732713 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 303.384, 127.976, 48.613, 47.9073 )
+
+[node name="sand_floor2" type="Sprite" parent="."]
+position = Vector2( 47.8781, 73 )
+scale = Vector2( 0.671745, 0.732713 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 303.384, 127.976, 48.613, 47.9073 )
+
+[node name="sand_floor3" type="Sprite" parent="."]
+position = Vector2( 79.3781, 73 )
+scale = Vector2( 0.650911, 0.732713 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 303.384, 127.976, 48.613, 47.9073 )
+
+[node name="sand_floor4" type="Sprite" parent="."]
+position = Vector2( 110, 73 )
+scale = Vector2( 0.650911, 0.732713 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 303.384, 127.976, 48.613, 47.9073 )
+
+[node name="sand_floor5" type="Sprite" parent="."]
+position = Vector2( 141, 73 )
+scale = Vector2( 0.650911, 0.732713 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 303.384, 127.976, 48.613, 47.9073 )
+
+[node name="sand_floor7" type="Sprite" parent="."]
+position = Vector2( 172, 73 )
+scale = Vector2( 0.650911, 0.732713 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 303.384, 127.976, 48.613, 47.9073 )
+
+[node name="sand_floor8" type="Sprite" parent="."]
+position = Vector2( 203, 73 )
+scale = Vector2( 0.650911, 0.732713 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 303.384, 127.976, 48.613, 47.9073 )
+
 [node name="GrassBackground16" type="Sprite" parent="."]
-position = Vector2( 328, 24 )
+position = Vector2( 536, 304 )
 scale = Vector2( 0.777345, 0.734751 )
 texture = ExtResource( 4 )
 
 [node name="GrassBackground18" type="Sprite" parent="."]
-position = Vector2( 264, 165 )
+position = Vector2( 520, 328 )
 scale = Vector2( 0.76953, 0.959495 )
 texture = ExtResource( 4 )
 
 [node name="GrassBackground19" type="Sprite" parent="."]
-position = Vector2( 344, 64 )
+position = Vector2( 304, 240 )
 scale = Vector2( 0.777345, 0.734751 )
 texture = ExtResource( 4 )
 
 [node name="GrassBackground20" type="Sprite" parent="."]
-position = Vector2( 335.563, 112.371 )
-scale = Vector2( 1.01367, 0.859117 )
+position = Vector2( 191, 116 )
+scale = Vector2( 0.881835, 0.804559 )
+texture = ExtResource( 4 )
+
+[node name="GrassBackground25" type="Sprite" parent="."]
+position = Vector2( 135, 116 )
+scale = Vector2( 0.881835, 0.804559 )
+texture = ExtResource( 4 )
+
+[node name="GrassBackground26" type="Sprite" parent="."]
+position = Vector2( 79, 116 )
+scale = Vector2( 0.881835, 0.804559 )
+texture = ExtResource( 4 )
+
+[node name="GrassBackground27" type="Sprite" parent="."]
+position = Vector2( 23, 116 )
+scale = Vector2( 0.881835, 0.804559 )
+texture = ExtResource( 4 )
+
+[node name="GrassBackground28" type="Sprite" parent="."]
+position = Vector2( -33, 116 )
+scale = Vector2( 0.881835, 0.804559 )
 texture = ExtResource( 4 )
 
 [node name="GrassBackground21" type="Sprite" parent="."]
-position = Vector2( 312, 165 )
+position = Vector2( -224, 88 )
 scale = Vector2( 0.76953, 0.959495 )
 texture = ExtResource( 4 )
 
 [node name="Grass4" type="Sprite" parent="."]
-position = Vector2( 40, 3.8147e-06 )
+position = Vector2( 48, 127 )
 scale = Vector2( 1.14063, 1.07813 )
 texture = ExtResource( 6 )
 offset = Vector2( -21.041, 12.0579 )
 
 [node name="Grass7" type="Sprite" parent="."]
-position = Vector2( 85, 115 )
+position = Vector2( 56, 123 )
 scale = Vector2( 0.726565, 0.686754 )
 texture = ExtResource( 6 )
 offset = Vector2( -21.041, 12.0579 )
 
 [node name="Grass3" type="Sprite" parent="."]
-position = Vector2( 16, 136 )
+position = Vector2( -2.78111, 121 )
 scale = Vector2( 1.42578, 1.26865 )
 texture = ExtResource( 6 )
 
 [node name="Grass5" type="Sprite" parent="."]
-position = Vector2( 248, 120 )
+position = Vector2( 229.219, 105 )
 scale = Vector2( 1.14063, 1.07813 )
 texture = ExtResource( 6 )
 offset = Vector2( -21.041, 12.0579 )
 
 [node name="Grass8" type="Sprite" parent="."]
-position = Vector2( 52, 14 )
+position = Vector2( 239, 99 )
 scale = Vector2( 0.726565, 0.686754 )
 texture = ExtResource( 6 )
 offset = Vector2( -21.041, 12.0579 )
 
+[node name="grass1" type="Sprite" parent="."]
+position = Vector2( 196.828, -20 )
+scale = Vector2( 2.69824, 3.35484 )
+texture = ExtResource( 1 )
+hframes = 5
+vframes = 48
+frame = 1
+
+[node name="grass4" type="Sprite" parent="."]
+position = Vector2( 195.5, -123 )
+scale = Vector2( 4.21875, 3.93548 )
+texture = ExtResource( 1 )
+hframes = 5
+vframes = 48
+frame = 1
+
+[node name="grass5" type="Sprite" parent="."]
+position = Vector2( -76.375, -94 )
+scale = Vector2( 4.72656, 5.93548 )
+texture = ExtResource( 1 )
+hframes = 5
+vframes = 48
+frame = 1
+
+[node name="grass9" type="Sprite" parent="."]
+position = Vector2( -120.125, 76 )
+scale = Vector2( 2.00781, 4.83871 )
+texture = ExtResource( 1 )
+hframes = 5
+vframes = 48
+frame = 1
+
+[node name="grass13" type="Sprite" parent="."]
+position = Vector2( 396, 77 )
+scale = Vector2( 4.76562, 4.83871 )
+texture = ExtResource( 1 )
+hframes = 5
+vframes = 48
+frame = 1
+
+[node name="grass10" type="Sprite" parent="."]
+position = Vector2( -76, 227 )
+scale = Vector2( 4.76562, 4.83871 )
+texture = ExtResource( 1 )
+hframes = 5
+vframes = 48
+frame = 1
+
+[node name="grass11" type="Sprite" parent="."]
+position = Vector2( 85, 229 )
+scale = Vector2( 5.25781, 4.70968 )
+texture = ExtResource( 1 )
+hframes = 5
+vframes = 48
+frame = 1
+
+[node name="grass12" type="Sprite" parent="."]
+position = Vector2( 245, 229 )
+scale = Vector2( 4.76562, 4.70968 )
+texture = ExtResource( 1 )
+hframes = 5
+vframes = 48
+frame = 1
+
+[node name="grass14" type="Sprite" parent="."]
+position = Vector2( 396, 227 )
+scale = Vector2( 4.76562, 4.83871 )
+texture = ExtResource( 1 )
+hframes = 5
+vframes = 48
+frame = 1
+
+[node name="grass7" type="Sprite" parent="."]
+position = Vector2( 61, -123 )
+scale = Vector2( 4.21875, 3.93548 )
+texture = ExtResource( 1 )
+hframes = 5
+vframes = 48
+frame = 1
+
+[node name="grass6" type="Sprite" parent="."]
+position = Vector2( 323.25, -123 )
+scale = Vector2( 3.79688, 3.93549 )
+texture = ExtResource( 1 )
+hframes = 5
+vframes = 48
+frame = 1
+
+[node name="grass8" type="Sprite" parent="."]
+position = Vector2( 396, -89 )
+scale = Vector2( 4.75, 6.12903 )
+texture = ExtResource( 1 )
+hframes = 5
+vframes = 48
+frame = 1
+
+[node name="grass2" type="Sprite" parent="."]
+position = Vector2( 197.469, 44 )
+scale = Vector2( 2.01172, 0.774193 )
+texture = ExtResource( 1 )
+hframes = 5
+vframes = 48
+frame = 1
+
+[node name="grass3" type="Sprite" parent="."]
+position = Vector2( 199, 64 )
+scale = Vector2( 1.00293, 0.516129 )
+texture = ExtResource( 1 )
+hframes = 5
+vframes = 48
+frame = 1
+
 [node name="Grass9" type="Sprite" parent="."]
-position = Vector2( 286, 10 )
+position = Vector2( 288, 88 )
 scale = Vector2( 0.726565, 0.686754 )
 texture = ExtResource( 6 )
 offset = Vector2( -21.041, 12.0579 )
 
 [node name="Grass6" type="Sprite" parent="."]
-position = Vector2( 299, 21 )
+position = Vector2( 304, 64 )
 scale = Vector2( 1.64453, 1.51546 )
 texture = ExtResource( 6 )
+
+[node name="TheLegendOfZeldaTileset" type="Sprite" parent="."]
+position = Vector2( 196.656, 19 )
+scale = Vector2( 0.699102, 0.621212 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( -0.067728, 224.754, 63.908, 30.4687 )
+
+[node name="TheLegendOfZeldaTileset3" type="Sprite" parent="."]
+position = Vector2( 197, -19 )
+scale = Vector2( 0.699102, 0.621212 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( -0.067728, 224.754, 63.908, 30.4687 )
+
+[node name="TheLegendOfZeldaTileset4" type="Sprite" parent="."]
+position = Vector2( 197, -37 )
+scale = Vector2( 0.699102, 0.621212 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( -0.067728, 224.754, 63.908, 30.4687 )
+
+[node name="TheLegendOfZeldaTileset5" type="Sprite" parent="."]
+position = Vector2( 197, -55 )
+scale = Vector2( 0.699102, 0.621212 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( -0.067728, 224.754, 63.908, 30.4687 )
+
+[node name="TheLegendOfZeldaTileset2" type="Sprite" parent="."]
+position = Vector2( 197, -1.90735e-06 )
+scale = Vector2( 0.699102, 0.621212 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( -0.067728, 224.754, 63.908, 30.4687 )
+
+[node name="Rock" type="Sprite" parent="."]
+position = Vector2( 246, 8 )
+scale = Vector2( 1.6, 1.54839 )
+texture = ExtResource( 2 )
+
+[node name="Rock2" type="Sprite" parent="."]
+position = Vector2( 149, 8 )
+scale = Vector2( 1.6, 1.54839 )
+texture = ExtResource( 2 )
+
+[node name="TheLegendOfZeldaTileset6" type="Sprite" parent="."]
+position = Vector2( 196, -106 )
+scale = Vector2( 0.931227, 0.948276 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 380.608, 0, 109.392, 99.3068 )
+
+[node name="pokemon_tree" type="Sprite" parent="."]
+position = Vector2( 232, 352 )
+scale = Vector2( 2.2, 2.25 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 80, 242, 65, 76 )

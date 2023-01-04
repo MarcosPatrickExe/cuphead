@@ -10,16 +10,6 @@
 [node name="mainScene" type="Node2D"]
 position = Vector2( 0, 1 )
 
-[node name="Walls" type="StaticBody2D" parent="."]
-visible = false
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
-[node name="WallsShape" type="CollisionPolygon2D" parent="Walls"]
-polygon = PoolVector2Array( 0, -2, 0, 146, 321, 148, 322, 0, -4, -2, -71, -1, -9, -26, 341, -26, 341, 165, -19, 166, -18, 16 )
-
 [node name="GodotIcon" type="Sprite" parent="."]
 visible = false
 position = Vector2( 288, 72 )
@@ -27,33 +17,29 @@ rotation = 3.14159
 scale = Vector2( 0.587595, -0.54676 )
 texture = ExtResource( 4 )
 
-[node name="Background1" parent="." instance=ExtResource( 2 )]
-visible = false
+[node name="Arena1" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1, -1 )
+
+[node name="Walls" type="StaticBody2D" parent="."]
 __meta__ = {
-"_edit_lock_": true
+"_edit_group_": true
 }
 
-[node name="Arena2" parent="." instance=ExtResource( 2 )]
-visible = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Arena3" parent="." instance=ExtResource( 2 )]
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="WallsShape" type="CollisionPolygon2D" parent="Walls"]
+polygon = PoolVector2Array( 0, -2, 0, 146, 321, 148, 322, 0, -4, -2, -71, -1, -9, -26, 341, -26, 341, 165, -19, 166, -18, 16 )
 
 [node name="YSort" type="YSort" parent="."]
+visible = false
 position = Vector2( 1, 1 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 55, 62 )
 
 [node name="Link_player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 302, 61 )
+position = Vector2( 297, 60 )
 
 [node name="Trees" parent="YSort" instance=ExtResource( 5 )]
+visible = false
 
 [node name="Bat_enemy" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 152, 89 )
