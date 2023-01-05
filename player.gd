@@ -74,7 +74,7 @@ func _physics_process(delta :float) -> void:
 			Directions.RIGHT:
 				self.get_child(0).frame = 0;
 			Directions.DOWN:
-				self.get_child(0).frame = 21;
+				self.get_child(0 ).frame = 21;
 		
 		
 	#   print("ACELERACAO * delta: ", str((ACELERACAO * delta)));

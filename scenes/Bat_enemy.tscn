@@ -218,8 +218,8 @@ graph_offset = Vector2( 5.4972, 14.1554 )
 script = ExtResource( 2 )
 
 [node name="Bat_sprites" type="Sprite" parent="."]
-position = Vector2( -1, -1 )
-scale = Vector2( 0.885417, 0.802083 )
+position = Vector2( 4, 6 )
+scale = Vector2( 1.35938, 1.23143 )
 texture = ExtResource( 1 )
 hframes = 3
 vframes = 4
