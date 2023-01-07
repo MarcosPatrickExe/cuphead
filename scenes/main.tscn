@@ -22,6 +22,18 @@ __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
 
+[node name="Arena2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8, -33 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="Arena3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8, -33 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
 [node name="Walls" type="StaticBody2D" parent="."]
 visible = false
 __meta__ = {
