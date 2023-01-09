@@ -17,7 +17,7 @@ scale = Vector2( 0.587595, -0.54676 )
 texture = ExtResource( 4 )
 
 [node name="Arena1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 8, -33 )
+position = Vector2( 27, -58 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
