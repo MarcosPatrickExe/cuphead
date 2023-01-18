@@ -246,4 +246,4 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 25 )
 parameters/Flying/blend_position = Vector2( -0.195078, -0.588757 )
-parameters/Static/blend_position = Vector2( -0.0537825, 0.41716 )
+parameters/Static/blend_position = Vector2( -0.0833333, 0.476331 )
