@@ -1,4 +1,2 @@
-#cuphead
-
 ### Sobre:
-Imitação do jogo cuphead, porém, somente com as fases de luta contra os bosses
+Jogo básico de RPG com personagens de outros jogos da Nintendo
