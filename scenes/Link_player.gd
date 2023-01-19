@@ -17,7 +17,7 @@ func _physics_process(delta :float) -> void:
 	directionResult.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left");
 	directionResult.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up");
 	directionResult = directionResult.normalized();
-	
+	 
 	
 	if (directionResult != Vector2.ZERO):
 		playAnimations(directionResult.x, directionResult.y);
