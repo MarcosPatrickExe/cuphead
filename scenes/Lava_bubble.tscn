@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Action RPG Resources/World/lava.png" type="Texture" id=1]
+[ext_resource path="res://Action RPG Resources/World/lava bubbles.png" type="Texture" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "lava",
+"speed": 5.0
+} ]
+
+[node name="Lava_bubble" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 123.0 ]
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "lava"
+playing = true

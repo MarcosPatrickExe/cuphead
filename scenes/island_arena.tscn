@@ -1,0 +1,3 @@
+[gd_scene format=2]
+
+[node name="island_arena" type="Node2D"]
