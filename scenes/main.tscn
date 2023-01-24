@@ -23,25 +23,25 @@ __meta__ = {
 }
 
 [node name="Walls" type="StaticBody2D" parent="."]
-visible = false
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="WallsShape" type="CollisionPolygon2D" parent="Walls"]
 polygon = PoolVector2Array( 0, -2, 0, 146, 321, 148, 322, 0, -4, -2, -71, -1, -9, -26, 341, -26, 341, 165, -19, 166, -18, 16 )
+disabled = true
 
 [node name="YSort" type="YSort" parent="."]
 position = Vector2( 1, 1 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 60, 158 )
+position = Vector2( 88, 62 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Link_player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 146, 181 )
+position = Vector2( 203, 59 )
 
 [node name="Bat_enemy" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 94, 190 )
+position = Vector2( 231, 100 )
