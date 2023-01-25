@@ -6514,7 +6514,11 @@ region_rect = Rect2( 0, 110, 30, 30 )
 script = ExtResource( 14 )
 
 [node name="OceanTower" type="Sprite" parent="Node2D"]
-position = Vector2( 1964, 540 )
-rotation = -0.270526
-scale = Vector2( 2.24545, 2.02577 )
+position = Vector2( 1969.29, 564.09 )
+rotation = -0.0314159
+scale = Vector2( 1.5269, 1.37752 )
 texture = ExtResource( 13 )
+
+[node name="Camera2D" type="Camera2D" parent="Node2D/OceanTower"]
+current = true
+zoom = Vector2( 2, 2 )
