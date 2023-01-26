@@ -17,7 +17,7 @@ scale = Vector2( 0.587595, -0.54676 )
 texture = ExtResource( 4 )
 
 [node name="World" parent="." instance=ExtResource( 2 )]
-position = Vector2( -155, 119 )
+position = Vector2( -352, 263 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
@@ -36,7 +36,7 @@ disabled = true
 position = Vector2( 1, 1 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 88, 62 )
+position = Vector2( -137, 302 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -45,7 +45,7 @@ __meta__ = {
 current = true
 
 [node name="Link_player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 203, 59 )
+position = Vector2( -89, 294 )
 
 [node name="Bat_enemy" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 231, 100 )
+position = Vector2( -129, 254 )

@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Action RPG Resources/World/tileset_pokemon_resurgent.png" type="Texture" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 19.0
+height = 64.0
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 41.0
+
+[node name="Fruit_tree" type="StaticBody2D"]
+
+[node name="TilesetPokemonResurgent21" type="Sprite" parent="."]
+position = Vector2( -1.96875, -0.624889 )
+scale = Vector2( 1.83801, 1.85081 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 31.0647, 209.034, 49.098, 62.4127 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.968758, 2.37511 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( -0.968758, -12.6249 )
+rotation = 1.5708
+shape = SubResource( 2 )
