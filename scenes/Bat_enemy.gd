@@ -28,7 +28,7 @@ func _physics_process(delta :float) -> void:
 	animationTree.set("parameters/Flying/blend_position", directionResult);
 	animationTree.set("parameters/Static/blend_position", directionResult);
 
-	print("X: ",str(directionResult.x), " Y: ",str(directionResult.y));
+	#print("X: ",str(directionResult.x), " Y: ",str(directionResult.y));
 	 
 		
 	if (directionResult != Vector2.ZERO):

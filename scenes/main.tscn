@@ -17,12 +17,13 @@ scale = Vector2( 0.587595, -0.54676 )
 texture = ExtResource( 4 )
 
 [node name="World" parent="." instance=ExtResource( 2 )]
-position = Vector2( -109, 131 )
+position = Vector2( -155, 119 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
 
 [node name="Walls" type="StaticBody2D" parent="."]
+visible = false
 __meta__ = {
 "_edit_group_": true
 }
@@ -39,6 +40,9 @@ position = Vector2( 88, 62 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
+current = true
 
 [node name="Link_player" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( 203, 59 )

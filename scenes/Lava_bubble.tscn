@@ -8,7 +8,7 @@ animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "lava",
-"speed": 5.0
+"speed": 2.0
 } ]
 
 [node name="Lava_bubble" type="Node2D"]
