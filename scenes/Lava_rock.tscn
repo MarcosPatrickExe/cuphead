@@ -18,10 +18,12 @@ region_enabled = true
 region_rect = Rect2( 896.049, 207.992, 47.5834, 47.5834 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0.375, 15.25 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 1, -28 )
 rotation = 1.5708
 shape = SubResource( 2 )
