@@ -36,13 +36,14 @@ disabled = true
 position = Vector2( 1, 1 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( -137, 302 )
+position = Vector2( 719, 206 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 current = true
+zoom = Vector2( 2, 2 )
 
 [node name="Link_player" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( -89, 294 )

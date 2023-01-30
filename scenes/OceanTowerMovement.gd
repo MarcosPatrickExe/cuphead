@@ -4,7 +4,7 @@ var modifyIncrement :int= 1;
 
 
 func _process(delta):
-	var tower = self.get_node("OceanTower");
+	var tower = self.get_node("ocean_tower_sprite");
 	count += (delta * modifyIncrement) ;
 	
 	if((count >= 0.5)):

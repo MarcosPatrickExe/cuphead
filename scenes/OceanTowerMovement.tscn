@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Action RPG Resources/World/ocean_tower.png" type="Texture" id=1]
+[ext_resource path="res://scenes/OceanTowerMovement.gd" type="Script" id=2]
+
+[node name="OceanTowerScene" type="Node2D"]
+position = Vector2( -5, 0 )
+rotation = -0.0314159
+scale = Vector2( 1.5269, 1.37752 )
+script = ExtResource( 2 )
+
+[node name="ocean_tower_sprite" type="Sprite" parent="."]
+position = Vector2( 1.35046, -1.40555 )
+rotation = -0.0314159
+scale = Vector2( 1.5269, 1.37752 )
+texture = ExtResource( 1 )
