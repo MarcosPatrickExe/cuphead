@@ -24,26 +24,24 @@ __meta__ = {
 
 [node name="Walls" type="StaticBody2D" parent="."]
 visible = false
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="WallsShape" type="CollisionPolygon2D" parent="Walls"]
-polygon = PoolVector2Array( 0, -2, 0, 146, 321, 148, 322, 0, -4, -2, -71, -1, -9, -26, 341, -26, 341, 165, -19, 166, -18, 16 )
+position = Vector2( -400, 415 )
+build_mode = 1
+polygon = PoolVector2Array( 0, -2, 0, 146, 321, 148, 322, 0, 8, 63, -4, -2, -71, -1, -9, -26, 341, -26, 341, 165, 32, 160, -40, 199, -18, 16 )
 disabled = true
 
 [node name="YSort" type="YSort" parent="."]
 position = Vector2( 1, 1 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 719, 206 )
+position = Vector2( 495, 102 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 current = true
-zoom = Vector2( 2, 2 )
 
 [node name="Link_player" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( -89, 294 )
