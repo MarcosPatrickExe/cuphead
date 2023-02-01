@@ -5,14 +5,13 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 30.0666
 
-[node name="Little_red_tree" type="StaticBody2D"]
+[node name="Little_green_tree" type="StaticBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 3, 0 )
 shape = SubResource( 1 )
 
 [node name="TheLegendOfZeldaTileset" type="Sprite" parent="."]
-position = Vector2( 3, 3 )
+position = Vector2( 0, 3 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 0.45285, 447.774, 62.6706, 64.0739 )
+region_rect = Rect2( -0.537331, 319.49, 64.3975, 63.4709 )
