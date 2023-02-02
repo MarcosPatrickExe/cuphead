@@ -4441,7 +4441,7 @@ position = Vector2( 127, -189 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Tree7" parent="." instance=ExtResource( 9 )]
-position = Vector2( 501, 120 )
+position = Vector2( 504, 116 )
 scale = Vector2( 1.89104, 1.78849 )
 
 [node name="TilesetPokemonResurgent20" type="Sprite" parent="."]
@@ -5818,7 +5818,7 @@ region_enabled = true
 region_rect = Rect2( 6.71333, 570.455, 31.9671, 31.5038 )
 
 [node name="Tree8" parent="." instance=ExtResource( 9 )]
-position = Vector2( 521, 166 )
+position = Vector2( 586, 184 )
 scale = Vector2( 1.4, 1.4 )
 
 [node name="Arbusto2" parent="." instance=ExtResource( 8 )]
@@ -6763,7 +6763,7 @@ region_enabled = true
 region_rect = Rect2( 0.862522, 318.81, 98.0938, 107.395 )
 
 [node name="WoodHouse3" type="Sprite" parent="."]
-position = Vector2( 509, 274 )
+position = Vector2( 612, 306 )
 scale = Vector2( 2.5, 2.5 )
 texture = ExtResource( 5 )
 region_enabled = true
@@ -8853,6 +8853,14 @@ scale = Vector2( 1, 1 )
 
 [node name="OceanTowerScene3" parent="." instance=ExtResource( 13 )]
 position = Vector2( 1900, 176 )
+scale = Vector2( 1, 1 )
+
+[node name="OceanTowerScene7" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2381, 376 )
+scale = Vector2( 1, 1 )
+
+[node name="OceanTowerScene8" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2725, 882 )
 scale = Vector2( 1, 1 )
 
 [node name="OceanTowerScene4" parent="." instance=ExtResource( 13 )]
