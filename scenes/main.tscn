@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/World.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Link_player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
 [ext_resource path="res://scenes/Bat_enemy.tscn" type="PackedScene" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 67, 67 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 65, 60 )
 
 [node name="mainScene" type="Node2D"]
 position = Vector2( 0, 1 )
@@ -22,17 +28,78 @@ __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
 
-[node name="Walls" type="StaticBody2D" parent="."]
-visible = false
+[node name="Obstacle_colliders" type="StaticBody2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="WallsShape" type="CollisionPolygon2D" parent="Walls"]
+[node name="gree_tree_colisor" type="CollisionPolygon2D" parent="Obstacle_colliders"]
 position = Vector2( -400, 415 )
 build_mode = 1
-polygon = PoolVector2Array( 0, -2, 0, 146, 321, 148, 322, 0, 8, 63, -4, -2, -71, -1, -9, -26, 341, -26, 341, 165, 32, 160, -40, 199, -18, 16 )
-disabled = true
+polygon = PoolVector2Array( -35, 6, -35, 8, -36, 11, -32, 12, -24, 9, -18, 17, -15, 17, -10, 9, -6, 9, -3, 11, 3, 12, 4, 11, 2, 6, 0, 1, 21, 1, 22, 5, 19, 10, 22, 11, 25, 12, 32, 8, 38, 17, 40, 17, 40, 17, 46, 9, 48, 9, 54, 13, 59, 11, 59, 7, 56, 6, 57, 0, 80, 1, 79, 7, 77, 9, 77, 11, 83, 11, 90, 9, 94, 13, 96, 16, 99, 17, 101, 13, 105, 8, 109, 11, 113, 12, 118, 12, 117, 8, 114, 5, 115, 1, 121, -1, 118, -6, 122, -10, 124, -19, 124, -27, 118, -35, 113, -39, 107, -40, 100, -43, 93, -42, 84, -39, 81, -38, 73, -30, 71, -28, 66, -26, 62, -33, 58, -36, 52, -41, 47, -40, 41, -42, 32, -41, 28, -39, 22, -37, 16, -30, 14, -26, 9, -26, 6, -31, 1, -36, -1, -39, -3, -39, -8, -40, -12, -41, -16, -41, -18, -41, -24, -40, -30, -39, -36, -38, -40, -33, -42, -29, -44, -20, -43, -15, -42, -11, -38, -7, -37, -7, -40, -3, -38, 1, -36, 2, -36, 9 )
+
+[node name="yellow_tree_colisor" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+position = Vector2( -397.736, 491 )
+scale = Vector2( 1.01339, 1 )
+build_mode = 1
+polygon = PoolVector2Array( -35, 6, -35, 8, -36, 11, -32, 12, -24, 9, -18, 17, -15, 17, -10, 9, -6, 9, -3, 11, 3, 12, 4, 11, 2, 6, 0, 1, 21, 1, 22, 5, 19, 10, 22, 11, 25, 12, 32, 8, 38, 17, 40, 17, 40, 17, 46, 9, 48, 9, 54, 13, 59, 11, 59, 7, 56, 6, 57, 0, 80, 1, 79, 7, 77, 9, 77, 11, 83, 11, 90, 9, 94, 13, 96, 16, 99, 17, 101, 13, 105, 8, 109, 11, 113, 12, 118, 12, 117, 8, 114, 5, 115, 1, 121, -1, 118, -6, 122, -10, 124, -19, 124, -27, 118, -35, 113, -39, 107, -40, 100, -43, 93, -42, 84, -39, 81, -38, 73, -30, 71, -28, 66, -26, 62, -33, 58, -36, 52, -41, 47, -40, 41, -42, 32, -41, 28, -39, 22, -37, 16, -30, 14, -26, 9, -26, 6, -31, 1, -36, -1, -39, -3, -39, -8, -40, -12, -41, -16, -41, -18, -41, -24, -40, -30, -39, -36, -38, -40, -33, -42, -29, -44, -20, -43, -15, -42, -11, -38, -7, -37, -7, -40, -3, -38, 1, -36, 2, -36, 9 )
+
+[node name="red_tree_colisor" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+position = Vector2( -398.038, 567.542 )
+scale = Vector2( 1.00595, 1.04167 )
+build_mode = 1
+polygon = PoolVector2Array( -35, 6, -35, 8, -36, 11, -32, 12, -24, 9, -18, 17, -15, 17, -10, 9, -6, 9, -3, 11, 3, 12, 4, 11, 2, 6, 0, 1, 21, 1, 22, 5, 19, 10, 22, 11, 25, 12, 32, 8, 38, 17, 40, 17, 40, 17, 46, 9, 48, 9, 54, 13, 59, 11, 59, 7, 56, 6, 57, 0, 80, 1, 79, 7, 77, 9, 77, 11, 83, 11, 90, 9, 94, 13, 96, 16, 99, 17, 101, 13, 105, 8, 109, 11, 113, 12, 118, 12, 117, 8, 114, 5, 115, 1, 121, -1, 118, -6, 122, -10, 124, -19, 124, -27, 118, -35, 113, -39, 107, -40, 100, -43, 93, -42, 84, -39, 81, -38, 73, -30, 71, -28, 66, -26, 62, -33, 58, -36, 52, -41, 47, -40, 41, -42, 32, -41, 28, -39, 22, -37, 16, -30, 14, -26, 9, -26, 6, -31, 1, -36, -1, -39, -3, -39, -8, -40, -12, -41, -16, -41, -18, -41, -24, -40, -30, -39, -36, -38, -40, -33, -42, -29, -44, -20, -43, -15, -42, -11, -38, -7, -37, -7, -40, -3, -38, 1, -36, 2, -36, 9 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+polygon = PoolVector2Array( -204, 740, -205, 745, -191, 744, -190, 468, -260, 469, -260, 490, -206, 491 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+position = Vector2( 71, 0 )
+polygon = PoolVector2Array( -204, 740, -205, 745, -191, 744, -189, 490, -133, 490, -135, 469, -205, 469, -206, 491 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+polygon = PoolVector2Array( -388, 1103, -377, 1089, -190, 1088, -181, 1100, -179, 1206, -193, 1219, -375, 1219, -389, 1208 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+position = Vector2( 432, -91 )
+polygon = PoolVector2Array( -388, 1103, -377, 1088, -308, 1088, -296, 1100, -296, 1214, -305, 1225, -377, 1225, -390, 1210 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+position = Vector2( 445, 286 )
+polygon = PoolVector2Array( -388, 1103, -369, 1082, -316, 1082, -295, 1103, -296, 1162, -302, 1167, -300, 1222, -366, 1223, -384, 1222, -384, 1166, -388, 1164, -389, 1148 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+polygon = PoolVector2Array( -489, 1291, -470, 1289, -460, 1278, -433, 1278, -423, 1287, -423, 1289, -406, 1289, -401, 1295, -399, 1350, -404, 1351, -404, 1367, -427, 1368, -429, 1365, -428, 1344, -430, 1341, -441, 1366, -450, 1366, -462, 1346, -462, 1369, -490, 1366 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+position = Vector2( 136, 163 )
+polygon = PoolVector2Array( -489, 1291, -470, 1289, -460, 1278, -433, 1278, -423, 1287, -423, 1291, -409, 1292, -405, 1298, -398, 1292, -381, 1291, -371, 1279, -350, 1279, -339, 1291, -322, 1292, -317, 1298, -318, 1365, -343, 1366, -344, 1348, -352, 1355, -366, 1354, -373, 1348, -376, 1348, -376, 1365, -401, 1365, -401, 1356, -401, 1351, -404, 1351, -404, 1367, -427, 1368, -431, 1364, -432, 1345, -430, 1341, -441, 1366, -450, 1366, -462, 1346, -462, 1369, -490, 1366 )
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+position = Vector2( -8.58165, 339 )
+scale = Vector2( 0.989884, 1 )
+polygon = PoolVector2Array( -489, 1291, -470, 1289, -460, 1278, -433, 1278, -423, 1287, -423, 1291, -409, 1292, -405, 1298, -398, 1292, -381, 1291, -371, 1279, -345.918, 1279, -339, 1291, -322, 1292, -317, 1298, -318.642, 1371, -339.856, 1370, -344, 1348, -352, 1355, -366, 1354, -373, 1348, -376, 1348, -377.234, 1370, -396.428, 1370, -401, 1356, -401, 1351, -404, 1351, -406.531, 1369, -426.735, 1370, -431, 1364, -432, 1345, -430, 1341, -440.878, 1368, -448.96, 1368, -462, 1346, -464.113, 1370, -483.307, 1371 )
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+polygon = PoolVector2Array( -190, 1588, -158, 1587, -146, 1583, -143, 1581, -136, 1583, -136, 1591, -95, 1588, -94, 1592, -85, 1593, -82, 1588, -71, 1589, -70, 1705, -193, 1705 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle_colliders"]
+position = Vector2( -34, 1081 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstacle_colliders"]
+position = Vector2( -32, 1417 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Obstacle_colliders"]
+position = Vector2( -285, 1296 )
+shape = SubResource( 2 )
 
 [node name="YSort" type="YSort" parent="."]
 position = Vector2( 1, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 495, 102 )
@@ -44,7 +111,7 @@ __meta__ = {
 current = true
 
 [node name="Link_player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( -89, 294 )
+position = Vector2( -138, 301 )
 
 [node name="Bat_enemy" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( -129, 254 )
+position = Vector2( -166, 282 )

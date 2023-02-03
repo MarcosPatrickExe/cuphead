@@ -157,8 +157,8 @@ scale = Vector2( 1.06592, 1 )
 texture = ExtResource( 4 )
 
 [node name="lava_tile5" type="Sprite" parent="."]
-position = Vector2( -263, 957 )
-scale = Vector2( 37.4, 98.2 )
+position = Vector2( -263, 958 )
+scale = Vector2( 37.4, 98.4 )
 texture = ExtResource( 10 )
 region_enabled = true
 region_rect = Rect2( 980, 370, 10, 10 )
@@ -2412,8 +2412,8 @@ position = Vector2( 25, 745 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="lava_tile3" type="Sprite" parent="."]
-position = Vector2( 151, 1715.5 )
-scale = Vector2( 119.8, 53.1 )
+position = Vector2( 150, 1715.5 )
+scale = Vector2( 120, 53.1 )
 texture = ExtResource( 10 )
 region_enabled = true
 region_rect = Rect2( 980, 370, 10, 10 )
@@ -2427,7 +2427,7 @@ position = Vector2( -276, 1015 )
 scale = Vector2( 5, 5 )
 
 [node name="Lava_bubble20" parent="." instance=ExtResource( 11 )]
-position = Vector2( -274, 1378 )
+position = Vector2( -323, 1375 )
 scale = Vector2( 5, 5 )
 
 [node name="Lava_bubble24" parent="." instance=ExtResource( 11 )]
@@ -2515,7 +2515,7 @@ position = Vector2( 332, 639 )
 scale = Vector2( 2, 2 )
 
 [node name="Lava_bubble15" parent="." instance=ExtResource( 11 )]
-position = Vector2( -406, 1399 )
+position = Vector2( -405, 1412 )
 scale = Vector2( 5, 5 )
 
 [node name="Lava_bubble16" parent="." instance=ExtResource( 11 )]
@@ -3392,8 +3392,8 @@ region_enabled = true
 region_rect = Rect2( 32.6582, 127.836, 31.7937, 32.2944 )
 
 [node name="TheLegendOfZeldaTileset36" type="Sprite" parent="."]
-position = Vector2( 303, 204 )
-scale = Vector2( 1.1, 1.1 )
+position = Vector2( 308.75, 209.942 )
+scale = Vector2( 0.716666, 0.716666 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 64.9474, 320.121, 30.8779, 31.631 )
@@ -6048,6 +6048,7 @@ region_enabled = true
 region_rect = Rect2( 7.69054, 442.313, 95.438, 107.02 )
 
 [node name="TheLegendOfZeldaTileset68" type="Sprite" parent="."]
+visible = false
 position = Vector2( 202, 489 )
 scale = Vector2( 2.43038, 3.08696 )
 texture = ExtResource( 3 )
