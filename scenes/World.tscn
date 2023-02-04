@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Action RPG Resources/World/The_legend_of_zelda_tileset.png" type="Texture" id=1]
 [ext_resource path="res://Action RPG Resources/World/rock.png" type="Texture" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://scenes/Little_yellow_tree.tscn" type="PackedScene" id=20]
 [ext_resource path="res://scenes/Little_red_tree.tscn" type="PackedScene" id=21]
 [ext_resource path="res://scenes/Little_green_tree.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Action RPG Resources/World/pilar.png" type="Texture" id=23]
 
 [node name="Arena1" type="Node2D"]
 position = Vector2( 0, -2 )
@@ -393,8 +394,8 @@ scale = Vector2( 1.70215, 1.35156 )
 texture = ExtResource( 4 )
 
 [node name="GrassBackground47" type="Sprite" parent="."]
-position = Vector2( 285, 424 )
-scale = Vector2( 1.18555, 1.3125 )
+position = Vector2( 285, 425.5 )
+scale = Vector2( 1.18555, 1.35938 )
 texture = ExtResource( 4 )
 
 [node name="GrassBackground49" type="Sprite" parent="."]
@@ -2591,15 +2592,22 @@ region_enabled = true
 region_rect = Rect2( 928.244, 576.247, 15.5073, 15.2488 )
 
 [node name="walls_entrance" type="Sprite" parent="."]
-position = Vector2( 200.5, 588.017 )
-scale = Vector2( 2.90361, 2.02923 )
+position = Vector2( 177, 572 )
+scale = Vector2( 2.03012, 1.68841 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 450.505, 303.195, 83.5997, 138.466 )
+
+[node name="walls_entrance2" type="Sprite" parent="."]
+position = Vector2( 226, 572 )
+scale = Vector2( 2.03012, 1.68841 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 450.505, 303.195, 83.5997, 138.466 )
 
 [node name="grass26" type="Sprite" parent="."]
-position = Vector2( 201, 565.656 )
-scale = Vector2( 5.5625, 4.9254 )
+position = Vector2( 201.5, 562 )
+scale = Vector2( 5.40625, 7.93548 )
 texture = ExtResource( 1 )
 hframes = 5
 vframes = 48
@@ -2612,6 +2620,18 @@ texture = ExtResource( 1 )
 hframes = 5
 vframes = 48
 frame = 1
+
+[node name="TheLegendOfZeldaTileset93" type="Sprite" parent="."]
+position = Vector2( 134, 487 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 97.0067, 31.551, 30.9579 )
+
+[node name="TheLegendOfZeldaTileset94" type="Sprite" parent="."]
+position = Vector2( 267, 488 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32.5219, 96.3499, 31.6541, 30.4889 )
 
 [node name="grass18" type="Sprite" parent="."]
 position = Vector2( 140, 143.844 )
@@ -3348,7 +3368,7 @@ region_enabled = true
 region_rect = Rect2( 32.6582, 128.213, 31.1313, 31.9172 )
 
 [node name="TheLegendOfZeldaTileset67" type="Sprite" parent="."]
-position = Vector2( 200.056, 617.167 )
+position = Vector2( 199, 617 )
 rotation = 3.14159
 scale = Vector2( 1.1696, 0.976295 )
 texture = ExtResource( 1 )
@@ -3364,8 +3384,8 @@ region_enabled = true
 region_rect = Rect2( 32.6582, 128.213, 31.1313, 31.9172 )
 
 [node name="TheLegendOfZeldaTileset34" type="Sprite" parent="."]
-position = Vector2( 200, 471 )
-scale = Vector2( 1.53226, 1.5 )
+position = Vector2( 200, 471.5 )
+scale = Vector2( 1.53226, 1.65625 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 32.6582, 127.836, 31.7937, 32.2944 )
@@ -3385,8 +3405,8 @@ region_enabled = true
 region_rect = Rect2( 32.6582, 127.836, 31.7937, 32.2944 )
 
 [node name="TheLegendOfZeldaTileset32" type="Sprite" parent="."]
-position = Vector2( 200, 424 )
-scale = Vector2( 1.53226, 1.5 )
+position = Vector2( 200, 424.5 )
+scale = Vector2( 1.53226, 1.53125 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 32.6582, 127.836, 31.7937, 32.2944 )
@@ -6063,8 +6083,8 @@ region_enabled = true
 region_rect = Rect2( 928.244, 576.247, 15.5073, 15.2488 )
 
 [node name="PokemonExteriorTileset107" type="Sprite" parent="."]
-position = Vector2( 118, 726 )
-scale = Vector2( 2.66667, 2.68503 )
+position = Vector2( 118, 726.069 )
+scale = Vector2( 2.66667, 2.67584 )
 texture = ExtResource( 10 )
 region_enabled = true
 region_rect = Rect2( 928.244, 576.247, 15.5073, 15.2488 )
@@ -8126,12 +8146,12 @@ texture = ExtResource( 10 )
 region_enabled = true
 region_rect = Rect2( 960.043, 544.206, 15.9167, 15.3596 )
 
-[node name="Arco_entrance" type="Sprite" parent="."]
-position = Vector2( 202, 639 )
-scale = Vector2( 3.3125, 3.42208 )
-texture = ExtResource( 3 )
+[node name="Pilar" type="Sprite" parent="."]
+position = Vector2( 257, 631.5 )
+scale = Vector2( 1.5625, 1.5625 )
+texture = ExtResource( 23 )
 region_enabled = true
-region_rect = Rect2( 79.9216, 34.9174, 59.325, 30.9118 )
+region_rect = Rect2( 503.949, 74.7887, 32.1123, 48.8194 )
 
 [node name="Arbusto10" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1561, -337 )
