@@ -18,7 +18,7 @@ func _physics_process(delta :float) -> void:
 	#print("count: ",str(count));
 	
 	
-	if(count > 15.0):
+	if(count > 10.0):
 		directionResult = generatePositionBat();
 		count = 0.0;
 	

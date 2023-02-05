@@ -23,7 +23,7 @@ scale = Vector2( 0.587595, -0.54676 )
 texture = ExtResource( 4 )
 
 [node name="World" parent="." instance=ExtResource( 2 )]
-position = Vector2( -361, 243 )
+position = Vector2( -388, 272 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }

@@ -12,5 +12,5 @@ func _process(delta):
 	if((count <= -0.450789)):
 		modifyIncrement *= -1;
 		
-	print("count: ",count);
+	# print("count: ",count);
 	tower.rotate( deg2rad(count) );
