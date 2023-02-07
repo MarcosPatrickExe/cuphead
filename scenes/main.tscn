@@ -13,7 +13,10 @@ extents = Vector2( 67, 67 )
 extents = Vector2( 65, 60 )
 
 [node name="mainScene" type="Node2D"]
-position = Vector2( 0, 1 )
+position = Vector2( 1, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="GodotIcon" type="Sprite" parent="."]
 visible = false
@@ -29,6 +32,7 @@ __meta__ = {
 }
 
 [node name="Obstacle_colliders" type="StaticBody2D" parent="."]
+position = Vector2( -27, 29 )
 
 [node name="gree_tree_colisor" type="CollisionPolygon2D" parent="Obstacle_colliders"]
 position = Vector2( -400, 415 )

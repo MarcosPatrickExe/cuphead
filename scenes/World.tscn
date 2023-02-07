@@ -3339,6 +3339,482 @@ texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
 
+[node name="TheLegendOfZeldaTileset341" type="Sprite" parent="."]
+position = Vector2( 296, -394.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset342" type="Sprite" parent="."]
+position = Vector2( 296, -378.021 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset381" type="Sprite" parent="."]
+position = Vector2( 278, -368.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset382" type="Sprite" parent="."]
+position = Vector2( 296, -362.021 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset383" type="Sprite" parent="."]
+position = Vector2( 278, -352.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset384" type="Sprite" parent="."]
+position = Vector2( 296, -346.021 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset385" type="Sprite" parent="."]
+position = Vector2( 278, -336.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset387" type="Sprite" parent="."]
+position = Vector2( 278, -320 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset390" type="Sprite" parent="."]
+position = Vector2( 260, -320 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset389" type="Sprite" parent="."]
+position = Vector2( 278, -304 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset388" type="Sprite" parent="."]
+position = Vector2( 260, -304 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset391" type="Sprite" parent="."]
+position = Vector2( 268, -288.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset392" type="Sprite" parent="."]
+position = Vector2( 250, -288.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset393" type="Sprite" parent="."]
+position = Vector2( 268, -272.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset394" type="Sprite" parent="."]
+position = Vector2( 250, -272.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset395" type="Sprite" parent="."]
+position = Vector2( 258, -256.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset396" type="Sprite" parent="."]
+position = Vector2( 240, -256.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset397" type="Sprite" parent="."]
+position = Vector2( 249, -240.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset398" type="Sprite" parent="."]
+position = Vector2( 231, -240.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset399" type="Sprite" parent="."]
+position = Vector2( 249, -224.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset400" type="Sprite" parent="."]
+position = Vector2( 231, -224.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset401" type="Sprite" parent="."]
+position = Vector2( 260, -208.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset402" type="Sprite" parent="."]
+position = Vector2( 242, -208.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset403" type="Sprite" parent="."]
+position = Vector2( 271, -192.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset404" type="Sprite" parent="."]
+position = Vector2( 253, -192.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset405" type="Sprite" parent="."]
+position = Vector2( 276, -176.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset406" type="Sprite" parent="."]
+position = Vector2( 258, -176.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset407" type="Sprite" parent="."]
+position = Vector2( 276, -160.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset408" type="Sprite" parent="."]
+position = Vector2( 258, -160.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset386" type="Sprite" parent="."]
+position = Vector2( 296, -330.021 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset343" type="Sprite" parent="."]
+position = Vector2( 314, -394.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset344" type="Sprite" parent="."]
+position = Vector2( 314, -378.021 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset345" type="Sprite" parent="."]
+position = Vector2( 332, -394.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset346" type="Sprite" parent="."]
+position = Vector2( 332, -378.021 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset347" type="Sprite" parent="."]
+position = Vector2( 350, -394.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset348" type="Sprite" parent="."]
+position = Vector2( 350, -378.021 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset349" type="Sprite" parent="."]
+position = Vector2( 368, -394.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset350" type="Sprite" parent="."]
+position = Vector2( 368, -378.021 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset351" type="Sprite" parent="."]
+position = Vector2( 386, -394.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset352" type="Sprite" parent="."]
+position = Vector2( 386, -378.021 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset353" type="Sprite" parent="."]
+position = Vector2( 404, -391.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset354" type="Sprite" parent="."]
+position = Vector2( 404, -375.021 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset355" type="Sprite" parent="."]
+position = Vector2( 422, -391.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset356" type="Sprite" parent="."]
+position = Vector2( 422, -375.021 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset357" type="Sprite" parent="."]
+position = Vector2( 440, -386.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset358" type="Sprite" parent="."]
+position = Vector2( 440, -370.021 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset359" type="Sprite" parent="."]
+position = Vector2( 458, -386.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset360" type="Sprite" parent="."]
+position = Vector2( 458, -370.021 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset361" type="Sprite" parent="."]
+position = Vector2( 476, -381.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset362" type="Sprite" parent="."]
+position = Vector2( 476, -365.021 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset363" type="Sprite" parent="."]
+position = Vector2( 494, -381.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset364" type="Sprite" parent="."]
+position = Vector2( 494, -365.021 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset367" type="Sprite" parent="."]
+position = Vector2( 494, -333 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset371" type="Sprite" parent="."]
+position = Vector2( 512, -317 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset365" type="Sprite" parent="."]
+position = Vector2( 494, -349 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset368" type="Sprite" parent="."]
+position = Vector2( 476, -349 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset366" type="Sprite" parent="."]
+position = Vector2( 512, -349 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset369" type="Sprite" parent="."]
+position = Vector2( 512, -333 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset370" type="Sprite" parent="."]
+position = Vector2( 530, -333 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset372" type="Sprite" parent="."]
+position = Vector2( 530, -317 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset373" type="Sprite" parent="."]
+position = Vector2( 512, -301.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset374" type="Sprite" parent="."]
+position = Vector2( 530, -301.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset375" type="Sprite" parent="."]
+position = Vector2( 512, -285.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset376" type="Sprite" parent="."]
+position = Vector2( 530, -285.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset377" type="Sprite" parent="."]
+position = Vector2( 512, -269.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset378" type="Sprite" parent="."]
+position = Vector2( 530, -269.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset379" type="Sprite" parent="."]
+position = Vector2( 512, -253.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
+[node name="TheLegendOfZeldaTileset380" type="Sprite" parent="."]
+position = Vector2( 530, -253.02 )
+scale = Vector2( 0.6, 0.531982 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.907722, 256.803, 30.7274, 30.7274 )
+
 [node name="TheLegendOfZeldaTileset317" type="Sprite" parent="."]
 position = Vector2( 80.0076, -438 )
 scale = Vector2( 0.600507, 0.533335 )
@@ -4141,6 +4617,11 @@ position = Vector2( -106, -340 )
 rotation = 3.12065
 scale = Vector2( 2.3, 2.3 )
 
+[node name="White_stone6" parent="." instance=ExtResource( 24 )]
+position = Vector2( -1.66893e-06, -492 )
+rotation = 0.733038
+scale = Vector2( 2, 2 )
+
 [node name="TheLegendOfZeldaTileset28" type="Sprite" parent="."]
 position = Vector2( 235.063, 295.35 )
 scale = Vector2( 1.00521, 0.7297 )
@@ -4308,15 +4789,14 @@ region_enabled = true
 region_rect = Rect2( 68.0843, 127.61, 24.493, 64.7155 )
 
 [node name="Little_yellow_tree" parent="." instance=ExtResource( 20 )]
-position = Vector2( 680, -996 )
-scale = Vector2( 1.2, 1.2 )
+position = Vector2( 608, -901 )
 
 [node name="Little_yellow_tree2" parent="." instance=ExtResource( 20 )]
-position = Vector2( 1264, -898 )
+position = Vector2( 1269, -901 )
 scale = Vector2( 1.2, 1.2 )
 
 [node name="Stone17" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1051, -471 )
+position = Vector2( 1038, -399 )
 scale = Vector2( 1.2, 1.2 )
 
 [node name="TheLegendOfZeldaTileset24" type="Sprite" parent="."]
@@ -4334,15 +4814,14 @@ region_enabled = true
 region_rect = Rect2( 68.0843, 127.61, 24.493, 64.7155 )
 
 [node name="Little_red_tree2" parent="." instance=ExtResource( 21 )]
-position = Vector2( 27, -373 )
-scale = Vector2( 1.1, 1.1 )
+position = Vector2( 35, -365 )
 
 [node name="Fruit_tree11" parent="." instance=ExtResource( 15 )]
 position = Vector2( 206, -317 )
 scale = Vector2( 1.1, 1.1 )
 
 [node name="Big_tree14" parent="." instance=ExtResource( 16 )]
-position = Vector2( 141, -326 )
+position = Vector2( 140, -320 )
 scale = Vector2( 0.9, 0.9 )
 
 [node name="Big_tree5" parent="." instance=ExtResource( 16 )]
@@ -4353,8 +4832,7 @@ position = Vector2( -199, -566 )
 scale = Vector2( 1.2, 1.2 )
 
 [node name="Little_green_tree" parent="." instance=ExtResource( 22 )]
-position = Vector2( -42, -496 )
-scale = Vector2( 1.2, 1.2 )
+position = Vector2( -52, -490 )
 
 [node name="Fruit_tree26" parent="." instance=ExtResource( 15 )]
 position = Vector2( -60, -601 )
@@ -4370,6 +4848,10 @@ position = Vector2( -129, -528 )
 [node name="Stone16" parent="." instance=ExtResource( 7 )]
 position = Vector2( 141, -490 )
 scale = Vector2( 1.2, 1.2 )
+
+[node name="Stone26" parent="." instance=ExtResource( 7 )]
+position = Vector2( 351, -427 )
+scale = Vector2( 0.4, 0.4 )
 
 [node name="Big_tree18" parent="." instance=ExtResource( 16 )]
 position = Vector2( 224, -519 )
@@ -4571,10 +5053,10 @@ position = Vector2( -364, -8 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="Fruit_tree8" parent="." instance=ExtResource( 15 )]
-position = Vector2( -158, 120 )
+position = Vector2( -169, 133 )
 
 [node name="Arbusto15" parent="." instance=ExtResource( 8 )]
-position = Vector2( -128, 199 )
+position = Vector2( -145, 189 )
 scale = Vector2( 1.65789, 1.65888 )
 
 [node name="TilesetPokemonResurgent5" type="Sprite" parent="."]
@@ -4678,7 +5160,7 @@ region_rect = Rect2( 140.93, 401.506, 51.8746, 62.0421 )
 position = Vector2( -260, 204 )
 
 [node name="Big_tree8" parent="." instance=ExtResource( 16 )]
-position = Vector2( -164, 268 )
+position = Vector2( -172, 268 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="Big_tree12" parent="." instance=ExtResource( 16 )]
@@ -4790,7 +5272,7 @@ region_enabled = true
 region_rect = Rect2( 254.633, 175.989, 33.0454, 33.6442 )
 
 [node name="TilesetPokemonResurgent41" type="Sprite" parent="."]
-position = Vector2( 974, -196 )
+position = Vector2( 960, -196 )
 scale = Vector2( 1.50023, 1.27273 )
 texture = ExtResource( 5 )
 region_enabled = true
@@ -4805,6 +5287,27 @@ region_rect = Rect2( 254.633, 175.989, 33.0454, 33.6442 )
 
 [node name="TilesetPokemonResurgent76" type="Sprite" parent="."]
 position = Vector2( 742.508, -196 )
+scale = Vector2( 1.48532, 1.27273 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 254.633, 175.989, 33.0454, 33.6442 )
+
+[node name="TilesetPokemonResurgent78" type="Sprite" parent="."]
+position = Vector2( 696, -196 )
+scale = Vector2( 1.48532, 1.27273 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 254.633, 175.989, 33.0454, 33.6442 )
+
+[node name="TilesetPokemonResurgent79" type="Sprite" parent="."]
+position = Vector2( 649.508, -196 )
+scale = Vector2( 1.48532, 1.27273 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 254.633, 175.989, 33.0454, 33.6442 )
+
+[node name="TilesetPokemonResurgent80" type="Sprite" parent="."]
+position = Vector2( 602.508, -196 )
 scale = Vector2( 1.48532, 1.27273 )
 texture = ExtResource( 5 )
 region_enabled = true
@@ -5053,7 +5556,7 @@ region_enabled = true
 region_rect = Rect2( 254.633, 175.989, 33.0454, 33.6442 )
 
 [node name="Tree17" parent="." instance=ExtResource( 9 )]
-position = Vector2( 838, -436 )
+position = Vector2( 832, -414 )
 scale = Vector2( 1.89104, 1.78849 )
 
 [node name="Stone" parent="." instance=ExtResource( 7 )]
@@ -5760,8 +6263,8 @@ region_enabled = true
 region_rect = Rect2( 0.0784492, 288.388, 33.2868, 30.7903 )
 
 [node name="rock_pokemon2" type="Sprite" parent="."]
-position = Vector2( -65, 17 )
-scale = Vector2( 1.48958, 1.55903 )
+position = Vector2( -64, 17 )
+scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 176.497, 62.65, 15.4969, 18.2642 )
@@ -5795,7 +6298,7 @@ region_enabled = true
 region_rect = Rect2( 458.793, 219.633, 27.6546, 17.1349 )
 
 [node name="Arbusto" parent="." instance=ExtResource( 8 )]
-position = Vector2( 614, -33 )
+position = Vector2( 655, -31 )
 scale = Vector2( 1.65789, 1.65888 )
 
 [node name="Arbusto4" parent="." instance=ExtResource( 8 )]
@@ -7283,15 +7786,15 @@ position = Vector2( 586, 184 )
 scale = Vector2( 1.4, 1.4 )
 
 [node name="Arbusto2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 785, -375 )
+position = Vector2( 776, -365 )
 scale = Vector2( 1.65789, 1.65888 )
 
 [node name="Tree3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 685, -59 )
+position = Vector2( 720, -59 )
 scale = Vector2( 1.89104, 1.78849 )
 
 [node name="Tree15" parent="." instance=ExtResource( 9 )]
-position = Vector2( 497, -456 )
+position = Vector2( 489, -454 )
 scale = Vector2( 1.89104, 1.78849 )
 
 [node name="Tree12" parent="." instance=ExtResource( 9 )]
@@ -7307,11 +7810,11 @@ position = Vector2( 241, 164 )
 scale = Vector2( 1, 1 )
 
 [node name="Arbusto12" parent="." instance=ExtResource( 8 )]
-position = Vector2( 373, -342 )
+position = Vector2( 377, -342 )
 scale = Vector2( 1.65789, 1.65888 )
 
 [node name="Arbusto13" parent="." instance=ExtResource( 8 )]
-position = Vector2( 541, -384 )
+position = Vector2( 536, -395 )
 scale = Vector2( 1.65789, 1.65888 )
 
 [node name="Arbusto7" parent="." instance=ExtResource( 8 )]
@@ -7327,7 +7830,7 @@ position = Vector2( 2768, 265 )
 scale = Vector2( 1.89104, 1.78849 )
 
 [node name="Fruit_tree28" parent="." instance=ExtResource( 15 )]
-position = Vector2( 1118, -594 )
+position = Vector2( 1108, -569 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Tree10" parent="." instance=ExtResource( 9 )]
@@ -7393,13 +7896,13 @@ scale = Vector2( 1.5, 1.5 )
 [node name="Big_tree16" parent="." instance=ExtResource( 16 )]
 position = Vector2( 2628, 217 )
 
-[node name="Big_tree4" parent="." instance=ExtResource( 16 )]
-position = Vector2( 441, -283 )
-scale = Vector2( 0.6, 0.6 )
-
 [node name="Arbusto11" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1880, -324 )
 scale = Vector2( 1.65789, 1.65888 )
+
+[node name="Big_tree4" parent="." instance=ExtResource( 16 )]
+position = Vector2( 441, -283 )
+scale = Vector2( 0.6, 0.6 )
 
 [node name="Big_tree3" parent="." instance=ExtResource( 16 )]
 position = Vector2( 345, -245 )
@@ -7418,7 +7921,7 @@ position = Vector2( 648, -579 )
 scale = Vector2( 1.2, 1.2 )
 
 [node name="Fruit_tree20" parent="." instance=ExtResource( 15 )]
-position = Vector2( 864, -558 )
+position = Vector2( 886, -509 )
 scale = Vector2( 1.2, 1.2 )
 
 [node name="Big_tree20" parent="." instance=ExtResource( 16 )]
@@ -7429,18 +7932,18 @@ scale = Vector2( 0.9, 0.9 )
 position = Vector2( 602, -511 )
 
 [node name="Big_tree24" parent="." instance=ExtResource( 16 )]
-position = Vector2( 406, -511 )
+position = Vector2( 407, -519 )
 
 [node name="Big_tree22" parent="." instance=ExtResource( 16 )]
-position = Vector2( 1014, -594 )
+position = Vector2( 992, -590 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="Little_red_tree" parent="." instance=ExtResource( 21 )]
-position = Vector2( 509, -187 )
+position = Vector2( 486, -194 )
 scale = Vector2( 1.1, 1.1 )
 
 [node name="Fruit_tree21" parent="." instance=ExtResource( 15 )]
-position = Vector2( 1117, -412 )
+position = Vector2( 1122, -410 )
 scale = Vector2( 1.2, 1.2 )
 
 [node name="Big_tree23" parent="." instance=ExtResource( 16 )]
@@ -7464,18 +7967,18 @@ position = Vector2( 991, -31 )
 scale = Vector2( 1.65789, 1.65888 )
 
 [node name="Tree6" parent="." instance=ExtResource( 9 )]
-position = Vector2( 511, -117 )
+position = Vector2( 508, -107 )
 scale = Vector2( 1.89104, 1.78849 )
 
 [node name="Wood_house" type="Sprite" parent="."]
-position = Vector2( 582, -294 )
+position = Vector2( 583, -290 )
 scale = Vector2( 1.48263, 1.43413 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 82.3101, 277.627, 46.8519, 47.5654 )
 
 [node name="Wood_house2" type="Sprite" parent="."]
-position = Vector2( 720, -294 )
+position = Vector2( 720, -290 )
 scale = Vector2( 1.48263, 1.43413 )
 texture = ExtResource( 3 )
 region_enabled = true
@@ -8225,7 +8728,7 @@ region_enabled = true
 region_rect = Rect2( 0.862522, 318.81, 98.0938, 107.395 )
 
 [node name="WoodHouse3" type="Sprite" parent="."]
-position = Vector2( 612, 306 )
+position = Vector2( 600, 300 )
 scale = Vector2( 2.5, 2.5 )
 texture = ExtResource( 5 )
 region_enabled = true
@@ -9674,7 +10177,7 @@ scale = Vector2( 1.5, 1.5 )
 position = Vector2( 716, 613 )
 
 [node name="Stone19" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1160, 474 )
+position = Vector2( 1159, 458 )
 
 [node name="Stone8" parent="." instance=ExtResource( 7 )]
 position = Vector2( 744, 872 )
@@ -9812,10 +10315,11 @@ position = Vector2( 426, 1004 )
 position = Vector2( 463, 963 )
 
 [node name="Little_lava_rock18" parent="." instance=ExtResource( 18 )]
-position = Vector2( 342, 719 )
+position = Vector2( 348, 723 )
+scale = Vector2( 1.2, 1.2 )
 
 [node name="Little_lava_rock20" parent="." instance=ExtResource( 18 )]
-position = Vector2( 300, 701 )
+position = Vector2( 301, 701 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="Little_lava_rock19" parent="." instance=ExtResource( 18 )]
@@ -10310,8 +10814,8 @@ region_enabled = true
 region_rect = Rect2( 977.075, 720.997, 29.9031, 46.1529 )
 
 [node name="TheLegendOfZeldaTileset75" type="Sprite" parent="."]
-position = Vector2( 439, 366 )
-scale = Vector2( 2.52358, 2.25664 )
+position = Vector2( 449, 373 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 78.6172, 141.523, 53.9375, 71.98 )

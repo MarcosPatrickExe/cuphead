@@ -7,11 +7,11 @@ radius = 30.0666
 
 [node name="Little_green_tree" type="StaticBody2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
-
 [node name="TheLegendOfZeldaTileset" type="Sprite" parent="."]
 position = Vector2( 0, 3 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( -0.537331, 319.49, 64.3975, 63.4709 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
