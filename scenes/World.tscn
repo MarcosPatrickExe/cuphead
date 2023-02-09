@@ -258,6 +258,16 @@ position = Vector2( 352, 362 )
 scale = Vector2( 1.18555, 1.125 )
 texture = ExtResource( 4 )
 
+[node name="GrassBackground56" type="Sprite" parent="."]
+position = Vector2( 427.938, 409 )
+scale = Vector2( 1.18555, 1.125 )
+texture = ExtResource( 4 )
+
+[node name="GrassBackground57" type="Sprite" parent="."]
+position = Vector2( 427.938, 337 )
+scale = Vector2( 1.18555, 1.125 )
+texture = ExtResource( 4 )
+
 [node name="GrassBackground51" type="Sprite" parent="."]
 position = Vector2( 352, 290 )
 scale = Vector2( 1.18555, 1.125 )
@@ -279,7 +289,7 @@ scale = Vector2( 1.25, 1.3125 )
 texture = ExtResource( 4 )
 
 [node name="GrassBackground42" type="Sprite" parent="."]
-position = Vector2( 432, 255 )
+position = Vector2( 432, 254 )
 scale = Vector2( 1.65625, 1.59375 )
 texture = ExtResource( 4 )
 
@@ -650,13 +660,6 @@ texture = ExtResource( 10 )
 region_enabled = true
 region_rect = Rect2( 960.043, 544.206, 15.9167, 15.3596 )
 
-[node name="PokemonExteriorTileset303" type="Sprite" parent="."]
-position = Vector2( 405, 335 )
-scale = Vector2( 2.57682, 2.51667 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 960.043, 544.206, 15.9167, 15.3596 )
-
 [node name="PokemonExteriorTileset304" type="Sprite" parent="."]
 position = Vector2( 405, 449 )
 scale = Vector2( 2.57682, 2.51667 )
@@ -671,36 +674,8 @@ texture = ExtResource( 10 )
 region_enabled = true
 region_rect = Rect2( 960.043, 544.206, 15.9167, 15.3596 )
 
-[node name="PokemonExteriorTileset305" type="Sprite" parent="."]
-position = Vector2( 405, 411 )
-scale = Vector2( 2.57682, 2.51667 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 960.043, 544.206, 15.9167, 15.3596 )
-
-[node name="PokemonExteriorTileset306" type="Sprite" parent="."]
-position = Vector2( 405, 373 )
-scale = Vector2( 2.57682, 2.51667 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 960.043, 544.206, 15.9167, 15.3596 )
-
 [node name="PokemonExteriorTileset350" type="Sprite" parent="."]
 position = Vector2( 444.326, 448.875 )
-scale = Vector2( 2.57682, 2.51667 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 960.043, 544.206, 15.9167, 15.3596 )
-
-[node name="PokemonExteriorTileset351" type="Sprite" parent="."]
-position = Vector2( 444.326, 410.875 )
-scale = Vector2( 2.57682, 2.51667 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 960.043, 544.206, 15.9167, 15.3596 )
-
-[node name="PokemonExteriorTileset352" type="Sprite" parent="."]
-position = Vector2( 444.326, 372.875 )
 scale = Vector2( 2.57682, 2.51667 )
 texture = ExtResource( 10 )
 region_enabled = true
@@ -1763,13 +1738,6 @@ texture = ExtResource( 10 )
 region_enabled = true
 region_rect = Rect2( 960.043, 544.206, 15.9167, 15.3596 )
 
-[node name="PokemonExteriorTileset356" type="Sprite" parent="."]
-position = Vector2( 444.326, 335.875 )
-scale = Vector2( 2.57682, 2.51667 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 960.043, 544.206, 15.9167, 15.3596 )
-
 [node name="PokemonExteriorTileset357" type="Sprite" parent="."]
 position = Vector2( 484.326, 335.875 )
 scale = Vector2( 2.57682, 2.51667 )
@@ -1917,13 +1885,6 @@ texture = ExtResource( 10 )
 region_enabled = true
 region_rect = Rect2( 960.043, 544.206, 15.9167, 15.3596 )
 
-[node name="PokemonExteriorTileset339" type="Sprite" parent="."]
-position = Vector2( 442, 321 )
-scale = Vector2( 2.57682, 2.51667 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 960.043, 544.206, 15.9167, 15.3596 )
-
 [node name="PokemonExteriorTileset340" type="Sprite" parent="."]
 position = Vector2( 516, 162 )
 scale = Vector2( 2.57682, 2.51667 )
@@ -2065,7 +2026,7 @@ region_enabled = true
 region_rect = Rect2( 960.043, 544.206, 15.9167, 15.3596 )
 
 [node name="PokemonExteriorTileset342" type="Sprite" parent="."]
-position = Vector2( 501.337, 269.438 )
+position = Vector2( 501.337, 270.438 )
 scale = Vector2( 3.28841, 3.125 )
 texture = ExtResource( 10 )
 region_enabled = true
@@ -2595,8 +2556,8 @@ vframes = 48
 frame = 1
 
 [node name="grass19" type="Sprite" parent="."]
-position = Vector2( 276, 179.672 )
-scale = Vector2( 2.25, 1.26915 )
+position = Vector2( 288, 179.672 )
+scale = Vector2( 3, 1.26915 )
 texture = ExtResource( 1 )
 hframes = 5
 vframes = 48
@@ -5084,8 +5045,8 @@ region_enabled = true
 region_rect = Rect2( 308.786, 14.4117, 55.6316, 82.0643 )
 
 [node name="little_mountain" type="Sprite" parent="."]
-position = Vector2( 416, 273 )
-scale = Vector2( 2.16798, 1.9645 )
+position = Vector2( 416, 261 )
+scale = Vector2( 1.32399, 1.19972 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 147.943, 85.0683, 50.3138, 50.118 )
@@ -5161,10 +5122,6 @@ position = Vector2( -260, 204 )
 
 [node name="Big_tree8" parent="." instance=ExtResource( 16 )]
 position = Vector2( -172, 268 )
-scale = Vector2( 0.8, 0.8 )
-
-[node name="Big_tree12" parent="." instance=ExtResource( 16 )]
-position = Vector2( 302, 315 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="Big_tree10" parent="." instance=ExtResource( 16 )]
@@ -8446,6 +8403,13 @@ texture = ExtResource( 10 )
 region_enabled = true
 region_rect = Rect2( 928.244, 576.247, 15.5073, 15.2488 )
 
+[node name="TilesetPokemonResurgent2" type="Sprite" parent="."]
+position = Vector2( 409, 358 )
+scale = Vector2( 1.6142, 1.56099 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 144.394, 176.349, 63.5394, 83.3822 )
+
 [node name="PokemonExteriorTileset32" type="Sprite" parent="."]
 position = Vector2( 327, 922.931 )
 scale = Vector2( 2.66667, 3.07585 )
@@ -8466,6 +8430,10 @@ scale = Vector2( 3.13333, 3.34251 )
 texture = ExtResource( 10 )
 region_enabled = true
 region_rect = Rect2( 928.244, 576.247, 15.5073, 15.2488 )
+
+[node name="Big_tree12" parent="." instance=ExtResource( 16 )]
+position = Vector2( 301, 325 )
+scale = Vector2( 0.8, 0.8 )
 
 [node name="PokemonExteriorTileset257" type="Sprite" parent="."]
 position = Vector2( 782.469, 1083.27 )
@@ -10812,13 +10780,6 @@ scale = Vector2( 3.07235, 2.97107 )
 texture = ExtResource( 10 )
 region_enabled = true
 region_rect = Rect2( 977.075, 720.997, 29.9031, 46.1529 )
-
-[node name="TheLegendOfZeldaTileset75" type="Sprite" parent="."]
-position = Vector2( 449, 373 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 78.6172, 141.523, 53.9375, 71.98 )
 
 [node name="TilesetPokemonResurgent19" type="Sprite" parent="."]
 position = Vector2( 2332, -415 )
