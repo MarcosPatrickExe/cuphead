@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/World.tscn" type="PackedScene" id=2]
@@ -11,6 +11,12 @@ extents = Vector2( 67, 67 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 65, 60 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 13.1667, 6.33333 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 40, 37.5 )
 
 [node name="mainScene" type="Node2D"]
 position = Vector2( 1, 1 )
@@ -26,128 +32,190 @@ scale = Vector2( 0.587595, -0.54676 )
 texture = ExtResource( 4 )
 
 [node name="World" parent="." instance=ExtResource( 2 )]
-position = Vector2( -388, 272 )
+position = Vector2( -389, 272 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
 
-[node name="Obstacle_colliders" type="StaticBody2D" parent="."]
-position = Vector2( -27, 29 )
+[node name="Obstacle_colliders" type="StaticBody2D" parent="World"]
+position = Vector2( 361, -243 )
 
-[node name="gree_tree_colisor" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="gree_tree_colisor" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 position = Vector2( -400, 415 )
 build_mode = 1
 polygon = PoolVector2Array( -35, 6, -35, 8, -36, 11, -32, 12, -24, 9, -18, 17, -15, 17, -10, 9, -6, 9, -3, 11, 3, 12, 4, 11, 2, 6, 0, 1, 21, 1, 22, 5, 19, 10, 22, 11, 25, 12, 32, 8, 38, 17, 40, 17, 40, 17, 46, 9, 48, 9, 54, 13, 59, 11, 59, 7, 56, 6, 57, 0, 80, 1, 79, 7, 77, 9, 77, 11, 83, 11, 90, 9, 94, 13, 96, 16, 99, 17, 101, 13, 105, 8, 109, 11, 113, 12, 118, 12, 117, 8, 114, 5, 115, 1, 121, -1, 118, -6, 122, -10, 124, -19, 124, -27, 118, -35, 113, -39, 107, -40, 100, -43, 93, -42, 84, -39, 81, -38, 73, -30, 71, -28, 66, -26, 62, -33, 58, -36, 52, -41, 47, -40, 41, -42, 32, -41, 28, -39, 22, -37, 16, -30, 14, -26, 9, -26, 6, -31, 1, -36, -1, -39, -3, -39, -8, -40, -12, -41, -16, -41, -18, -41, -24, -40, -30, -39, -36, -38, -40, -33, -42, -29, -44, -20, -43, -15, -42, -11, -38, -7, -37, -7, -40, -3, -38, 1, -36, 2, -36, 9 )
 
-[node name="yellow_tree_colisor" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="yellow_tree_colisor" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 position = Vector2( -397.736, 491 )
 scale = Vector2( 1.01339, 1 )
 build_mode = 1
 polygon = PoolVector2Array( -35, 6, -35, 8, -36, 11, -32, 12, -24, 9, -18, 17, -15, 17, -10, 9, -6, 9, -3, 11, 3, 12, 4, 11, 2, 6, 0, 1, 21, 1, 22, 5, 19, 10, 22, 11, 25, 12, 32, 8, 38, 17, 40, 17, 40, 17, 46, 9, 48, 9, 54, 13, 59, 11, 59, 7, 56, 6, 57, 0, 80, 1, 79, 7, 77, 9, 77, 11, 83, 11, 90, 9, 94, 13, 96, 16, 99, 17, 101, 13, 105, 8, 109, 11, 113, 12, 118, 12, 117, 8, 114, 5, 115, 1, 121, -1, 118, -6, 122, -10, 124, -19, 124, -27, 118, -35, 113, -39, 107, -40, 100, -43, 93, -42, 84, -39, 81, -38, 73, -30, 71, -28, 66, -26, 62, -33, 58, -36, 52, -41, 47, -40, 41, -42, 32, -41, 28, -39, 22, -37, 16, -30, 14, -26, 9, -26, 6, -31, 1, -36, -1, -39, -3, -39, -8, -40, -12, -41, -16, -41, -18, -41, -24, -40, -30, -39, -36, -38, -40, -33, -42, -29, -44, -20, -43, -15, -42, -11, -38, -7, -37, -7, -40, -3, -38, 1, -36, 2, -36, 9 )
 
-[node name="red_tree_colisor" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="red_tree_colisor" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 position = Vector2( -398.038, 567.542 )
 scale = Vector2( 1.00595, 1.04167 )
 build_mode = 1
 polygon = PoolVector2Array( -35, 6, -35, 8, -36, 11, -32, 12, -24, 9, -18, 17, -15, 17, -10, 9, -6, 9, -3, 11, 3, 12, 4, 11, 2, 6, 0, 1, 21, 1, 22, 5, 19, 10, 22, 11, 25, 12, 32, 8, 38, 17, 40, 17, 40, 17, 46, 9, 48, 9, 54, 13, 59, 11, 59, 7, 56, 6, 57, 0, 80, 1, 79, 7, 77, 9, 77, 11, 83, 11, 90, 9, 94, 13, 96, 16, 99, 17, 101, 13, 105, 8, 109, 11, 113, 12, 118, 12, 117, 8, 114, 5, 115, 1, 121, -1, 118, -6, 122, -10, 124, -19, 124, -27, 118, -35, 113, -39, 107, -40, 100, -43, 93, -42, 84, -39, 81, -38, 73, -30, 71, -28, 66, -26, 62, -33, 58, -36, 52, -41, 47, -40, 41, -42, 32, -41, 28, -39, 22, -37, 16, -30, 14, -26, 9, -26, 6, -31, 1, -36, -1, -39, -3, -39, -8, -40, -12, -41, -16, -41, -18, -41, -24, -40, -30, -39, -36, -38, -40, -33, -42, -29, -44, -20, -43, -15, -42, -11, -38, -7, -37, -7, -40, -3, -38, 1, -36, 2, -36, 9 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 polygon = PoolVector2Array( -205, 728, -232, 727, -231, 869, -217, 869, -217, 744, -191, 744, -190, 468, -260, 469, -260, 490, -206, 491 )
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 position = Vector2( 71, 0 )
 polygon = PoolVector2Array( -204, 740, -205, 745, -176, 745, -175, 869, -161, 869, -160, 726, -190, 726, -189, 490, -133, 490, -135, 469, -205, 469, -206, 491 )
 
-[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 position = Vector2( -9, -1 )
 polygon = PoolVector2Array( -241, 857, -235, 857, -232, 861, -230, 857, -212, 858, -210, 861, -206, 858, -200, 858, -200, 871, -202, 872, -198, 876, -198, 884, -201, 885, -199, 887, -199, 917, -207, 924, -212, 924, -216, 921, -217, 924, -225, 925, -228, 922, -230, 925, -235, 924, -243, 916, -244, 885, -243, 876, -241, 874, -241, 872, -242, 871 )
 
-[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 position = Vector2( 125, -2 )
 polygon = PoolVector2Array( -241, 857, -235, 857, -232, 861, -230, 857, -212, 858, -210, 861, -206, 858, -200, 858, -200, 871, -202, 872, -198, 876, -198, 884, -201, 885, -199, 887, -199, 917, -207, 924, -212, 924, -216, 921, -217, 924, -225, 925, -228, 922, -230, 925, -235, 924, -243, 916, -244, 885, -243, 876, -241, 874, -241, 872, -242, 871 )
 
-[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 position = Vector2( 984.353, -1177.84 )
 scale = Vector2( 1.25056, 1.25056 )
 polygon = PoolVector2Array( -241, 857, -235, 857, -232, 861, -230, 857, -212.187, 857.09, -210, 861, -206, 858, -200, 858, -200, 871, -202, 872, -198, 876, -198, 884, -201, 885, -199, 887, -199, 917, -206.59, 923.46, -212, 924, -216, 921, -216.186, 925.859, -224.982, 925.859, -228, 922, -230, 925, -235, 924, -243, 916, -244, 885, -243, 876, -241, 874, -241, 872, -242, 871 )
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 polygon = PoolVector2Array( -388, 1103, -377, 1089, -190, 1088, -181, 1100, -179, 1206, -193, 1219, -375, 1219, -389, 1208 )
 
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 position = Vector2( 432, -91 )
 polygon = PoolVector2Array( -388, 1103, -377, 1088, -308, 1088, -296, 1100, -296, 1214, -305, 1225, -377, 1225, -390, 1210 )
 
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 position = Vector2( 445, 286 )
 polygon = PoolVector2Array( -388, 1103, -369, 1082, -316, 1082, -295, 1103, -296, 1162, -302, 1167, -300, 1222, -366, 1223, -384, 1222, -384, 1166, -388, 1164, -389, 1148 )
 
-[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 polygon = PoolVector2Array( -489, 1291, -470, 1289, -460, 1278, -433, 1278, -423, 1287, -423, 1289, -406, 1289, -401, 1295, -399, 1350, -404, 1351, -404, 1367, -427, 1368, -429, 1365, -428, 1344, -430, 1341, -441, 1366, -450, 1366, -462, 1346, -462, 1369, -490, 1366 )
 
-[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 position = Vector2( 136, 163 )
 polygon = PoolVector2Array( -489, 1291, -470, 1289, -460, 1278, -433, 1278, -423, 1287, -423, 1291, -409, 1292, -405, 1298, -398, 1292, -381, 1291, -371, 1279, -350, 1279, -339, 1291, -322, 1292, -317, 1298, -318, 1365, -343, 1366, -344, 1348, -352, 1355, -366, 1354, -373, 1348, -376, 1348, -376, 1365, -401, 1365, -401, 1356, -401, 1351, -404, 1351, -404, 1367, -427, 1368, -431, 1364, -432, 1345, -430, 1341, -441, 1366, -450, 1366, -462, 1346, -462, 1369, -490, 1366 )
 
-[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 position = Vector2( -8.58165, 339 )
 scale = Vector2( 0.989884, 1 )
 polygon = PoolVector2Array( -489, 1291, -470, 1289, -460, 1278, -433, 1278, -423, 1287, -423, 1291, -409, 1292, -405, 1298, -398, 1292, -381, 1291, -371, 1279, -345.918, 1279, -339, 1291, -322, 1292, -317, 1298, -318.642, 1371, -339.856, 1370, -344, 1348, -352, 1355, -366, 1354, -373, 1348, -376, 1348, -377.234, 1370, -396.428, 1370, -401, 1356, -401, 1351, -404, 1351, -406.531, 1369, -426.735, 1370, -431, 1364, -432, 1345, -430, 1341, -440.878, 1368, -448.96, 1368, -462, 1346, -464.113, 1370, -483.307, 1371 )
 
-[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 polygon = PoolVector2Array( -190, 1588, -158, 1587, -146, 1583, -143, 1581, -136, 1583, -136, 1591, -95, 1588, -94, 1592, -85, 1593, -82, 1588, -71, 1589, -70, 1705, -193, 1705 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle_colliders"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Obstacle_colliders"]
 position = Vector2( -34, 1081 )
 shape = SubResource( 1 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstacle_colliders"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="World/Obstacle_colliders"]
 position = Vector2( -32, 1417 )
 shape = SubResource( 1 )
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Obstacle_colliders"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="World/Obstacle_colliders"]
 position = Vector2( -285, 1296 )
 shape = SubResource( 2 )
 
-[node name="lava_collisor_polygon" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="lava_collisor_polygon" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 polygon = PoolVector2Array( -556, 713, -556, 807, -539, 807, -539, 847, -582, 848, -582, 893, -447, 893, -446, 950, -536, 949, -535, 1031, -488, 1031, -488, 1065, -530, 1067, -529, 1107, -570, 1108, -569, 1148, -611, 1149, -609, 1189, -529, 1190, -529, 1231, -490, 1231, -490, 1269, -530, 1270, -530, 1310, -608, 1311, -608, 1351, -530, 1351, -530, 1430, -490, 1430, -490, 1462, -530, 1462, -531, 1503, -490, 1503, -489, 1544, -531, 1545, -530, 1630, -570, 1630, -571, 1668, -610, 1669, -608, 1708, -648, 1708, -648, 1749, -606, 1750, -606, 1790, -564, 1789, -565, 1748, -607, 1749, -606, 1710, -529, 1712, -531, 1788, -490, 1790, -490, 1750, -410, 1751, -410, 1710, -370, 1710, -369, 1750, -285, 1749, -284, 1709, -247, 1709, -247, 1749, 23, 1749, 22, 1788, 65, 1788, 66, 1827, 151, 1827, 151, 1788, 280, 1786, 280, 1771, 317, 1771, 316, 1761, 349, 1761, 348, 1945, 303, 1946, 305, 2067, 264, 2068, 265, 2106, 224, 2108, 224, 2224, -816, 2221, -811, 710 )
 
-[node name="lava_collisor_polygon2" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="lava_collisor_polygon2" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 polygon = PoolVector2Array( 126, 885, 126, 934, 166, 934, 166, 970, 194, 970, 193, 1008, 232, 1009, 232, 1050, 194, 1050, 194, 1079, 179, 1080, 179, 1258, 216, 1258, 215, 1213, 265, 1213, 265, 1259, 366, 1259, 366, 1190, 333, 1190, 332, 1138, 303, 1138, 301, 1069, 343, 1069, 343, 1002, 365, 1002, 364, 926, 205, 925, 204, 885 )
 
-[node name="OceanPolygon1" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="OceanPolygon1" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 polygon = PoolVector2Array( 421, 500, 566, 498, 567, 529, 603, 532, 603, 566, 568, 567, 569, 638, 604, 638, 604, 671, 640, 670, 641, 637, 680, 637, 679, 602, 717, 601, 717, 480, 742, 481, 743, 365, 775, 365, 776, 304, 799, 303, 799, 223, 799, 36, 1121, 36, 1121, 305, 1294, 306, 1296, 586, 1256, 585, 1256, 644, 1313, 644, 1312, 717, 1198, 717, 1200, 775, 1029, 774, 1029, 715, 971, 715, 971, 602, 858, 602, 858, 661, 802, 662, 802, 686, 780, 714, 745, 715, 745, 774, 917, 774, 918, 830, 971, 831, 972, 886, 917, 887, 917, 945, 802, 943, 803, 1002, 873, 1002, 873, 1044, 816, 1044, 816, 1104, 859, 1102, 859, 1158, 971, 1159, 971, 1173, 1086, 1173, 1086, 1115, 1198, 1116, 1200, 1002, 1255, 1003, 1255, 1057, 1369, 1058, 1369, 999, 1313, 998, 1314, 944, 1424, 945, 1426, 998, 1626, 1000, 1626, 1017, 1681, 1017, 1682, 1072, 1738, 1073, 1738, 1185, 1682, 1184, 1681, 1241, 1623, 1242, 1626, 1353, 1568, 1356, 1568, 1412, 1514, 1413, 1513, 1359, 1345, 1359, 1345, 1306, 1286, 1304, 1287, 1361, 1166, 1360, 1166, 1468, 1130, 1468, 1120, 1464, 850, 1464, 837, 1473, 828, 1468, 558, 1466, 547, 1477, 547, 1468, 530, 1468, 531, 1365, 633, 1366, 631, 1316, 669, 1317, 669, 1216, 622, 1215, 622, 1265, 577, 1265, 578, 1229, 534, 1229, 528, 1207, 557, 1208, 557, 1164, 496, 1165, 496, 1125, 536, 1124, 536, 1093, 600, 1094, 600, 1040, 556, 1040, 557, 998, 621, 998, 620, 955, 575, 954, 575, 916, 535, 916, 535, 877, 457, 878, 456, 805, 376, 805, 376, 814, 354, 814, 354, 782, 331, 781, 331, 754, 408, 753, 408, 717, 465, 717, 466, 675, 419, 675, 420, 637, 381, 637, 381, 582, 421, 582 )
 
-[node name="OceanPolygon2" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="OceanPolygon2" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 position = Vector2( 1, 0 )
 polygon = PoolVector2Array( 548, 1580, 519, 1580, 519, 1653, 624, 1653, 624, 1696, 681, 1697, 681, 1753, 624, 1753, 624, 1777, 585, 1778, 586, 1846, 483, 1846, 483, 1999, 483, 2091, 444, 2091, 444, 2126, 395, 2125, 396, 2159, 413, 2159, 414, 2230, 1722, 2236, 2586, 2234, 2580, 638, 2495, 638, 2494, 696, 2324, 695, 2324, 639, 2130, 639, 2129, 583, 2074, 582, 2072, 466, 2129, 466, 2130, 353, 2186, 352, 2186, 303, 2238, 302, 2256, 279, 2272, 252, 2292, 82, 2233, 133, 1895, 135, 1829, 78, 1839, 159, 1845, 199, 1876, 243, 1447, 242, 1447, 586, 1482, 587, 1483, 644, 1426, 644, 1426, 774, 1364, 775, 1364, 829, 1541, 829, 1540, 884, 1650, 884, 1652, 828, 1711, 827, 1711, 750, 1651, 748, 1651, 643, 1668, 643, 1668, 599, 1883, 599, 1883, 713, 1941, 713, 1942, 770, 2058, 770, 2057, 828, 1941, 829, 1942, 886, 1825, 885, 1825, 1013, 1908, 1013, 1909, 1071, 2019, 1070, 2019, 1013, 2077, 1013, 2077, 1071, 2134, 1071, 2135, 1125, 2191, 1126, 2191, 1183, 2133, 1184, 2133, 1299, 2078, 1300, 2079, 1358, 1907, 1356, 1908, 1299, 1793, 1299, 1794, 1356, 1737, 1356, 1736, 1467, 1681, 1467, 1682, 1525, 1739, 1526, 1740, 1584, 1798, 1584, 1797, 1640, 1682, 1641, 1682, 1697, 1626, 1696, 1626, 1639, 1570, 1639, 1570, 1698, 1514, 1699, 1515, 1814, 1458, 1814, 1459, 1897, 1403, 1896, 1401, 1817, 1344, 1817, 1345, 1759, 1289, 1759, 1287, 1704, 1231, 1703, 1231, 1648, 1174, 1647, 1175, 1582, 1129, 1581, 1131, 1566, 1121, 1554, 845, 1557, 837, 1563, 830, 1559, 555, 1559, 547, 1568 )
 
-[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 polygon = PoolVector2Array( -34, 442, -30, 439, -30, 434, -23, 430, -16, 427, -8, 427, -2, 430, 0, 427, 7, 427, 13, 431, 16, 431, 21, 435, 25, 443, 25, 449, 22, 453, 25, 457, 26, 460, 25, 463, 23, 466, 23, 472, 16, 481, 13, 481, -23, 481, -31, 474, -32, 466, -35, 462, -35, 456, -32, 454, -31, 451, -35, 447 )
 
-[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 position = Vector2( 67, -13 )
 polygon = PoolVector2Array( -34, 442, -30, 439, -30, 434, -23, 430, -16, 427, -8, 427, -2, 430, 0, 427, 7, 427, 13, 431, 16, 431, 21, 435, 25, 443, 25, 449, 22, 453, 25, 457, 26, 460, 25, 463, 23, 466, 23, 472, 16, 481, 13, 481, -23, 481, -31, 474, -32, 466, -35, 462, -35, 456, -32, 454, -31, 451, -35, 447 )
 
-[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 position = Vector2( 60, 51 )
 polygon = PoolVector2Array( -34, 442, -30, 439, -30, 434, -23, 430, -16, 427, -8, 427, -2, 430, 0, 427, 7, 427, 13, 431, 16, 431, 21, 435, 25, 443, 25, 449, 22, 453, 25, 457, 26, 460, 25, 463, 23, 466, 23, 472, 16, 481, 13, 481, -23, 481, -31, 474, -32, 466, -35, 462, -35, 456, -32, 454, -31, 451, -35, 447 )
 
-[node name="hide_house" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="hide_house" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 polygon = PoolVector2Array( 99, 581, 49, 566, -3, 580, -2, 619, -2, 624, 1, 624, 1, 658, 6, 659, 15, 660, 22, 656, 50, 657, 81, 658, 80, 660, 90, 661, 91, 659, 92, 658, 95, 658, 94, 624, 97, 624, 97, 619, 99, 619 )
 
-[node name="central_house" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="central_house" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 position = Vector2( -325.618, -271 )
 scale = Vector2( 0.878713, 0.859171 )
 polygon = PoolVector2Array( 98.5733, 585.448, 47.362, 564.497, -3.84927, 586.611, -3.84927, 614.545, -2, 624, 1, 624, 1, 658, 6, 659, 15, 660, 22, 656, 50, 657, 79.2268, 657.61, 79.2268, 658.774, 87.193, 658.774, 91, 659, 92, 658, 95, 658, 94, 624, 97, 624, 97, 619, 99, 619 )
 
-[node name="big_house_beach" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="big_house_beach" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 polygon = PoolVector2Array( 139, 573, 140, 493, 184, 493, 251, 495, 293, 495, 338, 494, 338, 574, 330, 573, 330, 585, 336, 588, 337, 672, 274, 672, 274, 675, 259, 675, 258, 669, 219, 668, 218, 675, 204, 675, 203, 672, 141, 671, 140, 588, 146, 587, 146, 574 )
 
-[node name="big_house_beach2" type="CollisionPolygon2D" parent="Obstacle_colliders"]
+[node name="big_house_beach2" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
 position = Vector2( -109.763, -239 )
 scale = Vector2( 0.650648, 0.64103 )
 polygon = PoolVector2Array( 139, 573, 137.959, 491.396, 184, 493, 251, 495, 293, 495, 339.297, 492.956, 338, 574, 330, 573, 330, 585, 336, 588, 337, 672, 274, 672, 274, 675, 259, 675, 258, 669, 219, 668, 218, 675, 204, 675, 203, 672, 141, 671, 139.496, 584.996, 146, 587, 146, 574 )
+
+[node name="grass_walls" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
+polygon = PoolVector2Array( -110, 338, -108, 334, -96, 333, -95, 335, -91, 335, -91, 333, -77, 333, -76, 335, -73, 335, -73, 334, -61, 333, -58, 337, -55, 334, -9, 333, -6, 337, -3, 333, 43, 333, 46, 337, 46, 371, 41, 374, -2, 374, -6, 371, -9, 375, -55, 375, -57, 371, -61, 376, -107, 375, -110, 372 )
+
+[node name="grass_walls2" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
+position = Vector2( 291, 5 )
+polygon = PoolVector2Array( -110, 338, -108, 333, -96, 333, -95, 335, -91, 335, -91, 333, -77, 333, -76, 335, -73, 335, -73, 334, -61, 333, -58, 337, -55, 334, -9, 333, -6, 337, -3, 333, 43, 333, 46, 337, 46, 371, 41, 374, -2, 374, -6, 371, -9, 375, -55, 375, -57, 371, -61, 376, -107, 375, -110, 372 )
+
+[node name="grass_walls3" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
+position = Vector2( 606, 8 )
+polygon = PoolVector2Array( -110, 338, -108, 333, -96, 333, -94, 334, -92, 334, -91, 333, -77, 333, -76, 334, -73, 334, -73, 333, -61, 333, -58, 337, -54, 333, -9, 333, -3, 337, 3, 334, 49, 334, 52, 339, 52, 371, 48, 375, 3, 375, -3, 372, -9, 375, -55, 375, -57, 371, -61, 376, -107, 375, -110, 372 )
+
+[node name="grass_walls4" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
+position = Vector2( 475, 5 )
+polygon = PoolVector2Array( -109, 337, -106, 333, -96, 333, -94, 334, -92, 334, -91, 333, -77, 333, -76, 334, -73, 334, -73, 333, -61, 333, -57, 338, -53, 334, -8, 334, -5, 339, -5, 372, -8, 375, -55, 375, -57, 371, -61, 376, -107, 375, -109, 371 )
+
+[node name="grass_walls5" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
+position = Vector2( 498, 63 )
+polygon = PoolVector2Array( -109, 337, -106, 333, -96, 333, -94, 334, -92, 334, -91, 333, -77, 333, -76, 334, -73, 334, -73, 333, -61, 333, -57, 338, -53, 334, -8, 334, -5, 339, -5, 372, -8, 375, -55, 375, -57, 371, -61, 376, -107, 375, -109, 371 )
+
+[node name="grass_walls7" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
+position = Vector2( 582, 64 )
+polygon = PoolVector2Array( -58, 339, -54, 333, -9, 333, -5, 339, -5, 372, -8, 375, -55, 375, -58, 372 )
+
+[node name="grass_walls8" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
+position = Vector2( 658, 62 )
+polygon = PoolVector2Array( -58, 339, -54, 333, -9, 333, -5, 339, -5, 372, -8, 375, -55, 375, -58, 372 )
+
+[node name="grass_walls6" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
+position = Vector2( 367, 61 )
+polygon = PoolVector2Array( -109, 337, -106, 333, -96, 333, -94, 334, -92, 334, -91, 333, -77, 333, -76, 334, -73, 334, -73, 333, -61, 333, -57, 338, -53, 334, -8, 334, -5, 339, -5, 372, -8, 375, -55, 375, -57, 371, -61, 376, -107, 375, -109, 371 )
+
+[node name="wooden_fence" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
+polygon = PoolVector2Array( -206, 120, -215, 114, -220, 114, -222, 116, -223, 196, -190, 197, -190, 179, -198, 179, -212, 179, -212, 119, -206, 122, -206, 155, -187, 175, -184, 175, -184, 164, -187, 164, -187, 160, -198, 149, -198, 121, -187, 111, -141, 111, -131, 122, -131, 149, -142, 160, -142, 164, -145, 164, -145, 176, -142, 176, -122, 155, -122, 124, -117, 120, -117, 182, -130, 182, -133, 179, -138, 179, -140, 181, -140, 196, -131, 196, -107, 196, -107, 173, -107, 116, -110, 113, -114, 113, -117, 116, -122, 121, -140, 103, -188, 103 )
+
+[node name="temple_center" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
+polygon = PoolVector2Array( -174, 126, -169, 126, -168, 127, -160, 127, -160, 126, -155, 126, -155, 141, -159, 145, -170, 145, -174, 141 )
+
+[node name="stones" type="CollisionShape2D" parent="World/Obstacle_colliders"]
+position = Vector2( -166.5, 80 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 3 )
+
+[node name="ocean_collide2" type="CollisionShape2D" parent="World/Obstacle_colliders"]
+position = Vector2( 960, -175 )
+scale = Vector2( 4, 4 )
+shape = SubResource( 4 )
+
+[node name="red_house_collider" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
+polygon = PoolVector2Array( 1548, -154, 1547, -126, 1550, -126, 1550, -87, 1561, -87, 1561, -84, 1611, -85, 1611, -69, 1622, -69, 1622, -67, 1627, -67, 1627, -64, 1635, -64, 1635, -67, 1664, -67, 1664, -64, 1672, -64, 1672, -67, 1686, -67, 1686, -69, 1697, -69, 1697, -95, 1723, -95, 1723, -134, 1720, -134, 1719, -134, 1719, -172, 1651, -200, 1640, -200, 1548, -164 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="brown_house_collider" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
+polygon = PoolVector2Array( 1242, -64, 1241, -108, 1203, -109, 1203, -145, 1207, -146, 1207, -182, 1393, -182, 1393, -162, 1389, -159, 1389, -126, 1386, -123, 1385, -62, 1374, -62, 1374, -66, 1341, -66, 1342, -63, 1329, -62, 1329, -66, 1298, -66, 1298, -62, 1286, -62, 1285, -66, 1253, -66, 1254, -62, 1242, -62 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="big_red_house_collider" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
+polygon = PoolVector2Array( 1832, -220, 1833, -162, 1845, -156, 1845, -79, 1855, -79, 1855, -82, 1887, -82, 1887, -79, 1897, -79, 1897, -82, 1931, -82, 1931, -66, 1941, -66, 1941, -71, 1948, -71, 1948, -66, 1957, -66, 1957, -69, 1984, -69, 1985, -69, 1985, -66, 1994, -66, 1994, -71, 2001, -71, 2001, -66, 2011, -66, 2011, -81, 2011, -82, 2045, -82, 2045, -79, 2055, -79, 2055, -82, 2087, -82, 2087, -79, 2097, -79, 2097, -156, 2110, -165, 2110, -221 )
 
 [node name="YSort" type="YSort" parent="."]
 position = Vector2( 1, 1 )
