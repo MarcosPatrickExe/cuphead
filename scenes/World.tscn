@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Action RPG Resources/World/The_legend_of_zelda_tileset.png" type="Texture" id=1]
 [ext_resource path="res://scenes/Brown_stone.tscn" type="PackedScene" id=2]
@@ -24,6 +24,8 @@
 [ext_resource path="res://scenes/Little_green_tree.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Action RPG Resources/World/pilar.png" type="Texture" id=23]
 [ext_resource path="res://scenes/White_stone.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scenes/Little_stone.tscn" type="PackedScene" id=25]
+[ext_resource path="res://scenes/Little_stone_black.tscn" type="PackedScene" id=26]
 
 [node name="World" type="Node2D"]
 position = Vector2( 0, -2 )
@@ -2524,12 +2526,6 @@ texture = ExtResource( 1 )
 hframes = 5
 vframes = 48
 frame = 1
-
-[node name="TheLegendOfZeldaTileset94" type="Sprite" parent="."]
-position = Vector2( 267, 462 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 32.5219, 96.3499, 31.6541, 30.4889 )
 
 [node name="grass18" type="Sprite" parent="."]
 position = Vector2( 140, 143.844 )
@@ -5069,11 +5065,11 @@ region_rect = Rect2( 147.943, 85.0683, 50.3138, 50.118 )
 position = Vector2( 98, 346 )
 scale = Vector2( 0.8, 0.8 )
 
-[node name="TheLegendOfZeldaTileset93" type="Sprite" parent="."]
-position = Vector2( 132, 462 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 0, 97.0067, 31.551, 30.9579 )
+[node name="Little_stone_black" parent="." instance=ExtResource( 26 )]
+position = Vector2( 266, 461 )
+
+[node name="Little_stone" parent="." instance=ExtResource( 25 )]
+position = Vector2( 132, 461 )
 
 [node name="TheLegendOfZeldaTileset9" type="Sprite" parent="."]
 position = Vector2( 0, 160 )
