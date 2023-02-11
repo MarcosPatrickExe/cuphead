@@ -5746,8 +5746,8 @@ region_enabled = true
 region_rect = Rect2( 362.617, 76.4755, 29.6146, 63.4601 )
 
 [node name="TheLegendOfZeldaTileset102" type="Sprite" parent="."]
-position = Vector2( 1043, -40 )
-scale = Vector2( 1.98276, 1.84849 )
+position = Vector2( 1046.38, -40 )
+scale = Vector2( 1.75, 1.84849 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 362.617, 76.4755, 29.4431, 63.4601 )
@@ -5769,8 +5769,8 @@ region_enabled = true
 region_rect = Rect2( 392.726, 96.4986, 47.4336, 42.4142 )
 
 [node name="TheLegendOfZeldaTileset107" type="Sprite" parent="."]
-position = Vector2( 1038.75, -92.5 )
-scale = Vector2( 2.25863, 1.8254 )
+position = Vector2( 1042.25, -92.5 )
+scale = Vector2( 2.01725, 1.8254 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 362.617, 76.4755, 29.4431, 63.4601 )
