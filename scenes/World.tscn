@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Action RPG Resources/World/The_legend_of_zelda_tileset.png" type="Texture" id=1]
 [ext_resource path="res://scenes/Brown_stone.tscn" type="PackedScene" id=2]
@@ -26,6 +26,7 @@
 [ext_resource path="res://scenes/White_stone.tscn" type="PackedScene" id=24]
 [ext_resource path="res://scenes/Little_stone.tscn" type="PackedScene" id=25]
 [ext_resource path="res://scenes/Little_stone_black.tscn" type="PackedScene" id=26]
+[ext_resource path="res://scenes/Wood_sign.tscn" type="PackedScene" id=27]
 
 [node name="World" type="Node2D"]
 position = Vector2( 0, -2 )
@@ -2559,19 +2560,21 @@ hframes = 5
 vframes = 48
 frame = 1
 
-[node name="TheLegendOfZeldaTileset38" type="Sprite" parent="."]
-position = Vector2( 157, 208 )
-scale = Vector2( 0.789063, 0.814851 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 0.0784492, 288.388, 33.2868, 30.7903 )
+[node name="Wood_sign" parent="." instance=ExtResource( 27 )]
+position = Vector2( 163, 213 )
+scale = Vector2( 1.2, 1.2 )
 
-[node name="TheLegendOfZeldaTileset49" type="Sprite" parent="."]
-position = Vector2( 1800, -49 )
-scale = Vector2( 1.13693, 1.17409 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 0.0784492, 288.388, 33.2868, 30.7903 )
+[node name="Wood_sign2" parent="." instance=ExtResource( 27 )]
+position = Vector2( 236, 41 )
+scale = Vector2( 1.2, 1.2 )
+
+[node name="Wood_sign3" parent="." instance=ExtResource( 27 )]
+position = Vector2( 329, -63 )
+scale = Vector2( 1.2, 1.2 )
+
+[node name="Wood_sign4" parent="." instance=ExtResource( 27 )]
+position = Vector2( 1798, -44 )
+scale = Vector2( 1.4, 1.4 )
 
 [node name="TheLegendOfZeldaTileset90" type="Sprite" parent="."]
 position = Vector2( 1775, -324 )
@@ -5351,8 +5354,8 @@ region_enabled = true
 region_rect = Rect2( 254.633, 175.989, 33.0454, 33.6442 )
 
 [node name="TilesetPokemonResurgent70" type="Sprite" parent="."]
-position = Vector2( 1730, -78 )
-scale = Vector2( 1.48532, 1.27273 )
+position = Vector2( 1730, -79 )
+scale = Vector2( 1.48532, 1.33333 )
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 254.633, 175.989, 33.0454, 33.6442 )
@@ -6207,13 +6210,6 @@ scale = Vector2( 0.833333, 0.75 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 96.4993, 256.676, 63.0696, 60.2094 )
-
-[node name="sign_zelda" type="Sprite" parent="."]
-position = Vector2( 230, 43 )
-scale = Vector2( 0.6, 0.6 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 0.0784492, 288.388, 33.2868, 30.7903 )
 
 [node name="rock_pokemon2" type="Sprite" parent="."]
 position = Vector2( -64, 17 )
