@@ -3,7 +3,7 @@
 [ext_resource path="res://Action RPG Resources/World/pokemon_exterior_tileset.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 55.125, 25.375 )
+extents = Vector2( 55.125, 32 )
 
 [node name="Big_brown_stone" type="StaticBody2D"]
 
@@ -14,7 +14,7 @@ region_enabled = true
 region_rect = Rect2( 48.3632, 320.209, 31.5558, 31.5558 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.125, 23 )
+position = Vector2( -0.125, 31 )
 shape = SubResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
