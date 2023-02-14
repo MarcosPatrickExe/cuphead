@@ -2359,16 +2359,15 @@ position = Vector2( 760, 1162 )
 scale = Vector2( 1.2, 1.2 )
 
 [node name="Lava_bubble10031" type="AnimatedSprite" parent="."]
-position = Vector2( -209, 1027 )
+position = Vector2( -212, 1017 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "lava"
-frame = 1
 playing = true
 
 [node name="Lava_bubble10030" type="AnimatedSprite" parent="."]
-position = Vector2( -319, 948 )
-scale = Vector2( 5, 5 )
+position = Vector2( -303, 941 )
+scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "lava"
 frame = 1
@@ -2390,14 +2389,14 @@ frame = 1
 playing = true
 
 [node name="Lava_bubble10018" type="AnimatedSprite" parent="."]
-position = Vector2( -215, 1186 )
+position = Vector2( -216, 1175 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
 playing = true
 
 [node name="Lava_bubble10028" type="AnimatedSprite" parent="."]
-position = Vector2( -151, 680 )
+position = Vector2( -148, 680 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
@@ -2426,7 +2425,7 @@ animation = "lava"
 playing = true
 
 [node name="Lava_bubble10032" type="AnimatedSprite" parent="."]
-position = Vector2( -247, 1358 )
+position = Vector2( -242, 1356 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
@@ -2440,15 +2439,101 @@ animation = "lava"
 frame = 1
 playing = true
 
-[node name="Lava_bubble10034" type="AnimatedSprite" parent="."]
+[node name="Lava_bubble10035" type="AnimatedSprite" parent="."]
 position = Vector2( -336, 1517 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 1 )
+animation = "lava"
+playing = true
+
+[node name="Lava_bubble10042" type="AnimatedSprite" parent="."]
+position = Vector2( 76, 1552 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 1 )
+animation = "lava"
+frame = 1
+playing = true
+
+[node name="Lava_bubble10045" type="AnimatedSprite" parent="."]
+position = Vector2( 281, 1560 )
+scale = Vector2( 4, 4 )
+frames = SubResource( 1 )
+animation = "lava"
+playing = true
+
+[node name="Lava_bubble10046" type="AnimatedSprite" parent="."]
+position = Vector2( 163, 1594 )
+scale = Vector2( 4, 4 )
+frames = SubResource( 1 )
+animation = "lava"
+playing = true
+
+[node name="Lava_bubble10043" type="AnimatedSprite" parent="."]
+position = Vector2( 592, 1635 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 1 )
+animation = "lava"
+playing = true
+
+[node name="Lava_bubble10044" type="AnimatedSprite" parent="."]
+position = Vector2( 483, 1608 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 1 )
+animation = "lava"
+playing = true
+
+[node name="Lava_bubble10036" type="AnimatedSprite" parent="."]
+position = Vector2( -325, 1510 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 1 )
 animation = "lava"
 playing = true
 
+[node name="Lava_bubble10041" type="AnimatedSprite" parent="."]
+position = Vector2( 373, 1627 )
+scale = Vector2( 4, 4 )
+frames = SubResource( 1 )
+animation = "lava"
+playing = true
+
+[node name="Lava_bubble10040" type="AnimatedSprite" parent="."]
+position = Vector2( 664, 1574 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 1 )
+animation = "lava"
+playing = true
+
+[node name="Lava_bubble10038" type="AnimatedSprite" parent="."]
+position = Vector2( -36, 1534 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 1 )
+animation = "lava"
+playing = true
+
+[node name="Lava_bubble10039" type="AnimatedSprite" parent="."]
+position = Vector2( -200, 1485 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 1 )
+animation = "lava"
+playing = true
+
+[node name="Lava_bubble10037" type="AnimatedSprite" parent="."]
+position = Vector2( -112, 1586 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 1 )
+animation = "lava"
+frame = 1
+playing = true
+
+[node name="Lava_bubble10034" type="AnimatedSprite" parent="."]
+position = Vector2( -225, 1588 )
+scale = Vector2( 4, 4 )
+frames = SubResource( 1 )
+animation = "lava"
+playing = true
+
 [node name="Lava_bubble10001" type="AnimatedSprite" parent="."]
-position = Vector2( -306, 1421 )
+position = Vector2( -311, 1416 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "lava"

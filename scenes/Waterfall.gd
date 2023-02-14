@@ -12,7 +12,7 @@ func _process(delta):
 			var nodeName = "PokemonExteriorTileset"+str(n);
 			var tile = self.get_node(nodeName);
 			tile.set_position( Vector2(tile.position.x, tile.position.y+8) );
-			
+			  
 			if(tile.position.y >= 110):
 				tile.set_position( Vector2(tile.position.x, 14.75) );
 			
