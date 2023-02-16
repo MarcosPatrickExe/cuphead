@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://fonts/EurostileT.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Action RPG Resources/Images/titulo legend of zeldris marrom bg.png" type="Texture" id=2]
 [ext_resource path="res://Action RPG Resources/Images/legend of zeldris logo.png" type="Texture" id=3]
+[ext_resource path="res://scenes/StartScreen.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=2]
 size = 9
@@ -17,6 +18,7 @@ margin_left = -161.0
 margin_top = -77.5
 margin_right = 159.0
 margin_bottom = 77.5
+script = ExtResource( 4 )
 
 [node name="imageBackground" type="TextureRect" parent="."]
 margin_right = 320.0
@@ -24,15 +26,15 @@ margin_bottom = 155.0
 texture = ExtResource( 2 )
 expand = true
 
-[node name="Label" type="Label" parent="."]
-margin_left = 98.0
+[node name="text" type="Label" parent="."]
+margin_left = 94.0
 margin_top = 137.0
-margin_right = 260.0
+margin_right = 221.0
 margin_bottom = 168.0
 custom_fonts/font = SubResource( 2 )
 text = "Pressione \"space\" para iniciar"
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="logoImage" type="TextureRect" parent="."]
 margin_left = 73.0
 margin_top = -19.0
 margin_right = 245.0
@@ -40,9 +42,8 @@ margin_bottom = 153.0
 texture = ExtResource( 3 )
 expand = true
 
-[node name="TextureButton" type="TextureButton" parent="."]
-visible = false
-margin_left = 78.0
-margin_top = 96.0
-margin_right = 207.0
-margin_bottom = 134.0
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
