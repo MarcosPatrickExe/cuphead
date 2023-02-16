@@ -26,24 +26,26 @@ margin_bottom = 155.0
 texture = ExtResource( 2 )
 expand = true
 
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 320.0
+margin_bottom = 155.0
+rect_min_size = Vector2( 320, 155 )
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer"]
+margin_right = 720.0
+margin_bottom = 720.0
+texture = ExtResource( 3 )
+
 [node name="text" type="Label" parent="."]
-margin_left = 94.0
-margin_top = 137.0
-margin_right = 221.0
-margin_bottom = 168.0
+margin_left = 101.0
+margin_top = 71.0
+margin_right = 218.0
+margin_bottom = 83.0
 custom_fonts/font = SubResource( 2 )
 text = "Pressione \"space\" para iniciar"
 
-[node name="logoImage" type="TextureRect" parent="."]
-margin_left = 73.0
-margin_top = -19.0
-margin_right = 245.0
-margin_bottom = 153.0
-texture = ExtResource( 3 )
-expand = true
-
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 0.5
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
