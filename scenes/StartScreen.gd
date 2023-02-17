@@ -1,6 +1,6 @@
 extends Control
 onready var timer = $Timer;
-onready var text = $text;
+onready var text = $CenterContainer/VBoxContainer/text;
 # var active :bool = false;
 
 """
@@ -12,4 +12,4 @@ func _process(delta :float) -> void:
 
 func _on_Timer_timeout():
 	
-	self.get_node("text").visible = not get_node("text").visible
+	self.get_node("CenterContainer/VBoxContainer/text").visible = not get_node("CenterContainer/VBoxContainer/text").visible
