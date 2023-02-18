@@ -1,15 +1,17 @@
 extends Control
 onready var timer = $Timer;
-onready var text = $CenterContainer/VBoxContainer/text;
+onready var text = $text;
 # var active :bool = false;
 
-"""
+
 func _process(delta :float) -> void:
-	
-	# if( self.timer.wait_time != 0 ):
+
+	if(Input.get_action_strength("ui_accept")):
+		get_tree().change_scene("MainMenu");
+		print("apertou");
 	#	self.get_node("text").visible = true;
-"""
+	
+
 
 func _on_Timer_timeout():
-	
-	self.get_node("CenterContainer/VBoxContainer/text").visible = not get_node("CenterContainer/VBoxContainer/text").visible
+	text.visible = not text.visible;
