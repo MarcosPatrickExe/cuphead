@@ -1,7 +1,12 @@
 extends Control
 onready var timer = $Timer;
 onready var text = $text;
+var arrowCursor :Resource = load("res://Action RPG Resources/Images/cursor1.png");
 
+
+func _ready() -> void:
+	Input.set_custom_mouse_cursor(self.arrowCursor);
+	
 
 func _process(delta :float) -> void:
 
