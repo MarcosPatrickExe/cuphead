@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://fonts/EurostileT.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Action RPG Resources/Images/titulo legend of zeldris marrom bg.png" type="Texture" id=2]
 [ext_resource path="res://Action RPG Resources/Images/legend of zeldris logo.png" type="Texture" id=3]
 [ext_resource path="res://scenes/StartScreen.gd" type="Script" id=4]
 [ext_resource path="res://textures/shadowGradient.tres" type="Texture" id=5]
@@ -9,7 +8,7 @@
 
 [sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 5 )
-region_rect = Rect2( 0, 0, 2048, 1 )
+region_rect = Rect2( 0, 0, 3000, 1 )
 margin_top = 100.0
 margin_bottom = 31.0
 
@@ -28,27 +27,27 @@ margin_right = 159.0
 margin_bottom = 90.0
 script = ExtResource( 4 )
 
-[node name="backgroundImage" type="TextureRect" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 1.0
-margin_right = 1.0
-texture = ExtResource( 2 )
-expand = true
-
-[node name="imageBackground2" type="TextureRect" parent="."]
+[node name="imageBackground" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 1.0
 texture = ExtResource( 6 )
 expand = true
 
-[node name="Panel" type="Panel" parent="."]
-margin_left = 96.0
-margin_top = -154.0
-margin_right = 471.0
-margin_bottom = 114.0
-rect_rotation = 32.1
+[node name="rightGradient" type="Panel" parent="."]
+margin_left = 100.0
+margin_top = -76.0
+margin_right = 396.0
+margin_bottom = 166.0
+rect_rotation = 18.2
+custom_styles/panel = SubResource( 3 )
+
+[node name="leftGradient" type="Panel" parent="."]
+margin_left = 220.0
+margin_top = 269.0
+margin_right = 532.0
+margin_bottom = 505.0
+rect_rotation = 201.8
 custom_styles/panel = SubResource( 3 )
 
 [node name="gameLogo" type="TextureRect" parent="."]
