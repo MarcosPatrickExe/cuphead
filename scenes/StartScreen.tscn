@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://fonts/EurostileT.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/ParallaxStartScreenBackgroundScript.gd" type="Script" id=2]
 [ext_resource path="res://Action RPG Resources/Images/legend of zeldris logo.png" type="Texture" id=3]
 [ext_resource path="res://scenes/StartScreen.gd" type="Script" id=4]
 [ext_resource path="res://textures/shadowGradient.tres" type="Texture" id=5]
@@ -30,46 +31,40 @@ script = ExtResource( 4 )
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2( 320, 0 )
+motion_mirroring = Vector2( 315, 180 )
+script = ExtResource( 2 )
 
 [node name="imageBackground" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_top = 1.0
 margin_right = 319.0
-margin_bottom = 180.0
+margin_bottom = 181.0
 texture = ExtResource( 6 )
 expand = true
 
 [node name="rightGradient" type="Panel" parent="."]
-visible = false
-margin_left = 188.0
-margin_top = -61.0
-margin_right = 410.0
-margin_bottom = 181.0
+margin_left = 167.0
+margin_top = -77.0
+margin_right = 445.0
+margin_bottom = 165.0
 rect_rotation = 22.8
 custom_styles/panel = SubResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="leftGradient" type="Panel" parent="."]
-visible = false
-margin_left = 182.0
-margin_top = 254.0
-margin_right = 446.0
-margin_bottom = 493.0
+margin_left = 165.0
+margin_top = 237.0
+margin_right = 445.0
+margin_bottom = 476.0
 rect_rotation = 201.8
 custom_styles/panel = SubResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="gameLogo" type="TextureRect" parent="."]
-margin_left = 104.0
-margin_top = 14.0
-margin_right = 615.0
-margin_bottom = 455.0
-rect_scale = Vector2( 0.24, 0.24 )
+margin_left = 98.0
+margin_top = 17.0
+margin_right = 609.0
+margin_bottom = 458.0
+rect_scale = Vector2( 0.27, 0.27 )
 texture = ExtResource( 3 )
 stretch_mode = 4
 
