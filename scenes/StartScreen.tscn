@@ -27,28 +27,42 @@ margin_right = 159.0
 margin_bottom = 90.0
 script = ExtResource( 4 )
 
-[node name="imageBackground" type="TextureRect" parent="."]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 320, 0 )
+
+[node name="imageBackground" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1.0
+margin_right = 319.0
+margin_bottom = 180.0
 texture = ExtResource( 6 )
 expand = true
 
 [node name="rightGradient" type="Panel" parent="."]
-margin_left = 100.0
-margin_top = -76.0
-margin_right = 396.0
-margin_bottom = 166.0
-rect_rotation = 18.2
+visible = false
+margin_left = 188.0
+margin_top = -61.0
+margin_right = 410.0
+margin_bottom = 181.0
+rect_rotation = 22.8
 custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="leftGradient" type="Panel" parent="."]
-margin_left = 220.0
-margin_top = 269.0
-margin_right = 532.0
-margin_bottom = 505.0
+visible = false
+margin_left = 182.0
+margin_top = 254.0
+margin_right = 446.0
+margin_bottom = 493.0
 rect_rotation = 201.8
 custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="gameLogo" type="TextureRect" parent="."]
 margin_left = 104.0
