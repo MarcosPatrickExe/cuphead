@@ -1,15 +1,13 @@
 extends Control;
-onready var stopButton = $stopButton;
+onready var stopButton = $quitButton;
 onready var backButton = $backButton;
 
 
 func _ready() -> void:
-	self.stopButton.connect("pressed", self, "gameOffButtonPressed");
+	self.quitButton.connect("pressed", self, "gameOffButtonPressed");
 	self.backButton.connect("pressed", self, "backButtonPressed")
 	
 
-	
-	
 func gameOffButtonPressed():
 	self.get_tree().quit();
 
