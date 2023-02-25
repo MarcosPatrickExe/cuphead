@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Action RPG Resources/Images/legend of zeldris brown background.png" type="Texture" id=1]
 [ext_resource path="res://Action RPG Resources/Images/legend of zeldris logo.png" type="Texture" id=2]
@@ -12,6 +12,11 @@
 [ext_resource path="res://Action RPG Resources/Images/moldura.png" type="Texture" id=10]
 [ext_resource path="res://Action RPG Resources/Images/option_name_frame.png" type="Texture" id=11]
 [ext_resource path="res://Action RPG Resources/Images/info_frame.png" type="Texture" id=12]
+[ext_resource path="res://Action RPG Resources/Images/single player icon.png" type="Texture" id=13]
+[ext_resource path="res://Action RPG Resources/Images/settings icon.png" type="Texture" id=14]
+[ext_resource path="res://Action RPG Resources/Images/battle arena icon.png" type="Texture" id=15]
+[ext_resource path="res://Action RPG Resources/Images/multiplayer icon.png" type="Texture" id=16]
+[ext_resource path="res://Action RPG Resources/Images/PVP icon.png" type="Texture" id=17]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.2, 0.0941176, 0.0235294, 0.176471 )
@@ -23,7 +28,7 @@ margin_top = 100.0
 margin_bottom = 31.0
 
 [sub_resource type="DynamicFont" id=7]
-size = 25
+size = 18
 outline_color = Color( 0.0117647, 0.0235294, 0.0235294, 1 )
 font_data = ExtResource( 9 )
 
@@ -42,9 +47,14 @@ font_data = ExtResource( 9 )
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 1.0
+margin_bottom = 1.0
 script = ExtResource( 5 )
 __meta__ = {
-"_edit_horizontal_guides_": [ -45.0, 38.0 ]
+"_edit_horizontal_guides_": [ -45.0, 38.0 ],
+"_edit_lock_": true
 }
 
 [node name="backgroundImage" type="TextureRect" parent="."]
@@ -75,13 +85,16 @@ __meta__ = {
 }
 
 [node name="option_info_frame" type="TextureRect" parent="."]
-margin_left = 6.0
-margin_top = 79.0
-margin_right = 326.0
-margin_bottom = 259.0
-rect_scale = Vector2( 1, 0.84 )
+margin_left = -23.0
+margin_top = 93.0
+margin_right = 297.0
+margin_bottom = 273.0
+rect_scale = Vector2( 1.2, 0.74 )
 texture = ExtResource( 12 )
 flip_v = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bottomGradient" type="Panel" parent="."]
 margin_left = 320.0
@@ -95,17 +108,18 @@ __meta__ = {
 }
 
 [node name="option_name_frame" type="TextureRect" parent="."]
-margin_left = 21.0
-margin_top = 11.0
-margin_right = 341.0
-margin_bottom = 191.0
+margin_left = 57.0
+margin_top = 45.0
+margin_right = 377.0
+margin_bottom = 225.0
+rect_scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 11 )
 
 [node name="option_name_text" type="Label" parent="."]
-margin_left = 112.0
-margin_top = 67.0
-margin_right = 199.0
-margin_bottom = 103.0
+margin_left = 117.0
+margin_top = 83.0
+margin_right = 183.0
+margin_bottom = 110.0
 custom_fonts/font = SubResource( 7 )
 text = "Survive"
 
@@ -190,3 +204,43 @@ align = 1
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="arenaOption" type="TextureRect" parent="."]
+margin_left = 190.0
+margin_top = 75.0
+margin_right = 242.0
+margin_bottom = 128.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 15 )
+
+[node name="multiplayerOption" type="TextureRect" parent="."]
+margin_left = 236.0
+margin_top = 135.0
+margin_right = 288.0
+margin_bottom = 188.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 16 )
+
+[node name="pvpOption" type="TextureRect" parent="."]
+margin_left = 231.0
+margin_top = 6.0
+margin_right = 282.0
+margin_bottom = 58.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 17 )
+
+[node name="settingsOption" type="TextureRect" parent="."]
+margin_left = 292.0
+margin_top = -40.0
+margin_right = 344.0
+margin_bottom = 12.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 14 )
+
+[node name="singleOption" type="TextureRect" parent="."]
+margin_left = 293.0
+margin_top = 175.0
+margin_right = 345.0
+margin_bottom = 228.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 13 )
