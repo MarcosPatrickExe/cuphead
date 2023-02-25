@@ -206,41 +206,41 @@ __meta__ = {
 }
 
 [node name="arenaOption" type="TextureRect" parent="."]
-margin_left = 190.0
-margin_top = 75.0
-margin_right = 242.0
-margin_bottom = 128.0
-rect_scale = Vector2( 0.8, 0.8 )
+margin_left = 174.0
+margin_top = 69.0
+margin_right = 226.0
+margin_bottom = 122.0
+rect_scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 15 )
 
 [node name="multiplayerOption" type="TextureRect" parent="."]
-margin_left = 236.0
-margin_top = 135.0
-margin_right = 288.0
-margin_bottom = 188.0
-rect_scale = Vector2( 0.8, 0.8 )
+margin_left = 211.0
+margin_top = 139.0
+margin_right = 263.0
+margin_bottom = 192.0
+rect_scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 16 )
 
 [node name="pvpOption" type="TextureRect" parent="."]
-margin_left = 231.0
-margin_top = 6.0
-margin_right = 282.0
-margin_bottom = 58.0
-rect_scale = Vector2( 0.8, 0.8 )
+margin_left = 206.0
+margin_top = -5.0
+margin_right = 257.0
+margin_bottom = 47.0
+rect_scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 17 )
 
 [node name="settingsOption" type="TextureRect" parent="."]
-margin_left = 292.0
-margin_top = -40.0
-margin_right = 344.0
-margin_bottom = 12.0
-rect_scale = Vector2( 0.8, 0.8 )
+margin_left = 286.0
+margin_top = -42.0
+margin_right = 338.0
+margin_bottom = 10.0
+rect_scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 14 )
 
 [node name="singleOption" type="TextureRect" parent="."]
-margin_left = 293.0
-margin_top = 175.0
-margin_right = 345.0
-margin_bottom = 228.0
-rect_scale = Vector2( 0.8, 0.8 )
+margin_left = 286.0
+margin_top = 170.0
+margin_right = 338.0
+margin_bottom = 223.0
+rect_scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 13 )
