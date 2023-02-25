@@ -244,3 +244,27 @@ margin_right = 338.0
 margin_bottom = 223.0
 rect_scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 13 )
+
+[node name="chatOption" type="TextureRect" parent="."]
+margin_left = 368.0
+margin_top = -8.0
+margin_right = 420.0
+margin_bottom = 44.0
+rect_scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 14 )
+
+[node name="commandsOption" type="TextureRect" parent="."]
+margin_left = 354.0
+margin_top = 140.0
+margin_right = 406.0
+margin_bottom = 193.0
+rect_scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 13 )
+
+[node name="aboutOption" type="TextureRect" parent="."]
+margin_left = 396.0
+margin_top = 70.0
+margin_right = 448.0
+margin_bottom = 123.0
+rect_scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 15 )
