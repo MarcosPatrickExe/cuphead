@@ -9,6 +9,8 @@ onready var single = $singleOption;
 onready var chat = $chatOption;
 onready var commands = $commandsOption;
 onready var about = $aboutOption;
+onready var nameOption = $option_name_text;
+onready var description = $description;
 var angle :float = 0;
 const speed :float = 100.0;
 var able :bool = false;
@@ -17,42 +19,53 @@ var optionsDict ={} # Dicionario q tera d
 
 
 
+
+
 func _ready() -> void:
 	self.quitButton.connect("pressed", self, "gameOffButtonPressed");
 	self.backButton.connect("pressed", self, "backButtonPressed")
+	self.nameOption.text = "arena";
 	
 	optionsDict ={
 		"about": {
 			"currentDegrees": 0.0,
-			"nodeObject": self.about
+			"nodeObject": self.about,
+			"description": "Conheça o criador do jogo..."
 		},
 		"chat": {
 			"currentDegrees": 45.0,
-			"nodeObject": self.chat
+			"nodeObject": self.chat,
+			"description": "Participe do chat global e conheça novos jogadores desse jogo incrível!"
 		},
 		"settings": {
 			"currentDegrees": 90.0,
-			"nodeObject": self.settings
+			"nodeObject": self.settings,
+			"description": "Ver e editar configurações de vídeo e áudio do jogo"
 		},
 		"pvp": {
 			"currentDegrees": 135.0,
-			"nodeObject": self.pvp
+			"nodeObject": self.pvp,
+			"description": "Batalhe com um(a) amigo(a) online!!"
 		},
 		"arena": {
 			"currentDegrees": 180.0,
-			"nodeObject": self.arenaOption
+			"nodeObject": self.arenaOption,
+			"description": "Derrote todos os chefões do jogo!"
 		},
 		"multiplayer": {
 			"currentDegrees": 225.0,
-			"nodeObject": self.multi
+			"nodeObject": self.multi,
+			"description": "Jogue com seu amigo no mundo aberto no qual é habitado por vários inimigos!"
 		},
 		"single": {
 			"currentDegrees": 270.0,
-			"nodeObject": self.single
+			"nodeObject": self.single,
+			"description": "Explore sozinho o mundo aberto e derrote vários inimigos!"
 		},
 		"commands": {
 			"currentDegrees": 315.0,
-			"nodeObject": self.commands
+			"nodeObject": self.commands,
+			"description": "Veja aqui todos os comandos para controlar o seu personagem!"
 		}
 	}
 	
@@ -64,7 +77,9 @@ func _ready() -> void:
 
 
 func _process(delta:float) ->void:
-	print(angle);
+	# print(angle);
+	
+	
 	
 	if(self.able):
 		angle += (delta * speed);
@@ -89,6 +104,11 @@ func _process(delta:float) ->void:
 		
 		for key in optionsDict:
 			optionsDict[key]["currentDegrees"] += (-angle if (rotate2Up) else angle);
+		
+			if( int(optionsDict[key]["currentDegrees"]) % 180==0 ):
+				self.nameOption.text = str(key);
+				self.description.text = optionsDict[key]["description"]
+				
 
 		self.angle = 0;
 
@@ -98,7 +118,7 @@ func setOptionDegrees( degrees:float, option :Node ) -> void:
 	var pos = Vector2(
 			  cos( deg2rad(degrees)) *100.0,# O valor do Cosseno representa o eixo X
 			- sin( deg2rad(degrees)) *100.0 # O valor do Seno invertido (pelo sinal de -) representa o eixo Y
-		) + Vector2(287,70);
+		) + Vector2(307,70);
 
 	option.set_position(pos);
 
