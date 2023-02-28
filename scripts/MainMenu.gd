@@ -55,17 +55,17 @@ func _ready() -> void:
 		"multiplayer": {
 			"currentDegrees": 225.0,
 			"nodeObject": self.multi,
-			"description": "Jogue com seu amigo no mundo aberto no qual é habitado por vários inimigos!"
+			"description": "Jogue com seu amigo no mundo aberto \n no qual é habitado por vários inimigos!"
 		},
 		"single": {
 			"currentDegrees": 270.0,
 			"nodeObject": self.single,
-			"description": "Explore sozinho o mundo aberto e derrote vários inimigos!"
+			"description": "Explore sozinho o mundo aberto e \n derrote vários inimigos!"
 		},
 		"commands": {
 			"currentDegrees": 315.0,
 			"nodeObject": self.commands,
-			"description": "Veja aqui todos os comandos para controlar o seu personagem!"
+			"description": "Veja aqui todos os comandos para \n controlar o seu personagem!"
 		}
 	}
 	
@@ -103,13 +103,15 @@ func _process(delta:float) ->void:
 		self.able = false;
 		
 		for key in optionsDict:
-			optionsDict[key]["currentDegrees"] += (-angle if (rotate2Up) else angle);
+			optionsDict[key]["currentDegrees"] += (-45 if (rotate2Up) else 45);
 		
 			if( int(optionsDict[key]["currentDegrees"]) % 180==0 ):
 				self.nameOption.text = str(key);
-				self.description.text = optionsDict[key]["description"]
+				self.description.text = optionsDict[key]["description"];
 				
-
+			print(str(key) +" // "+str(optionsDict[key]["currentDegrees"]));
+		print("========================================= \n")
+			
 		self.angle = 0;
 
 	
