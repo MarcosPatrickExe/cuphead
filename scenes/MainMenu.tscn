@@ -33,19 +33,19 @@ outline_color = Color( 0.0117647, 0.0235294, 0.0235294, 1 )
 font_data = ExtResource( 9 )
 
 [sub_resource type="DynamicFont" id=8]
-size = 8
+size = 32
 font_data = ExtResource( 9 )
 
 [sub_resource type="DynamicFont" id=6]
-size = 7
+size = 23
 font_data = ExtResource( 9 )
 
 [sub_resource type="DynamicFont" id=5]
-size = 7
+size = 23
 font_data = ExtResource( 9 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 24
+size = 64
 font_data = ExtResource( 9 )
 
 [node name="MainMenu" type="Control"]
@@ -57,8 +57,7 @@ margin_right = 1.0
 margin_bottom = 1.0
 script = ExtResource( 5 )
 __meta__ = {
-"_edit_horizontal_guides_": [ -45.0, 38.0 ],
-"_edit_lock_": true
+"_edit_horizontal_guides_": [ -45.0, 38.0 ]
 }
 
 [node name="backgroundImage" type="TextureRect" parent="."]
@@ -66,22 +65,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 1 )
 expand = true
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="colorLayer" type="Panel" parent="."]
 margin_right = 320.0
 margin_bottom = 180.0
 custom_styles/panel = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="topGradient" type="Panel" parent="."]
-margin_top = 169.0
-margin_right = 189.0
-margin_bottom = 488.0
+margin_left = -1.0
+margin_top = 431.0
+margin_right = 453.0
+margin_bottom = 1389.0
 rect_rotation = -90.0
 custom_styles/panel = SubResource( 3 )
 __meta__ = {
@@ -89,22 +83,19 @@ __meta__ = {
 }
 
 [node name="option_info_frame" type="TextureRect" parent="."]
-margin_left = -23.0
-margin_top = 93.0
-margin_right = 297.0
-margin_bottom = 273.0
-rect_scale = Vector2( 1.2, 0.74 )
+margin_left = -25.0
+margin_top = 276.0
+margin_right = 295.0
+margin_bottom = 456.0
+rect_scale = Vector2( 3.2, 2.1 )
 texture = ExtResource( 12 )
 flip_v = true
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="bottomGradient" type="Panel" parent="."]
-margin_left = 320.0
-margin_top = 54.0
-margin_right = 464.0
-margin_bottom = 373.0
+margin_left = 953.0
+margin_top = 66.0
+margin_right = 1468.0
+margin_bottom = 1021.0
 rect_rotation = 90.0
 custom_styles/panel = SubResource( 3 )
 __meta__ = {
@@ -112,194 +103,158 @@ __meta__ = {
 }
 
 [node name="option_name_frame" type="TextureRect" parent="."]
-margin_left = 41.0
-margin_top = 48.0
-margin_right = 381.0
-margin_bottom = 228.0
-rect_scale = Vector2( 0.89, 0.7 )
+margin_left = 56.0
+margin_top = 76.0
+margin_right = 396.0
+margin_bottom = 256.0
+rect_scale = Vector2( 3, 3 )
 texture = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="option_name_text" type="Label" parent="."]
-margin_left = 111.0
-margin_top = 86.0
-margin_right = 197.0
-margin_bottom = 113.0
+margin_left = 317.0
+margin_top = 281.0
+margin_right = 403.0
+margin_bottom = 308.0
 custom_colors/font_color = Color( 0.988235, 0.717647, 0, 1 )
 custom_fonts/font = SubResource( 7 )
 text = "example"
 align = 1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="description" type="Label" parent="."]
-margin_left = 83.0
-margin_top = 127.0
-margin_right = 210.0
-margin_bottom = 141.0
+margin_left = 256.0
+margin_top = 355.0
+margin_right = 383.0
+margin_bottom = 401.0
 rect_clip_content = true
 custom_colors/font_color = Color( 1, 0.709804, 0.0392157, 1 )
 custom_fonts/font = SubResource( 8 )
 text = "Example"
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="quitButton" type="TextureButton" parent="."]
-margin_left = 32.0
-margin_top = 2.0
-margin_right = 117.0
-margin_bottom = 70.0
-rect_scale = Vector2( 0.356, 0.356 )
+margin_left = 79.0
+margin_top = -1.0
+margin_right = 164.0
+margin_bottom = 67.0
 texture_normal = ExtResource( 7 )
 texture_hover = ExtResource( 6 )
 
 [node name="quitText" type="Label" parent="."]
-margin_left = 40.0
-margin_top = 24.0
-margin_right = 58.0
-margin_bottom = 39.0
+margin_left = 97.0
+margin_top = 58.0
+margin_right = 142.0
+margin_bottom = 94.0
 custom_colors/font_color = Color( 1, 0.611765, 0.00392157, 1 )
 custom_fonts/font = SubResource( 6 )
 text = "quit"
 
 [node name="backButton" type="TextureButton" parent="."]
-margin_top = 6.0
-margin_right = 85.0
-margin_bottom = 74.0
-rect_scale = Vector2( 0.356, 0.356 )
+margin_left = -7.0
+margin_top = 10.0
+margin_right = 78.0
+margin_bottom = 78.0
 action_mode = 0
 texture_normal = ExtResource( 4 )
 texture_hover = ExtResource( 3 )
 
 [node name="backText" type="Label" parent="."]
-margin_left = 9.0
-margin_top = 24.0
-margin_right = 29.0
-margin_bottom = 36.0
+margin_left = 18.0
+margin_top = 58.0
+margin_right = 73.0
+margin_bottom = 94.0
 custom_colors/font_color = Color( 1, 0.611765, 0.00392157, 1 )
 custom_fonts/font = SubResource( 5 )
 text = "back"
 
 [node name="gameLogo" type="TextureRect" parent="."]
-margin_left = 7.0
-margin_top = 128.0
-margin_right = 518.0
-margin_bottom = 569.0
-rect_scale = Vector2( 0.1, 0.1 )
+margin_left = 26.0
+margin_top = 402.0
+margin_right = 537.0
+margin_bottom = 843.0
+rect_scale = Vector2( 0.266, 0.266 )
 texture = ExtResource( 2 )
 stretch_mode = 5
 
 [node name="menu_frame" type="TextureRect" parent="."]
-margin_left = 117.0
-margin_top = -6.0
-margin_right = 207.0
-margin_bottom = 28.0
+margin_left = 334.0
+margin_top = -24.0
+margin_right = 424.0
+margin_bottom = 10.0
+rect_scale = Vector2( 3, 3 )
 texture = ExtResource( 10 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Menu" type="Label" parent="."]
-margin_left = 133.0
-margin_top = -7.0
-margin_right = 190.0
-margin_bottom = 27.0
+margin_left = 390.0
+margin_top = -21.0
+margin_right = 542.0
+margin_bottom = 69.0
 custom_colors/font_color = Color( 0.984314, 0.694118, 0.00784314, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "menu"
 align = 1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="arenaOption" type="TextureRect" parent="."]
-margin_left = 207.0
-margin_top = 68.0
-margin_right = 259.0
-margin_bottom = 121.0
-rect_scale = Vector2( 1.1, 1.1 )
+margin_left = 641.0
+margin_top = 213.0
+margin_right = 693.0
+margin_bottom = 266.0
+rect_scale = Vector2( 3, 3 )
 texture = ExtResource( 15 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="multiplayerOption" type="TextureRect" parent="."]
-margin_left = 230.0
-margin_top = 136.0
-margin_right = 282.0
-margin_bottom = 189.0
-rect_scale = Vector2( 1.1, 1.1 )
+margin_left = 738.0
+margin_top = 389.0
+margin_right = 790.0
+margin_bottom = 442.0
+rect_scale = Vector2( 3, 3 )
 texture = ExtResource( 16 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="pvpOption" type="TextureRect" parent="."]
-margin_left = 229.0
-margin_top = -2.0
-margin_right = 280.0
-margin_bottom = 50.0
-rect_scale = Vector2( 1.1, 1.1 )
+margin_left = 728.0
+margin_top = 45.0
+margin_right = 779.0
+margin_bottom = 97.0
+rect_scale = Vector2( 3, 3 )
 texture = ExtResource( 17 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="settingsOption" type="TextureRect" parent="."]
-margin_left = 305.0
-margin_top = -42.0
-margin_right = 357.0
-margin_bottom = 10.0
-rect_scale = Vector2( 1.1, 1.1 )
+margin_left = 896.0
+margin_top = -95.0
+margin_right = 948.0
+margin_bottom = -43.0
+rect_scale = Vector2( 3, 3 )
 texture = ExtResource( 14 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="singleOption" type="TextureRect" parent="."]
-margin_left = 300.0
-margin_top = 170.0
-margin_right = 352.0
-margin_bottom = 223.0
-rect_scale = Vector2( 1.1, 1.1 )
+margin_left = 913.0
+margin_top = 519.0
+margin_right = 965.0
+margin_bottom = 572.0
+rect_scale = Vector2( 3, 3 )
 texture = ExtResource( 13 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="chatOption" type="TextureRect" parent="."]
-margin_left = 382.0
-margin_top = -8.0
-margin_right = 434.0
-margin_bottom = 44.0
-rect_scale = Vector2( 1.1, 1.1 )
+margin_left = 1090.0
+margin_top = 24.0
+margin_right = 1142.0
+margin_bottom = 76.0
+rect_scale = Vector2( 3, 3 )
 texture = ExtResource( 14 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="commandsOption" type="TextureRect" parent="."]
-margin_left = 368.0
-margin_top = 140.0
-margin_right = 420.0
-margin_bottom = 193.0
-rect_scale = Vector2( 1.1, 1.1 )
+margin_left = 1087.0
+margin_top = 399.0
+margin_right = 1139.0
+margin_bottom = 452.0
+rect_scale = Vector2( 3, 3 )
 texture = ExtResource( 13 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="aboutOption" type="TextureRect" parent="."]
-margin_left = 410.0
-margin_top = 70.0
-margin_right = 462.0
-margin_bottom = 123.0
-rect_scale = Vector2( 1.1, 1.1 )
+margin_left = 1205.0
+margin_top = 236.0
+margin_right = 1257.0
+margin_bottom = 289.0
+rect_scale = Vector2( 3, 3 )
 texture = ExtResource( 15 )
-__meta__ = {
-"_edit_lock_": true
-}

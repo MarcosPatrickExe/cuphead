@@ -1,0 +1,119 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://fonts/COMICI.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://Action RPG Resources/Images/nofocus_buttons/left_arrow.png" type="Texture" id=2]
+[ext_resource path="res://Action RPG Resources/Images/moldura.png" type="Texture" id=3]
+[ext_resource path="res://textures/shadowGradient.tres" type="Texture" id=4]
+[ext_resource path="res://Action RPG Resources/Images/legend of zeldris brown background.png" type="Texture" id=5]
+[ext_resource path="res://Action RPG Resources/Images/hover_buttons/left_arrow.png" type="Texture" id=6]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 3000, 1 )
+margin_top = 100.0
+margin_bottom = 31.0
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.054902, 0.0352941, 0.0156863, 0.721569 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.984314, 0.470588, 0.00784314, 1 )
+border_blend = true
+
+[sub_resource type="DynamicFont" id=3]
+size = 7
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 10
+font_data = ExtResource( 1 )
+
+[node name="Chat" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="backgroundImage" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="topGradient" type="Panel" parent="."]
+margin_top = 105.0
+margin_right = 125.0
+margin_bottom = 424.0
+rect_rotation = -90.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="bottomGradient" type="Panel" parent="."]
+margin_left = 320.0
+margin_top = 75.0
+margin_right = 443.0
+margin_bottom = 394.0
+rect_rotation = 90.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 42.0
+margin_top = 39.0
+margin_right = 308.0
+margin_bottom = 120.0
+custom_styles/panel = SubResource( 2 )
+
+[node name="Panel2" type="Panel" parent="."]
+margin_left = 78.0
+margin_top = 125.0
+margin_right = 278.0
+margin_bottom = 172.0
+custom_styles/panel = SubResource( 2 )
+
+[node name="backButton" type="TextureButton" parent="."]
+margin_top = 6.0
+margin_right = 85.0
+margin_bottom = 74.0
+rect_scale = Vector2( 0.356, 0.356 )
+action_mode = 0
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 6 )
+
+[node name="backText" type="Label" parent="."]
+margin_left = 9.0
+margin_top = 24.0
+margin_right = 29.0
+margin_bottom = 36.0
+custom_colors/font_color = Color( 1, 0.611765, 0.00392157, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "back"
+
+[node name="menu_frame" type="TextureRect" parent="."]
+margin_left = 99.0
+margin_top = -6.0
+margin_right = 189.0
+margin_bottom = 28.0
+rect_scale = Vector2( 1.4, 1 )
+texture = ExtResource( 3 )
+
+[node name="Chat_label" type="Label" parent="."]
+margin_left = 100.0
+margin_top = -5.0
+margin_right = 222.0
+margin_bottom = 29.0
+custom_colors/font_color = Color( 0.984314, 0.694118, 0.00784314, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "chat global"
+align = 1
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_left = 85.0
+margin_top = 131.0
+margin_right = 249.0
+margin_bottom = 165.0
+custom_fonts/font = SubResource( 5 )
+text = "Text will send here"
+show_line_numbers = true

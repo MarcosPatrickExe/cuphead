@@ -11,13 +11,13 @@ config_version=4
 [application]
 
 config/name="legend_of_zeldris"
-run/main_scene="res://scenes/StartScreen.tscn"
+run/main_scene="res://scenes/MainScene.tscn"
 config/icon="res://icon.png"
 
 [display]
 
-window/size/width=320
-window/size/height=180
+window/size/width=960
+window/size/height=540
 window/size/resizable=false
 window/size/always_on_top=true
 window/size/test_width=1280

@@ -8037,14 +8037,6 @@ texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 7.69054, 442.313, 95.438, 107.02 )
 
-[node name="TheLegendOfZeldaTileset68" type="Sprite" parent="."]
-visible = false
-position = Vector2( 202, 489 )
-scale = Vector2( 2.43038, 3.08696 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( -2.24852, 66.0638, 79.2981, 46.1035 )
-
 [node name="PokemonExteriorTileset6" type="Sprite" parent="."]
 position = Vector2( 159, 726.638 )
 scale = Vector2( 2.66667, 2.35171 )
