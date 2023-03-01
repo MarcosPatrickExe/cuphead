@@ -25,6 +25,7 @@ script = ExtResource( 4 )
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 960, 540 )
 script = ExtResource( 2 )
 
 [node name="imageBackground" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]

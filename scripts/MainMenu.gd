@@ -9,8 +9,9 @@ onready var single = $singleOption;
 onready var chat = $chatOption;
 onready var commands = $commandsOption;
 onready var about = $aboutOption;
-onready var nameOption = $option_name_text;
-onready var description = $description;
+onready var nameOption = $option_name_frame/option_name_text;
+onready var description = $description_option;
+onready var enterFrase = $cliqueEnter;
 var angle :float = 0;
 const speed :float = 100.0;
 var able :bool = false;
@@ -35,19 +36,19 @@ func _ready() -> void:
 		"chat": {
 			"currentDegrees": 45.0,
 			"nodeObject": self.chat,
-			"description": "Participe do chat global e conheça novos jogadores desse jogo incrível!"
-		},
+			"description": "Participe do chat global e conheça \n novos jogadores desse jogo incrível!"
+		}, 
 		"settings": {
 			"currentDegrees": 90.0,
 			"nodeObject": self.settings,
-			"description": "Ver e editar configurações de vídeo e áudio do jogo"
+			"description": "Ver e editar configurações de \n vídeo e áudio do jogo"
 		},
 		"pvp": {
 			"currentDegrees": 135.0,
 			"nodeObject": self.pvp,
 			"description": "Batalhe com um(a) amigo(a) online!!"
 		},
-		"arena": {
+		"arena": { 
 			"currentDegrees": 180.0,
 			"nodeObject": self.arenaOption,
 			"description": "Derrote todos os chefões do jogo!"
@@ -79,7 +80,12 @@ func _ready() -> void:
 func _process(delta:float) ->void:
 	# print(angle);
 	
-	
+	if(Input.is_action_pressed("enter") and !self.able):
+		match self.nameOption.text:
+			"chat":
+				self.get_tree().change_scene("res://scenes/Chat.tscn");
+		
+		
 	
 	if(self.able):
 		angle += (delta * speed);
@@ -93,24 +99,27 @@ func _process(delta:float) ->void:
 
 	if((angle <45) and Input.is_action_pressed("ui_up") and (self.able==false) ):
 		self.able =true;
+		self.enterFrase.visible = false;
 		self.rotate2Up = true;
 	elif((angle <45) and Input.is_action_pressed("ui_down") and (self.able==false) ):
 		self.able =true;
+		self.enterFrase.visible = false;
 		self.rotate2Up = false;
 		
 		
 	elif( angle >= 45):
 		self.able = false;
+		self.enterFrase.visible = true;
 		
 		for key in optionsDict:
-			optionsDict[key]["currentDegrees"] += (-45 if (rotate2Up) else 45);
+			optionsDict[key]["currentDegrees"] += (-45 if (rotate2Up) else 45); # A cade clique, as opcoes se deslocam por um arco de pi/4 radianos (ou 45 graus)
 		
-			if( int(optionsDict[key]["currentDegrees"]) % 180==0 ):
+			if( cos( deg2rad(optionsDict[key]["currentDegrees"]) ) == -1 ):
 				self.nameOption.text = str(key);
 				self.description.text = optionsDict[key]["description"];
-				
-			print(str(key) +" // "+str(optionsDict[key]["currentDegrees"]));
-		print("========================================= \n")
+			
+			#print(str(key) +" // "+str(optionsDict[key]["currentDegrees"]));
+		#print("========================================= \n")
 			
 		self.angle = 0;
 
@@ -118,9 +127,9 @@ func _process(delta:float) ->void:
 	
 func setOptionDegrees( degrees:float, optionNode :Node ) -> void:
 	var pos = Vector2(
-			  cos( deg2rad(degrees)) *100.0,# O valor do Cosseno representa o eixo X
-			- sin( deg2rad(degrees)) *100.0 # O valor do Seno invertido (pelo sinal de -) representa o eixo Y
-		) + Vector2(900,208);
+			  cos( deg2rad(degrees)) *330.0,# O valor do Cosseno representa o eixo X
+			- sin( deg2rad(degrees)) *250.0 # O valor do Seno invertido (pelo sinal de -) representa o eixo Y
+		) + Vector2(930,208);
 
 	optionNode.set_position(pos);
 

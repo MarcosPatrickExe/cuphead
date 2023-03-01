@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Action RPG Resources/Images/legend of zeldris brown background.png" type="Texture" id=1]
 [ext_resource path="res://Action RPG Resources/Images/legend of zeldris logo.png" type="Texture" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Action RPG Resources/Images/battle arena icon.png" type="Texture" id=15]
 [ext_resource path="res://Action RPG Resources/Images/multiplayer icon.png" type="Texture" id=16]
 [ext_resource path="res://Action RPG Resources/Images/PVP icon.png" type="Texture" id=17]
+[ext_resource path="res://fonts/EurostileT.ttf" type="DynamicFontData" id=18]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.2, 0.0941176, 0.0235294, 0.141176 )
@@ -28,7 +29,7 @@ margin_top = 100.0
 margin_bottom = 31.0
 
 [sub_resource type="DynamicFont" id=7]
-size = 50
+size = 45
 outline_color = Color( 0.0117647, 0.0235294, 0.0235294, 1 )
 font_data = ExtResource( 9 )
 
@@ -38,16 +39,20 @@ outline_color = Color( 0.105882, 0.0901961, 0.0901961, 1 )
 font_data = ExtResource( 9 )
 
 [sub_resource type="DynamicFont" id=6]
-size = 23
+size = 21
 font_data = ExtResource( 9 )
 
 [sub_resource type="DynamicFont" id=5]
-size = 23
+size = 21
 font_data = ExtResource( 9 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 64
+size = 21
 font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 22
+font_data = ExtResource( 18 )
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -87,87 +92,88 @@ __meta__ = {
 }
 
 [node name="option_info_frame" type="TextureRect" parent="."]
-margin_left = -25.0
-margin_top = 276.0
-margin_right = 295.0
-margin_bottom = 456.0
+margin_left = -24.0
+margin_top = 259.0
+margin_right = 296.0
+margin_bottom = 483.0
 rect_scale = Vector2( 3.2, 2.1 )
 texture = ExtResource( 12 )
 flip_v = true
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="bottomGradient" type="Panel" parent="."]
 margin_left = 953.0
-margin_top = 66.0
-margin_right = 1468.0
-margin_bottom = 1021.0
+margin_top = 178.0
+margin_right = 1356.0
+margin_bottom = 1133.0
 rect_rotation = 90.0
 custom_styles/panel = SubResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="option_name_frame" type="TextureRect" parent="."]
-margin_left = 127.0
-margin_top = 107.0
-margin_right = 447.0
-margin_bottom = 287.0
-rect_scale = Vector2( 2.5, 2.5 )
+margin_left = 151.0
+margin_top = 134.0
+margin_right = 471.0
+margin_bottom = 314.0
+rect_scale = Vector2( 2.4, 2 )
 texture = ExtResource( 11 )
 
-[node name="option_name_text" type="Label" parent="."]
-margin_left = 358.0
-margin_top = 250.0
-margin_right = 571.0
-margin_bottom = 329.0
+[node name="option_name_text" type="Label" parent="option_name_frame"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -78.75
+margin_top = -34.0
+margin_right = 188.25
+margin_bottom = 45.0
+rect_scale = Vector2( 0.4, 0.5 )
 custom_colors/font_color = Color( 0.988235, 0.717647, 0, 1 )
 custom_fonts/font = SubResource( 7 )
 text = "example"
 align = 1
 
-[node name="description" type="Label" parent="."]
-margin_left = 252.0
-margin_top = 365.0
-margin_right = 541.0
-margin_bottom = 411.0
+[node name="description_option" type="Label" parent="."]
+margin_left = 255.0
+margin_top = 353.0
+margin_right = 487.0
+margin_bottom = 399.0
 rect_clip_content = true
 custom_colors/font_color = Color( 1, 0.709804, 0.0392157, 1 )
 custom_fonts/font = SubResource( 8 )
 text = "Description here =)"
 
 [node name="quitButton" type="TextureButton" parent="."]
-margin_left = 79.0
-margin_top = -1.0
-margin_right = 164.0
-margin_bottom = 67.0
+margin_left = 70.0
+margin_top = 1.0
+margin_right = 155.0
+margin_bottom = 69.0
+rect_scale = Vector2( 0.9, 0.9 )
 texture_normal = ExtResource( 7 )
 texture_hover = ExtResource( 6 )
 
 [node name="quitText" type="Label" parent="."]
-margin_left = 97.0
-margin_top = 58.0
-margin_right = 142.0
-margin_bottom = 94.0
+margin_left = 88.0
+margin_top = 53.0
+margin_right = 133.0
+margin_bottom = 89.0
 custom_colors/font_color = Color( 1, 0.611765, 0.00392157, 1 )
 custom_fonts/font = SubResource( 6 )
 text = "quit"
 
 [node name="backButton" type="TextureButton" parent="."]
-margin_left = -7.0
-margin_top = 10.0
-margin_right = 78.0
-margin_bottom = 78.0
+margin_left = -2.0
+margin_top = 12.0
+margin_right = 83.0
+margin_bottom = 80.0
+rect_scale = Vector2( 0.9, 0.9 )
 action_mode = 0
 texture_normal = ExtResource( 4 )
 texture_hover = ExtResource( 3 )
 
 [node name="backText" type="Label" parent="."]
-margin_left = 18.0
-margin_top = 58.0
-margin_right = 73.0
-margin_bottom = 94.0
+margin_left = 17.0
+margin_top = 53.0
+margin_right = 72.0
+margin_bottom = 89.0
 custom_colors/font_color = Color( 1, 0.611765, 0.00392157, 1 )
 custom_fonts/font = SubResource( 5 )
 text = "back"
@@ -192,18 +198,17 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Menu" type="Label" parent="."]
-margin_left = 390.0
-margin_top = -21.0
-margin_right = 542.0
-margin_bottom = 69.0
+[node name="Menu" type="Label" parent="menu_frame"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -8.0
+margin_top = 2.33333
+margin_right = 9.0
+margin_bottom = 9.33333
 custom_colors/font_color = Color( 0.984314, 0.694118, 0.00784314, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "menu"
 align = 1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="arenaOption" type="TextureRect" parent="."]
 margin_left = 607.0
@@ -268,3 +273,15 @@ margin_right = 1257.0
 margin_bottom = 289.0
 rect_scale = Vector2( 3, 3 )
 texture = ExtResource( 15 )
+
+[node name="cliqueEnter" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -131.0
+margin_top = -40.0
+margin_right = 133.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 9 )
+text = "aperte enter para entrar"
