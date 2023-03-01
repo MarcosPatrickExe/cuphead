@@ -116,13 +116,13 @@ func _process(delta:float) ->void:
 
 	
 	
-func setOptionDegrees( degrees:float, option :Node ) -> void:
+func setOptionDegrees( degrees:float, optionNode :Node ) -> void:
 	var pos = Vector2(
 			  cos( deg2rad(degrees)) *100.0,# O valor do Cosseno representa o eixo X
 			- sin( deg2rad(degrees)) *100.0 # O valor do Seno invertido (pelo sinal de -) representa o eixo Y
-		) + Vector2(307,70);
+		) + Vector2(900,208);
 
-	option.set_position(pos);
+	optionNode.set_position(pos);
 
 
 
