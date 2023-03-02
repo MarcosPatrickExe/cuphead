@@ -11,6 +11,7 @@
 [ext_resource path="res://textures/buttons/BPE_0001_golden.png" type="Texture" id=9]
 [ext_resource path="res://textures/buttons/BPE_0003_pressed.png" type="Texture" id=10]
 [ext_resource path="res://textures/buttons/BPE_0000_golde-2.png" type="Texture" id=11]
+[ext_resource path="res://scenes/CommentTemplate.tscn" type="PackedScene" id=12]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.054902, 0.0352941, 0.0156863, 0.341176 )
@@ -76,9 +77,6 @@ VScrollBar/styles/grabber = SubResource( 21 )
 VScrollBar/styles/grabber_highlight = SubResource( 25 )
 VScrollBar/styles/grabber_pressed = SubResource( 24 )
 VScrollBar/styles/scroll_focus = SubResource( 22 )
-
-[sub_resource type="StyleBoxFlat" id=20]
-bg_color = Color( 0.121569, 0.0705882, 0.027451, 1 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 15
@@ -189,36 +187,15 @@ scroll_horizontal_enabled = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="chat_panel/ScrollContainer"]
 margin_right = 630.0
-margin_bottom = 427.0
+margin_bottom = 100.0
 custom_constants/separation = 9
 alignment = 1
 
-[node name="commentary" type="Panel" parent="chat_panel/ScrollContainer/VBoxContainer"]
+[node name="commentary" parent="chat_panel/ScrollContainer/VBoxContainer" instance=ExtResource( 12 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_right = 630.0
 margin_bottom = 100.0
-rect_min_size = Vector2( 630, 100 )
-custom_styles/panel = SubResource( 20 )
-
-[node name="commentary2" type="Panel" parent="chat_panel/ScrollContainer/VBoxContainer"]
-margin_top = 109.0
-margin_right = 630.0
-margin_bottom = 209.0
-rect_min_size = Vector2( 630, 100 )
-custom_styles/panel = SubResource( 20 )
-
-[node name="commentary3" type="Panel" parent="chat_panel/ScrollContainer/VBoxContainer"]
-margin_top = 218.0
-margin_right = 630.0
-margin_bottom = 318.0
-rect_min_size = Vector2( 630, 100 )
-custom_styles/panel = SubResource( 20 )
-
-[node name="commentary4" type="Panel" parent="chat_panel/ScrollContainer/VBoxContainer"]
-margin_top = 327.0
-margin_right = 630.0
-margin_bottom = 427.0
-rect_min_size = Vector2( 630, 100 )
-custom_styles/panel = SubResource( 20 )
 
 [node name="menu_frame" type="TextureRect" parent="."]
 margin_left = 313.0
