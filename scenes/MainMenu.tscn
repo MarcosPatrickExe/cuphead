@@ -82,14 +82,11 @@ custom_styles/panel = SubResource( 1 )
 
 [node name="topGradient" type="Panel" parent="."]
 margin_left = -1.0
-margin_top = 431.0
-margin_right = 453.0
-margin_bottom = 1389.0
+margin_top = 534.0
+margin_right = 556.0
+margin_bottom = 1492.0
 rect_rotation = -90.0
 custom_styles/panel = SubResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="option_info_frame" type="TextureRect" parent="."]
 margin_left = -24.0
@@ -102,9 +99,9 @@ flip_v = true
 
 [node name="bottomGradient" type="Panel" parent="."]
 margin_left = 953.0
-margin_top = 178.0
-margin_right = 1356.0
-margin_bottom = 1133.0
+margin_top = 131.0
+margin_right = 1403.0
+margin_bottom = 1086.0
 rect_rotation = 90.0
 custom_styles/panel = SubResource( 3 )
 

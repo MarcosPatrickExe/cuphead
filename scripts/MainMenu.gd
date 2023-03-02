@@ -85,7 +85,7 @@ func _process(delta:float) ->void:
 			"chat":
 				self.get_tree().change_scene("res://scenes/Chat.tscn");
 		
-		
+
 	
 	if(self.able):
 		angle += (delta * speed);

@@ -1,11 +1,16 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://fonts/COMICI.TTF" type="DynamicFontData" id=1]
-[ext_resource path="res://scenes/Chat.gd" type="Script" id=2]
+[ext_resource path="res://scripts/Chat.gd" type="Script" id=2]
 [ext_resource path="res://Action RPG Resources/Images/moldura.png" type="Texture" id=3]
 [ext_resource path="res://Action RPG Resources/Images/hover_buttons/left_arrow.png" type="Texture" id=4]
 [ext_resource path="res://Action RPG Resources/Images/legend of zeldris brown background.png" type="Texture" id=5]
 [ext_resource path="res://Action RPG Resources/Images/nofocus_buttons/left_arrow.png" type="Texture" id=6]
+[ext_resource path="res://textures/shadowGradient.tres" type="Texture" id=7]
+[ext_resource path="res://fonts/EurostileT.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://textures/buttons/BPE_0001_golden.png" type="Texture" id=9]
+[ext_resource path="res://textures/buttons/BPE_0003_pressed.png" type="Texture" id=10]
+[ext_resource path="res://textures/buttons/BPE_0000_golde-2.png" type="Texture" id=11]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.054902, 0.0352941, 0.0156863, 0.341176 )
@@ -15,6 +20,12 @@ border_width_right = 3
 border_width_bottom = 3
 border_color = Color( 0.984314, 0.470588, 0.00784314, 1 )
 border_blend = true
+
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 3000, 1 )
+margin_top = 100.0
+margin_bottom = 31.0
 
 [sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.152941, 0.0901961, 0.0352941, 1 )
@@ -40,7 +51,7 @@ border_width_left = 3
 border_width_top = 5
 border_width_right = 15
 border_width_bottom = 2
-border_color = Color( 0.984314, 0.584314, 0.00784314, 1 )
+border_color = Color( 0.733333, 0.733333, 0.733333, 1 )
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
@@ -48,6 +59,23 @@ corner_radius_bottom_left = 10
 [sub_resource type="DynamicFont" id=5]
 size = 18
 font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.152941, 0.0901961, 0.0352941, 1 )
+border_width_left = 5
+border_width_top = 10
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.984314, 0.584314, 0.00784314, 1 )
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.0745098, 0.0431373, 0.0156863, 0.623529 )
+corner_radius_bottom_right = 20
+
+[sub_resource type="DynamicFont" id=12]
+size = 25
+font_data = ExtResource( 8 )
 
 [node name="Chat" type="Control"]
 anchor_right = 1.0
@@ -72,11 +100,33 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="topGradient" type="Panel" parent="."]
+margin_left = -2.0
+margin_top = 374.0
+margin_right = 452.0
+margin_bottom = 1332.0
+rect_rotation = -90.0
+custom_styles/panel = SubResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bottomGradient" type="Panel" parent="."]
+margin_left = 964.0
+margin_top = 226.0
+margin_right = 1367.0
+margin_bottom = 1194.0
+rect_rotation = 90.0
+custom_styles/panel = SubResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="chat_panel" type="Panel" parent="."]
-margin_left = 45.0
+margin_left = 228.0
 margin_top = 102.0
-margin_right = 733.0
-margin_bottom = 418.0
+margin_right = 917.0
+margin_bottom = 403.0
 custom_styles/panel = SubResource( 6 )
 
 [node name="menu_frame" type="TextureRect" parent="."]
@@ -127,17 +177,17 @@ __meta__ = {
 }
 
 [node name="comment_panel" type="Panel" parent="."]
-margin_left = 45.0
-margin_top = 417.0
-margin_right = 603.0
-margin_bottom = 526.0
+margin_left = 230.0
+margin_top = 415.0
+margin_right = 766.0
+margin_bottom = 515.0
 custom_styles/panel = SubResource( 8 )
 
 [node name="TextEdit" type="TextEdit" parent="comment_panel"]
 margin_left = 14.0
 margin_top = 14.0
-margin_right = 524.0
-margin_bottom = 99.0
+margin_right = 510.0
+margin_bottom = 91.0
 custom_colors/background_color = Color( 0.0705882, 0.0431373, 0.0196078, 1 )
 custom_constants/line_spacing = 0
 custom_fonts/font = SubResource( 5 )
@@ -146,3 +196,63 @@ syntax_highlighting = true
 show_line_numbers = true
 wrap_enabled = true
 minimap_draw = true
+
+[node name="users_online_panel" type="Panel" parent="."]
+margin_left = 36.0
+margin_top = 92.0
+margin_right = 215.0
+margin_bottom = 403.0
+custom_styles/panel = SubResource( 9 )
+
+[node name="bottom_background" type="Panel" parent="users_online_panel"]
+margin_left = 6.0
+margin_top = 188.0
+margin_right = 176.0
+margin_bottom = 309.0
+custom_styles/panel = SubResource( 11 )
+
+[node name="sendBtn" type="TextureButton" parent="."]
+margin_left = 775.0
+margin_top = 416.0
+margin_right = 907.0
+margin_bottom = 451.0
+rect_scale = Vector2( 1.1, 1.3 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 9 )
+expand = true
+
+[node name="enviar" type="Label" parent="sendBtn"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -29.6364
+margin_top = -16.7307
+margin_right = 39.3636
+margin_bottom = 16.2693
+custom_fonts/font = SubResource( 12 )
+text = "enviar"
+
+[node name="clearCommentBtn" type="TextureButton" parent="."]
+margin_left = 775.0
+margin_top = 470.0
+margin_right = 907.0
+margin_bottom = 505.0
+rect_scale = Vector2( 1.1, 1.3 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 9 )
+expand = true
+
+[node name="clear" type="Label" parent="clearCommentBtn"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -29.6365
+margin_top = -16.7307
+margin_right = 39.3635
+margin_bottom = 16.2693
+custom_fonts/font = SubResource( 12 )
+text = "limpar"
