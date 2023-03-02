@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://fonts/COMICI.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/Chat.gd" type="Script" id=2]
@@ -37,6 +37,49 @@ border_color = Color( 0.984314, 0.584314, 0.00784314, 1 )
 corner_radius_top_left = 20
 corner_radius_bottom_right = 20
 
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0.427451, 0.203922, 0.027451, 1 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id=25]
+bg_color = Color( 0.666667, 0.415686, 0.0509804, 1 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 0.666667, 0.415686, 0.0509804, 1 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 0.699219, 0.324887, 0.0293617, 1 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="Theme" id=23]
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/decrement_pressed = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/icons/increment_pressed = null
+VScrollBar/styles/grabber = SubResource( 21 )
+VScrollBar/styles/grabber_highlight = SubResource( 25 )
+VScrollBar/styles/grabber_pressed = SubResource( 24 )
+VScrollBar/styles/scroll_focus = SubResource( 22 )
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 0.121569, 0.0705882, 0.027451, 1 )
+
 [sub_resource type="DynamicFont" id=4]
 size = 15
 font_data = ExtResource( 1 )
@@ -72,6 +115,11 @@ corner_radius_bottom_right = 20
 [sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.0745098, 0.0431373, 0.0156863, 0.623529 )
 corner_radius_bottom_right = 20
+
+[sub_resource type="DynamicFont" id=13]
+size = 19
+outline_color = Color( 0.984314, 0.584314, 0.00784314, 1 )
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=12]
 size = 25
@@ -128,6 +176,49 @@ margin_top = 102.0
 margin_right = 917.0
 margin_bottom = 403.0
 custom_styles/panel = SubResource( 6 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="chat_panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -15.0
+margin_bottom = -14.0
+theme = SubResource( 23 )
+scroll_horizontal_enabled = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="chat_panel/ScrollContainer"]
+margin_right = 630.0
+margin_bottom = 427.0
+custom_constants/separation = 9
+alignment = 1
+
+[node name="commentary" type="Panel" parent="chat_panel/ScrollContainer/VBoxContainer"]
+margin_right = 630.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 630, 100 )
+custom_styles/panel = SubResource( 20 )
+
+[node name="commentary2" type="Panel" parent="chat_panel/ScrollContainer/VBoxContainer"]
+margin_top = 109.0
+margin_right = 630.0
+margin_bottom = 209.0
+rect_min_size = Vector2( 630, 100 )
+custom_styles/panel = SubResource( 20 )
+
+[node name="commentary3" type="Panel" parent="chat_panel/ScrollContainer/VBoxContainer"]
+margin_top = 218.0
+margin_right = 630.0
+margin_bottom = 318.0
+rect_min_size = Vector2( 630, 100 )
+custom_styles/panel = SubResource( 20 )
+
+[node name="commentary4" type="Panel" parent="chat_panel/ScrollContainer/VBoxContainer"]
+margin_top = 327.0
+margin_right = 630.0
+margin_bottom = 427.0
+rect_min_size = Vector2( 630, 100 )
+custom_styles/panel = SubResource( 20 )
 
 [node name="menu_frame" type="TextureRect" parent="."]
 margin_left = 313.0
@@ -197,19 +288,38 @@ show_line_numbers = true
 wrap_enabled = true
 minimap_draw = true
 
-[node name="users_online_panel" type="Panel" parent="."]
+[node name="user_profile_panel" type="Panel" parent="."]
 margin_left = 36.0
-margin_top = 92.0
+margin_top = 102.0
 margin_right = 215.0
 margin_bottom = 403.0
 custom_styles/panel = SubResource( 9 )
 
-[node name="bottom_background" type="Panel" parent="users_online_panel"]
-margin_left = 6.0
-margin_top = 188.0
-margin_right = 176.0
-margin_bottom = 309.0
+[node name="bottom_background" type="Panel" parent="user_profile_panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -83.5
+margin_top = -135.0
+margin_right = 86.5
+margin_bottom = -3.0
 custom_styles/panel = SubResource( 11 )
+
+[node name="profile_image" type="TextureRect" parent="user_profile_panel"]
+margin_left = 12.0
+margin_top = 18.0
+margin_right = 168.0
+margin_bottom = 145.0
+
+[node name="user_name" type="Label" parent="user_profile_panel"]
+margin_left = 20.0
+margin_top = 175.0
+margin_right = 70.0
+margin_bottom = 202.0
+custom_colors/font_color = Color( 0.984314, 0.584314, 0.00784314, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "Name"
 
 [node name="sendBtn" type="TextureButton" parent="."]
 margin_left = 775.0

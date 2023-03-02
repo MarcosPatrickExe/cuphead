@@ -1,5 +1,5 @@
 extends ParallaxLayer;
-export var background_speedXY = -25;
+export var background_speedXY = -35;
 
 
 func _process(delta :float) -> void:
