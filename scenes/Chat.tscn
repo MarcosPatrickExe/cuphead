@@ -187,7 +187,7 @@ scroll_horizontal_enabled = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="chat_panel/ScrollContainer"]
 margin_right = 630.0
-margin_bottom = 100.0
+margin_bottom = 120.0
 custom_constants/separation = 9
 alignment = 1
 
@@ -195,7 +195,7 @@ alignment = 1
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 630.0
-margin_bottom = 100.0
+margin_bottom = 120.0
 
 [node name="menu_frame" type="TextureRect" parent="."]
 margin_left = 313.0
@@ -271,6 +271,9 @@ margin_top = 102.0
 margin_right = 215.0
 margin_bottom = 403.0
 custom_styles/panel = SubResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bottom_background" type="Panel" parent="user_profile_panel"]
 anchor_left = 0.5
@@ -343,3 +346,6 @@ margin_right = 39.3635
 margin_bottom = 16.2693
 custom_fonts/font = SubResource( 12 )
 text = "limpar"
+
+[connection signal="pressed" from="sendBtn" to="." method="_on_sendBtn_pressed"]
+[connection signal="pressed" from="clearCommentBtn" to="." method="_on_clearCommentBtn_pressed"]
