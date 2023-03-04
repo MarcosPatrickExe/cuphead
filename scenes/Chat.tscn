@@ -259,7 +259,7 @@ margin_bottom = 91.0
 custom_colors/background_color = Color( 0.0705882, 0.0431373, 0.0196078, 1 )
 custom_constants/line_spacing = 0
 custom_fonts/font = SubResource( 5 )
-text = "Escreva aqui =)"
+text = "Escreva aqui"
 syntax_highlighting = true
 show_line_numbers = true
 wrap_enabled = true

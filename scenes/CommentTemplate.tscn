@@ -60,7 +60,7 @@ font_data = ExtResource( 3 )
 size = 14
 font_data = ExtResource( 3 )
 
-[node name="Comment" type="Panel"]
+[node name="CommentTemplate" type="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -330.0
