@@ -16,7 +16,7 @@ var angle :float = 0;
 const speed :float = 100.0;
 var able :bool = false;
 var rotate2Up :bool = true;
-var optionsDict ={} # Dicionario q tera d
+var optionsDict :Dictionary ={} # Dicionario q tera d
 
 
 
