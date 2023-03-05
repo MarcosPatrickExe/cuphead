@@ -1,25 +1,19 @@
 extends Panel;
-const textEditNode = get_node("commentText");
+#onready var textEditNode = $commentText;
 onready var date_and_hour_text :Label = $date_and_hour_text;
 
 
-func _ready():
-	print("na func ready ");
-	print(self.textEditNode);
-	
-func _init():
-	print("dentro da func ___init");
-	print(self.textEditNode);
-	
-	
+
 func init(comment: String):
-	print("na func init ");
-	print(self.textEditNode);
+	var dataMask :String = "D-M-Y / H:m";
 	
+	$commentText.text = comment;
+	var date :Dictionary =  Time.get_datetime_dict_from_system(false);  #OS.get_datetime(false); #deprecated!!
 	
-	self.textEditNode.text = str(comment);
-	var date :Dictionary =  OS.get_datetime(false);
+	dataMask = dataMask.replace("D", str("0",date["day"]) if date["day"]<10 else date["day"]  );
+	dataMask = dataMask.replace("M", str("0",date["month"]) if date["month"]<10 else date["month"]  );
+	dataMask = dataMask.replace("Y", str("0",date["year"]) if date["year"]<10 else date["year"]  );
+	dataMask = dataMask.replace("H", str("0",date["hour"]) if date["hour"]<10 else date["hour"]  );
+	dataMask = dataMask.replace("m", str("0",date["minute"]) if date["minute"]<10 else date["minute"]  );
 	
-	print("data e hora: ")
-	for d in date:
-		print(d);
+	$date_and_hour_text.text = dataMask;

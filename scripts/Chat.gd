@@ -18,14 +18,11 @@ func _on_clearCommentBtn_pressed():
 
 
 func _on_sendBtn_pressed():
-	print("Instanciando com instance() ");
 	var commentSceneInstance = self.commentScene.instance();
 	
-	print("\n");
-	print("Usando metodo init");
 	commentSceneInstance.init(
 		self.textInput.text
 	);
 	
+	self.textInput.text = "";
 	self.commentVContainer.add_child(commentSceneInstance);
-	
