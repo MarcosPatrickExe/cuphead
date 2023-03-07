@@ -12,7 +12,7 @@ func _ready():
 
 func _process(delta :float) -> void:
 	if(Input.is_action_pressed("space") ):
-		$create_user_window.popup_centered( );
+		$create_user_window.popup_centered();
 
 
 
