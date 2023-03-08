@@ -468,9 +468,6 @@ custom_fonts/title_font = SubResource( 26 )
 custom_styles/panel = SubResource( 27 )
 popup_exclusive = true
 window_title = "Digite seu nick para entrar no chat"
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="nickname_section_background" type="Panel" parent="create_user_window"]
 margin_left = 17.0
