@@ -53,7 +53,7 @@ shader_param/offset = Vector2( 0.008, 0.028 )
 shader_param/profileImage = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 28
+size = 25
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=7]
@@ -63,9 +63,9 @@ font_data = ExtResource( 3 )
 [node name="CommentTemplate" type="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -296.0
-margin_bottom = -420.0
-rect_min_size = Vector2( 630, 120 )
+margin_right = -305.0
+margin_bottom = -430.0
+rect_min_size = Vector2( 655, 110 )
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 5 )
 
@@ -85,7 +85,7 @@ margin_left = 8.0
 margin_top = 8.0
 margin_right = 508.0
 margin_bottom = 508.0
-rect_scale = Vector2( 0.12, 0.12 )
+rect_scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -93,28 +93,28 @@ visible = false
 script = ExtResource( 4 )
 
 [node name="profile_name" type="Label" parent="."]
-margin_left = 67.0
-margin_top = 6.0
-margin_right = 274.0
-margin_bottom = 52.0
+margin_left = 59.0
+margin_top = 3.0
+margin_right = 219.0
+margin_bottom = 39.0
 custom_colors/font_color = Color( 0.984314, 0.584314, 0.00784314, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "The john wick"
 
 [node name="date_and_hour_text" type="Label" parent="."]
-margin_left = 70.0
-margin_top = 46.0
-margin_right = 208.0
-margin_bottom = 69.0
+margin_left = 62.0
+margin_top = 39.0
+margin_right = 200.0
+margin_bottom = 62.0
 custom_colors/font_color = Color( 0.996078, 0.678431, 0, 1 )
 custom_fonts/font = SubResource( 7 )
 text = "27-03-2023  /  11:12"
 
 [node name="commentText" type="Label" parent="."]
 margin_left = 16.0
-margin_top = 72.0
-margin_right = 648.0
-margin_bottom = 103.0
+margin_top = 65.0
+margin_right = 640.0
+margin_bottom = 104.0
 text = "Bom, testando, testando mais um rescurso de comunição com várias pessoas  de diferentes sociedades nas quais bla bla bá...."
 autowrap = true
 clip_text = true

@@ -23,7 +23,7 @@ func _process(delta :float) -> void:
 	if(Input.is_action_pressed("space") && !$create_user_window.visible ):
 		ableToShow = true;
 		self.shadowOfUserWindow.visible = true;
-		$create_user_window.popup_centered();
+		$create_user_window.popup_centered(); #abre a janela de criar usuario
 
 
 	if(ableToShow): # Ativando efeito fade-in
@@ -68,6 +68,7 @@ func _on_confirm_btn_pressed(): # botao de confirmar nome (janela de criar usuar
 		$create_user_window/warning_name.text = "Nome não pode ser vazio!!";
 	else:
 		self.userName = $create_user_window/input_name.text;
+		$user_profile_panel/userNameEditable.text = $create_user_window/input_name.text;
 		$create_user_window.visible = false;
 	
 	
