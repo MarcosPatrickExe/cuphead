@@ -72,10 +72,10 @@ script = ExtResource( 5 )
 [node name="profile_image_border" type="TextureRect" parent="."]
 visible = false
 material = SubResource( 3 )
-margin_left = 4.0
-margin_top = 4.0
-margin_right = 504.0
-margin_bottom = 504.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 505.0
+margin_bottom = 505.0
 rect_scale = Vector2( 0.128, 0.128 )
 texture = ExtResource( 2 )
 

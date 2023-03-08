@@ -32,10 +32,10 @@ margin_bottom = 31.0
 
 [sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.152941, 0.0901961, 0.0352941, 1 )
-border_width_left = 8
-border_width_top = 8
+border_width_left = 7
+border_width_top = 7
 border_width_right = 3
-border_width_bottom = 5
+border_width_bottom = 3
 border_color = Color( 0.984314, 0.584314, 0.00784314, 1 )
 corner_radius_top_left = 20
 corner_radius_bottom_right = 20
@@ -214,9 +214,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -1.0
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="backgroundImage" type="TextureRect" parent="."]
 anchor_right = 1.0
@@ -263,9 +260,6 @@ margin_top = 102.0
 margin_right = 917.0
 margin_bottom = 403.0
 custom_styles/panel = SubResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="ScrollContainer" type="ScrollContainer" parent="chat_panel"]
 anchor_right = 1.0
@@ -342,9 +336,6 @@ margin_top = 415.0
 margin_right = 766.0
 margin_bottom = 515.0
 custom_styles/panel = SubResource( 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="TextEdit" type="TextEdit" parent="comment_panel"]
 margin_left = 14.0
@@ -366,9 +357,6 @@ margin_top = 102.0
 margin_right = 215.0
 margin_bottom = 403.0
 custom_styles/panel = SubResource( 9 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="bottom_background" type="Panel" parent="user_profile_panel"]
 anchor_left = 0.5
@@ -388,13 +376,13 @@ margin_right = 168.0
 margin_bottom = 145.0
 
 [node name="user_name" type="Label" parent="user_profile_panel"]
-margin_left = 20.0
-margin_top = 175.0
-margin_right = 70.0
-margin_bottom = 202.0
+margin_left = 14.0
+margin_top = 171.0
+margin_right = 76.0
+margin_bottom = 198.0
 custom_colors/font_color = Color( 0.984314, 0.584314, 0.00784314, 1 )
 custom_fonts/font = SubResource( 13 )
-text = "Name"
+text = "Name: "
 
 [node name="sendBtn" type="TextureButton" parent="."]
 margin_left = 775.0
@@ -406,9 +394,6 @@ texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 11 )
 texture_hover = ExtResource( 9 )
 expand = true
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="enviar" type="Label" parent="sendBtn"]
 anchor_left = 0.5
@@ -432,9 +417,6 @@ texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 11 )
 texture_hover = ExtResource( 9 )
 expand = true
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="clear" type="Label" parent="clearCommentBtn"]
 anchor_left = 0.5
@@ -449,12 +431,12 @@ custom_fonts/font = SubResource( 12 )
 text = "limpar"
 
 [node name="shadow_for_dialog" type="Panel" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_styles/panel = SubResource( 38 )
 
 [node name="create_user_window" type="WindowDialog" parent="."]
-visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -567,9 +549,6 @@ custom_fonts/font = SubResource( 28 )
 text = "confirmar"
 align = 1
 valign = 1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="add_file_dialog" type="FileDialog" parent="create_user_window"]
 margin_top = 91.0
@@ -583,3 +562,5 @@ show_hidden_files = true
 
 [connection signal="pressed" from="sendBtn" to="." method="_on_sendBtn_pressed"]
 [connection signal="pressed" from="clearCommentBtn" to="." method="_on_clearCommentBtn_pressed"]
+[connection signal="popup_hide" from="create_user_window" to="." method="_on_create_user_window_popup_hide"]
+[connection signal="pressed" from="create_user_window/confirm_btn" to="." method="_on_confirm_btn_pressed"]
