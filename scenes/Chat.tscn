@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://fonts/COMICI.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/Chat.gd" type="Script" id=2]
@@ -126,6 +126,9 @@ font_data = ExtResource( 1 )
 [sub_resource type="DynamicFont" id=12]
 size = 25
 font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxFlat" id=38]
+bg_color = Color( 0.0588235, 0.027451, 0.00392157, 0 )
 
 [sub_resource type="DynamicFont" id=26]
 extra_spacing_bottom = 7
@@ -260,6 +263,9 @@ margin_top = 102.0
 margin_right = 917.0
 margin_bottom = 403.0
 custom_styles/panel = SubResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="ScrollContainer" type="ScrollContainer" parent="chat_panel"]
 anchor_right = 1.0
@@ -336,6 +342,9 @@ margin_top = 415.0
 margin_right = 766.0
 margin_bottom = 515.0
 custom_styles/panel = SubResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="TextEdit" type="TextEdit" parent="comment_panel"]
 margin_left = 14.0
@@ -397,6 +406,9 @@ texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 11 )
 texture_hover = ExtResource( 9 )
 expand = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="enviar" type="Label" parent="sendBtn"]
 anchor_left = 0.5
@@ -420,6 +432,9 @@ texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 11 )
 texture_hover = ExtResource( 9 )
 expand = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="clear" type="Label" parent="clearCommentBtn"]
 anchor_left = 0.5
@@ -432,6 +447,11 @@ margin_right = 39.3635
 margin_bottom = 16.2693
 custom_fonts/font = SubResource( 12 )
 text = "limpar"
+
+[node name="shadow_for_dialog" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 38 )
 
 [node name="create_user_window" type="WindowDialog" parent="."]
 visible = true
@@ -448,6 +468,9 @@ custom_fonts/title_font = SubResource( 26 )
 custom_styles/panel = SubResource( 27 )
 popup_exclusive = true
 window_title = "Digite seu nick para entrar no chat"
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="nickname_section_background" type="Panel" parent="create_user_window"]
 margin_left = 17.0
@@ -556,9 +579,10 @@ margin_top = 91.0
 margin_right = 315.0
 margin_bottom = 294.0
 rect_min_size = Vector2( 150, 52.5 )
-window_title = "Selecione uma imagem "
+window_title = "Open a File"
 mode = 0
 access = 1
+show_hidden_files = true
 
 [connection signal="pressed" from="sendBtn" to="." method="_on_sendBtn_pressed"]
 [connection signal="pressed" from="clearCommentBtn" to="." method="_on_clearCommentBtn_pressed"]
