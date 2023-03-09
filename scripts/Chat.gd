@@ -64,9 +64,7 @@ func _on_sendBtn_pressed(): #botao de enviar comentario
 
 
 func _on_confirm_btn_pressed(): # botao de confirmar nome (janela de criar usuario)
-	if($create_user_window/input_name.text == ""):
-		$create_user_window/warning_name.text = "Nome não pode ser vazio!!";
-	else:
+	if($create_user_window/input_name.text.length() > 0):
 		self.userName = $create_user_window/input_name.text;
 		$user_profile_panel/userNameEditable.text = $create_user_window/input_name.text;
 		$create_user_window.visible = false;
@@ -74,3 +72,23 @@ func _on_confirm_btn_pressed(): # botao de confirmar nome (janela de criar usuar
 	
 func _on_create_user_window_popup_hide():
 	self.abletoHide = true;
+
+
+func _on_input_name_text_changed(new_text :String):
+	 if(new_text == ""):
+	   $create_user_window/warning_name.text = "Nome não pode ser vazio!!";
+	
+	 elif(new_text.length() > 0):
+	   $create_user_window/warning_name.text = "";
+
+
+func _on_comment_panel_gui_input(event :InputEvent): # evento emitido apos clique do mouse na area de inserir comentario
+	 if event is InputEventMouseButton and event.is_pressed():
+		 if InputEventMouseButton.new().get_button_index() == BUTTON_LEFT :
+			 print("clicou com botao esquerdo");
+	
+	
+	
+	
+	
+	

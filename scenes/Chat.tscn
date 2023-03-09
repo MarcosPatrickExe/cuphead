@@ -263,6 +263,9 @@ margin_top = 102.0
 margin_right = 917.0
 margin_bottom = 403.0
 custom_styles/panel = SubResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="ScrollContainer" type="ScrollContainer" parent="chat_panel"]
 anchor_right = 1.0
@@ -293,6 +296,9 @@ margin_right = 403.0
 margin_bottom = 24.0
 rect_scale = Vector2( 3.7, 3 )
 texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Chat_label" type="Label" parent="menu_frame"]
 margin_left = 9.83011
@@ -357,6 +363,9 @@ margin_top = 102.0
 margin_right = 215.0
 margin_bottom = 403.0
 custom_styles/panel = SubResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bottom_background" type="Panel" parent="user_profile_panel"]
 anchor_left = 0.5
@@ -496,12 +505,11 @@ placeholder_text = "Nome"
 
 [node name="warning_name" type="Label" parent="create_user_window"]
 margin_left = 27.0
-margin_top = 98.0
-margin_right = 298.0
-margin_bottom = 119.0
+margin_top = 99.0
+margin_right = 289.0
+margin_bottom = 118.0
 custom_colors/font_color = Color( 0.992157, 1, 0, 1 )
 custom_fonts/font = SubResource( 31 )
-text = "warn"
 
 [node name="image_section_background" type="Panel" parent="create_user_window"]
 margin_left = 17.0
@@ -575,7 +583,9 @@ mode = 0
 access = 1
 show_hidden_files = true
 
+[connection signal="gui_input" from="comment_panel" to="." method="_on_comment_panel_gui_input"]
 [connection signal="pressed" from="sendBtn" to="." method="_on_sendBtn_pressed"]
 [connection signal="pressed" from="clearCommentBtn" to="." method="_on_clearCommentBtn_pressed"]
 [connection signal="popup_hide" from="create_user_window" to="." method="_on_create_user_window_popup_hide"]
+[connection signal="text_changed" from="create_user_window/input_name" to="." method="_on_input_name_text_changed"]
 [connection signal="pressed" from="create_user_window/confirm_btn" to="." method="_on_confirm_btn_pressed"]

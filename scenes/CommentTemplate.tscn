@@ -93,18 +93,18 @@ visible = false
 script = ExtResource( 4 )
 
 [node name="profile_name" type="Label" parent="."]
-margin_left = 59.0
-margin_top = 3.0
-margin_right = 219.0
-margin_bottom = 39.0
+margin_left = 61.0
+margin_top = 6.0
+margin_right = 221.0
+margin_bottom = 42.0
 custom_colors/font_color = Color( 0.984314, 0.584314, 0.00784314, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "The john wick"
 
 [node name="date_and_hour_text" type="Label" parent="."]
-margin_left = 62.0
+margin_left = 64.0
 margin_top = 39.0
-margin_right = 200.0
+margin_right = 202.0
 margin_bottom = 62.0
 custom_colors/font_color = Color( 0.996078, 0.678431, 0, 1 )
 custom_fonts/font = SubResource( 7 )
