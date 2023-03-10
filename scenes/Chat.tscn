@@ -583,6 +583,12 @@ mode = 0
 access = 1
 show_hidden_files = true
 
+[node name="FileDialog" type="FileDialog" parent="."]
+margin_right = 315.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 150, 52.5 )
+show_hidden_files = true
+
 [connection signal="gui_input" from="comment_panel" to="." method="_on_comment_panel_gui_input"]
 [connection signal="pressed" from="sendBtn" to="." method="_on_sendBtn_pressed"]
 [connection signal="pressed" from="clearCommentBtn" to="." method="_on_clearCommentBtn_pressed"]
