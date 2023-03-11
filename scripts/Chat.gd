@@ -70,7 +70,7 @@ func _on_confirm_btn_pressed(): # botao de confirmar nome (janela de criar usuar
 	   $create_user_window.visible = false;
 	
 	
-func _on_create_user_window_popup_hide():
+func _on_create_user_window_popup_hide(): # evento executado toda vez que a janela de criar usuario for fechada
 	  self.abletoHide = true;
 
 
@@ -93,3 +93,8 @@ func _on_comment_panel_gui_input(event :InputEvent): # evento emitido apos cliqu
 		print("clicou com botao esquerdo // btn index: ", InputEventMouseButton.new().get_button_index());
 
 
+
+
+func _on_send_image_btn_pressed(): #botao de enviar imagem
+	
+	$uploadFileWindow.popup_centered();
