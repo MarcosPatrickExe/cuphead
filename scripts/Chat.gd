@@ -55,7 +55,8 @@ func _on_sendBtn_pressed(): #botao de enviar comentario
 	
 	commentSceneInstance.init(
 		self.textInput.text,
-		self.userName
+		self.userName,
+		$create_user_window/image_section_background/image_uploaded.texture
 	);
 	
 	self.textInput.text = "";
@@ -65,10 +66,11 @@ func _on_sendBtn_pressed(): #botao de enviar comentario
 
 func _on_confirm_btn_pressed(): # botao de confirmar nome (janela de criar usuario)
 	 self.userName = $create_user_window/nickname_section_background/input_name.text;
+	 var textureModel =  $create_user_window/image_section_background/image_uploaded.texture;
 	
 	 if(self.userName.length() > 0):
 	   $user_profile_panel/userNameEditable.text = self.userName;
-	   $user_profile_panel/profile_image.texture = $create_user_window/image_section_background/image_uploaded.texture;
+	   $user_profile_panel/profile_image.material.set_shader_param("profileImage", textureModel);
 	   $create_user_window.visible = false;
 	 else:
 	   $create_user_window/nickname_section_background/warning_name.text = "O campo nome não pode estar vazio!!";
@@ -101,7 +103,7 @@ func _on_send_image_btn_pressed(): #botao de enviar imagem
 
 
 func _on_uploadFileWindow_file_selected(path :String): #imagem selecionada
-	print("Arquivo selecionado:  ", path);
+	
 	var image =  Image.new();
 	image.load(path);
 	image.resize(450, 450, 0);

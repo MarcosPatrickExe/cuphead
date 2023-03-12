@@ -1,7 +1,7 @@
 extends Panel;
 
 
-func init(comment: String, userName :String) -> void:
+func init(comment: String, userName :String, profileImageTexture :Texture) -> void:
 	var dataMask :String = "D-M-Y / H:m";
 	
 	var date :Dictionary =  Time.get_datetime_dict_from_system(false);  #OS.get_datetime(false); #deprecated!!
@@ -15,3 +15,5 @@ func init(comment: String, userName :String) -> void:
 	$profile_name.text = userName;
 	$date_and_hour_text.text = dataMask;
 	$commentText.text = comment;
+	
+	$profileImage.material.set_shader_param("profileImage", profileImageTexture)

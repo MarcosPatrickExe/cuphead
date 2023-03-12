@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://fonts/COMICI.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/Chat.gd" type="Script" id=2]
@@ -13,7 +13,8 @@
 [ext_resource path="res://textures/buttons/BPE_0000_golde-2.png" type="Texture" id=11]
 [ext_resource path="res://scenes/CommentTemplate.tscn" type="PackedScene" id=12]
 [ext_resource path="res://fonts/COMIC.TTF" type="DynamicFontData" id=13]
-[ext_resource path="res://Action RPG Resources/Images/circle_mask.png" type="Texture" id=14]
+[ext_resource path="res://Action RPG Resources/Images/profile_default.png" type="Texture" id=14]
+[ext_resource path="res://shaders/CommentTemplate.gdshader" type="Shader" id=15]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.054902, 0.0352941, 0.0156863, 0.341176 )
@@ -117,6 +118,12 @@ corner_radius_bottom_right = 20
 [sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.0745098, 0.0431373, 0.0156863, 0.623529 )
 corner_radius_bottom_right = 20
+
+[sub_resource type="ShaderMaterial" id=41]
+shader = ExtResource( 15 )
+shader_param/scale = Vector2( 1, 1 )
+shader_param/offset = Vector2( 0, 0 )
+shader_param/customColor = Color( 0.5, 0.5, 0.5, 1 )
 
 [sub_resource type="DynamicFont" id=13]
 outline_color = Color( 0.984314, 0.584314, 0.00784314, 1 )
@@ -382,6 +389,7 @@ margin_bottom = -3.0
 custom_styles/panel = SubResource( 11 )
 
 [node name="profile_image" type="TextureRect" parent="user_profile_panel"]
+material = SubResource( 41 )
 margin_left = 16.0
 margin_top = 16.0
 margin_right = 514.0
@@ -535,18 +543,18 @@ rect_clip_content = true
 custom_styles/panel = SubResource( 34 )
 
 [node name="image_uploaded" type="TextureRect" parent="create_user_window/image_section_background"]
-margin_left = 16.0
-margin_top = 3.0
-margin_right = 516.0
-margin_bottom = 503.0
+margin_left = 14.0
+margin_top = 5.0
+margin_right = 514.0
+margin_bottom = 505.0
 rect_scale = Vector2( 0.22, 0.22 )
 texture = ExtResource( 14 )
 
 [node name="name_image_uploaded" type="Label" parent="create_user_window/image_section_background"]
 margin_left = 133.0
-margin_top = 12.0
+margin_top = 11.0
 margin_right = 269.0
-margin_bottom = 66.0
+margin_bottom = 65.0
 text = "Empty image...."
 align = 1
 valign = 1
@@ -554,9 +562,9 @@ autowrap = true
 
 [node name="send_image_btn" type="Button" parent="create_user_window/image_section_background"]
 margin_left = 157.0
-margin_top = 75.0
+margin_top = 74.0
 margin_right = 237.0
-margin_bottom = 102.0
+margin_bottom = 101.0
 custom_colors/font_color = Color( 0.960784, 0.960784, 0.960784, 1 )
 custom_fonts/font = SubResource( 35 )
 custom_styles/hover = SubResource( 36 )
