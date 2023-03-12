@@ -43,7 +43,6 @@ void fragment(){
 	COLOR = profileImage2;
 }
 
-
 "
 
 [sub_resource type="ShaderMaterial" id=6]
@@ -79,7 +78,7 @@ margin_bottom = 505.0
 rect_scale = Vector2( 0.128, 0.128 )
 texture = ExtResource( 2 )
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="profileImage" type="TextureRect" parent="."]
 material = SubResource( 6 )
 margin_left = 8.0
 margin_top = 8.0

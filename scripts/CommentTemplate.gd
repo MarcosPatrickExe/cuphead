@@ -1,6 +1,4 @@
 extends Panel;
-onready var date_and_hour_text :Label = $date_and_hour_text;
-
 
 
 func init(comment: String, userName :String) -> void:

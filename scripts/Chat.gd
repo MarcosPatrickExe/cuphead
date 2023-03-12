@@ -1,4 +1,4 @@
-extends Control
+extends Control;
 onready var backBtn = $backButton;
 onready var textInput = $comment_panel/TextEdit;
 onready var commentScene = preload("res://scenes/CommentTemplate.tscn");
@@ -66,7 +66,7 @@ func _on_sendBtn_pressed(): #botao de enviar comentario
 func _on_confirm_btn_pressed(): # botao de confirmar nome (janela de criar usuario)
 	 if($create_user_window/input_name.text.length() > 0):
 	   self.userName = $create_user_window/input_name.text;
-	   $user_profile_panel/userNameEditable.text = $create_user_window/input_name.text;
+	   $user_profile_panel/userNameEditable.text = self.userName;
 	   $create_user_window.visible = false;
 	
 	
@@ -83,18 +83,28 @@ func _on_input_name_text_changed(new_text :String):
 
 
 
+
 func _on_comment_panel_gui_input(event :InputEvent): # evento emitido apos clique do mouse na area de inserir comentario
 	 
 	if event is InputEventMouseButton:
 		print("clicou com o mouse", InputEventMouseButton.new().get_button_index());
 	
 	
-	if InputEventMouseButton.new().get_button_index() != 0: #BUTTON_LEFT and event.is_pressed()
-		print("clicou com botao esquerdo // btn index: ", InputEventMouseButton.new().get_button_index());
-
-
-
 
 func _on_send_image_btn_pressed(): #botao de enviar imagem
+	 $uploadFileWindow.popup_centered();
+
+
+
+func _on_uploadFileWindow_file_selected(path :String): #imagem selecionada
+	print("Arquivo selecionado:  ", path);
+	var image =  Image.new();
+	image.load(path);
+	image.resize(500, 500, 0);
 	
-	$uploadFileWindow.popup_centered();
+	var texture = ImageTexture.new();
+	texture.create_from_image(image);
+	
+	$create_user_window/image_uploaded.texture = texture;
+
+
