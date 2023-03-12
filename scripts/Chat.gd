@@ -64,10 +64,14 @@ func _on_sendBtn_pressed(): #botao de enviar comentario
 
 
 func _on_confirm_btn_pressed(): # botao de confirmar nome (janela de criar usuario)
-	 if($create_user_window/input_name.text.length() > 0):
-	   self.userName = $create_user_window/input_name.text;
+	 self.userName = $create_user_window/nickname_section_background/input_name.text;
+	
+	 if(self.userName.length() > 0):
 	   $user_profile_panel/userNameEditable.text = self.userName;
+	   $user_profile_panel/profile_image.texture = $create_user_window/image_section_background/image_uploaded.texture;
 	   $create_user_window.visible = false;
+	 else:
+	   $create_user_window/nickname_section_background/warning_name.text = "O campo nome não pode estar vazio!!";
 	
 	
 func _on_create_user_window_popup_hide(): # evento executado toda vez que a janela de criar usuario for fechada
@@ -76,10 +80,10 @@ func _on_create_user_window_popup_hide(): # evento executado toda vez que a jane
 
 func _on_input_name_text_changed(new_text :String):
 	 if(new_text == ""):
-	   $create_user_window/warning_name.text = "Nome não pode ser vazio!!";
+	   $create_user_window/nickname_section_background/warning_name.text = "Nome não pode ser vazio!!";
 	
 	 elif(new_text.length() > 0):
-	   $create_user_window/warning_name.text = "";
+	   $create_user_window/nickname_section_background/warning_name.text = "";
 
 
 
@@ -100,11 +104,13 @@ func _on_uploadFileWindow_file_selected(path :String): #imagem selecionada
 	print("Arquivo selecionado:  ", path);
 	var image =  Image.new();
 	image.load(path);
-	image.resize(500, 500, 0);
+	image.resize(450, 450, 0);
+	var imageName = path.split("/", false, 0);# delimitador "/", false (nao permite espacos), n de divisoes maximas 
 	
 	var texture = ImageTexture.new();
 	texture.create_from_image(image);
 	
-	$create_user_window/image_uploaded.texture = texture;
+	$create_user_window/image_section_background/name_image_uploaded.text = imageName[ imageName.size()-1 ] # .trim_suffix(".png");
+	$create_user_window/image_section_background/image_uploaded.texture = texture;
 
 
