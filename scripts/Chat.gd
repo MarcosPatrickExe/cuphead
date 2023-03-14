@@ -20,7 +20,7 @@ func _ready():
 
 func _process(delta :float) -> void:
 	
-	if(Input.is_action_pressed("space") && !$create_user_window.visible ):
+	if( (self.userName =="") && !$create_user_window.visible ):
 		ableToShow = true;
 		self.shadowOfUserWindow.visible = true;
 		$create_user_window.popup_centered(); #abre a janela de criar usuario
