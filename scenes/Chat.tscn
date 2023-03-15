@@ -372,6 +372,7 @@ margin_left = 36.0
 margin_top = 102.0
 margin_right = 215.0
 margin_bottom = 384.0
+rect_clip_content = true
 custom_styles/panel = SubResource( 9 )
 
 [node name="bottom_background" type="Panel" parent="user_profile_panel"]
@@ -381,8 +382,7 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -84.5
 margin_top = -109.0
-margin_right = 76.5
-margin_bottom = -3.0
+margin_right = 84.5
 custom_styles/panel = SubResource( 11 )
 
 [node name="profile_image" type="TextureRect" parent="user_profile_panel"]
