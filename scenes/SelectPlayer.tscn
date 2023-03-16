@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://fonts/COMICI.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://Action RPG Resources/Images/legend of zeldris brown background.png" type="Texture" id=2]
@@ -30,7 +30,7 @@ font_data = ExtResource( 1 )
 bg_color = Color( 0.533333, 0.388235, 0.027451, 1 )
 
 [sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.152941, 0.0901961, 0.0352941, 1 )
+bg_color = Color( 0.227451, 0.121569, 0.0313726, 1 )
 border_width_left = 6
 border_width_top = 8
 border_width_right = 2
@@ -39,8 +39,89 @@ border_color = Color( 0.984314, 0.584314, 0.00784314, 1 )
 corner_radius_top_left = 20
 
 [sub_resource type="DynamicFont" id=7]
-size = 28
+size = 30
 font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.101961, 0.0627451, 0.00784314, 1 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 22
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 22
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.00784314, 0.615686, 0.0784314, 0.952941 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.266667, 0.121569, 0.0196078, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.0352941, 0.411765, 0.772549, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.266667, 0.121569, 0.0196078, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0.752941, 0.294118, 0.0313726, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0.266667, 0.121569, 0.0196078, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 0.894118, 0.737255, 0.0196078, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.266667, 0.121569, 0.0196078, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.580392, 0.027451, 0.858824, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 0.266667, 0.121569, 0.0196078, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="SelectPlayer" type="Control"]
 anchor_right = 1.0
@@ -124,10 +205,10 @@ __meta__ = {
 [node name="Menu" type="Label" parent="menu_frame"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -48.913
-margin_top = 4.0
-margin_right = 145.087
-margin_bottom = 44.0
+margin_left = -48.6956
+margin_top = 4.33333
+margin_right = 145.304
+margin_bottom = 44.3333
 rect_scale = Vector2( 0.504, 0.801 )
 custom_colors/font_color = Color( 0.984314, 0.694118, 0.00784314, 1 )
 custom_fonts/font = SubResource( 4 )
@@ -135,10 +216,10 @@ text = "Select a player"
 align = 1
 
 [node name="menuSelect" type="GridContainer" parent="."]
-margin_left = 127.0
-margin_top = 121.0
-margin_right = 597.0
-margin_bottom = 431.0
+margin_left = 140.0
+margin_top = 131.0
+margin_right = 610.0
+margin_bottom = 441.0
 custom_constants/vseparation = 10
 custom_constants/hseparation = 10
 columns = 3
@@ -186,19 +267,131 @@ margin_bottom = 310.0
 rect_min_size = Vector2( 150, 150 )
 custom_styles/panel = SubResource( 5 )
 
-[node name="PlayerAttributes" type="Panel" parent="."]
-margin_left = 727.0
-margin_top = 120.0
-margin_right = 938.0
-margin_bottom = 462.0
+[node name="PlayerAttributesPanel" type="Panel" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -312.0
+margin_top = -139.0
+margin_right = -29.0
+margin_bottom = 173.0
 custom_styles/panel = SubResource( 6 )
 
-[node name="Label" type="Label" parent="PlayerAttributes"]
-margin_left = 23.0
-margin_top = 24.0
-margin_right = 196.0
-margin_bottom = 107.0
+[node name="characterName" type="Label" parent="PlayerAttributesPanel"]
+margin_left = 19.0
+margin_top = 19.0
+margin_right = 269.0
+margin_bottom = 68.0
+custom_constants/line_spacing = -11
 custom_fonts/font = SubResource( 7 )
 text = "Character name"
 autowrap = true
 clip_text = true
+
+[node name="attibutesBackground" type="Panel" parent="PlayerAttributesPanel"]
+margin_left = 7.0
+margin_top = 75.0
+margin_right = 281.0
+margin_bottom = 310.0
+custom_styles/panel = SubResource( 8 )
+
+[node name="health" type="Label" parent="PlayerAttributesPanel"]
+margin_left = 30.0
+margin_top = 89.0
+margin_right = 99.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0.984314, 0.760784, 0, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Health"
+
+[node name="magic" type="Label" parent="PlayerAttributesPanel"]
+margin_left = 38.0
+margin_top = 134.0
+margin_right = 97.0
+margin_bottom = 169.0
+custom_colors/font_color = Color( 0.984314, 0.760784, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Magic"
+
+[node name="attack" type="Label" parent="PlayerAttributesPanel"]
+margin_left = 28.0
+margin_top = 182.0
+margin_right = 105.0
+margin_bottom = 217.0
+custom_colors/font_color = Color( 0.984314, 0.760784, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Attack"
+
+[node name="attack2" type="Label" parent="PlayerAttributesPanel"]
+margin_left = 14.0
+margin_top = 227.0
+margin_right = 100.0
+margin_bottom = 262.0
+custom_colors/font_color = Color( 0.984314, 0.760784, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Defense"
+
+[node name="speed" type="Label" parent="PlayerAttributesPanel"]
+margin_left = 36.0
+margin_top = 268.0
+margin_right = 105.0
+margin_bottom = 303.0
+custom_colors/font_color = Color( 0.984314, 0.760784, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Speed"
+
+[node name="healthBar" type="ProgressBar" parent="PlayerAttributesPanel"]
+margin_left = 110.0
+margin_top = 99.0
+margin_right = 273.0
+margin_bottom = 114.0
+custom_styles/fg = SubResource( 11 )
+custom_styles/bg = SubResource( 12 )
+max_value = 200.0
+step = 0.1
+value = 95.0
+percent_visible = false
+
+[node name="magicBar" type="ProgressBar" parent="PlayerAttributesPanel"]
+margin_left = 110.0
+margin_top = 145.0
+margin_right = 273.0
+margin_bottom = 160.0
+custom_styles/fg = SubResource( 13 )
+custom_styles/bg = SubResource( 14 )
+value = 20.0
+percent_visible = false
+
+[node name="attackBar" type="ProgressBar" parent="PlayerAttributesPanel"]
+margin_left = 110.0
+margin_top = 193.0
+margin_right = 273.0
+margin_bottom = 208.0
+custom_styles/fg = SubResource( 15 )
+custom_styles/bg = SubResource( 16 )
+max_value = 200.0
+value = 180.0
+percent_visible = false
+
+[node name="defenseBar" type="ProgressBar" parent="PlayerAttributesPanel"]
+margin_left = 110.0
+margin_top = 238.0
+margin_right = 273.0
+margin_bottom = 253.0
+custom_styles/fg = SubResource( 17 )
+custom_styles/bg = SubResource( 18 )
+max_value = 200.0
+value = 40.0
+percent_visible = false
+
+[node name="speedBar" type="ProgressBar" parent="PlayerAttributesPanel"]
+margin_left = 110.0
+margin_top = 278.0
+margin_right = 273.0
+margin_bottom = 293.0
+custom_styles/fg = SubResource( 19 )
+custom_styles/bg = SubResource( 20 )
+max_value = 200.0
+value = 130.0
+percent_visible = false
