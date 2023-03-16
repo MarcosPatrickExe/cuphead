@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://fonts/COMICI.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://Action RPG Resources/Images/legend of zeldris brown background.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Action RPG Resources/Images/moldura.png" type="Texture" id=4]
 [ext_resource path="res://Action RPG Resources/Images/hover_buttons/left_arrow.png" type="Texture" id=5]
 [ext_resource path="res://textures/shadowGradient.tres" type="Texture" id=6]
+[ext_resource path="res://scripts/SelectPlayer.gd" type="Script" id=7]
+[ext_resource path="res://fonts/COMIC.TTF" type="DynamicFontData" id=8]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.2, 0.0941176, 0.0235294, 0.141176 )
@@ -21,14 +23,31 @@ size = 21
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 48
+size = 21
 font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.533333, 0.388235, 0.027451, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.152941, 0.0901961, 0.0352941, 1 )
+border_width_left = 6
+border_width_top = 8
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.984314, 0.584314, 0.00784314, 1 )
+corner_radius_top_left = 20
+
+[sub_resource type="DynamicFont" id=7]
+size = 28
+font_data = ExtResource( 8 )
 
 [node name="SelectPlayer" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -1.0
 margin_right = -1.0
+script = ExtResource( 7 )
 
 [node name="backgroundImage" type="TextureRect" parent="."]
 anchor_right = 1.0
@@ -59,15 +78,12 @@ __meta__ = {
 }
 
 [node name="bottomGradient" type="Panel" parent="."]
-margin_left = 953.0
+margin_left = 960.0
 margin_top = 131.0
-margin_right = 1403.0
-margin_bottom = 1086.0
+margin_right = 1410.0
+margin_bottom = 1093.0
 rect_rotation = 90.0
 custom_styles/panel = SubResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="backButton" type="TextureButton" parent="."]
 margin_left = -2.0
@@ -95,20 +111,94 @@ __meta__ = {
 }
 
 [node name="menu_frame" type="TextureRect" parent="."]
-margin_left = 297.0
+margin_left = 289.0
 margin_top = -18.0
-margin_right = 387.0
+margin_right = 379.0
 margin_bottom = 16.0
 rect_scale = Vector2( 4.6, 3 )
 texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Menu" type="Label" parent="."]
+[node name="Menu" type="Label" parent="menu_frame"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -203.0
-margin_right = 250.0
-margin_bottom = 76.0
+margin_left = -48.913
+margin_top = 4.0
+margin_right = 145.087
+margin_bottom = 44.0
+rect_scale = Vector2( 0.504, 0.801 )
 custom_colors/font_color = Color( 0.984314, 0.694118, 0.00784314, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "Select a player"
 align = 1
+
+[node name="menuSelect" type="GridContainer" parent="."]
+margin_left = 127.0
+margin_top = 121.0
+margin_right = 597.0
+margin_bottom = 431.0
+custom_constants/vseparation = 10
+custom_constants/hseparation = 10
+columns = 3
+
+[node name="Panel" type="Panel" parent="menuSelect"]
+margin_right = 150.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/panel = SubResource( 5 )
+
+[node name="Panel2" type="Panel" parent="menuSelect"]
+margin_left = 160.0
+margin_right = 310.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/panel = SubResource( 5 )
+
+[node name="Panel3" type="Panel" parent="menuSelect"]
+margin_left = 320.0
+margin_right = 470.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/panel = SubResource( 5 )
+
+[node name="Panel4" type="Panel" parent="menuSelect"]
+margin_top = 160.0
+margin_right = 150.0
+margin_bottom = 310.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/panel = SubResource( 5 )
+
+[node name="Panel5" type="Panel" parent="menuSelect"]
+margin_left = 160.0
+margin_top = 160.0
+margin_right = 310.0
+margin_bottom = 310.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/panel = SubResource( 5 )
+
+[node name="Panel6" type="Panel" parent="menuSelect"]
+margin_left = 320.0
+margin_top = 160.0
+margin_right = 470.0
+margin_bottom = 310.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/panel = SubResource( 5 )
+
+[node name="PlayerAttributes" type="Panel" parent="."]
+margin_left = 727.0
+margin_top = 120.0
+margin_right = 938.0
+margin_bottom = 462.0
+custom_styles/panel = SubResource( 6 )
+
+[node name="Label" type="Label" parent="PlayerAttributes"]
+margin_left = 23.0
+margin_top = 24.0
+margin_right = 196.0
+margin_bottom = 107.0
+custom_fonts/font = SubResource( 7 )
+text = "Character name"
+autowrap = true
+clip_text = true
