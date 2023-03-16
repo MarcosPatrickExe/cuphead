@@ -81,7 +81,8 @@ func _process(delta:float) ->void:
 		match self.nameOption.text:
 			"chat":
 				self.get_tree().change_scene("res://scenes/Chat.tscn");
-		
+			"single":
+				self.get_tree().change_scene("res://scenes/SelectPlayer.tscn");
 
 	
 	if(self.able):
