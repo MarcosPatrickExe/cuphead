@@ -1,10 +1,12 @@
-extends Control
+extends Control;
+
 
 
 
 
 func _ready():
 	$backButton.connect("pressed", self, "backBtnPressed");
+	
 
 
 

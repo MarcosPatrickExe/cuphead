@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://fonts/COMICI.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://Action RPG Resources/Images/legend of zeldris brown background.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://textures/buttons/BPE_0003_pressed.png" type="Texture" id=10]
 [ext_resource path="res://textures/buttons/BPE_0000_golde-2.png" type="Texture" id=11]
 [ext_resource path="res://fonts/EurostileT.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Action RPG Resources/Images/bg_character.png" type="Texture" id=13]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.2, 0.0941176, 0.0235294, 0.141176 )
@@ -30,8 +31,22 @@ font_data = ExtResource( 1 )
 size = 15
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.533333, 0.388235, 0.027451, 1 )
+[sub_resource type="Shader" id=22]
+code = "shader_type canvas_item;
+
+
+void fragment(){
+	vec4 textureCurr = texture(TEXTURE, UV);
+	vec3 new = vec3(0.56, 0.19, 0.02);
+	COLOR.a = textureCurr.a;
+	COLOR.rgb = new;
+}
+
+
+"
+
+[sub_resource type="ShaderMaterial" id=23]
+shader = SubResource( 22 )
 
 [sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.227451, 0.121569, 0.0313726, 1 )
@@ -226,59 +241,20 @@ text = "Select a player"
 align = 1
 
 [node name="menuSelect" type="GridContainer" parent="."]
-margin_left = 140.0
+margin_left = 67.0
 margin_top = 131.0
-margin_right = 610.0
+margin_right = 537.0
 margin_bottom = 441.0
 custom_constants/vseparation = 8
 custom_constants/hseparation = 10
 columns = 3
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="Panel" type="Panel" parent="menuSelect"]
-margin_right = 150.0
-margin_bottom = 150.0
-rect_min_size = Vector2( 150, 150 )
-custom_styles/panel = SubResource( 5 )
-
-[node name="Panel2" type="Panel" parent="menuSelect"]
-margin_left = 160.0
-margin_right = 310.0
-margin_bottom = 150.0
-rect_min_size = Vector2( 150, 150 )
-custom_styles/panel = SubResource( 5 )
-
-[node name="Panel3" type="Panel" parent="menuSelect"]
-margin_left = 320.0
-margin_right = 470.0
-margin_bottom = 150.0
-rect_min_size = Vector2( 150, 150 )
-custom_styles/panel = SubResource( 5 )
-
-[node name="Panel4" type="Panel" parent="menuSelect"]
-margin_top = 158.0
-margin_right = 150.0
-margin_bottom = 308.0
-rect_min_size = Vector2( 150, 150 )
-custom_styles/panel = SubResource( 5 )
-
-[node name="Panel5" type="Panel" parent="menuSelect"]
-margin_left = 160.0
-margin_top = 158.0
-margin_right = 310.0
-margin_bottom = 308.0
-rect_min_size = Vector2( 150, 150 )
-custom_styles/panel = SubResource( 5 )
-
-[node name="Panel6" type="Panel" parent="menuSelect"]
-margin_left = 320.0
-margin_top = 158.0
-margin_right = 470.0
-margin_bottom = 308.0
-rect_min_size = Vector2( 150, 150 )
-custom_styles/panel = SubResource( 5 )
+[node name="TextureButton" type="TextureButton" parent="menuSelect"]
+material = SubResource( 23 )
+margin_right = 336.0
+margin_bottom = 248.0
+rect_scale = Vector2( 0.6, 0.6 )
+texture_normal = ExtResource( 13 )
 
 [node name="PlayerAttributesPanel" type="Panel" parent="."]
 anchor_left = 1.0
