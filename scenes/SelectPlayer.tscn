@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://fonts/COMICI.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://Action RPG Resources/Images/legend of zeldris brown background.png" type="Texture" id=2]
@@ -14,9 +14,15 @@
 [ext_resource path="res://fonts/EurostileT.ttf" type="DynamicFontData" id=12]
 [ext_resource path="res://Action RPG Resources/Images/bg_character.png" type="Texture" id=13]
 [ext_resource path="res://Action RPG Resources/Images/bg_character_border.png" type="Texture" id=14]
-[ext_resource path="res://Action RPG Resources/Images/sora.png" type="Texture" id=15]
+[ext_resource path="res://Action RPG Resources/Images/fox.png" type="Texture" id=15]
 [ext_resource path="res://shaders/playerCharacterSelected.gdshader" type="Shader" id=16]
 [ext_resource path="res://shaders/playerCharacterImage.gdshader" type="Shader" id=17]
+[ext_resource path="res://Action RPG Resources/Images/frog.png" type="Texture" id=18]
+[ext_resource path="res://Action RPG Resources/Images/chrono.png" type="Texture" id=19]
+[ext_resource path="res://Action RPG Resources/Images/magus.png" type="Texture" id=20]
+[ext_resource path="res://Action RPG Resources/Images/ayla.png" type="Texture" id=21]
+[ext_resource path="res://Action RPG Resources/Images/black_mage.png" type="Texture" id=22]
+[ext_resource path="res://Action RPG Resources/Images/ganbare_goemon.png" type="Texture" id=23]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.2, 0.0941176, 0.0235294, 0.141176 )
@@ -37,11 +43,71 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="ShaderMaterial" id=23]
 shader = ExtResource( 17 )
-shader_param/scale = Vector2( 1, 1.2 )
-shader_param/offset = null
+shader_param/scale = Vector2( 1.2, 1.4 )
+shader_param/offset = Vector2( 0.1, 0.153 )
 shader_param/imageAddited = ExtResource( 15 )
 
 [sub_resource type="ShaderMaterial" id=25]
+shader = ExtResource( 16 )
+shader_param/isSelected = false
+
+[sub_resource type="ShaderMaterial" id=26]
+shader = ExtResource( 17 )
+shader_param/scale = Vector2( 1, 1.03 )
+shader_param/offset = Vector2( 0.04, 0 )
+shader_param/imageAddited = ExtResource( 18 )
+
+[sub_resource type="ShaderMaterial" id=27]
+shader = ExtResource( 16 )
+shader_param/isSelected = null
+
+[sub_resource type="ShaderMaterial" id=28]
+shader = ExtResource( 17 )
+shader_param/scale = Vector2( 1.05, 1.03 )
+shader_param/offset = Vector2( 0, 0.01 )
+shader_param/imageAddited = ExtResource( 19 )
+
+[sub_resource type="ShaderMaterial" id=29]
+shader = ExtResource( 16 )
+shader_param/isSelected = null
+
+[sub_resource type="ShaderMaterial" id=30]
+shader = ExtResource( 17 )
+shader_param/scale = Vector2( 1.1, 1.1 )
+shader_param/offset = Vector2( 0, 0.03 )
+shader_param/imageAddited = ExtResource( 20 )
+
+[sub_resource type="ShaderMaterial" id=31]
+shader = ExtResource( 16 )
+shader_param/isSelected = null
+
+[sub_resource type="ShaderMaterial" id=32]
+shader = ExtResource( 17 )
+shader_param/scale = Vector2( 1.124, 1.11 )
+shader_param/offset = Vector2( 0, 0.051 )
+shader_param/imageAddited = ExtResource( 21 )
+
+[sub_resource type="ShaderMaterial" id=33]
+shader = ExtResource( 16 )
+shader_param/isSelected = false
+
+[sub_resource type="ShaderMaterial" id=34]
+shader = ExtResource( 17 )
+shader_param/scale = Vector2( 1, 1 )
+shader_param/offset = null
+shader_param/imageAddited = ExtResource( 22 )
+
+[sub_resource type="ShaderMaterial" id=35]
+shader = ExtResource( 16 )
+shader_param/isSelected = null
+
+[sub_resource type="ShaderMaterial" id=36]
+shader = ExtResource( 17 )
+shader_param/scale = Vector2( 1.6, 1.6 )
+shader_param/offset = Vector2( 0.24, 0.09 )
+shader_param/imageAddited = ExtResource( 23 )
+
+[sub_resource type="ShaderMaterial" id=37]
 shader = ExtResource( 16 )
 shader_param/isSelected = false
 
@@ -223,6 +289,9 @@ margin_right = 424.0
 margin_bottom = 24.0
 rect_scale = Vector2( 3.1, 2 )
 texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Menu" type="Label" parent="menu_frame"]
 anchor_left = 0.5
@@ -238,35 +307,149 @@ text = "Select a player"
 align = 1
 
 [node name="menuSelect" type="GridContainer" parent="."]
-margin_left = 36.0
-margin_top = 123.0
-margin_right = 1148.0
-margin_bottom = 741.0
+margin_left = 29.0
+margin_top = 109.0
+margin_right = 1235.0
+margin_bottom = 893.0
 rect_scale = Vector2( 0.5, 0.5 )
-custom_constants/vseparation = 8
-custom_constants/hseparation = 10
-columns = 5
+custom_constants/vseparation = 35
+custom_constants/hseparation = -30
+columns = 3
 
-[node name="soraBTN" type="TextureButton" parent="menuSelect"]
+[node name="foxBTN" type="TextureButton" parent="menuSelect"]
 material = SubResource( 23 )
 margin_right = 336.0
 margin_bottom = 248.0
 texture_normal = ExtResource( 13 )
 
-[node name="soraBorder" type="TextureRect" parent="menuSelect/soraBTN"]
+[node name="foxBorder" type="TextureRect" parent="menuSelect/foxBTN"]
 show_behind_parent = true
 material = SubResource( 25 )
-anchor_left = 0.462
-anchor_top = 0.511
-anchor_right = 0.516
-anchor_bottom = 0.566
-margin_left = -174.5
-margin_top = -132.5
-margin_right = 174.5
-margin_bottom = 132.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 1.0
+margin_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_scale = Vector2( 1.05, 1 )
+texture = ExtResource( 14 )
+
+[node name="frogBTN" type="TextureButton" parent="menuSelect"]
+material = SubResource( 26 )
+margin_left = 306.0
+margin_right = 642.0
+margin_bottom = 248.0
+texture_normal = ExtResource( 13 )
+
+[node name="frogBorder" type="TextureRect" parent="menuSelect/frogBTN"]
+show_behind_parent = true
+material = SubResource( 27 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -10.0
+margin_right = -9.0
+margin_bottom = 5.0
+rect_scale = Vector2( 1.07, 1 )
+texture = ExtResource( 14 )
+
+[node name="chronoBTN" type="TextureButton" parent="menuSelect"]
+material = SubResource( 28 )
+margin_left = 612.0
+margin_right = 948.0
+margin_bottom = 248.0
+texture_normal = ExtResource( 13 )
+
+[node name="chronoBorder" type="TextureRect" parent="menuSelect/chronoBTN"]
+show_behind_parent = true
+material = SubResource( 29 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -12.0
+margin_top = -10.0
+margin_right = -1.0
+margin_bottom = 5.0
+rect_scale = Vector2( 1.04, 1 )
+texture = ExtResource( 14 )
+
+[node name="magusBTN" type="TextureButton" parent="menuSelect"]
+material = SubResource( 30 )
+margin_top = 283.0
+margin_right = 336.0
+margin_bottom = 531.0
+texture_normal = ExtResource( 13 )
+
+[node name="magusBorder" type="TextureRect" parent="menuSelect/magusBTN"]
+show_behind_parent = true
+material = SubResource( 31 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -12.0
+margin_top = -8.0
+margin_right = -1.0
+margin_bottom = 7.0
+rect_scale = Vector2( 1.04, 1 )
+texture = ExtResource( 14 )
+
+[node name="aylaBTN" type="TextureButton" parent="menuSelect"]
+material = SubResource( 32 )
+margin_left = 306.0
+margin_top = 283.0
+margin_right = 642.0
+margin_bottom = 531.0
+texture_normal = ExtResource( 13 )
+
+[node name="aylaBorder" type="TextureRect" parent="menuSelect/aylaBTN"]
+show_behind_parent = true
+material = SubResource( 33 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 1.0
+margin_bottom = 5.0
+rect_scale = Vector2( 1.04, 1 )
+texture = ExtResource( 14 )
+
+[node name="blackMageBTN" type="TextureButton" parent="menuSelect"]
+material = SubResource( 34 )
+margin_left = 612.0
+margin_top = 283.0
+margin_right = 948.0
+margin_bottom = 531.0
+texture_normal = ExtResource( 13 )
+
+[node name="blackMageBorder" type="TextureRect" parent="menuSelect/blackMageBTN"]
+show_behind_parent = true
+material = SubResource( 35 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 1.0
+margin_bottom = 5.0
+rect_scale = Vector2( 1.04, 1 )
+texture = ExtResource( 14 )
+
+[node name="ganbareGoemonBTN" type="TextureButton" parent="menuSelect"]
+material = SubResource( 36 )
+margin_top = 566.0
+margin_right = 336.0
+margin_bottom = 814.0
+texture_normal = ExtResource( 13 )
+
+[node name="ganbareGoemonBorder" type="TextureRect" parent="menuSelect/ganbareGoemonBTN"]
+show_behind_parent = true
+material = SubResource( 37 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 1.0
+margin_bottom = 5.0
+rect_scale = Vector2( 1.02, 1.02 )
 texture = ExtResource( 14 )
 
 [node name="PlayerAttributesPanel" type="Panel" parent="."]
@@ -274,11 +457,14 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -320.0
-margin_top = -152.0
-margin_right = -37.0
-margin_bottom = 160.0
+margin_left = -302.0
+margin_top = -150.0
+margin_right = -19.0
+margin_bottom = 162.0
 custom_styles/panel = SubResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="characterName" type="Label" parent="PlayerAttributesPanel"]
 margin_left = 18.0
@@ -414,7 +600,8 @@ texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 11 )
 texture_hover = ExtResource( 9 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="startBattle" type="Label" parent="startBtn"]
@@ -424,6 +611,3 @@ margin_right = 106.588
 margin_bottom = 28.2942
 custom_fonts/font = SubResource( 21 )
 text = "Start battle"
-
-[connection signal="mouse_entered" from="menuSelect/soraBTN" to="." method="_on_soraBTN_mouse_entered"]
-[connection signal="mouse_exited" from="menuSelect/soraBTN" to="." method="_on_soraBTN_mouse_exited"]
