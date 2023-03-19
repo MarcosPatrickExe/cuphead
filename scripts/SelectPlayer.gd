@@ -18,7 +18,7 @@ func mouseOnButton(button :TextureButton):
 	
 	button.get_child(0).set_scale( Vector2(1.09, 1.07) );
 	button.get_child(0).material.set_shader_param("isSelected", true);
-
+	
 
 
 func mouseLeaveOfButton(button :TextureButton):
