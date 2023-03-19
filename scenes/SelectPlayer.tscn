@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://fonts/COMICI.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://Action RPG Resources/Images/legend of zeldris brown background.png" type="Texture" id=2]
@@ -15,6 +15,8 @@
 [ext_resource path="res://Action RPG Resources/Images/bg_character.png" type="Texture" id=13]
 [ext_resource path="res://Action RPG Resources/Images/bg_character_border.png" type="Texture" id=14]
 [ext_resource path="res://Action RPG Resources/Images/sora.png" type="Texture" id=15]
+[ext_resource path="res://shaders/playerCharacterSelected.gdshader" type="Shader" id=16]
+[ext_resource path="res://shaders/playerCharacterImage.gdshader" type="Shader" id=17]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.2, 0.0941176, 0.0235294, 0.141176 )
@@ -30,32 +32,18 @@ size = 21
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 15
+size = 10
 font_data = ExtResource( 1 )
 
-[sub_resource type="Shader" id=22]
-code = "shader_type canvas_item;
-
-uniform sampler2D imageAddited;
-
-void fragment(){
-	vec4 textureAddited = texture(imageAddited, UV);
-	vec4 textureCurrent = texture(TEXTURE, UV);
-	vec3 defaultColor = vec3(0.36, 0.19, 0.02);
-	
-	if(textureAddited.r < 1.0 || textureAddited.g < 1.0 || textureAddited.b < 1.0 ){
-		textureAddited.a = textureCurrent.a;
-		COLOR = textureAddited;
-	}else{
-		COLOR.a = textureCurrent.a;
-		COLOR.rgb = defaultColor;
-	}
-
-}"
-
 [sub_resource type="ShaderMaterial" id=23]
-shader = SubResource( 22 )
+shader = ExtResource( 17 )
+shader_param/scale = Vector2( 1, 1.2 )
+shader_param/offset = null
 shader_param/imageAddited = ExtResource( 15 )
+
+[sub_resource type="ShaderMaterial" id=25]
+shader = ExtResource( 16 )
+shader_param/isSelected = false
 
 [sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.227451, 0.121569, 0.0313726, 1 )
@@ -229,24 +217,21 @@ __meta__ = {
 }
 
 [node name="menu_frame" type="TextureRect" parent="."]
-margin_left = 289.0
-margin_top = -16.0
-margin_right = 379.0
-margin_bottom = 18.0
-rect_scale = Vector2( 3.9, 2.7 )
+margin_left = 334.0
+margin_top = -10.0
+margin_right = 424.0
+margin_bottom = 24.0
+rect_scale = Vector2( 3.1, 2 )
 texture = ExtResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Menu" type="Label" parent="menu_frame"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -38.312
-margin_top = 7.4074
-margin_right = 69.6881
-margin_bottom = 31.4074
-rect_scale = Vector2( 0.7, 1 )
+margin_left = -35.9677
+margin_top = 4.89474
+margin_right = 33.0323
+margin_bottom = 19.8947
+rect_scale = Vector2( 1, 1.6 )
 custom_colors/font_color = Color( 0.984314, 0.694118, 0.00784314, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "Select a player"
@@ -262,19 +247,26 @@ custom_constants/vseparation = 8
 custom_constants/hseparation = 10
 columns = 5
 
-[node name="TextureButton" type="TextureButton" parent="menuSelect"]
+[node name="soraBTN" type="TextureButton" parent="menuSelect"]
 material = SubResource( 23 )
 margin_right = 336.0
 margin_bottom = 248.0
 texture_normal = ExtResource( 13 )
 
-[node name="TextureRect" type="TextureRect" parent="menuSelect/TextureButton"]
+[node name="soraBorder" type="TextureRect" parent="menuSelect/soraBTN"]
 show_behind_parent = true
-anchor_right = 1.0
-margin_left = -10.0
-margin_top = -8.0
-margin_right = 3.0
-margin_bottom = 257.0
+material = SubResource( 25 )
+anchor_left = 0.462
+anchor_top = 0.511
+anchor_right = 0.516
+anchor_bottom = 0.566
+margin_left = -174.5
+margin_top = -132.5
+margin_right = 174.5
+margin_bottom = 132.5
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 1.05, 1 )
 texture = ExtResource( 14 )
 
 [node name="PlayerAttributesPanel" type="Panel" parent="."]
@@ -409,18 +401,21 @@ value = 130.0
 percent_visible = false
 
 [node name="startBtn" type="TextureButton" parent="."]
-anchor_left = 0.5
+anchor_left = 1.0
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -107.0
-margin_top = -74.0001
-margin_right = 21.9999
-margin_bottom = -40.0001
-rect_scale = Vector2( 1.7, 1.7 )
+margin_left = -171.0
+margin_top = -56.0
+margin_right = -41.9999
+margin_bottom = -22.0
+rect_scale = Vector2( 1.2, 1.2 )
 texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 11 )
 texture_hover = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="startBattle" type="Label" parent="startBtn"]
 margin_left = 20.5883
@@ -429,3 +424,6 @@ margin_right = 106.588
 margin_bottom = 28.2942
 custom_fonts/font = SubResource( 21 )
 text = "Start battle"
+
+[connection signal="mouse_entered" from="menuSelect/soraBTN" to="." method="_on_soraBTN_mouse_entered"]
+[connection signal="mouse_exited" from="menuSelect/soraBTN" to="." method="_on_soraBTN_mouse_exited"]
