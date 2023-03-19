@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://fonts/COMICI.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://Action RPG Resources/Images/legend of zeldris brown background.png" type="Texture" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://textures/buttons/BPE_0000_golde-2.png" type="Texture" id=11]
 [ext_resource path="res://fonts/EurostileT.ttf" type="DynamicFontData" id=12]
 [ext_resource path="res://Action RPG Resources/Images/bg_character.png" type="Texture" id=13]
+[ext_resource path="res://Action RPG Resources/Images/bg_character_border.png" type="Texture" id=14]
+[ext_resource path="res://Action RPG Resources/Images/sora.png" type="Texture" id=15]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.2, 0.0941176, 0.0235294, 0.141176 )
@@ -34,19 +36,26 @@ font_data = ExtResource( 1 )
 [sub_resource type="Shader" id=22]
 code = "shader_type canvas_item;
 
+uniform sampler2D imageAddited;
 
 void fragment(){
-	vec4 textureCurr = texture(TEXTURE, UV);
-	vec3 new = vec3(0.56, 0.19, 0.02);
-	COLOR.a = textureCurr.a;
-	COLOR.rgb = new;
-}
+	vec4 textureAddited = texture(imageAddited, UV);
+	vec4 textureCurrent = texture(TEXTURE, UV);
+	vec3 defaultColor = vec3(0.36, 0.19, 0.02);
+	
+	if(textureAddited.r < 1.0 || textureAddited.g < 1.0 || textureAddited.b < 1.0 ){
+		textureAddited.a = textureCurrent.a;
+		COLOR = textureAddited;
+	}else{
+		COLOR.a = textureCurrent.a;
+		COLOR.rgb = defaultColor;
+	}
 
-
-"
+}"
 
 [sub_resource type="ShaderMaterial" id=23]
 shader = SubResource( 22 )
+shader_param/imageAddited = ExtResource( 15 )
 
 [sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.227451, 0.121569, 0.0313726, 1 )
@@ -226,6 +235,9 @@ margin_right = 379.0
 margin_bottom = 18.0
 rect_scale = Vector2( 3.9, 2.7 )
 texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Menu" type="Label" parent="menu_frame"]
 anchor_left = 0.5
@@ -241,34 +253,40 @@ text = "Select a player"
 align = 1
 
 [node name="menuSelect" type="GridContainer" parent="."]
-margin_left = 67.0
-margin_top = 131.0
-margin_right = 537.0
-margin_bottom = 441.0
+margin_left = 36.0
+margin_top = 123.0
+margin_right = 1148.0
+margin_bottom = 741.0
+rect_scale = Vector2( 0.5, 0.5 )
 custom_constants/vseparation = 8
 custom_constants/hseparation = 10
-columns = 3
+columns = 5
 
 [node name="TextureButton" type="TextureButton" parent="menuSelect"]
 material = SubResource( 23 )
 margin_right = 336.0
 margin_bottom = 248.0
-rect_scale = Vector2( 0.6, 0.6 )
 texture_normal = ExtResource( 13 )
+
+[node name="TextureRect" type="TextureRect" parent="menuSelect/TextureButton"]
+show_behind_parent = true
+anchor_right = 1.0
+margin_left = -10.0
+margin_top = -8.0
+margin_right = 3.0
+margin_bottom = 257.0
+texture = ExtResource( 14 )
 
 [node name="PlayerAttributesPanel" type="Panel" parent="."]
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -312.0
-margin_top = -139.0
-margin_right = -29.0
-margin_bottom = 173.0
+margin_left = -320.0
+margin_top = -152.0
+margin_right = -37.0
+margin_bottom = 160.0
 custom_styles/panel = SubResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="characterName" type="Label" parent="PlayerAttributesPanel"]
 margin_left = 18.0
