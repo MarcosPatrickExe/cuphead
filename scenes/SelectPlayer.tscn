@@ -338,8 +338,8 @@ align = 1
 [node name="menuSelect" type="GridContainer" parent="."]
 margin_left = 51.0
 margin_top = 111.0
-margin_right = 1147.0
-margin_bottom = 945.0
+margin_right = 1076.0
+margin_bottom = 951.0
 rect_scale = Vector2( 0.447, 0.447 )
 custom_constants/vseparation = 48
 custom_constants/hseparation = -26
