@@ -2,10 +2,14 @@ extends Control;
 # var funcc = funcref(self, "mouseOnImage")
 
 
+
 func _ready():
 	$backButton.connect("pressed", self, "backBtnPressed");
-	$menuSelect/foxBTN.connect("mouse_entered", self, "mouseOnButton", [$menuSelect/foxBTN]);
-	$menuSelect/foxBTN.connect("mouse_exited", self, "mouseLeaveOfButton", [$menuSelect/foxBTN]);
+		
+	for characterNode in $menuSelect.get_children():
+		characterNode.connect("mouse_entered", self, "mouseOnButton", [characterNode]);
+		characterNode.connect("mouse_exited", self, "mouseLeaveOfButton", [characterNode]);
+
 
 
 func backBtnPressed():
@@ -14,15 +18,12 @@ func backBtnPressed():
 
 
 func mouseOnButton(button :TextureButton):
-	print("mouse em cima da fox!!");
-	
+	print("mouse em cima do node: ",button.name);
 	button.get_child(0).set_scale( Vector2(1.09, 1.07) );
 	button.get_child(0).material.set_shader_param("isSelected", true);
 	
-
-
 func mouseLeaveOfButton(button :TextureButton):
-	print("mouse fora");
+	print("mouse fora do node: ", button.name);
 	button.get_child(0).set_scale( Vector2(1.05, 1) );
 	button.get_child(0).material.set_shader_param("isSelected", false);
 

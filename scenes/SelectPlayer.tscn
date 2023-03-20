@@ -244,7 +244,9 @@ script = ExtResource( 7 )
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 955, 500 )
 script = ExtResource( 26 )
+speedParallax = 50.0
 
 [node name="backgroundImage" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
 anchor_right = 1.0
@@ -334,13 +336,13 @@ text = "Select a player"
 align = 1
 
 [node name="menuSelect" type="GridContainer" parent="."]
-margin_left = 47.0
+margin_left = 51.0
 margin_top = 111.0
-margin_right = 1143.0
+margin_right = 1147.0
 margin_bottom = 945.0
-rect_scale = Vector2( 0.467, 0.467 )
-custom_constants/vseparation = 45
-custom_constants/hseparation = -30
+rect_scale = Vector2( 0.447, 0.447 )
+custom_constants/vseparation = 48
+custom_constants/hseparation = -26
 columns = 3
 
 [node name="frogBTN" type="TextureButton" parent="menuSelect"]
@@ -363,8 +365,8 @@ texture = ExtResource( 14 )
 
 [node name="foxBTN" type="TextureButton" parent="menuSelect"]
 material = SubResource( 23 )
-margin_left = 306.0
-margin_right = 642.0
+margin_left = 310.0
+margin_right = 646.0
 margin_bottom = 248.0
 texture_normal = ExtResource( 13 )
 
@@ -384,8 +386,8 @@ texture = ExtResource( 14 )
 
 [node name="chronoBTN" type="TextureButton" parent="menuSelect"]
 material = SubResource( 28 )
-margin_left = 612.0
-margin_right = 948.0
+margin_left = 620.0
+margin_right = 956.0
 margin_bottom = 248.0
 texture_normal = ExtResource( 13 )
 
@@ -403,9 +405,9 @@ texture = ExtResource( 14 )
 
 [node name="magusBTN" type="TextureButton" parent="menuSelect"]
 material = SubResource( 30 )
-margin_top = 293.0
+margin_top = 296.0
 margin_right = 336.0
-margin_bottom = 541.0
+margin_bottom = 544.0
 texture_normal = ExtResource( 13 )
 
 [node name="magusBorder" type="TextureRect" parent="menuSelect/magusBTN"]
@@ -422,10 +424,10 @@ texture = ExtResource( 14 )
 
 [node name="aylaBTN" type="TextureButton" parent="menuSelect"]
 material = SubResource( 32 )
-margin_left = 306.0
-margin_top = 293.0
-margin_right = 642.0
-margin_bottom = 541.0
+margin_left = 310.0
+margin_top = 296.0
+margin_right = 646.0
+margin_bottom = 544.0
 texture_normal = ExtResource( 13 )
 
 [node name="aylaBorder" type="TextureRect" parent="menuSelect/aylaBTN"]
@@ -442,10 +444,10 @@ texture = ExtResource( 14 )
 
 [node name="blackMageBTN" type="TextureButton" parent="menuSelect"]
 material = SubResource( 34 )
-margin_left = 612.0
-margin_top = 293.0
-margin_right = 948.0
-margin_bottom = 541.0
+margin_left = 620.0
+margin_top = 296.0
+margin_right = 956.0
+margin_bottom = 544.0
 texture_normal = ExtResource( 13 )
 
 [node name="blackMageBorder" type="TextureRect" parent="menuSelect/blackMageBTN"]
@@ -462,9 +464,9 @@ texture = ExtResource( 14 )
 
 [node name="ganbareGoemonBTN" type="TextureButton" parent="menuSelect"]
 material = SubResource( 36 )
-margin_top = 586.0
+margin_top = 592.0
 margin_right = 336.0
-margin_bottom = 834.0
+margin_bottom = 840.0
 texture_normal = ExtResource( 13 )
 
 [node name="ganbareGoemonBorder" type="TextureRect" parent="menuSelect/ganbareGoemonBTN"]
@@ -481,10 +483,10 @@ texture = ExtResource( 14 )
 
 [node name="linkBTN" type="TextureButton" parent="menuSelect"]
 material = SubResource( 38 )
-margin_left = 306.0
-margin_top = 586.0
-margin_right = 642.0
-margin_bottom = 834.0
+margin_left = 310.0
+margin_top = 592.0
+margin_right = 646.0
+margin_bottom = 840.0
 texture_normal = ExtResource( 13 )
 
 [node name="linkBorder" type="TextureRect" parent="menuSelect/linkBTN"]
@@ -499,10 +501,10 @@ texture = ExtResource( 14 )
 
 [node name="soraBTN" type="TextureButton" parent="menuSelect"]
 material = SubResource( 40 )
-margin_left = 612.0
-margin_top = 586.0
-margin_right = 948.0
-margin_bottom = 834.0
+margin_left = 620.0
+margin_top = 592.0
+margin_right = 956.0
+margin_bottom = 840.0
 texture_normal = ExtResource( 13 )
 
 [node name="soraBorder" type="TextureRect" parent="menuSelect/soraBTN"]
