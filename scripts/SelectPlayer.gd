@@ -5,20 +5,20 @@ var currSelection = Vector2(0, 0); # current selection index array
 
 
 var charactersOptionsMap :Dictionary = {
-	0 : {
-		0: $menuSelect/frogBTN,
-		1: $menuSelect/foxBTN,
-		2: $menuSelect/chronoBTN 
+	"0" : {
+		"0": $menuSelect/frogBTN,
+		"1": $menuSelect/foxBTN,
+		"2": $menuSelect/chronoBTN 
 	},
-	1 : {
-		0: $menuSelect/magusBTN,
-		1: $menuSelect/aylaBTN,
-		2: $menuSelect/blackMageBTN
+	"1" : {
+		"0": $menuSelect/magusBTN,
+		"1": $menuSelect/aylaBTN,
+		"2": $menuSelect/blackMageBTN
 	},
-	2 : {
-		0: $menuSelect/ganbareGoemonBTN,
-		1: $menuSelect/linkBTN,
-		2: $menuSelect/soraBTN
+	"2" : {
+		"0": $menuSelect/ganbareGoemonBTN,
+		"1": $menuSelect/linkBTN,
+		"2": $menuSelect/soraBTN
 	}
 }
 
@@ -32,19 +32,37 @@ func _ready():
 		characterNode.connect("mouse_entered", self, "mouseOnButton", [characterNode]);
 		characterNode.connect("mouse_exited", self, "mouseLeaveOfButton", [characterNode]);
 
+	print("nnnname: ", self.charactersOptionsMap["0"]["0"].name);
+
+	self.mouseOnButton(
+			self.charactersOptionsMap["0"]["0"]
+	);
 
 
 
 func _input(event :InputEvent):
-	if(Input.is_key_pressed(KEY_UP) || Input.is_key_pressed(KEY_W) &&  (self.currSelection.y -1 >= 0)):
-		self.currSelection.y -= 1;
+	if(Input.is_key_pressed(KEY_UP) || Input.is_key_pressed(KEY_W)  &&  (self.currSelection.y -1 >= 0)):
 		
 		self.mouseLeaveOfButton(
 			self.charactersOptionsMap[currSelection.x][currSelection.y]
 		);
-	#	print("up from input");
+		self.currSelection.y -= 1;
+		self.mouseOnButton(
+			self.charactersOptionsMap[currSelection.x][currSelection.y]
+		);
+		
+	if(Input.is_key_pressed(KEY_DOWN) || Input.is_key_pressed(KEY_S)  &&  (self.currSelection.y +1 <= 2)):
+		
+		self.mouseLeaveOfButton(
+			self.charactersOptionsMap[currSelection.x][currSelection.y]
+		);
+		self.currSelection.y += 2;
+		self.mouseOnButton(
+			self.charactersOptionsMap[currSelection.x][currSelection.y]
+		);
 	
-	
+
+
 
 
 func mouseOnButton(button :TextureButton):
@@ -64,6 +82,8 @@ func backBtnPressed():
 
 
 
+
+"""
 var aylaCharacter :Dictionary = {
 	"current": $menuSelect/aylaBTN,
 	"top": self.foxCharacter,
@@ -103,3 +123,4 @@ var frogCharacter :Dictionary = {
 	"bottom": self.magusCharacter,
 	"left": self.frogCharacter
 }
+"""
