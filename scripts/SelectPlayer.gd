@@ -1,26 +1,7 @@
 extends Control;
 # var funcc = funcref(self, "mouseOnImage")
 var currSelection = Vector2(0, 0); # current selection index array
-
-
-
-var charactersOptionsMap :Dictionary = {
-	"0" : {
-		"0": $menuSelect/frogBTN,
-		"1": $menuSelect/foxBTN,
-		"2": $menuSelect/chronoBTN 
-	},
-	"1" : {
-		"0": $menuSelect/magusBTN,
-		"1": $menuSelect/aylaBTN,
-		"2": $menuSelect/blackMageBTN
-	},
-	"2" : {
-		"0": $menuSelect/ganbareGoemonBTN,
-		"1": $menuSelect/linkBTN,
-		"2": $menuSelect/soraBTN
-	}
-}
+var charactersOptionsMap :Dictionary = { }
 
 
 
@@ -32,8 +13,32 @@ func _ready():
 		characterNode.connect("mouse_entered", self, "mouseOnButton", [characterNode]);
 		characterNode.connect("mouse_exited", self, "mouseLeaveOfButton", [characterNode]);
 
-	print("nnnname: ", self.charactersOptionsMap[0][0]);
+	
+	self.charactersOptionsMap = {
+		"0" : {
+			"0": $menuSelect/frogBTN,
+			"1": $menuSelect/foxBTN,
+			"2": $menuSelect/chronoBTN 
+		},
+		"1" : {
+			"0": $menuSelect/magusBTN,
+			"1": $menuSelect/aylaBTN,
+			"2": $menuSelect/blackMageBTN
+		},
+		"2" : {
+			"0": $menuSelect/ganbareGoemonBTN,
+			"1": $menuSelect/linkBTN,
+			"2": $menuSelect/soraBTN
+		}
+	}
 
+
+	# print("get name via get(): ", self.charactersOptionsMap.get("0").get("0").name );
+	print("get name via get(): ", self.charactersOptionsMap["0"]["0"].name );
+
+	self.mouseOnButton(
+			self.charactersOptionsMap["0"]["0"]
+	);
 
 
 
