@@ -32,11 +32,9 @@ func _ready():
 		characterNode.connect("mouse_entered", self, "mouseOnButton", [characterNode]);
 		characterNode.connect("mouse_exited", self, "mouseLeaveOfButton", [characterNode]);
 
-	print("nnnname: ", self.charactersOptionsMap["0"]["0"].name);
+	print("nnnname: ", self.charactersOptionsMap[0][0]);
 
-	self.mouseOnButton(
-			self.charactersOptionsMap["0"]["0"]
-	);
+
 
 
 
