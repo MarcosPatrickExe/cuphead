@@ -1,7 +1,11 @@
 extends Control;
 # var funcc = funcref(self, "mouseOnImage")
 var currSelection :Array = [0, 0]; # current selection index array
-
+var characterName :Array = [
+	["Frog", "Fox", "Chrono"],
+	["Magus", "Ayla", "Black Mage"],
+	["Ganbare Goemon", "Link", "Sora"]
+]
 var charactersOptionsMap :Dictionary = { }
 
 
@@ -90,6 +94,8 @@ func mouseOnButton(button :TextureButton):
 	# print("mouse em cima do node: ",button.name);
 	
 	self.mouseLeaveOfButton( self.charactersOptionsMap[currSelection[0]][currSelection[1]] );
+	$PlayerAttributesPanel/characterName.text = self.characterName[currSelection[0]][currSelection[1]];
+	
 	
 	button.get_child(0).set_scale( Vector2(1.09, 1.07) ); #aumentando o tamanho do rect, ficando vermelho
 	button.get_child(0).material.set_shader_param("isSelected", true);
