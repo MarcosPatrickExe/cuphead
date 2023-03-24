@@ -1,6 +1,6 @@
 extends Control;
 # var funcc = funcref(self, "mouseOnImage")
-var currSelection = Vector2(0, 0); # current selection index array
+var currSelection = [0, 0]; # current selection index array
 var charactersOptionsMap :Dictionary = { }
 
 
@@ -15,57 +15,73 @@ func _ready():
 
 	
 	self.charactersOptionsMap = {
-		"0" : {
-			"0": $menuSelect/frogBTN,
-			"1": $menuSelect/foxBTN,
-			"2": $menuSelect/chronoBTN 
+		0 : {
+			0: $menuSelect/frogBTN,
+			1: $menuSelect/foxBTN,
+			2: $menuSelect/chronoBTN 
 		},
-		"1" : {
-			"0": $menuSelect/magusBTN,
-			"1": $menuSelect/aylaBTN,
-			"2": $menuSelect/blackMageBTN
+		1 : {
+			0: $menuSelect/magusBTN,
+			1: $menuSelect/aylaBTN,
+			2: $menuSelect/blackMageBTN
 		},
-		"2" : {
-			"0": $menuSelect/ganbareGoemonBTN,
-			"1": $menuSelect/linkBTN,
-			"2": $menuSelect/soraBTN
+		2 : {
+			0: $menuSelect/ganbareGoemonBTN,
+			1: $menuSelect/linkBTN,
+			2: $menuSelect/soraBTN
 		}
 	}
 
 
 	# print("get name via get(): ", self.charactersOptionsMap.get("0").get("0").name );
-	print("get name via get(): ", self.charactersOptionsMap["0"]["0"].name );
+	print("get name via get(): ", self.charactersOptionsMap[0][0].name );
 
 	self.mouseOnButton(
-			self.charactersOptionsMap["0"]["0"]
+			self.charactersOptionsMap[0][0]
 	);
 
 
 
 
 func _input(event :InputEvent):
-	if(Input.is_key_pressed(KEY_UP) || Input.is_key_pressed(KEY_W)  &&  (self.currSelection.y -1 >= 0)):
+	if((Input.is_key_pressed(KEY_UP) || Input.is_key_pressed(KEY_W))  &&  (self.currSelection[0] -1) >= 0):
 		
 		self.mouseLeaveOfButton(
-			self.charactersOptionsMap[currSelection.x][currSelection.y]
+			self.charactersOptionsMap[currSelection[0]][currSelection[1]]
 		);
-		self.currSelection.y -= 1;
+		self.currSelection[0] -= 1;
+		print("y: ", str(currSelection[0]));
 		self.mouseOnButton(
-			self.charactersOptionsMap[currSelection.x][currSelection.y]
+			self.charactersOptionsMap[currSelection[0]][currSelection[1]]
 		);
 		
-	if(Input.is_key_pressed(KEY_DOWN) || Input.is_key_pressed(KEY_S)  &&  (self.currSelection.y +1 <= 2)):
+	elif((Input.is_key_pressed(KEY_DOWN) || Input.is_key_pressed(KEY_S))  &&  (self.currSelection[0] +1) <= 2):
 		
 		self.mouseLeaveOfButton(
-			self.charactersOptionsMap[currSelection.x][currSelection.y]
+			self.charactersOptionsMap[currSelection[0]][currSelection[1]]
 		);
-		self.currSelection.y += 2;
+		self.currSelection[0] += 1;
 		self.mouseOnButton(
-			self.charactersOptionsMap[currSelection.x][currSelection.y]
+			self.charactersOptionsMap[currSelection[0]][currSelection[1]]
 		);
 	
-
-
+	elif((Input.is_key_pressed(KEY_LEFT) || Input.is_key_pressed(KEY_S)) && (self.currSelection[1])-1 >=0 ):
+		self.mouseLeaveOfButton(
+			self.charactersOptionsMap[currSelection[0]][currSelection[1]]
+		)
+		self.currSelection[1] -= 1;
+		self.mouseOnButton(
+			self.charactersOptionsMap[currSelection[0]][currSelection[1]]
+		)
+	elif((Input.is_key_pressed(KEY_RIGHT) || Input.is_key_pressed(KEY_R)) && (self.currSelection[1])+1 <=2 ):
+		self.mouseLeaveOfButton(
+			self.charactersOptionsMap[currSelection[0]][currSelection[1]]
+		)
+		self.currSelection[1] += 1;
+		self.mouseOnButton(
+			self.charactersOptionsMap[currSelection[0]][currSelection[1]]
+		)
+		
 
 
 func mouseOnButton(button :TextureButton):
