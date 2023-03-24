@@ -1,7 +1,9 @@
 extends Control;
 # var funcc = funcref(self, "mouseOnImage")
-var currSelection = [0, 0]; # current selection index array
+var currSelection :Array = [0, 0]; # current selection index array
+
 var charactersOptionsMap :Dictionary = { }
+
 
 
 
@@ -34,7 +36,7 @@ func _ready():
 
 
 	# print("get name via get(): ", self.charactersOptionsMap.get("0").get("0").name );
-	print("get name via get(): ", self.charactersOptionsMap[0][0].name );
+	print("get name via get(): ", self.charactersOptionsMap.get(0).get(0).name );
 
 	self.mouseOnButton(
 			self.charactersOptionsMap[0][0]
@@ -65,7 +67,7 @@ func _input(event :InputEvent):
 			self.charactersOptionsMap[currSelection[0]][currSelection[1]]
 		);
 	
-	elif((Input.is_key_pressed(KEY_LEFT) || Input.is_key_pressed(KEY_S)) && (self.currSelection[1])-1 >=0 ):
+	elif((Input.is_key_pressed(KEY_LEFT) || Input.is_key_pressed(KEY_A)) && (self.currSelection[1]-1) >=0 ):
 		self.mouseLeaveOfButton(
 			self.charactersOptionsMap[currSelection[0]][currSelection[1]]
 		)
@@ -73,7 +75,7 @@ func _input(event :InputEvent):
 		self.mouseOnButton(
 			self.charactersOptionsMap[currSelection[0]][currSelection[1]]
 		)
-	elif((Input.is_key_pressed(KEY_RIGHT) || Input.is_key_pressed(KEY_R)) && (self.currSelection[1])+1 <=2 ):
+	elif((Input.is_key_pressed(KEY_RIGHT) || Input.is_key_pressed(KEY_D)) && (self.currSelection[1]+1) <=2 ):
 		self.mouseLeaveOfButton(
 			self.charactersOptionsMap[currSelection[0]][currSelection[1]]
 		)
@@ -86,12 +88,15 @@ func _input(event :InputEvent):
 
 func mouseOnButton(button :TextureButton):
 	# print("mouse em cima do node: ",button.name);
-	button.get_child(0).set_scale( Vector2(1.09, 1.07) );
+	
+	self.mouseLeaveOfButton( self.charactersOptionsMap[currSelection[0]][currSelection[1]] );
+	
+	button.get_child(0).set_scale( Vector2(1.09, 1.07) ); #aumentando o tamanho do rect, ficando vermelho
 	button.get_child(0).material.set_shader_param("isSelected", true);
 	
 	
 func mouseLeaveOfButton(button :TextureButton):
-	button.get_child(0).set_scale( Vector2(1.05, 1) );
+	button.get_child(0).set_scale( Vector2(1.05, 1) ); #diminuindo o tamanho do rect vermelho, ficando amarelo
 	button.get_child(0).material.set_shader_param("isSelected", false);
 
 
