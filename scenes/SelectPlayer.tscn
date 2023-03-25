@@ -252,10 +252,10 @@ void fragment(){
 
 [sub_resource type="ShaderMaterial" id=42]
 shader = SubResource( 44 )
-shader_param/scale = 1.271
-shader_param/translation = Vector2( 0, 0.091 )
+shader_param/scale = 1.8
+shader_param/translation = Vector2( 0.211, 0.147 )
 shader_param/amount = null
-shader_param/image = ExtResource( 19 )
+shader_param/image = ExtResource( 25 )
 
 [sub_resource type="StyleBoxFlat" id=43]
 bg_color = Color( 0.47451, 0.290196, 0.0313726, 0.870588 )

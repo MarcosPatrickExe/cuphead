@@ -110,24 +110,58 @@ func mouseOnButton(button :TextureButton, buttonHoveredByMouse :bool):
 	
 	# setando valores dos atributos em funcao do personagem selecionado:
 	match button.name:
-			"frogBTN": attributesBars = [100, 120, 90, 80, 130];
+			"frogBTN": attributesBars = [100, 120, 90, 80, 160];
 			"foxBTN": attributesBars = [100, 50, 110, 90, 50];
-			"chronoBTN": attributesBars = [50, 20, 190, 50, 120];
+			"chronoBTN": attributesBars = [70, 20, 195, 50, 120];
 			"magusBTN": attributesBars = [110, 120, 115, 105, 40];
-			"aylaBTN": attributesBars = [80, 5, 190, 125, 170];
+			"aylaBTN": attributesBars = [80, 5, 190, 125, 180];
 			"blackMageBTN": attributesBars = [80, 190, 10, 70, 40];
 			"ganbareGoemonBTN": attributesBars = [190, 20, 75, 120, 30];
 			"linkBTN": attributesBars = [110, 70, 130, 170, 70];
 			"soraBTN": attributesBars = [110, 130, 70, 130, 100];
 			
-	
 	var statusBar = $PlayerAttributesPanel/attibutesBackground;
 	for count in range(0, attributesBars.size() ):
 		statusBar.get_child(count+5).set_value( attributesBars[count] );
 	
 	
+	
+	
+	# definindo configuracoes de exibicao da imagem do personagem selecionado
 	$PlayerAttributesPanel/characterName.text = self.characterName[currSelection[0]][currSelection[1]];
-	$PlayerAttributesPanel/characterImage.material.set_shader_param("image", button.material.get_shader_param("imageAddited"));
+	var characterImgMaterial = $PlayerAttributesPanel/characterImage.material;
+	characterImgMaterial.set_shader_param("image", button.material.get_shader_param("imageAddited"));
+	
+	match button.name:
+		"frogBTN": 
+			characterImgMaterial.set_shader_param("scale", 1.182);
+			characterImgMaterial.set_shader_param("translation", Vector2(0.042, 0.091));
+		"foxBTN": 
+			characterImgMaterial.set_shader_param("scale", 1.482);
+			characterImgMaterial.set_shader_param("translation", Vector2(0.122, 0.191));
+		"chronoBTN": 
+			characterImgMaterial.set_shader_param("scale", 1.282);
+			characterImgMaterial.set_shader_param("translation", Vector2(0.062, 0.191));
+		"magusBTN":  
+			characterImgMaterial.set_shader_param("scale", 1.262);
+			characterImgMaterial.set_shader_param("translation", Vector2(0.162, 0.191));
+		"aylaBTN":  
+			characterImgMaterial.set_shader_param("scale", 1.356);
+			characterImgMaterial.set_shader_param("translation", Vector2(0.113, 0.203));
+		"blackMageBTN":  
+			characterImgMaterial.set_shader_param("scale", 1.26);
+			characterImgMaterial.set_shader_param("translation", Vector2(0.028, 0.133));
+		"ganbareGoemonBTN":  
+			characterImgMaterial.set_shader_param("scale", 1.69);
+			characterImgMaterial.set_shader_param("translation", Vector2(0.178, 0.123));
+		"linkBTN":  
+			characterImgMaterial.set_shader_param("scale", 2.1);
+			characterImgMaterial.set_shader_param("translation", Vector2(0.31, 0.447));
+		"soraBTN":
+			characterImgMaterial.set_shader_param("scale", 1.8);
+			characterImgMaterial.set_shader_param("translation", Vector2(0.211, 0.147));
+	
+	
 	
 
 	button.get_child(0).set_scale( Vector2(1.09, 1.07) ); #aumentando o tamanho do rect, ficando vermelho
