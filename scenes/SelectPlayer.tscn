@@ -147,19 +147,22 @@ corner_radius_bottom_right = 20
 [sub_resource type="Shader" id=44]
 code = "shader_type canvas_item;
 
-uniform sampler2D characterImage;
+uniform sampler2D image;
+uniform float scale;
+uniform vec2 translation;
+uniform float amount : hint_range(0, 1);
 
 
 void fragment(){
 	
-	vec4 imgText = texture(characterImage, UV);
-	if(imgText.a ==1.0 ){
-		COLOR = vec4(0.512, 0.202, 0.003, 0.501);
+	vec4 imgText = texture(image, (UV/scale)+translation);
+	// if(imgText.a ==1.0 ){
+		// COLOR = vec4(0.512, 0.202, 0.003, 0.501);
 		
-		
-	}else if(imgText.a <1.0 ){
-		COLOR = imgText; //vec4(0.221, 0.174, 0.008, 1.0 );
-	}
+//	}else if(imgText.a <1.0 ){
+	COLOR = imgText; //vec4(0.221, 0.174, 0.008, 1.0 );
+//	}
+	
 	
 }
 
@@ -167,6 +170,10 @@ void fragment(){
 
 [sub_resource type="ShaderMaterial" id=42]
 shader = SubResource( 44 )
+shader_param/scale = 1.171
+shader_param/translation = Vector2( -0.001, 0.061 )
+shader_param/amount = null
+shader_param/image = ExtResource( 19 )
 
 [sub_resource type="StyleBoxFlat" id=43]
 bg_color = Color( 0.47451, 0.290196, 0.0313726, 0.870588 )

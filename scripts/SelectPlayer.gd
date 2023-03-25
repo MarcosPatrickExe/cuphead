@@ -107,7 +107,8 @@ func mouseOnButton(button :TextureButton, buttonHoveredByMouse :bool):
 			
 	
 	$PlayerAttributesPanel/characterName.text = self.characterName[currSelection[0]][currSelection[1]];
-		# $PlayerAttributesPanel/characterName.text = button.name;
+	$PlayerAttributesPanel/characterImage.material.set_shader_param("image", button.material.get_shader_param("imageAddited"));
+
 
 	button.get_child(0).set_scale( Vector2(1.09, 1.07) ); #aumentando o tamanho do rect, ficando vermelho
 	button.get_child(0).material.set_shader_param("isSelected", true);
