@@ -6,6 +6,7 @@ var characterName :Array = [
 	["Magus", "Ayla", "Black Mage"],
 	["Ganbare Goemon", "Link", "Sora"]
 ]
+var attributesBars :Array = [];
 var charactersOptionsMap :Dictionary = { }
 
 
@@ -40,11 +41,10 @@ func _ready():
 
 
 	# print("get name via get(): ", self.charactersOptionsMap.get(0).get(0).name );
-
 	self.mouseOnButton(
 			self.charactersOptionsMap[0][0], false
 	);
-
+	# selecionando personagem padrao automaticamente
 
 
 
@@ -91,24 +91,44 @@ func _input(event :InputEvent):
 
 func mouseOnButton(button :TextureButton, buttonHoveredByMouse :bool):
 	
-	self.mouseLeaveOfButton( self.charactersOptionsMap[currSelection[0]][currSelection[1]] );
 	
 	if( buttonHoveredByMouse ):
+		self.mouseLeaveOfButton( self.charactersOptionsMap[currSelection[0]][currSelection[1]] );
+	
 		match button.name:
-			"frogBTN": currSelection = [0, 0];
-			"foxBTN": currSelection = [0, 1];
-			"chronoBTN": currSelection = [0, 2];
-			"magusBTN": currSelection = [1, 0];
-			"aylaBTN": currSelection = [1, 1];
-			"blackMageBTN": currSelection = [1, 2];
-			"ganbareGoemonBTN": currSelection = [2, 0];
-			"linkBTN": currSelection = [2, 1];
-			"soraBTN": currSelection = [2, 2];
+			"frogBTN": self.currSelection = [0, 0];
+			"foxBTN": self.currSelection = [0, 1];
+			"chronoBTN": self.currSelection = [0, 2];
+			"magusBTN": self.currSelection = [1, 0];
+			"aylaBTN": self.currSelection = [1, 1];
+			"blackMageBTN": self.currSelection = [1, 2];
+			"ganbareGoemonBTN": self.currSelection = [2, 0];
+			"linkBTN": self.currSelection = [2, 1];
+			"soraBTN": self.currSelection = [2, 2];
+			 
+	
+	
+	# setando valores dos atributos em funcao do personagem selecionado:
+	match button.name:
+			"frogBTN": attributesBars = [100, 120, 90, 80, 130];
+			"foxBTN": attributesBars = [100, 50, 110, 90, 50];
+			"chronoBTN": attributesBars = [50, 20, 190, 50, 120];
+			"magusBTN": attributesBars = [110, 120, 115, 105, 40];
+			"aylaBTN": attributesBars = [80, 5, 190, 125, 170];
+			"blackMageBTN": attributesBars = [80, 190, 10, 70, 40];
+			"ganbareGoemonBTN": attributesBars = [190, 20, 75, 120, 30];
+			"linkBTN": attributesBars = [110, 70, 130, 170, 70];
+			"soraBTN": attributesBars = [110, 130, 70, 130, 100];
 			
+	
+	var statusBar = $PlayerAttributesPanel/attibutesBackground;
+	for count in range(0, attributesBars.size() ):
+		statusBar.get_child(count+5).set_value( attributesBars[count] );
+	
 	
 	$PlayerAttributesPanel/characterName.text = self.characterName[currSelection[0]][currSelection[1]];
 	$PlayerAttributesPanel/characterImage.material.set_shader_param("image", button.material.get_shader_param("imageAddited"));
-
+	
 
 	button.get_child(0).set_scale( Vector2(1.09, 1.07) ); #aumentando o tamanho do rect, ficando vermelho
 	button.get_child(0).material.set_shader_param("isSelected", true);
@@ -123,48 +143,3 @@ func mouseLeaveOfButton(button :TextureButton):
 
 func backBtnPressed():
 	get_tree().change_scene("res://scenes/MainMenu.tscn");
-
-
-
-
-"""
-var aylaCharacter :Dictionary = {
-	"current": $menuSelect/aylaBTN,
-	"top": self.foxCharacter,
-	"right": self.blackMageCharacter,
-	"bottom": self.linkCharacter,
-	"left": self.magusCharacter
-}
-
-var blackMageCharacter :Dictionary = {
-	"current": $menuSelect/blackMageBTN,
-	"top": self.chronoCharacter,
-	"right": blackMageCharacter,
-	"bottom": self.soraCharacter,
-	"left": self.aylaCharacter
-}
-
-var chronoCharacter :Dictionary = {
-	"current": $menuSelect/chronoBTN,
-	"top": chronoCharacter,
-	"right": chronoCharacter,
-	"bottom": self.blackMageCharacter,
-	"left": self.foxCharacter
-}
-
-var foxCharacter :Dictionary = {
-	"current": $menuSelect/foxBTN,
-	"top": foxCharacter,
-	"right": self.chronoCharacter,
-	"bottom": self.aylaCharacter,
-	"left": self.frogCharacter
-}
-
-var frogCharacter :Dictionary = {
-	"current": $menuSelect/frogBTN,
-	"top": self.frogCharacter,
-	"right": self.foxCharacter,
-	"bottom": self.magusCharacter,
-	"left": self.frogCharacter
-}
-"""

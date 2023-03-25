@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=69 format=2]
 
 [ext_resource path="res://fonts/COMICI.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://Action RPG Resources/Images/legend of zeldris brown background.png" type="Texture" id=2]
@@ -144,51 +144,12 @@ border_color = Color( 0.984314, 0.584314, 0.00784314, 1 )
 corner_radius_top_left = 20
 corner_radius_bottom_right = 20
 
-[sub_resource type="Shader" id=44]
-code = "shader_type canvas_item;
-
-uniform sampler2D image;
-uniform float scale;
-uniform vec2 translation;
-uniform float amount : hint_range(0, 1);
-
-
-void fragment(){
-	
-	vec4 imgText = texture(image, (UV/scale)+translation);
-	// if(imgText.a ==1.0 ){
-		// COLOR = vec4(0.512, 0.202, 0.003, 0.501);
-		
-//	}else if(imgText.a <1.0 ){
-	COLOR = imgText; //vec4(0.221, 0.174, 0.008, 1.0 );
-//	}
-	
-	
-}
-
-"
-
-[sub_resource type="ShaderMaterial" id=42]
-shader = SubResource( 44 )
-shader_param/scale = 1.171
-shader_param/translation = Vector2( -0.001, 0.061 )
-shader_param/amount = null
-shader_param/image = ExtResource( 19 )
-
-[sub_resource type="StyleBoxFlat" id=43]
-bg_color = Color( 0.47451, 0.290196, 0.0313726, 0.870588 )
-corner_radius_top_left = 10
-
-[sub_resource type="DynamicFont" id=7]
-size = 30
-font_data = ExtResource( 8 )
-
 [sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0.101961, 0.0627451, 0.00784314, 1 )
 corner_radius_bottom_right = 20
 
 [sub_resource type="DynamicFont" id=9]
-size = 18
+size = 17
 font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=10]
@@ -264,6 +225,49 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+
+[sub_resource type="Shader" id=44]
+code = "shader_type canvas_item;
+
+uniform sampler2D image;
+uniform float scale;
+uniform vec2 translation;
+uniform float amount : hint_range(0, 1);
+
+
+void fragment(){
+	
+	vec4 imgText = texture(image, (UV/scale)+translation);
+	// if(imgText.a ==1.0 ){
+		// COLOR = vec4(0.512, 0.202, 0.003, 0.501);
+		
+//	}else if(imgText.a <1.0 ){
+	COLOR = imgText; //vec4(0.221, 0.174, 0.008, 1.0 );
+//	}
+	
+	
+}
+
+"
+
+[sub_resource type="ShaderMaterial" id=42]
+shader = SubResource( 44 )
+shader_param/scale = 1.271
+shader_param/translation = Vector2( 0, 0.091 )
+shader_param/amount = null
+shader_param/image = ExtResource( 19 )
+
+[sub_resource type="StyleBoxFlat" id=43]
+bg_color = Color( 0.47451, 0.290196, 0.0313726, 0.870588 )
+corner_radius_top_left = 10
+
+[sub_resource type="StyleBoxFlat" id=45]
+bg_color = Color( 0.984314, 0.584314, 0.00784314, 1 )
+corner_radius_bottom_right = 10
+
+[sub_resource type="DynamicFont" id=7]
+size = 40
+font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=21]
 size = 18
@@ -563,89 +567,71 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -429.0
-margin_top = -156.0
+margin_top = -159.0
 margin_right = -29.0
-margin_bottom = 194.0
+margin_bottom = 191.0
 custom_styles/panel = SubResource( 6 )
-
-[node name="characterImage" type="Panel" parent="PlayerAttributesPanel"]
-material = SubResource( 42 )
-margin_left = 9.0
-margin_top = 13.0
-margin_right = 160.0
-margin_bottom = 129.0
-custom_styles/panel = SubResource( 43 )
-
-[node name="characterName" type="Label" parent="PlayerAttributesPanel"]
-margin_left = 173.0
-margin_top = 13.0
-margin_right = 386.0
-margin_bottom = 125.0
-custom_constants/line_spacing = -11
-custom_fonts/font = SubResource( 7 )
-text = "Character name"
-align = 1
-valign = 1
-autowrap = true
-clip_text = true
 
 [node name="attibutesBackground" type="Panel" parent="PlayerAttributesPanel"]
 margin_left = 9.0
 margin_top = 129.0
-margin_right = 386.0
+margin_right = 397.0
 margin_bottom = 348.0
 custom_styles/panel = SubResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="health" type="Label" parent="PlayerAttributesPanel/attibutesBackground"]
-margin_left = 165.0
-margin_top = 2.0
-margin_right = 225.0
-margin_bottom = 28.0
+margin_left = 177.0
+margin_top = 1.0
+margin_right = 236.0
+margin_bottom = 27.0
 custom_colors/font_color = Color( 0.984314, 0.760784, 0, 1 )
 custom_fonts/font = SubResource( 9 )
 text = "health"
 
 [node name="magic" type="Label" parent="PlayerAttributesPanel/attibutesBackground"]
-margin_left = 166.0
-margin_top = 45.0
-margin_right = 225.0
-margin_bottom = 74.0
+margin_left = 177.0
+margin_top = 42.0
+margin_right = 224.0
+margin_bottom = 71.0
 custom_colors/font_color = Color( 0.984314, 0.760784, 0, 1 )
 custom_fonts/font = SubResource( 10 )
 text = "magic"
 
 [node name="attack" type="Label" parent="PlayerAttributesPanel/attibutesBackground"]
-margin_left = 165.0
-margin_top = 89.0
-margin_right = 235.0
-margin_bottom = 124.0
+margin_left = 178.0
+margin_top = 86.0
+margin_right = 237.0
+margin_bottom = 110.0
 custom_colors/font_color = Color( 0.984314, 0.760784, 0, 1 )
 custom_fonts/font = SubResource( 10 )
 text = "attack"
 
-[node name="attack2" type="Label" parent="PlayerAttributesPanel/attibutesBackground"]
-margin_left = 165.0
-margin_top = 131.0
-margin_right = 248.0
-margin_bottom = 166.0
+[node name="defense" type="Label" parent="PlayerAttributesPanel/attibutesBackground"]
+margin_left = 176.0
+margin_top = 129.0
+margin_right = 244.0
+margin_bottom = 153.0
 custom_colors/font_color = Color( 0.984314, 0.760784, 0, 1 )
 custom_fonts/font = SubResource( 10 )
 text = "defense"
 
 [node name="speed" type="Label" parent="PlayerAttributesPanel/attibutesBackground"]
-margin_left = 168.0
+margin_left = 178.0
 margin_top = 172.0
-margin_right = 237.0
-margin_bottom = 207.0
+margin_right = 223.0
+margin_bottom = 196.0
 custom_colors/font_color = Color( 0.984314, 0.760784, 0, 1 )
 custom_fonts/font = SubResource( 10 )
 text = "speed"
 
 [node name="healthBar" type="ProgressBar" parent="PlayerAttributesPanel/attibutesBackground"]
-margin_left = 167.0
-margin_top = 29.0
-margin_right = 359.0
-margin_bottom = 40.0
+margin_left = 177.0
+margin_top = 25.0
+margin_right = 362.0
+margin_bottom = 35.0
 custom_styles/fg = SubResource( 11 )
 custom_styles/bg = SubResource( 12 )
 max_value = 200.0
@@ -654,20 +640,21 @@ value = 95.0
 percent_visible = false
 
 [node name="magicBar" type="ProgressBar" parent="PlayerAttributesPanel/attibutesBackground"]
-margin_left = 166.0
-margin_top = 71.0
-margin_right = 360.0
-margin_bottom = 82.0
+margin_left = 177.0
+margin_top = 67.0
+margin_right = 363.0
+margin_bottom = 77.0
 custom_styles/fg = SubResource( 13 )
 custom_styles/bg = SubResource( 14 )
+max_value = 200.0
 value = 20.0
 percent_visible = false
 
 [node name="attackBar" type="ProgressBar" parent="PlayerAttributesPanel/attibutesBackground"]
-margin_left = 165.0
-margin_top = 114.0
-margin_right = 362.0
-margin_bottom = 125.0
+margin_left = 177.0
+margin_top = 109.0
+margin_right = 366.0
+margin_bottom = 119.0
 custom_styles/fg = SubResource( 15 )
 custom_styles/bg = SubResource( 16 )
 max_value = 200.0
@@ -675,10 +662,10 @@ value = 180.0
 percent_visible = false
 
 [node name="defenseBar" type="ProgressBar" parent="PlayerAttributesPanel/attibutesBackground"]
-margin_left = 167.0
-margin_top = 154.0
-margin_right = 360.0
-margin_bottom = 165.0
+margin_left = 177.0
+margin_top = 153.0
+margin_right = 362.0
+margin_bottom = 163.0
 custom_styles/fg = SubResource( 17 )
 custom_styles/bg = SubResource( 18 )
 max_value = 200.0
@@ -686,15 +673,44 @@ value = 40.0
 percent_visible = false
 
 [node name="speedBar" type="ProgressBar" parent="PlayerAttributesPanel/attibutesBackground"]
-margin_left = 167.0
+margin_left = 177.0
 margin_top = 197.0
-margin_right = 361.0
-margin_bottom = 208.0
+margin_right = 363.0
+margin_bottom = 207.0
 custom_styles/fg = SubResource( 19 )
 custom_styles/bg = SubResource( 20 )
 max_value = 200.0
 value = 130.0
 percent_visible = false
+
+[node name="characterImage" type="Panel" parent="PlayerAttributesPanel"]
+material = SubResource( 42 )
+margin_left = 12.0
+margin_top = 16.0
+margin_right = 164.0
+margin_bottom = 132.0
+custom_styles/panel = SubResource( 43 )
+
+[node name="imageBorder" type="Panel" parent="PlayerAttributesPanel/characterImage"]
+show_behind_parent = true
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 162.0
+margin_bottom = 122.0
+custom_styles/panel = SubResource( 45 )
+
+[node name="characterName" type="Label" parent="PlayerAttributesPanel"]
+margin_left = 176.0
+margin_top = 18.0
+margin_right = 393.0
+margin_bottom = 123.0
+custom_constants/line_spacing = -11
+custom_fonts/font = SubResource( 7 )
+text = "Character name"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
 
 [node name="startBtn" type="TextureButton" parent="."]
 anchor_left = 1.0
