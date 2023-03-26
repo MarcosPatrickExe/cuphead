@@ -19,7 +19,7 @@ func _physics_process(delta :float) -> void:
 	
 	
 	if(count > 10.0):
-		directionResult = generatePositionBat();
+		directionResult = self.generatePositionBat();
 		count = 0.0;
 	
 	
@@ -41,7 +41,7 @@ func _physics_process(delta :float) -> void:
 	
 	
 #	self.position = self.position + playerSpeed;   TBM EQUIVALE À:
-	move_and_collide(playerSpeed);  # aplicando os valores de 'playerSpeed' para a funcao acumulativa
+	self.move_and_collide(playerSpeed);  # aplicando os valores de 'playerSpeed' para a funcao acumulativa
 
 
 

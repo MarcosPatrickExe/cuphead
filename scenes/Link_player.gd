@@ -20,7 +20,7 @@ func _physics_process(delta :float) -> void:
 	 
 	
 	if (directionResult != Vector2.ZERO):
-		playAnimations(directionResult.x, directionResult.y);
+		self.playAnimations(directionResult.x, directionResult.y);
 		# playerSpeed = directionResult;
 		playerSpeed = playerSpeed.move_toward(directionResult, self.ACCELERATION * delta);
 	else:
@@ -32,7 +32,8 @@ func _physics_process(delta :float) -> void:
 			
 
 
-	if(playerSpeed == Vector2.ZERO): #Caso o player esteja parado, ele recebe um frame estatico
+	#Caso o player esteja parado, ele recebe um frame estatico
+	if(playerSpeed == Vector2.ZERO): 
 		
 		match self.currentDirection: #"match" atua como um 'switch' 
 			Directions.LEFT:
@@ -43,11 +44,10 @@ func _physics_process(delta :float) -> void:
 				self.get_child(1).frame = 3;
 			Directions.DOWN:
 				self.get_child(3).frame = 4;
-		
-#	print("delta: ", str(delta));
+
 	
 #	self.position = self.position + playerSpeed;   TBM EQUIVALE À:
-	move_and_collide(playerSpeed);  # aplicando os valores de 'playerSpeed' para a funcao acumulativa
+	self.move_and_collide(playerSpeed);  # aplicando os valores de 'playerSpeed' para a funcao acumulativa
 	
 	
 	
@@ -74,6 +74,7 @@ func playAnimations(X :int, Y :int) -> void:
 		playerAnimationInstance.play("Run_to_top");
 		self.currentDirection = Directions.UP;
 		
+	# deixando o node Sprite visivel correspondente com a direcao que o personagem esta olhando
 	for cont in 4:
 		if cont == direction:
 			self.get_child(cont).visible = true;
