@@ -75,9 +75,9 @@ func playAnimations(X :int, Y :int) -> void:
 		self.currentDirection = Directions.UP;
 		
 	# deixando o node Sprite visivel correspondente com a direcao que o personagem esta olhando
-	for cont in 4:
-		if cont == direction:
-			self.get_child(cont).visible = true;
+	for count in 4:
+		if count == direction:
+			self.get_child(count).visible = true;
 		else:
-			self.get_child(cont).visible = false;
+			self.get_child(count).visible = false;
 

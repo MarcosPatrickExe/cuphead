@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Action RPG Resources/Player/ayla_sprites.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Ayla_player.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 7.0
+radius = 12.0
+height = 0.0
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -20,7 +22,7 @@ tracks/0/keys = {
 "values": [ 2 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Ayla_run_to_up_sprite:frame")
+tracks/1/path = NodePath("Ayla_run_to_right_sprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -31,11 +33,36 @@ tracks/1/keys = {
 "update": 0,
 "values": [ 2 ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("Ayla_run_to_left_sprite:region_rect")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Rect2( 120, 169, 25, 24 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Ayla_run_to_up_sprite:region_rect")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Rect2( 187, 127, 22, 32 ) ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "run_to_down"
-length = 0.5
+length = 0.45
 loop = true
+step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("Ayla_run_to_down_sprite:frame")
 tracks/0/interp = 1
@@ -43,18 +70,19 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
+"times": PoolRealArray( 0, 0.15, 0.35 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 2, 1, 0 ]
+"values": [ 2, 0, 1 ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "run_to_up"
-length = 0.5
+[sub_resource type="Animation" id=5]
+resource_name = "run_to_left"
+length = 0.45
 loop = true
+step = 0.04
 tracks/0/type = "value"
-tracks/0/path = NodePath("Ayla_run_to_up_sprite:frame")
+tracks/0/path = NodePath("Ayla_run_to_left_sprite:region_rect")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -63,31 +91,90 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 2, 1, 0 ]
+"values": [ Rect2( 178, 169, 32, 24 ), Rect2( 120, 169, 25, 24 ), Rect2( 149, 170, 25, 23 ) ]
 }
 
-[node name="Ayla_player" type="StaticBody2D"]
+[sub_resource type="Animation" id=4]
+resource_name = "run_to_right"
+length = 0.45
+loop = true
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Ayla_run_to_right_sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.16, 0.32 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 2, 0, 1 ]
+}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-shape = SubResource( 1 )
+[sub_resource type="Animation" id=6]
+resource_name = "run_to_up"
+length = 0.45
+loop = true
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Ayla_run_to_up_sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.16, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 187, 127, 22, 32 ), Rect2( 132, 137, 27, 22 ), Rect2( 163, 131, 20, 28 ) ]
+}
+
+[node name="Ayla_player" type="KinematicBody2D"]
+position = Vector2( 465, 293 )
+script = ExtResource( 2 )
 
 [node name="Ayla_run_to_up_sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 3, 0 )
+texture = ExtResource( 1 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 187, 127, 22, 32 )
+
+[node name="Ayla_run_to_left_sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, 3 )
+texture = ExtResource( 1 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 120, 169, 25, 24 )
+
+[node name="Ayla_run_to_right_sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 5, 4 )
 texture = ExtResource( 1 )
 hframes = 3
 frame = 2
 region_enabled = true
-region_rect = Rect2( 133, 126, 79, 35 )
+region_rect = Rect2( 119, 168, 89, 27 )
+region_filter_clip = true
 
 [node name="Ayla_run_to_down_sprite" type="Sprite" parent="."]
-visible = false
+position = Vector2( 2, 0 )
 texture = ExtResource( 1 )
 hframes = 3
 frame = 2
 region_enabled = true
 region_rect = Rect2( 59, 125, 69, 37 )
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 1 )
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )
 anims/run_to_down = SubResource( 3 )
-anims/run_to_up = SubResource( 4 )
+anims/run_to_left = SubResource( 5 )
+anims/run_to_right = SubResource( 4 )
+anims/run_to_up = SubResource( 6 )
