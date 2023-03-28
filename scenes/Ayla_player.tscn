@@ -228,6 +228,7 @@ region_enabled = true
 region_rect = Rect2( 59, 125, 69, 37 )
 
 [node name="Ayla_stopped_down" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 1 )
 hframes = 3
 frame = 1
@@ -240,6 +241,11 @@ texture = ExtResource( 1 )
 hframes = 3
 region_enabled = true
 region_rect = Rect2( 105.045, 204.415, 57.9744, 36.6431 )
+
+[node name="Ayla_stopped" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 203.535, 255.384, 21.0816, 35.3117 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

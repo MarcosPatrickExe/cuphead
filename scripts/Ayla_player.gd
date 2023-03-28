@@ -20,14 +20,16 @@ func _physics_process(delta :float) -> void:
 	self.directionValues.y = Input.get_action_strength("s") - Input.get_action_strength("w");
 		# self.currentDirection = Directions.LEFT;
 
-	if(directionValues != Vector2.ZERO):
+	if(playerCood != Vector2.ZERO):
 		self.animations(directionValues.x, directionValues.y);
 	else:
 		self.idleAnimations();
 	
-	playerCood = playerCood.move_toward(self.directionValues*5, delta*10);
-	#playerCood.x += directionValues.x;  # Exemplo com aceleracao em X
+	playerCood = playerCood.move_toward(self.directionValues*6, delta*20); # aqui a velocidade do player vai aumentando (ou diminuindo) ate chegar no valor-alvo, delimitado por "directionValues*6" !!
+	# playerCood = directionValues*6; # nessa versao, a velocidade do player eh constante!!
+	#playerCood.x += directionValues.x;  # aqui a velocidade do player eh acelerada ate o infinito, sem nenhum limite!!
 	
+
 	self.move_and_collide(playerCood);
 	
 	
@@ -37,8 +39,10 @@ func _physics_process(delta :float) -> void:
 	
 func idleAnimations():
 	
+	# ocultando sprites do personagem quando esta correndo:
 	for count in range(0, 4):
 		self.get_child(count).visible = false;
+	
 	
 	match self.currentDirection:
 		Directions.DOWN:
@@ -48,14 +52,23 @@ func idleAnimations():
 		Directions.UP:
 			self.get_node("Ayla_stopped_up").visible = true;
 			self.animations.play("stopped_up");
-		
+			
+		Directions.RIGHT:
+			self.get_node("Ayla_stopped").set_flip_h(false);
+			self.get_node("Ayla_stopped").visible = true;
+		Directions.LEFT:
+			self.get_node("Ayla_stopped").set_flip_h(true);
+			self.get_node("Ayla_stopped").visible = true;
 	
 	
 	
 func animations( X :int, Y:int) -> void:
 	
+	# ocultando sprites do personagem quando esta parado:
 	self.get_node("Ayla_stopped_down").visible = false;
 	self.get_node("Ayla_stopped_up").visible = false;
+	self.get_node("Ayla_stopped").visible = false;
+	
 	
 	match X:
 		-1:
