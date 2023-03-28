@@ -217,7 +217,6 @@ region_enabled = true
 region_rect = Rect2( 142, 0, 142, 34 )
 
 [node name="Run_to_top_sprites" type="Sprite" parent="."]
-visible = false
 position = Vector2( 0, 4 )
 scale = Vector2( 1.13636, 1.10714 )
 texture = ExtResource( 1 )
@@ -226,6 +225,7 @@ region_enabled = true
 region_rect = Rect2( 283, 2, 176, 28 )
 
 [node name="Run_to_down_sprites" type="Sprite" parent="."]
+visible = false
 position = Vector2( 0, 5 )
 scale = Vector2( 1.13095, 1.15741 )
 texture = ExtResource( 2 )

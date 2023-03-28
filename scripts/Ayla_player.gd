@@ -16,36 +16,63 @@ func _ready() -> void:
 
 func _physics_process(delta :float) -> void:
 	
-	if(Input.is_action_just_pressed("a")):
-		self.currentDirection = Directions.LEFT;
-		self.directionValues.x = -1;
-	elif(Input.is_action_just_pressed("w")):
-		self.currentDirection = Directions.UP;
-		self.directionValues.y = 1;
-	elif(Input.is_action_just_pressed("d")):
-		self.currentDirection = Directions.RIGHT;
-		self.directionValues.x = 1;
-	elif(Input.is_action_just_pressed("s")):
-		self.currentDirection = Directions.DOWN;
-		self.directionValues.y = -1;
+	self.directionValues.x = Input.get_action_strength("d") - Input.get_action_strength("a");
+	self.directionValues.y = Input.get_action_strength("s") - Input.get_action_strength("w");
+		# self.currentDirection = Directions.LEFT;
+
+	if(directionValues != Vector2.ZERO):
+		self.animations(directionValues.x, directionValues.y);
+	else:
+		self.idleAnimations();
 	
-	#playerCood = playerCood.move_toward(self.directionValues, delta*10.0);
-	#playerCood.x += directionValues.x;  # Exemplo com aceleracao
-	#playerCood.y += directionValues.y;  # Exemplo com aceleracao 2
-	print("X :",str(playerCood.x));
+	playerCood = playerCood.move_toward(self.directionValues*5, delta*10);
+	#playerCood.x += directionValues.x;  # Exemplo com aceleracao em X
+	
+	self.move_and_collide(playerCood);
 	
 	
-	match currentDirection:
-		Directions.LEFT:
+	
+	
+	
+	
+func idleAnimations():
+	
+	for count in range(0, 4):
+		self.get_child(count).visible = false;
+	
+	match self.currentDirection:
+		Directions.DOWN:
+			self.get_node("Ayla_stopped_down").visible = true;
+			self.animations.play("stopped_down");
+			
+		Directions.UP:
+			self.get_node("Ayla_stopped_up").visible = true;
+			self.animations.play("stopped_up");
+		
+	
+	
+	
+func animations( X :int, Y:int) -> void:
+	
+	self.get_node("Ayla_stopped_down").visible = false;
+	self.get_node("Ayla_stopped_up").visible = false;
+	
+	match X:
+		-1:
 			self.animations.play("run_to_left");
 			self.dirCod = 1;
-		Directions.RIGHT:
+			self.currentDirection = self.Directions.LEFT;
+		1:
 			self.animations.play("run_to_right");
 			self.dirCod = 2;
-		Directions.DOWN:
+			self.currentDirection = self.Directions.RIGHT;
+	match Y:
+		1:
+			self.currentDirection = self.Directions.DOWN;
 			self.animations.play("run_to_down");
 			self.dirCod = 3;
-		Directions.UP:
+		-1:
+			self.currentDirection = self.Directions.UP;
 			self.animations.play("run_to_up");
 			self.dirCod = 0;
 	
@@ -57,7 +84,7 @@ func _physics_process(delta :float) -> void:
 			self.get_child(count).visible = false;
 			
 			
-	self.move_and_collide(playerCood);
+	
 	
 	
 	
