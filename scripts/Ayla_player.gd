@@ -16,6 +16,7 @@ func _ready() -> void:
 
 func _physics_process(delta :float) -> void:
 	
+	
 	self.directionValues.x = Input.get_action_strength("d") - Input.get_action_strength("a");
 	self.directionValues.y = Input.get_action_strength("s") - Input.get_action_strength("w");
 		# self.currentDirection = Directions.LEFT;
