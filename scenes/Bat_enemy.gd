@@ -15,8 +15,6 @@ var count :float = 0.0;
 func _physics_process(delta :float) -> void:
 	
 	count += self.ACCELERATION * delta;
-	#print("count: ",str(count));
-	
 	
 	if(count > 10.0):
 		directionResult = self.generatePositionBat();
@@ -28,8 +26,6 @@ func _physics_process(delta :float) -> void:
 	animationTree.set("parameters/Flying/blend_position", directionResult);
 	animationTree.set("parameters/Static/blend_position", directionResult);
 
-	#print("X: ",str(directionResult.x), " Y: ",str(directionResult.y));
-	
 	
 	if (directionResult != Vector2.ZERO):
 		playerSpeed = playerSpeed.move_toward(directionResult, self.ACCELERATION * delta);
