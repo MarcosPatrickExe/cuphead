@@ -5,10 +5,16 @@ var currentDirection;
 var dirCod :int;
 var playerCood = Vector2(0, 0);
 var directionValues = Vector2(0, 0);
+var actionsNode :Dictionary = {};
 
 
 func _ready():
 	self.currentDirection = Directions.RIGHT;
+	self.actionsNode = {
+		"stopped": $Sora_stopped,
+		"stopped_down": $Sora_stopped_down,
+		"stopped_up": $Sora_stopped_up
+	}
 	
 	
 func _physics_process(delta:float) -> void:
@@ -25,11 +31,11 @@ func _physics_process(delta:float) -> void:
 
 
 	if(self.playerCood != Vector2.ZERO):
-		self.runAnimations(directionValues.x, directionValues.y)
+		Globals.runAnimations(directionValues.x, directionValues.y, self, self.actionsNode);
 	else:
 		self.idleAnimations();
 		
-	# adicionadn
+	# adicionando X e Y de "playerCood" na sua posicao atual:
 	self.move_and_collide(playerCood);
 	
 	
@@ -56,36 +62,3 @@ func idleAnimations():
 		
 	
 	
-func runAnimations(X: int, Y: int):
-	
-	# ocultando as sprites do personagem quando parado
-	$Sora_stopped.visible = false;
-	$Sora_stopped_up.visible = false;
-	$Sora_stopped_down.visible = false;
-	
-	match X:
-		-1:
-			self.animations.play("run_to_left");
-			self.dirCod = 0;
-			self.currentDirection = self.Directions.LEFT;
-		1:
-			self.animations.play("run_to_right");
-			self.dirCod = 1;
-			self.currentDirection = self.Directions.RIGHT;
-	match Y:
-		1:
-			self.animations.play("run_to_down");
-			self.dirCod = 3;
-			self.currentDirection = self.Directions.DOWN;
-		-1:
-			self.animations.play("run_to_up");
-			self.dirCod = 2;
-			self.currentDirection = self.Directions.UP;
-	
-	
-	# ocultando as sprites com animacoes desnecessarias:
-	for count in range(0, 4):
-		if(count == self.dirCod):
-			self.get_child(count).visible = true;
-		else:
-			self.get_child(count).visible = false;

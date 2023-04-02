@@ -130,6 +130,12 @@ tracks/0/keys = {
 position = Vector2( 465, 293 )
 script = ExtResource( 2 )
 
+[node name="Sora_run_to_up" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1, 309, 29, 50 )
+
 [node name="Sora_run_to_left" type="Sprite" parent="."]
 visible = false
 texture = ExtResource( 1 )
@@ -142,12 +148,6 @@ texture = ExtResource( 1 )
 flip_h = true
 region_enabled = true
 region_rect = Rect2( 2, 583, 32, 42 )
-
-[node name="Sora_run_to_up" type="Sprite" parent="."]
-visible = false
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 1, 309, 29, 50 )
 
 [node name="Sora_run_to_down" type="Sprite" parent="."]
 visible = false

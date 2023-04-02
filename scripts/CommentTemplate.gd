@@ -18,7 +18,7 @@ func init(comment: String, userName :String, profileImageTexture :Texture) -> vo
 	$date_and_hour_text.text = dataMask;
 	$commentText.text = comment;
 	
-	var newMaterial = ShaderMaterial.new()
+	var newMaterial = ShaderMaterial.new();
 	newMaterial.shader = self.shaderResource;
 	newMaterial.set_shader_param("scale", Vector2(1, 1));
 	newMaterial.set_shader_param("offset", Vector2(0.008, 0.008));
