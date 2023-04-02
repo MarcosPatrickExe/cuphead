@@ -44,8 +44,6 @@ func _physics_process(delta :float) -> void:
 	
 	
 	
-	
-	
 func idleAnimations() -> void:
 	
 	# ocultando sprites do personagem quando esta correndo:
