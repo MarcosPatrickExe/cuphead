@@ -5,7 +5,7 @@ var currentDirection;
 var dirCod :int;
 var playerCood = Vector2(0, 0);
 var directionValues = Vector2(0, 0);
-
+export var ACCELERATION = 4;
 
 
 
@@ -13,24 +13,28 @@ func _ready() -> void:
 	self.currentDirection = Directions.DOWN;
 
 
-
 func _physics_process(delta :float) -> void:
 	
 	
 	self.directionValues.x = Input.get_action_strength("d") - Input.get_action_strength("a");
 	self.directionValues.y = Input.get_action_strength("s") - Input.get_action_strength("w");
-		# self.currentDirection = Directions.LEFT;
+	
+	# impedindo a personagem de andar na diagonal:
+	if( (directionValues.x !=0) && (directionValues.y!=0)):
+		self.directionValues = Vector2.ZERO;
+
 
 	if(playerCood != Vector2.ZERO):
 		self.animations(directionValues.x, directionValues.y);
 	else:
 		self.idleAnimations();
 	
-	playerCood = playerCood.move_toward(self.directionValues*6, delta*20); # aqui a velocidade do player vai aumentando (ou diminuindo) ate chegar no valor-alvo, delimitado por "directionValues*6" !!
-	# playerCood = directionValues*6; # nessa versao, a velocidade do player eh constante!!
-	#playerCood.x += directionValues.x;  # aqui a velocidade do player eh acelerada ate o infinito, sem nenhum limite!!
+	playerCood = playerCood.move_toward(self.directionValues*6, delta*ACCELERATION); # aqui a velocidade do player vai aumentando (ou diminuindo) ate chegar no valor-alvo, delimitado por "directionValues*6" !!
+	# playerCood = directionValues*6; # nessa versao, a velocidade do player eh constante, ou seja, vale "directionValues*6" !
+	# playerCood.x += directionValues.x;  # aqui a velocidade do player eh acelerada ate o infinito, sem nenhum limite!!
 	
-
+	
+	# aqui o "playerCood" eh adicionando a posicao (X, Y) anterior do persoangem
 	self.move_and_collide(playerCood);
 	
 	
@@ -38,7 +42,7 @@ func _physics_process(delta :float) -> void:
 	
 	
 	
-func idleAnimations():
+func idleAnimations() -> void:
 	
 	# ocultando sprites do personagem quando esta correndo:
 	for count in range(0, 4):

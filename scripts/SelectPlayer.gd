@@ -120,6 +120,7 @@ func mouseOnButton(button :TextureButton, buttonHoveredByMouse :bool):
 			"linkBTN": attributesBars = [110, 70, 130, 170, 70];
 			"soraBTN": attributesBars = [110, 130, 70, 130, 100];
 			
+	# mudando as barras de atributos de acordo com o personagem selecionado:
 	var statusBar = $PlayerAttributesPanel/attibutesBackground;
 	for count in range(0, attributesBars.size() ):
 		statusBar.get_child(count+5).set_value( attributesBars[count] );
@@ -132,6 +133,7 @@ func mouseOnButton(button :TextureButton, buttonHoveredByMouse :bool):
 	var characterImgMaterial = $PlayerAttributesPanel/characterImage.material;
 	characterImgMaterial.set_shader_param("image", button.material.get_shader_param("imageAddited"));
 	
+	# mudando imagem do lado direito de acordo com o personagem selecionado
 	match button.name:
 		"frogBTN": 
 			characterImgMaterial.set_shader_param("scale", 1.182);
@@ -162,8 +164,6 @@ func mouseOnButton(button :TextureButton, buttonHoveredByMouse :bool):
 			characterImgMaterial.set_shader_param("translation", Vector2(0.211, 0.147));
 	
 	
-	
-
 	button.get_child(0).set_scale( Vector2(1.09, 1.07) ); #aumentando o tamanho do rect, ficando vermelho
 	button.get_child(0).material.set_shader_param("isSelected", true);
 	

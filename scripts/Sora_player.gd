@@ -16,18 +16,20 @@ func _physics_process(delta:float) -> void:
 	self.directionValues.x = Input.get_action_strength("d") - Input.get_action_strength("a");
 	self.directionValues.y = Input.get_action_strength("s") - Input.get_action_strength("w");
 	
+	# impedindo o personagem de andar na diagonal:
 	if( (directionValues.x !=0) && (directionValues.y!=0)):
 		self.directionValues = Vector2.ZERO;
 		 
+		
 	self.playerCood = playerCood.move_toward(directionValues*4, delta*20.0);
 
 
-	if(directionValues != Vector2.ZERO):
+	if(self.playerCood != Vector2.ZERO):
 		self.runAnimations(directionValues.x, directionValues.y)
 	else:
 		self.idleAnimations();
 		
-	
+	# adicionadn
 	self.move_and_collide(playerCood);
 	
 	
@@ -35,6 +37,7 @@ func _physics_process(delta:float) -> void:
 	
 func idleAnimations():
 	
+	# ocultando as sprites do personagem correndo:
 	for count in range(0, 4):
 		self.get_child(count).visible = false;
 	
@@ -55,6 +58,7 @@ func idleAnimations():
 	
 func runAnimations(X: int, Y: int):
 	
+	# ocultando as sprites do personagem quando parado
 	$Sora_stopped.visible = false;
 	$Sora_stopped_up.visible = false;
 	$Sora_stopped_down.visible = false;
@@ -79,6 +83,7 @@ func runAnimations(X: int, Y: int):
 			self.currentDirection = self.Directions.UP;
 	
 	
+	# ocultando as sprites com animacoes desnecessarias:
 	for count in range(0, 4):
 		if(count == self.dirCod):
 			self.get_child(count).visible = true;
