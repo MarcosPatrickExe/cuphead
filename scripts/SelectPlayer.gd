@@ -55,7 +55,6 @@ func _input(event :InputEvent):
 			self.charactersOptionsMap[currSelection[0]][currSelection[1]]
 		);
 		self.currSelection[0] -= 1;
-		print("y: ", str(currSelection[0]));
 		self.mouseOnButton(
 			self.charactersOptionsMap[currSelection[0]][currSelection[1]], false
 		);
@@ -91,7 +90,6 @@ func _input(event :InputEvent):
 
 func mouseOnButton(button :TextureButton, buttonHoveredByMouse :bool):
 	
-	
 	if( buttonHoveredByMouse ):
 		self.mouseLeaveOfButton( self.charactersOptionsMap[currSelection[0]][currSelection[1]] );
 	
@@ -105,7 +103,7 @@ func mouseOnButton(button :TextureButton, buttonHoveredByMouse :bool):
 			"ganbareGoemonBTN": self.currSelection = [2, 0];
 			"linkBTN": self.currSelection = [2, 1];
 			"soraBTN": self.currSelection = [2, 2];
-			 
+
 	
 	
 	# setando valores dos atributos em funcao do personagem selecionado:
@@ -165,7 +163,7 @@ func mouseOnButton(button :TextureButton, buttonHoveredByMouse :bool):
 	
 	
 	button.get_child(0).set_scale( Vector2(1.09, 1.07) ); #aumentando o tamanho do rect, ficando vermelho
-	button.get_child(0).material.set_shader_param("isSelected", true);
+	button.get_child(0).material.set_shader_param("isSelected", true);# alterando a cor do rect para vermelho
 	
 	
 	
