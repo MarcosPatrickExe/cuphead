@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Action RPG Resources/Player/black_mage_sprites.png" type="Texture" id=1]
 [ext_resource path="res://scripts/BlackMage_player.gd" type="Script" id=2]
@@ -9,7 +9,7 @@ radius = 8.06226
 [sub_resource type="Animation" id=2]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Mage_run_to_up:frame")
+tracks/0/path = NodePath("all_sprites:region_rect")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -18,15 +18,33 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 50 ]
+"values": [ Rect2( 2, 215, 27, 22 ) ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=8]
+resource_name = "drinking"
+length = 7.0
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("all_sprites:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.55, 0.9, 1.2, 1.55, 1.85, 2.65, 3.45, 4.35, 5.25, 6.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 2, 215, 27, 22 ), Rect2( 32, 215, 28, 22 ), Rect2( 63, 215, 26, 22 ), Rect2( 92, 215, 27, 22 ), Rect2( 122, 215, 27, 22 ), Rect2( 152, 215, 27, 22 ), Rect2( 182, 215, 27, 21 ), Rect2( 212, 215, 27, 21 ), Rect2( 242, 215, 27, 21 ), Rect2( 272, 215, 27, 21 ), Rect2( 242, 215, 27, 21 ), Rect2( 212, 215, 27, 21 ) ]
+}
+
+[sub_resource type="Animation" id=9]
 resource_name = "run_to_down"
 length = 0.9
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Mage_run_to_up:frame")
+tracks/0/path = NodePath("all_sprites:region_rect")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -35,52 +53,52 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 15, 16, 17, 18, 17 ]
+"values": [ Rect2( 156, 35, 19, 22 ), Rect2( 186, 35, 19, 22 ), Rect2( 216, 35, 20, 22 ), Rect2( 246, 35, 20, 22 ), Rect2( 65, 35, 20, 22 ) ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=10]
 resource_name = "run_to_left"
 length = 0.6
 loop = true
 step = 0.04
 tracks/0/type = "value"
-tracks/0/path = NodePath("Mage_run_to_up:frame")
+tracks/0/path = NodePath("all_sprites:region_rect")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.15, 0.32, 0.5 ),
+"times": PoolRealArray( 0, 0.16, 0.32, 0.52 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 64, 63, 62, 61 ]
+"values": [ Rect2( 125, 185, 22, 21 ), Rect2( 94, 185, 24, 21 ), Rect2( 62, 186, 28, 19 ), Rect2( 36, 185, 19, 21 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=11]
 resource_name = "run_to_right"
 length = 0.6
 loop = true
 step = 0.04
 tracks/0/type = "value"
-tracks/0/path = NodePath("Mage_run_to_up:frame")
+tracks/0/path = NodePath("all_sprites:region_rect")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.16, 0.32, 0.5 ),
+"times": PoolRealArray( 0, 0.16, 0.32, 0.52 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 65, 66, 67, 68 ]
+"values": [ Rect2( 155, 185, 22, 21 ), Rect2( 184, 185, 24, 21 ), Rect2( 212, 186, 28, 19 ), Rect2( 247, 185, 19, 21 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=12]
 resource_name = "run_to_up"
 length = 1.1
 loop = true
 step = 0.08
 tracks/0/type = "value"
-tracks/0/path = NodePath("Mage_run_to_up:frame")
+tracks/0/path = NodePath("all_sprites:region_rect")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -89,27 +107,27 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.16, 0.32, 0.48, 0.64, 0.8, 0.96 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 50, 51, 52, 53, 54, 52, 51 ]
+"values": [ Rect2( 7, 156, 18, 20 ), Rect2( 37, 155, 17, 21 ), Rect2( 67, 155, 17, 22 ), Rect2( 97, 155, 17, 21 ), Rect2( 126, 156, 19, 20 ), Rect2( 67, 155, 17, 22 ), Rect2( 37, 155, 17, 21 ) ]
 }
 
 [node name="BlackMage_player" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
-[node name="Mage_run_to_up" type="Sprite" parent="."]
-position = Vector2( 473, 258 )
+[node name="all_sprites" type="Sprite" parent="."]
+position = Vector2( 477, 278 )
 texture = ExtResource( 1 )
-hframes = 10
-vframes = 11
-frame = 50
+region_enabled = true
+region_rect = Rect2( 2, 215, 27, 22 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2( 475, 262 )
+position = Vector2( 477, 280 )
 shape = SubResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )
-anims/run_to_down = SubResource( 3 )
-anims/run_to_left = SubResource( 4 )
-anims/run_to_right = SubResource( 5 )
-anims/run_to_up = SubResource( 6 )
+anims/drinking = SubResource( 8 )
+anims/run_to_down = SubResource( 9 )
+anims/run_to_left = SubResource( 10 )
+anims/run_to_right = SubResource( 11 )
+anims/run_to_up = SubResource( 12 )
