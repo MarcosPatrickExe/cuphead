@@ -1,16 +1,17 @@
 extends KinematicBody2D
-enum states { UP, LEFT, RIGHT, DOWN  }
+enum states { UP, LEFT, RIGHT, DOWN, DEFEATED }
 var currentState = states.DOWN;
 var directionsValues = Vector2(0, 0);
 var playerSpeed = Vector2(0, 0);
 
 
-func _ready():
-	pass;
-
 
 
 func _physics_process(delta :float) -> void:
+	
+	if(self.currentState == states.DEFEATED):
+		return
+	
 	
 	self.directionsValues.x = Input.get_action_strength("d") - Input.get_action_strength("a");
 	self.directionsValues.y = Input.get_action_strength("s") - Input.get_action_strength("w");
@@ -25,6 +26,13 @@ func _physics_process(delta :float) -> void:
 		match self.currentState:
 			states.DOWN:
 				$AnimationPlayer.play("drinking");
+			states.LEFT:
+				$AnimationPlayer.play("stopped_left");
+			states.RIGHT:
+				$AnimationPlayer.play("stopped_right");
+				# self.currentState = states.DEFEATED;
+			states.UP:
+				$AnimationPlayer.play("stopped_up");
 			
 	
 	

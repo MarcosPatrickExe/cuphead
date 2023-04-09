@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Action RPG Resources/Player/black_mage_sprites.png" type="Texture" id=1]
 [ext_resource path="res://scripts/BlackMage_player.gd" type="Script" id=2]
@@ -21,9 +21,25 @@ tracks/0/keys = {
 "values": [ Rect2( 2, 215, 27, 22 ) ]
 }
 
+[sub_resource type="Animation" id=13]
+resource_name = "defeated"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("all_sprites:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 35, 276, 22, 19 ), Rect2( 62, 275, 27, 21 ), Rect2( 92, 274, 27, 24 ), Rect2( 123, 276, 26, 20 ) ]
+}
+
 [sub_resource type="Animation" id=8]
 resource_name = "drinking"
-length = 7.0
+length = 6.0
 loop = true
 step = 0.05
 tracks/0/type = "value"
@@ -33,10 +49,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.55, 0.9, 1.2, 1.55, 1.85, 2.65, 3.45, 4.35, 5.25, 6.3 ),
+"times": PoolRealArray( 0.05, 0.65, 1.25, 1.95, 2.6, 3.45, 3.75, 4, 4.3, 4.6, 4.9, 5.2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Rect2( 2, 215, 27, 22 ), Rect2( 32, 215, 28, 22 ), Rect2( 63, 215, 26, 22 ), Rect2( 92, 215, 27, 22 ), Rect2( 122, 215, 27, 22 ), Rect2( 152, 215, 27, 22 ), Rect2( 182, 215, 27, 21 ), Rect2( 212, 215, 27, 21 ), Rect2( 242, 215, 27, 21 ), Rect2( 272, 215, 27, 21 ), Rect2( 242, 215, 27, 21 ), Rect2( 212, 215, 27, 21 ) ]
+"values": [ Rect2( 212, 215, 27, 21 ), Rect2( 242, 215, 27, 21 ), Rect2( 272, 215, 27, 21 ), Rect2( 242, 215, 27, 21 ), Rect2( 212, 215, 27, 21 ), Rect2( 2, 215, 27, 22 ), Rect2( 32, 215, 28, 22 ), Rect2( 63, 215, 26, 22 ), Rect2( 92, 215, 27, 22 ), Rect2( 122, 215, 27, 22 ), Rect2( 152, 215, 27, 22 ), Rect2( 182, 215, 27, 21 ) ]
 }
 
 [sub_resource type="Animation" id=9]
@@ -110,11 +126,60 @@ tracks/0/keys = {
 "values": [ Rect2( 7, 156, 18, 20 ), Rect2( 37, 155, 17, 21 ), Rect2( 67, 155, 17, 22 ), Rect2( 97, 155, 17, 21 ), Rect2( 126, 156, 19, 20 ), Rect2( 67, 155, 17, 22 ), Rect2( 37, 155, 17, 21 ) ]
 }
 
+[sub_resource type="Animation" id=14]
+resource_name = "stopped_left"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("all_sprites:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Rect2( 125, 185, 22, 21 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "stopped_right"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("all_sprites:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Rect2( 155, 185, 22, 21 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "stopped_up"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("all_sprites:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Rect2( 67, 155, 17, 22 ) ]
+}
+
 [node name="BlackMage_player" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="all_sprites" type="Sprite" parent="."]
 position = Vector2( 477, 278 )
+scale = Vector2( 1.8, 1.8 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 2, 215, 27, 22 )
@@ -126,8 +191,12 @@ shape = SubResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )
+anims/defeated = SubResource( 13 )
 anims/drinking = SubResource( 8 )
 anims/run_to_down = SubResource( 9 )
 anims/run_to_left = SubResource( 10 )
 anims/run_to_right = SubResource( 11 )
 anims/run_to_up = SubResource( 12 )
+anims/stopped_left = SubResource( 14 )
+anims/stopped_right = SubResource( 15 )
+anims/stopped_up = SubResource( 16 )
