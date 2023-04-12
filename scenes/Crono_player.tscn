@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Action RPG Resources/Player/crono_sprites.png" type="Texture" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 7.0
+
+[node name="Crono_player" type="KinematicBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 488, 305 )
+shape = SubResource( 1 )
+
+[node name="CronoSprites" type="Sprite" parent="."]
+position = Vector2( 488, 305 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 59, 14, 16, 35 )
