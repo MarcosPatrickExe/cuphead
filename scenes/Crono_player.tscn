@@ -1,9 +1,41 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Action RPG Resources/Player/crono_sprites.png" type="Texture" id=1]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 7.0
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("all_sprites:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Rect2( 199, 143, 28, 32 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "run_to_right"
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("all_sprites:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45, 0.6, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 221, 99, 14, 33 ), Rect2( 242, 98, 15, 34 ), Rect2( 231, 143, 28, 32 ), Rect2( 151, 99, 15, 33 ), Rect2( 174, 98, 14, 34 ), Rect2( 199, 143, 28, 32 ) ]
+}
 
 [node name="Crono_player" type="KinematicBody2D"]
 
@@ -12,8 +44,12 @@ visible = false
 position = Vector2( 488, 305 )
 shape = SubResource( 1 )
 
-[node name="CronoSprites" type="Sprite" parent="."]
+[node name="all_sprites" type="Sprite" parent="."]
 position = Vector2( 488, 305 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 59, 14, 16, 35 )
+region_rect = Rect2( 199, 143, 28, 32 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+anims/run_to_right = SubResource( 3 )
