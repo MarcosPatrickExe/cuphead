@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Action RPG Resources/Player/crono_sprites.png" type="Texture" id=1]
 
@@ -20,6 +20,23 @@ tracks/0/keys = {
 "values": [ Rect2( 199, 143, 28, 32 ) ]
 }
 
+[sub_resource type="Animation" id=4]
+resource_name = "run_to_down"
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("all_sprites:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 130, 15, 16, 34 ), Rect2( 150, 17, 17, 32 ), Rect2( 193, 15, 16, 34 ), Rect2( 213, 17, 17, 32 ) ]
+}
+
 [sub_resource type="Animation" id=3]
 resource_name = "run_to_right"
 loop = true
@@ -37,6 +54,24 @@ tracks/0/keys = {
 "values": [ Rect2( 221, 99, 14, 33 ), Rect2( 242, 98, 15, 34 ), Rect2( 231, 143, 28, 32 ), Rect2( 151, 99, 15, 33 ), Rect2( 174, 98, 14, 34 ), Rect2( 199, 143, 28, 32 ) ]
 }
 
+[sub_resource type="Animation" id=5]
+resource_name = "run_to_up"
+length = 0.9
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("all_sprites:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45, 0.6, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 150, 60, 18, 32 ), Rect2( 172, 59, 18, 33 ), Rect2( 177, 137, 17, 38 ), Rect2( 213, 60, 18, 32 ), Rect2( 235, 59, 18, 33 ), Rect2( 156, 137, 17, 38 ) ]
+}
+
 [node name="Crono_player" type="KinematicBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -52,4 +87,6 @@ region_rect = Rect2( 199, 143, 28, 32 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )
+anims/run_to_down = SubResource( 4 )
 anims/run_to_right = SubResource( 3 )
+anims/run_to_up = SubResource( 5 )
