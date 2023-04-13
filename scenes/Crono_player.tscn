@@ -24,6 +24,7 @@ tracks/0/keys = {
 resource_name = "run_to_down"
 length = 0.7
 loop = true
+step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("all_sprites:region_rect")
 tracks/0/interp = 1
@@ -31,14 +32,15 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.14, 0.24, 0.36, 0.47, 0.58 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Rect2( 130, 15, 16, 34 ), Rect2( 150, 17, 17, 32 ), Rect2( 193, 15, 16, 34 ), Rect2( 213, 17, 17, 32 ) ]
+"values": [ Rect2( 130, 15, 16, 34 ), Rect2( 150, 17, 17, 32 ), Rect2( 171, 14, 18, 35 ), Rect2( 193, 15, 16, 34 ), Rect2( 213, 17, 17, 32 ), Rect2( 234, 14, 18, 35 ) ]
 }
 
 [sub_resource type="Animation" id=3]
 resource_name = "run_to_right"
+length = 0.9
 loop = true
 step = 0.05
 tracks/0/type = "value"
@@ -56,9 +58,9 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=5]
 resource_name = "run_to_up"
-length = 0.9
+length = 0.8
 loop = true
-step = 0.05
+step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("all_sprites:region_rect")
 tracks/0/interp = 1
@@ -66,7 +68,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.15, 0.3, 0.45, 0.6, 0.75 ),
+"times": PoolRealArray( 0, 0.12, 0.26, 0.4, 0.54, 0.67 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ Rect2( 150, 60, 18, 32 ), Rect2( 172, 59, 18, 33 ), Rect2( 177, 137, 17, 38 ), Rect2( 213, 60, 18, 32 ), Rect2( 235, 59, 18, 33 ), Rect2( 156, 137, 17, 38 ) ]
