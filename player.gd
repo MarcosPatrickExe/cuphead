@@ -1,18 +1,18 @@
 extends KinematicBody2D
 
 var playerSpeed :Vector2 = Vector2(0, 0); # Vector2.ZERO;
-const SPEED :int = 1;
-const FRICTION :int = 6;
-const ACCELERATION :int = 10;
+const SPEED :int = 2;
+const FRICTION :int = 20;
+const ACCELERATION :int = 20;
 onready var playerAnimationInstance = $AnimationPlayer; #Instancia o node dentro da funcao "ready()"
 enum Directions { RIGHT, DOWN, LEFT, UP }
-var currentDirection = Directions.RIGHT;
+var currentDirection;
 
 
 
 
 func _ready():
-	print("helloo from ready");
+	self.currentDirection = Directions.DOWN;
 	# self.get_child(0).frame = 0;
 	# self.get_node("CollisionShape2D").disabled = true; # only works for main player!!
 	# OS.set_window_maximized(true);
@@ -54,15 +54,22 @@ func _physics_process(delta :float) -> void:
 			speedResult.y = 0;
 
  
+
 	if (speedResult != Vector2.ZERO):
 		# playerSpeed = speedResult;
 		playerSpeed = playerSpeed.move_toward(speedResult, self.ACCELERATION * delta);
 	else:
-		playerAnimationInstance.stop();
 		playerSpeed = playerSpeed.move_toward(Vector2.ZERO, self.FRICTION * delta);
 			# caso nada seja pressionado, o vetor 'playerSpeed' terá seus valorex X e Y 
 			# subtraídos pela expressao "ATRITO * delta" até chegarem à zero, como definido
 			# em "Vector2.ZERO"
+
+	
+	if(Input.is_action_pressed("arrow_left")):
+		playerAnimationInstance.play("attack_left");
+		playerAnimationInstance.stop();
+	elif(Input.is_action_pressed("arrow_right")):
+		pass #	playerAnimationInstance.play("attack_left");
 
 
 
@@ -77,11 +84,8 @@ func _physics_process(delta :float) -> void:
 				self.get_child(0).frame = 0;
 			Directions.DOWN:
 				self.get_child(0).frame = 21;
-		
-		
-	#   print("ACELERACAO * delta: ", str((ACELERACAO * delta)));
-	#	print("delta: ", str(delta));
-	
+
+
 
 	#	self.position = self.position + playerSpeed;   TBM EQUIVALE À:
 	move_and_collide(playerSpeed);  # aplicando os valores de 'playerSpeed' para a funcao acumulativa
