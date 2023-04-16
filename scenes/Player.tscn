@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://Action RPG Resources/Player/Player.png" type="Texture" id=2]
@@ -90,6 +90,36 @@ tracks/0/keys = {
 "values": [ 7, 8, 9, 10, 11, 6 ]
 }
 
+[sub_resource type="Animation" id=10]
+resource_name = "down_attack"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 36, 37, 38, 39 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "onAttackEndingAnimation"
+} ]
+}
+
 [sub_resource type="Animation" id=8]
 resource_name = "left_attack"
 length = 0.4
@@ -151,6 +181,36 @@ tracks/1/keys = {
 } ]
 }
 
+[sub_resource type="Animation" id=11]
+resource_name = "up_attack"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 28, 29, 30, 31 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "onAttackEndingAnimation"
+} ]
+}
+
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 485, 273 )
 rotation = 0.0559265
@@ -163,7 +223,7 @@ rotation = -0.0523599
 scale = Vector2( 1.23545, 1.18742 )
 texture = ExtResource( 2 )
 hframes = 60
-frame = 27
+frame = 31
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -178,5 +238,7 @@ anims/Run_to_down = SubResource( 4 )
 anims/Run_to_left = SubResource( 5 )
 anims/Run_to_right = SubResource( 6 )
 anims/Run_to_top = SubResource( 7 )
+anims/down_attack = SubResource( 10 )
 anims/left_attack = SubResource( 8 )
 anims/right_attack = SubResource( 9 )
+anims/up_attack = SubResource( 11 )
