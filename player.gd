@@ -5,37 +5,53 @@ const SPEED :int = 2;
 const FRICTION :int = 20;
 const ACCELERATION :int = 20;
 onready var playerAnimationInstance = $AnimationPlayer; #Instancia o node dentro da funcao "ready()"
-enum Directions { RIGHT, DOWN, LEFT, UP }
-var currentDirection;
+enum states { IDLE_RIGHT, IDLE_DOWN, IDLE_LEFT, IDLE_UP, LEFT_ATTACK, RIGHT_ATTACK, UP_ATTACK, DOWN_ATTACK }
+var currentState;
+const attackDurationLimit = 8 ;
 
+
+#funcao q eh executada quando a animacao de ataque termina, alem de mudar o estado 'ataque' para 'idle':
+func onAttackEndingAnimation():
+	
+	match self.currentState:
+		states.LEFT_ATTACK:
+			self.currentState = self.states.IDLE_LEFT;
+		states.RIGHT_ATTACK:
+			self.currentState = self.states.IDLE_RIGHT;
+	
+
+
+func _input(event :InputEvent):
+	if(event.is_action_released("arrow_left") ):
+		self.currentState = self.states.LEFT_ATTACK;
+		playerAnimationInstance.play("left_attack");
+		
+	if(event.is_action_pressed("arrow_right") ):
+		self.currentState = self.states.RIGHT_ATTACK;
+		playerAnimationInstance.play("right_attack");
 
 
 
 func _ready():
-	self.currentDirection = Directions.DOWN;
-	# self.get_child(0).frame = 0;
+	self.currentState = states.IDLE_DOWN;
 	# self.get_node("CollisionShape2D").disabled = true; # only works for main player!!
 	# OS.set_window_maximized(true);
 
 
+
 func _physics_process(delta :float) -> void:
-	# Input.get_action_strength("a") # retorna o valor 1 caso a tecla seja pressionada e 0, caso não
-	# var eixo.x = Input.get_action_strength("d") - Input.get_action_strength("a")
-	# var eixo.y = Input.get_action_strength("s") - Input.get_action_strength("w")
-	# eixo.normalized();
-	
 	
 	var speedResult = Vector2.ZERO;
 	
 	if (Input.is_action_pressed("d")):
 			speedResult.x = SPEED;
-			self.currentDirection = Directions.RIGHT;
+			self.currentState = states.IDLE_RIGHT;
 			playerAnimationInstance.play("Run_to_right");
 	#		print(self.get_children()[0].scale);
 
 	elif (Input.is_action_pressed("a")):
 			speedResult.x = -SPEED;
-			self.currentDirection = Directions.LEFT;
+			self.currentState = states.IDLE_LEFT;
 			playerAnimationInstance.play("Run_to_left");
 	else:	
 			speedResult.x = 0;
@@ -43,12 +59,13 @@ func _physics_process(delta :float) -> void:
 			
 	if (Input.is_action_pressed("w")):
 			speedResult.y = -SPEED;
-			self.currentDirection = Directions.UP;
+			self.currentState = states.IDLE_UP;
 			playerAnimationInstance.play("Run_to_top");
+			
 			
 	elif (Input.is_action_pressed("s")):
 			speedResult.y = SPEED;
-			self.currentDirection = Directions.DOWN;
+			self.currentState = states.IDLE_DOWN;
 			playerAnimationInstance.play("Run_to_down");
 	else:
 			speedResult.y = 0;
@@ -64,28 +81,21 @@ func _physics_process(delta :float) -> void:
 			# subtraídos pela expressao "ATRITO * delta" até chegarem à zero, como definido
 			# em "Vector2.ZERO"
 
-	
-	if(Input.is_action_pressed("arrow_left")):
-		playerAnimationInstance.play("attack_left");
+
+	if((playerSpeed == Vector2.ZERO) and (self.currentState != states.RIGHT_ATTACK) and (self.currentState != states.LEFT_ATTACK)  ): #Caso o player esteja parado, ele recebe um frame estatico
 		playerAnimationInstance.stop();
-	elif(Input.is_action_pressed("arrow_right")):
-		pass #	playerAnimationInstance.play("attack_left");
-
-
-
-	if(playerSpeed == Vector2.ZERO): #Caso o player esteja parado, ele recebe um frame estatico
 		
-		match self.currentDirection: #"match" atua como um 'switch' 
-			Directions.LEFT:
-				self.get_child(0).frame = 12;
-			Directions.UP:
+		match self.currentState: #"match" atua como um 'switch' 
+			states.IDLE_LEFT:
+				 self.get_child(0).frame = 12;
+			#	playerAnimationInstance.play("attack_left");
+			states.IDLE_UP:
 				self.get_child(0).frame = 9;
-			Directions.RIGHT:
+			states.IDLE_RIGHT:
 				self.get_child(0).frame = 0;
-			Directions.DOWN:
+			states.IDLE_DOWN:
 				self.get_child(0).frame = 21;
 
-
-
+	
 	#	self.position = self.position + playerSpeed;   TBM EQUIVALE À:
 	move_and_collide(playerSpeed);  # aplicando os valores de 'playerSpeed' para a funcao acumulativa

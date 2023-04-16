@@ -103,8 +103,6 @@ func mouseOnButton(button :TextureButton, buttonHoveredByMouse :bool):
 			"ganbareGoemonBTN": self.currSelection = [2, 0];
 			"linkBTN": self.currSelection = [2, 1];
 			"soraBTN": self.currSelection = [2, 2];
-
-	
 	
 	# setando valores dos atributos em funcao do personagem selecionado:
 	match button.name:
