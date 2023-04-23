@@ -15,7 +15,7 @@ var charactersOptionsMap :Dictionary = { }
 
 func _ready():
 	$backButton.connect("pressed", self, "backBtnPressed");
-		
+	
 	for characterNode in $menuSelect.get_children():
 		characterNode.connect("mouse_entered", self, "mouseOnButton", [characterNode, true]);
 		characterNode.connect("mouse_exited", self, "mouseLeaveOfButton", [characterNode]);

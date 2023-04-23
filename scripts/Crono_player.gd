@@ -18,7 +18,7 @@ func _physics_process(delta: float) -> void:
 	# impedindo a personagem de andar na diagonal:
 	if( (directionsValues.x !=0) && (directionsValues.y!=0)):
 		self.directionValues = Vector2.ZERO;
-	
+		
 	
 	# para quando o personagem estiver parado:
 	elif( self.playerValues == Vector2.ZERO ):
@@ -42,16 +42,19 @@ func _physics_process(delta: float) -> void:
 	
 	# animacoes de movimentacao:
 	if(directionsValues.x == -1):
-			$all_sprites.set_flip_h(true);
-			$AnimationPlayer.play("run_to_right");
-			self.currentState = states.LEFT;
+		$all_sprites.set_flip_h(true);
+		$AnimationPlayer.play("run_to_right");
+		self.currentState = states.LEFT;
+		
 	elif(directionsValues.x == 1):
-			$all_sprites.set_flip_h(false);
-			$AnimationPlayer.play("run_to_right");
-			self.currentState = states.RIGHT;
+		$all_sprites.set_flip_h(false);
+		$AnimationPlayer.play("run_to_right");
+		self.currentState = states.RIGHT;
+		
 	elif(directionsValues.y == -1):
-			$AnimationPlayer.play("run_to_up");
-			self.currentState = states.UP;
+		$AnimationPlayer.play("run_to_up");
+		self.currentState = states.UP;
+		
 	elif(directionsValues.y == 1):
-			$AnimationPlayer.play("run_to_down");
-			self.currentState = states.DOWN;
+		$AnimationPlayer.play("run_to_down");
+		self.currentState = states.DOWN;

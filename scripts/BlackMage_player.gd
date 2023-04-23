@@ -16,6 +16,7 @@ func _physics_process(delta :float) -> void:
 	self.directionsValues.x = Input.get_action_strength("d") - Input.get_action_strength("a");
 	self.directionsValues.y = Input.get_action_strength("s") - Input.get_action_strength("w");
 	
+	
 	# impedindo a personagem de andar na diagonal:
 	if( (directionsValues.x !=0) and (directionsValues.y!=0)):
 		self.directionsValues = Vector2.ZERO;
@@ -35,8 +36,10 @@ func _physics_process(delta :float) -> void:
 				$AnimationPlayer.play("stopped_up");
 			
 	
+	var mod = 3.5 if(directionsValues.x == 1 or directionsValues.x == -1) else 2;
+		
+	self.playerSpeed = playerSpeed.move_toward( directionsValues*mod, delta*10 );
 	
-	self.playerSpeed = playerSpeed.move_toward( directionsValues*2, delta*10 );
 	# movendo o player
 	self.position += self.playerSpeed;
 

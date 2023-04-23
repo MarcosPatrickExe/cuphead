@@ -5,21 +5,14 @@ const FRICTION :int = 20;
 const ACCELERATION :int = 20;
 onready var playerAnimationInstance = $AnimationPlayer; #Instancia o node dentro da funcao "ready()"
 enum states { IDLE_RIGHT, IDLE_DOWN, IDLE_LEFT, IDLE_UP, LEFT_ATTACK, RIGHT_ATTACK, UP_ATTACK, DOWN_ATTACK }
+var isAttacking = false;
 var currentState;
+
 
 
 #funcao q eh executada quando a animacao de ataque termina, alem de mudar o estado 'ataque' para 'idle':
 func onAttackEndingAnimation():
-	match self.currentState:
-		states.LEFT_ATTACK:
-			self.currentState = self.states.IDLE_LEFT;
-		states.RIGHT_ATTACK:
-			self.currentState = self.states.IDLE_RIGHT;
-		states.UP_ATTACK:
-			self.currentState = self.states.IDLE_UP;
-		states.DOWN_ATTACK:
-			self.currentState = self.states.IDLE_DOWN;
-
+	self.isAttacking = false;
 
 
 
@@ -34,21 +27,21 @@ func _physics_process(delta :float) -> void:
 	
 	var speedResult = Vector2.ZERO;
 	
-	if (Input.is_action_pressed("d")):
+	if (Input.is_action_pressed("d") and !self.isAttacking ):
 			speedResult.x = SPEED;
 			self.currentState = states.IDLE_RIGHT;
 			playerAnimationInstance.play("Run_to_right");
-	elif (Input.is_action_pressed("a")):
+	elif (Input.is_action_pressed("a") and !self.isAttacking):
 			speedResult.x = -SPEED;
 			self.currentState = states.IDLE_LEFT;
 			playerAnimationInstance.play("Run_to_left");
 	else:	
 			speedResult.x = 0;
-	if (Input.is_action_pressed("w")):
+	if (Input.is_action_pressed("w") and !self.isAttacking):
 			speedResult.y = -SPEED;
 			self.currentState = states.IDLE_UP;
 			playerAnimationInstance.play("Run_to_top");
-	elif (Input.is_action_pressed("s")):
+	elif (Input.is_action_pressed("s") and !self.isAttacking):
 			speedResult.y = SPEED;
 			self.currentState = states.IDLE_DOWN;
 			playerAnimationInstance.play("Run_to_down");
@@ -67,7 +60,7 @@ func _physics_process(delta :float) -> void:
 			# em "Vector2.ZERO"
 
 
-	if((playerSpeed == Vector2.ZERO) and !self.isAttackingState() ): #Caso o player esteja parado, ele recebe um frame estatico
+	if( (playerSpeed == Vector2.ZERO) and !self.isAttacking ): #Caso o player esteja parado, ele recebe um frame estatico
 		playerAnimationInstance.stop(); #encerrando animacao de correr
 		
 		match self.currentState:
@@ -89,30 +82,17 @@ func _physics_process(delta :float) -> void:
 
 
 func _input(event :InputEvent):
-	if(event.is_action_released("arrow_left") ):
-			self.currentState = self.states.LEFT_ATTACK;
-			playerAnimationInstance.play("left_attack");
-	elif(event.is_action_pressed("arrow_right") ):
-			self.currentState = self.states.RIGHT_ATTACK;
-			playerAnimationInstance.play("right_attack");
-	elif(event.is_action_pressed("arrow_up") ):
-			self.currentState = self.states.UP_ATTACK;
-			playerAnimationInstance.play("up_attack");
-	elif(event.is_action_pressed("arrow_down") ):
-			self.currentState = self.states.DOWN_ATTACK;
-			playerAnimationInstance.play("down_attack");
-
-
-
-
-func isAttackingState() -> bool:
-	match self.currentState:
-		states.LEFT_ATTACK:
-			return true;
-		states.RIGHT_ATTACK:
-			return true;
-		states.UP_ATTACK:
-			return true;
-		states.DOWN_ATTACK:
-			return true;
-	return false;
+	
+	if(event.is_action_pressed("num1") ):
+		playerSpeed = Vector2.ZERO; # impredindo o personagem de continuar correndo enquanto ataca
+		self.isAttacking = true;
+		
+		match self.currentState:
+			states.IDLE_LEFT:
+				playerAnimationInstance.play("left_attack");
+			states.IDLE_UP:
+				playerAnimationInstance.play("up_attack");
+			states.IDLE_RIGHT:
+				playerAnimationInstance.play("right_attack");
+			states.IDLE_DOWN:
+				playerAnimationInstance.play("down_attack");
