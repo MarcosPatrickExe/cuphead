@@ -2,11 +2,11 @@ extends KinematicBody2D
 
 var playerSpeed :Vector2 = Vector2(0, 0); # Vector2.ZERO;
 const SPEED_MAX :int = 2;
-const FRICTION :int = 3;
+const FRICTION :int = 15;
 const ACCELERATION :int = 10;
 onready var playerAnimationInstance = $AnimationPlayer; #Instancia o node dentro da funcao "ready()"
 enum Directions { RIGHT, DOWN, LEFT, UP }
-var currentDirection;
+var currentDirection = Directions.DOWN;
 
 
 
@@ -14,36 +14,41 @@ func _physics_process(delta :float) -> void:
 	
 	var directionResult = Vector2.ZERO;
 	
-	directionResult.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left");
-	directionResult.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up");
-	directionResult = directionResult.normalized();
-	 
+	directionResult.x = Input.get_action_strength("d") - Input.get_action_strength("a");
+	directionResult.y = Input.get_action_strength("s") - Input.get_action_strength("w");
+	#directionResult = directionResult.normalized();
+	print("X: ",str(directionResult.x),"// Y: ",str(directionResult.y));
 	
-	if (directionResult != Vector2.ZERO):
+	
+	if((directionResult.x!=0) && (directionResult.y!=0)):
+		directionResult = Vector2.ZERO;
+		playerSpeed = Vector2.ZERO;
+	elif (directionResult != Vector2.ZERO):
 		self.playAnimations(directionResult.x, directionResult.y);
 		# playerSpeed = directionResult;
-		playerSpeed = playerSpeed.move_toward(directionResult, self.ACCELERATION * delta);
+		playerSpeed = playerSpeed.move_toward(directionResult *3, self.ACCELERATION * delta);
 	else:
 		playerAnimationInstance.stop();
 		playerSpeed = playerSpeed.move_toward(Vector2.ZERO, self.FRICTION * delta);
 			# caso nada seja pressionado, o vetor 'playerSpeed' terá seus valorex X e Y 
 			# subtraídos pela expressao "ATRITO * delta" até chegarem à zero, como definido
 			# em "Vector2.ZERO"
-			
-
-
-	#Caso o player esteja parado, ele recebe um frame estatico
-	if(playerSpeed == Vector2.ZERO): 
 		
-		match self.currentDirection: #"match" atua como um 'switch' 
-			Directions.LEFT:
-				self.get_child(0).frame = 3;
-			Directions.UP:
-				self.get_child(2).frame = 3;
-			Directions.RIGHT:
-				self.get_child(1).frame = 3;
-			Directions.DOWN:
-				self.get_child(3).frame = 4;
+		#Caso o player esteja parado, ele recebe um frame estatico
+		if(playerSpeed == Vector2.ZERO): 
+			
+			match self.currentDirection: #"match" atua como um 'switch' 
+				Directions.LEFT:
+					self.get_child(0).frame = 3;
+				Directions.UP:
+					self.get_child(2).frame = 3;
+				Directions.RIGHT:
+					self.get_child(1).frame = 3;
+				Directions.DOWN:
+					self.get_child(3).frame = 4;
+
+
+	
 
 	
 #	self.position = self.position + playerSpeed;   TBM EQUIVALE À:

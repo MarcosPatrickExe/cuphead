@@ -5,7 +5,7 @@
 [ext_resource path="res://scenes/Link_player.gd" type="Script" id=3]
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 1.95053
+radius = 6.0
 height = 8.09894
 
 [sub_resource type="Animation" id=3]
@@ -195,6 +195,8 @@ tracks/0/keys = {
 }
 
 [node name="Link_player" type="KinematicBody2D"]
+position = Vector2( 384, 226 )
+scale = Vector2( 2, 2 )
 script = ExtResource( 3 )
 
 [node name="Run_to_left_sprites" type="Sprite" parent="."]
@@ -208,7 +210,6 @@ region_enabled = true
 region_rect = Rect2( -1, 0, 143, 34 )
 
 [node name="Run_to_right_sprites" type="Sprite" parent="."]
-visible = false
 position = Vector2( 2, 4.00002 )
 scale = Vector2( 1.1413, 1.07353 )
 texture = ExtResource( 1 )
@@ -217,7 +218,8 @@ region_enabled = true
 region_rect = Rect2( 142, 0, 142, 34 )
 
 [node name="Run_to_top_sprites" type="Sprite" parent="."]
-position = Vector2( 0, 4 )
+visible = false
+position = Vector2( 1, 3 )
 scale = Vector2( 1.13636, 1.10714 )
 texture = ExtResource( 1 )
 hframes = 8
@@ -235,8 +237,9 @@ region_enabled = true
 region_rect = Rect2( 145, 0, 168, 27 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1, 10 )
-rotation = 1.5708
+visible = false
+position = Vector2( 0, 4 )
+rotation = 3.14159
 shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
