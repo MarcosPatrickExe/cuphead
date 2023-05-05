@@ -6,6 +6,7 @@ var arrowCursor :Resource = load("res://Action RPG Resources/Images/cursor1.png"
 
 func _ready() -> void:
 	Input.set_custom_mouse_cursor(self.arrowCursor);
+	self.timer
 	
 
 func _process(delta :float) -> void:

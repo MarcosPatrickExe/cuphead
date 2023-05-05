@@ -19,6 +19,7 @@ var rotate2Up :bool = true;
 var optionsDict :Dictionary ={} # Dicionario q tera as descricoes e nomes de cada uma das opcoes no menu
 
 
+
 func _ready() -> void:
 	self.quitButton.connect("pressed", self, "gameOffButtonPressed");
 	self.backButton.connect("pressed", self, "backButtonPressed")
@@ -115,8 +116,8 @@ func _process(delta:float) ->void:
 			if( cos( deg2rad(optionsDict[key]["currentDegrees"]) ) == -1 ):
 				self.nameOption.text = str(key);
 				self.description.text = optionsDict[key]["description"];
-			
-			#print(str(key) +" // "+str(optionsDict[key]["currentDegrees"]));
+		
+		#print(str(key) +" // "+str(optionsDict[key]["currentDegrees"]));
 		#print("========================================= \n")
 			
 		self.angle = 0;
