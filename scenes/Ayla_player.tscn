@@ -210,7 +210,6 @@ region_enabled = true
 region_rect = Rect2( 120, 169, 25, 24 )
 
 [node name="Ayla_run_to_right_sprite" type="Sprite" parent="."]
-visible = false
 position = Vector2( 5, 4 )
 texture = ExtResource( 1 )
 hframes = 3
@@ -229,6 +228,7 @@ region_enabled = true
 region_rect = Rect2( 59, 125, 69, 37 )
 
 [node name="Ayla_stopped_down" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 1 )
 hframes = 3
 frame = 1

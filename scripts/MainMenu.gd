@@ -85,7 +85,8 @@ func _process(delta:float) ->void:
 			"single":
 				self.get_tree().change_scene("res://scenes/SelectPlayer.tscn");
 
-	
+
+	# SE ABLE = TRUE, ENTAO A ANIMAÇÃO DE GIRO DOS BOTÔES SERÁ EXECUTADA
 	if(self.able):
 		angle += (delta * speed);
 
@@ -95,7 +96,7 @@ func _process(delta:float) ->void:
 					optionsDict[key]["nodeObject"]
 				);
 
-
+	# ISSO DAQUI SERVE PRO USUARIO NAO PODER CONTROLAR AS OPCOES ATÉ Q ELAS PAREM DE GIRAR
 	if((angle <45) and Input.is_action_pressed("ui_up") and (self.able==false) ):
 		self.able =true;
 		self.enterFrase.visible = false;
@@ -116,10 +117,7 @@ func _process(delta:float) ->void:
 			if( cos( deg2rad(optionsDict[key]["currentDegrees"]) ) == -1 ):
 				self.nameOption.text = str(key);
 				self.description.text = optionsDict[key]["description"];
-		
-		#print(str(key) +" // "+str(optionsDict[key]["currentDegrees"]));
-		#print("========================================= \n")
-			
+	
 		self.angle = 0;
 
 	

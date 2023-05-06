@@ -5,7 +5,7 @@ var shaderResource = preload("res://shaders/CommentTemplate.gdshader");
 func init(comment: String, userName :String, profileImageTexture :Texture) -> void:
 	var dataMask :String = "D-M-Y / H:m";
 	
-	var date :Dictionary =  Time.get_datetime_dict_from_system(false);  #OS.get_datetime(false); #deprecated!!
+	var date :Dictionary = Time.get_datetime_dict_from_system(false);  #OS.get_datetime(false); #deprecated!!
 	
 	dataMask = dataMask.replace("D", str("0",date["day"]) if date["day"]<10 else date["day"]  );
 	dataMask = dataMask.replace("M", str("0",date["month"]) if date["month"]<10 else date["month"]  );

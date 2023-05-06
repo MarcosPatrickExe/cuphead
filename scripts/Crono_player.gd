@@ -5,23 +5,19 @@ var currentState = states.RIGHT;
 var playerValues = Vector2.ZERO;
 
 
-func _ready():
-	pass
-
 
 
 func _physics_process(delta: float) -> void:
 	
-	directionsValues.x = Input.get_action_strength("d") - Input.get_action_strength("a");
-	directionsValues.y = Input.get_action_strength("s") - Input.get_action_strength("w");
+	self.directionsValues.x = Input.get_action_strength("d") - Input.get_action_strength("a");
+	self.directionsValues.y = Input.get_action_strength("s") - Input.get_action_strength("w");
+	
 	
 	# impedindo a personagem de andar na diagonal:
-	if( (directionsValues.x !=0) && (directionsValues.y!=0)):
-		self.directionValues = Vector2.ZERO;
+	if( ((directionsValues.x !=0) && (directionsValues.y!=0)) or (self.directionsValues == Vector2.ZERO) ):
+		self.directionsValues = Vector2.ZERO;
 		
-	
 	# para quando o personagem estiver parado:
-	elif( self.playerValues == Vector2.ZERO ):
 		match self.currentState:
 			states.DOWN:
 				$AnimationPlayer.play("idle_down");
@@ -36,7 +32,7 @@ func _physics_process(delta: float) -> void:
 
 	
 	
-	self.playerValues = self.playerValues.move_toward(directionsValues*4, delta*10)
+	self.playerValues = self.playerValues.move_toward(directionsValues*5, delta*25)
 	self.position += playerValues;
 	
 	
