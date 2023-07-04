@@ -245,5 +245,5 @@ tree_root = SubResource( 24 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 25 )
-parameters/Flying/blend_position = Vector2( -0.195078, -0.588757 )
+parameters/Flying/blend_position = Vector2( 0.379831, -0.245562 )
 parameters/Static/blend_position = Vector2( -0.0833333, 0.476331 )

@@ -44,6 +44,7 @@ __meta__ = {
 }
 
 [node name="Obstacle_colliders" type="StaticBody2D" parent="World"]
+visible = false
 position = Vector2( 361, -243 )
 
 [node name="gree_tree_colisor" type="CollisionPolygon2D" parent="World/Obstacle_colliders"]
@@ -270,11 +271,12 @@ __meta__ = {
 position = Vector2( 516, 474 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
+visible = false
 current = true
 zoom = Vector2( 0.38, 0.38 )
 
 [node name="Link_player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 410, 510 )
+position = Vector2( 630, 408 )
 
 [node name="Bat_enemy" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 577, 567 )

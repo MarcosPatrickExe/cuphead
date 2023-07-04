@@ -23,10 +23,12 @@ func _physics_process(delta :float) -> void:
 	if((directionResult.x!=0) && (directionResult.y!=0)):
 		directionResult = Vector2.ZERO;
 		playerSpeed = Vector2.ZERO;
+		
 	elif (directionResult != Vector2.ZERO):
 		self.playAnimations(directionResult.x, directionResult.y);
 		# playerSpeed = directionResult;
 		playerSpeed = playerSpeed.move_toward(directionResult *3, self.ACCELERATION * delta);
+	
 	else:
 		playerAnimationInstance.stop();
 		playerSpeed = playerSpeed.move_toward(Vector2.ZERO, self.FRICTION * delta);
