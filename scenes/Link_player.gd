@@ -49,10 +49,6 @@ func _physics_process(delta :float) -> void:
 				Directions.DOWN:
 					self.get_child(3).frame = 4;
 
-
-	
-
-	
 #	self.position = self.position + playerSpeed;   TBM EQUIVALE À:
 	self.move_and_collide(playerSpeed);  # aplicando os valores de 'playerSpeed' para a funcao acumulativa
 	
