@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Action RPG Resources/Enemies/jackal.png" type="Texture" id=1]
 
@@ -15,6 +15,74 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Rect2( 15, 301, 49, 51 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "static_down"
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Jackal_sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 1, -2, 60, 64 ), Rect2( 62, 1, 58, 60 ), Rect2( 121, 1, 57, 60 ), Rect2( 181, 3, 56, 56 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "static_left"
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Jackal_sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 5, 56, 56, 60 ), Rect2( 61, 57, 60, 61 ), Rect2( 116, 56, 58, 62 ), Rect2( 173, 56, 58, 62 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "static_right"
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Jackal_sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.55, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 4, 167, 55, 64 ), Rect2( 63, 170, 56, 61 ), Rect2( 118, 170, 59, 60 ), Rect2( 174, 167, 57, 66 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "static_up"
+length = 1.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Jackal_sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 9, 121, 55, 46 ), Rect2( 67, 121, 51, 47 ), Rect2( 122, 120, 51, 48 ), Rect2( 180, 120, 50, 46 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -87,7 +155,7 @@ tracks/0/keys = {
 [node name="Jackal_sprites" type="Node2D"]
 
 [node name="Jackal_sprite" type="Sprite" parent="."]
-position = Vector2( 643, 218 )
+position = Vector2( 644, 217 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -95,6 +163,10 @@ region_rect = Rect2( 15, 301, 49, 51 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 1 )
+anims/static_down = SubResource( 6 )
+anims/static_left = SubResource( 7 )
+anims/static_right = SubResource( 8 )
+anims/static_up = SubResource( 9 )
 anims/walk_to_down = SubResource( 2 )
 anims/walk_to_left = SubResource( 3 )
 anims/walk_to_right = SubResource( 4 )
