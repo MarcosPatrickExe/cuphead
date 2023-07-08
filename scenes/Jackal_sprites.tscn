@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Action RPG Resources/Enemies/jackal.png" type="Texture" id=1]
+[ext_resource path="res://scenes/Jackal_sprites.gd" type="Script" id=2]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -152,10 +153,16 @@ tracks/0/keys = {
 "values": [ Rect2( 6, 361, 50, 47 ), Rect2( 61, 361, 55, 46 ), Rect2( 121, 361, 50, 45 ), Rect2( 176, 361, 50, 46 ), Rect2( 231, 360, 51, 47 ), Rect2( 285, 360, 54, 46 ), Rect2( 343, 363, 51, 45 ) ]
 }
 
-[node name="Jackal_sprites" type="Node2D"]
+[sub_resource type="CircleShape2D" id=10]
+radius = 57.0351
+
+[sub_resource type="CircleShape2D" id=11]
+radius = 226.0
+
+[node name="Jackal_sprites" type="KinematicBody2D"]
+script = ExtResource( 2 )
 
 [node name="Jackal_sprite" type="Sprite" parent="."]
-position = Vector2( 644, 217 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -171,3 +178,16 @@ anims/walk_to_down = SubResource( 2 )
 anims/walk_to_left = SubResource( 3 )
 anims/walk_to_right = SubResource( 4 )
 anims/walk_to_up = SubResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 10 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="bossPresenceDetection" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource( 11 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

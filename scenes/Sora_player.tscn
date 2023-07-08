@@ -131,7 +131,6 @@ position = Vector2( 465, 293 )
 script = ExtResource( 2 )
 
 [node name="Sora_run_to_up" type="Sprite" parent="."]
-visible = false
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 1, 309, 29, 50 )
@@ -168,6 +167,7 @@ region_enabled = true
 region_rect = Rect2( 2, 2, 28, 52 )
 
 [node name="Sora_stopped" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 2, 521, 25, 53 )

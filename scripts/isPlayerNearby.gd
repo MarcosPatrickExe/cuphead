@@ -1,6 +1,11 @@
 extends ConditionLeaf
 
 
+
 func tick(actor, blackboard):
-	print("is player nearby");
-	return SUCCESS;
+	return FAILURE;
+	
+	if( actor.get_child(0).playerIsCloser ):
+		return SUCCESS;
+	else:
+		return FAILURE;
