@@ -2,7 +2,9 @@ extends KinematicBody2D
 
 
 var playerIsCloser = false;
-var newPosition :Vector2;
+var bossDirection = Vector2(0, 0);
+var bossPosition = Vector2.ZERO;
+#var newVelocity :Vector2;
 
 
 func _on_Area2D_body_entered(body):
@@ -21,13 +23,15 @@ func _on_Area2D_mouse_exited():
 
 
 
-func jackalPosition( position :Vector2 ):
-	self.newPosition = position;
+func jackalMove( direction :Vector2 ):
+	#self.newVelocity = vel;
+	self.bossDirection = direction;
 	
-
 
 
 func _physics_process(delta):
+	self.bossPosition = self.bossPosition.move_toward( self.bossDirection, delta*3.0 )
 	
-	move_and_collide(newPosition);
-
+	print("bossPosition: ", self.bossPosition);
+	
+	move_and_collide( self.bossPosition );
