@@ -11,11 +11,11 @@
 [ext_resource path="res://scenes/Jackal_boss.gd" type="Script" id=9]
 [ext_resource path="res://addons/behavior_tree/nodes/decorators/inverter.gd" type="Script" id=10]
 
-[node name="Jackal_boss" type="Node2D"]
+[node name="JackalBoss" type="Node2D"]
 script = ExtResource( 9 )
 
-[node name="Jackal_sprites" parent="." instance=ExtResource( 8 )]
-position = Vector2( 453, 287 )
+[node name="JackalSprites" parent="." instance=ExtResource( 8 )]
+position = Vector2( 508, 187 )
 
 [node name="BehaviorTreeRoot" type="Node" parent="."]
 script = ExtResource( 3 )
@@ -26,13 +26,13 @@ script = ExtResource( 2 )
 [node name="WalkNormally" type="Node" parent="BehaviorTreeRoot/SelectState"]
 script = ExtResource( 5 )
 
-[node name="patrolAction" type="Node" parent="BehaviorTreeRoot/SelectState/WalkNormally"]
+[node name="patrol" type="Node" parent="BehaviorTreeRoot/SelectState/WalkNormally"]
 script = ExtResource( 6 )
 
 [node name="InverterDecorator" type="Node" parent="BehaviorTreeRoot/SelectState/WalkNormally"]
 script = ExtResource( 10 )
 
-[node name="is player nearby" type="Node" parent="BehaviorTreeRoot/SelectState/WalkNormally/InverterDecorator"]
+[node name="isPlayerNearby" type="Node" parent="BehaviorTreeRoot/SelectState/WalkNormally/InverterDecorator"]
 script = ExtResource( 7 )
 
 [node name="FollowMouse" type="Node" parent="BehaviorTreeRoot/SelectState"]

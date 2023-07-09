@@ -1,5 +1,6 @@
 extends Node2D
 
+
 enum CurrentState {
 	STATIC_LEFT,
 	STATIC_TOP,
@@ -11,11 +12,12 @@ enum CurrentState {
 	WALK_DOWN,
 }
 
-# export (CurrentState) 
-var currentState = CurrentState.WALK_DOWN;
+#export (CurrentState) var currentState = CurrentState.WALK_RIGHT;
 
 
-onready var jackalBossScript = $Jackal_sprites; #preload("res://scenes/Jackal_sprites.tscn").instance();
+onready var jackalAnimations = $JackalSprites/AnimationPlayer;
+#onready var patrolAction = $"%patrolAction";
 
 
-
+func startAnimation(name :String):
+	self.jackalAnimations.play(name);
