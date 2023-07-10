@@ -4,22 +4,34 @@ extends ActionLeaf
 var actionDuration :float = 0;
 
 
+
 func tick(actor, blackboard):
-	
 	self.actionDuration += blackboard.get("delta");
 	
 	
-	if( blackboard.get("state") == null ):
-		blackboard.set("state", actor.CurrentState.STATIC_LEFT );
-	
-	
+	# CONVERTANDO ANIMACOES DE MOVIMENTACAO PARA ANIMACOES ESTATICAS:
+	match blackboard.get("state"):
+		null:
+			 blackboard.set("state", actor.CurrentState.STATIC_LEFT );
+		actor.CurrentState.WALK_RIGHT :
+			blackboard.set("state", actor.CurrentState.STATIC_RIGHT );
+		actor.CurrentState.WALK_LEFT:
+			blackboard.set("state", actor.CurrentState.STATIC_LEFT );
+		actor.CurrentState.WALK_DOWN :
+			 blackboard.set("state", actor.CurrentState.STATIC_DOWN );
+		actor.CurrentState.WALK_TOP:
+			 blackboard.set("state", actor.CurrentState.STATIC_TOP );
+
+
+	# DEFININDO ALGUM ESTADO ALEATORIO PARA MUDAR A ANIMACAO ESTATICA:
 	if(self.actionDuration > 2.0):
 		self.actionDuration = 0;
 		var newStatee = self.randomState(actor);
 		blackboard.set("state", newStatee);
-		#print("new state: ", blackboard.get("state"));
 
 
+
+	# EXECUTANDO ANIMACOES PARA QUANDO O BOSS 'JACKAL' ESTIVER PARADO VIGIANDO
 	match (blackboard.get("state")):
 		actor.CurrentState.STATIC_LEFT:
 			actor.startAnimation("static_left");
@@ -33,18 +45,6 @@ func tick(actor, blackboard):
 		actor.CurrentState.STATIC_DOWN:
 			actor.startAnimation("static_down");
 			
-		actor.CurrentState.WALK_LEFT:
-			actor.startAnimation("walk_to_left");
-			
-		actor.CurrentState.WALK_TOP:
-			actor.startAnimation("walk_to_up");
-			
-		actor.CurrentState.WALK_RIGHT:
-			actor.startAnimation("walk_to_right");
-			
-		actor.CurrentState.WALK_DOWN:
-			actor.startAnimation("walk_to_down");
-		
 	return SUCCESS;
 
 
@@ -60,19 +60,10 @@ func randomState(actor):
 		1: return actor.CurrentState.STATIC_TOP;
 		2: return actor.CurrentState.STATIC_RIGHT;
 		3: return actor.CurrentState.STATIC_DOWN;
-		4: return actor.CurrentState.WALK_LEFT;
-		5: return actor.CurrentState.WALK_TOP;
-		6: return actor.CurrentState.WALK_RIGHT;
-		7: return actor.CurrentState.WALK_DOWN;
+	#	4: return actor.CurrentState.WALK_LEFT;
+	#	5: return actor.CurrentState.WALK_TOP;
+	#	6: return actor.CurrentState.WALK_RIGHT;
+	#	7: return actor.CurrentState.WALK_DOWN;
 		#print("state selected: ", int(actor.CurrentState.keys()[ int(random.randf_range(-1, 8)) ]) );
 		#return int( actor.CurrentState.keys()[ random.randi_range(0, 7) ]);
 		#return actor.CurrentState.keys()[ randi() % actor.CurrentState.size() ]
-		#return actor.CurrentState.keys()[ numberSort];
-
-
-
-func randomPosition() -> Vector2:
-	var directionRandom = Vector2.ZERO;
-	directionRandom.x = int(rand_range(-2, 2)); #-1 if (int(rand_range(0, 2))==0) else 1
-	directionRandom.y = int(rand_range(-2, 2));
-	return directionRandom;

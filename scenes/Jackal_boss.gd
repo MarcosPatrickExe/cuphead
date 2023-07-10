@@ -21,3 +21,5 @@ onready var jackalAnimations = $JackalSprites/AnimationPlayer;
 
 func startAnimation(name :String):
 	self.jackalAnimations.play(name);
+
+
