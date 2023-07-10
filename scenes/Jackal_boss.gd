@@ -13,6 +13,9 @@ enum CurrentState {
 }
 
 #export (CurrentState) var currentState = CurrentState.WALK_RIGHT;
+var isAttacking = false;
+
+var distance = Vector2(200, 200);
 
 
 onready var jackalAnimations = $JackalSprites/AnimationPlayer;

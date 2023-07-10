@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scripts/searchPlayerPosition.gd" type="Script" id=1]
 [ext_resource path="res://addons/behavior_tree/nodes/composites/selector.gd" type="Script" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://addons/behavior_tree/nodes/decorators/inverter.gd" type="Script" id=10]
 [ext_resource path="res://scripts/isStalking.gd" type="Script" id=11]
 [ext_resource path="res://scripts/isArrive.gd" type="Script" id=12]
+[ext_resource path="res://scenes/attack.gd" type="Script" id=13]
 
 [node name="JackalBoss" type="Node2D"]
 script = ExtResource( 9 )
@@ -34,7 +35,7 @@ script = ExtResource( 10 )
 [node name="isPlayerNearby" type="Node" parent="BehaviorTreeRoot/SelectState/WalkNormally/InverterDecorator"]
 script = ExtResource( 7 )
 
-[node name="patrolling" type="Node" parent="BehaviorTreeRoot/SelectState/WalkNormally"]
+[node name="patrollingAction" type="Node" parent="BehaviorTreeRoot/SelectState/WalkNormally"]
 script = ExtResource( 6 )
 
 [node name="FollowMouse" type="Node" parent="BehaviorTreeRoot/SelectState"]
@@ -49,5 +50,17 @@ script = ExtResource( 1 )
 [node name="followPlayerAction" type="Node" parent="BehaviorTreeRoot/SelectState/FollowMouse"]
 script = ExtResource( 4 )
 
-[node name="isArrive" type="Node" parent="BehaviorTreeRoot/SelectState/FollowMouse"]
+[node name="InverterDecorator" type="Node" parent="BehaviorTreeRoot/SelectState/FollowMouse"]
+script = ExtResource( 10 )
+
+[node name="isArrive" type="Node" parent="BehaviorTreeRoot/SelectState/FollowMouse/InverterDecorator"]
 script = ExtResource( 12 )
+
+[node name="SequenceComposite" type="Node" parent="BehaviorTreeRoot/SelectState"]
+script = ExtResource( 5 )
+
+[node name="isArrive" type="Node" parent="BehaviorTreeRoot/SelectState/SequenceComposite"]
+script = ExtResource( 12 )
+
+[node name="attackAction" type="Node" parent="BehaviorTreeRoot/SelectState/SequenceComposite"]
+script = ExtResource( 13 )

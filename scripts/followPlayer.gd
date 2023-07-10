@@ -7,10 +7,14 @@ var current_velocity = Vector2.ZERO;
 
 func tick(actor, blackboard):
 	
+	print("following");
+	
 	var distance_to_target = blackboard.get("mousePosition") - actor.get_child(0).get_global_position();
 	var desired_velocity = distance_to_target.normalized() * self.MAX_VELOCITY; #converte a distancia para valores entre -0.999 ate 0.999
 	
-	blackboard.set("distance", distance_to_target);
+	#blackboard.set("distance", distance_to_target);
+	actor.distance = distance_to_target;
+	
 	
 	var steeringForce = (desired_velocity - self.current_velocity) / blackboard.get("delta");
 	steeringForce = steeringForce.clamped(self.MAX_FORCE);

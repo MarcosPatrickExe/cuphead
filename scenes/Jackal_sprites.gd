@@ -14,11 +14,11 @@ func _on_Area2D_body_exited(body):
 	pass;
 
 func _on_Area2D_mouse_entered():
-	print("Enemy entered !!");
+	#print("Enemy entered !!");
 	self.playerIsCloser = true;
 
 func _on_Area2D_mouse_exited():
-	print("Enemy far away !!");
+	#print("Enemy far away !!");
 	self.playerIsCloser = false;
 
 
