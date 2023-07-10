@@ -221,10 +221,10 @@ tracks/0/keys = {
 }
 
 [sub_resource type="CircleShape2D" id=10]
-radius = 57.0351
+radius = 32.1403
 
 [sub_resource type="CircleShape2D" id=11]
-radius = 226.0
+radius = 127.81
 
 [node name="JackalSprites" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -252,12 +252,13 @@ anims/walk_to_up = SubResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
+position = Vector2( 0, 11 )
 shape = SubResource( 10 )
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 
 [node name="bossPresenceDetection" type="CollisionShape2D" parent="Area2D"]
-visible = false
 shape = SubResource( 11 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

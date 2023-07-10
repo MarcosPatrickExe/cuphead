@@ -4,8 +4,8 @@
 [ext_resource path="res://Action RPG Resources/Player/Player.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 3.94691
-height = 8.0653
+radius = 8.43857
+height = 16.582
 
 [sub_resource type="Animation" id=3]
 length = 0.001
@@ -223,14 +223,14 @@ rotation = -0.0523599
 scale = Vector2( 1.23545, 1.18742 )
 texture = ExtResource( 2 )
 hframes = 60
-frame = 1
+frame = 21
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( -2.31989, 12.0891 )
-rotation = 1.51844
+position = Vector2( -3.98859, 12.2421 )
+rotation = 3.07352
 z_index = 1
 shape = SubResource( 1 )
+disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 3 )

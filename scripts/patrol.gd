@@ -9,10 +9,7 @@ func tick(actor, blackboard):
 	self.actionDuration += blackboard.get("delta");
 	
 	
-	print("patrolling");
-	#blackboard.set("distance", Vector2(200, 200)); # definindo uma distancia grande entre mouse e o boss
-	#actor.isAttacking = false;
-	var distance_to_target = get_viewport().get_mouse_position() - actor.get_child(0).get_global_position();
+	var distance_to_target = actor.enemyBody.get_global_position() - actor.get_child(0).get_global_position();       #get_viewport().get_mouse_position() - actor.get_child(0).get_global_position();
 	actor.distance = distance_to_target;
 	
 	

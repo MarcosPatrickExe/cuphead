@@ -12,17 +12,15 @@ enum CurrentState {
 	WALK_DOWN,
 }
 
-#export (CurrentState) var currentState = CurrentState.WALK_RIGHT;
-var isAttacking = false;
 
+# definindo uma distancia grande entre mouse e o boss
 var distance = Vector2(200, 200);
 
 
 onready var jackalAnimations = $JackalSprites/AnimationPlayer;
-#onready var patrolAction = $"%patrolAction";
+
+onready var enemyBody = $"%Link_player";
 
 
 func startAnimation(name :String):
 	self.jackalAnimations.play(name);
-
-

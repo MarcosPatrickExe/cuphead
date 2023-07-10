@@ -228,6 +228,7 @@ frame = 9
 [node name="Bat_hitbox" type="CollisionShape2D" parent="."]
 position = Vector2( 3, 10 )
 shape = SubResource( 7 )
+disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Fly_to_bottom = SubResource( 2 )

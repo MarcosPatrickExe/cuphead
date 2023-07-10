@@ -6,7 +6,7 @@ const FRICTION :int = 15;
 const ACCELERATION :int = 10;
 onready var playerAnimationInstance = $AnimationPlayer; #Instancia o node dentro da funcao "ready()"
 enum Directions { RIGHT, DOWN, LEFT, UP }
-var currentDirection = Directions.DOWN;
+var currentDirection = Directions.LEFT;
 
 
 
@@ -17,7 +17,7 @@ func _physics_process(delta :float) -> void:
 	directionResult.x = Input.get_action_strength("d") - Input.get_action_strength("a");
 	directionResult.y = Input.get_action_strength("s") - Input.get_action_strength("w");
 	#directionResult = directionResult.normalized();
-	print("X: ",str(directionResult.x),"// Y: ",str(directionResult.y));
+	#print("X: ",str(directionResult.x),"// Y: ",str(directionResult.y));
 	
 	
 	if((directionResult.x!=0) && (directionResult.y!=0)):

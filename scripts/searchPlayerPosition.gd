@@ -4,8 +4,8 @@ extends ActionLeaf
 
 func tick(actor, blackboard):
 
-	var mousePos = get_viewport().get_mouse_position();
+	var mousePos = actor.enemyBody.get_global_position();		  #get_viewport().get_mouse_position();
 	
-	blackboard.set("mousePosition", mousePos);
+	blackboard.set("playerPosition", mousePos);
 	
 	return SUCCESS;

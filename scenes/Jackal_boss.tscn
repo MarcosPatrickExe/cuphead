@@ -18,7 +18,6 @@
 script = ExtResource( 9 )
 
 [node name="JackalSprites" parent="." instance=ExtResource( 8 )]
-position = Vector2( 508, 187 )
 
 [node name="BehaviorTreeRoot" type="Node" parent="."]
 script = ExtResource( 3 )
@@ -26,41 +25,41 @@ script = ExtResource( 3 )
 [node name="SelectState" type="Node" parent="BehaviorTreeRoot"]
 script = ExtResource( 2 )
 
-[node name="WalkNormally" type="Node" parent="BehaviorTreeRoot/SelectState"]
+[node name="Watching" type="Node" parent="BehaviorTreeRoot/SelectState"]
 script = ExtResource( 5 )
 
-[node name="InverterDecorator" type="Node" parent="BehaviorTreeRoot/SelectState/WalkNormally"]
+[node name="InverterDecorator" type="Node" parent="BehaviorTreeRoot/SelectState/Watching"]
 script = ExtResource( 10 )
 
-[node name="isPlayerNearby" type="Node" parent="BehaviorTreeRoot/SelectState/WalkNormally/InverterDecorator"]
+[node name="isPlayerNearby" type="Node" parent="BehaviorTreeRoot/SelectState/Watching/InverterDecorator"]
 script = ExtResource( 7 )
 
-[node name="patrollingAction" type="Node" parent="BehaviorTreeRoot/SelectState/WalkNormally"]
+[node name="watchingAction" type="Node" parent="BehaviorTreeRoot/SelectState/Watching"]
 script = ExtResource( 6 )
 
-[node name="FollowMouse" type="Node" parent="BehaviorTreeRoot/SelectState"]
+[node name="FollowPlayer" type="Node" parent="BehaviorTreeRoot/SelectState"]
 script = ExtResource( 5 )
 
-[node name="isStalking" type="Node" parent="BehaviorTreeRoot/SelectState/FollowMouse"]
+[node name="isStalking" type="Node" parent="BehaviorTreeRoot/SelectState/FollowPlayer"]
 script = ExtResource( 11 )
 
-[node name="searchPlayerPositionAction" type="Node" parent="BehaviorTreeRoot/SelectState/FollowMouse"]
+[node name="searchPlayerPositionAction" type="Node" parent="BehaviorTreeRoot/SelectState/FollowPlayer"]
 script = ExtResource( 1 )
 
-[node name="followPlayerAction" type="Node" parent="BehaviorTreeRoot/SelectState/FollowMouse"]
+[node name="followPlayerAction" type="Node" parent="BehaviorTreeRoot/SelectState/FollowPlayer"]
 script = ExtResource( 4 )
 
-[node name="InverterDecorator" type="Node" parent="BehaviorTreeRoot/SelectState/FollowMouse"]
+[node name="InverterDecorator" type="Node" parent="BehaviorTreeRoot/SelectState/FollowPlayer"]
 script = ExtResource( 10 )
 
-[node name="isArrive" type="Node" parent="BehaviorTreeRoot/SelectState/FollowMouse/InverterDecorator"]
+[node name="isArrive" type="Node" parent="BehaviorTreeRoot/SelectState/FollowPlayer/InverterDecorator"]
 script = ExtResource( 12 )
 
-[node name="SequenceComposite" type="Node" parent="BehaviorTreeRoot/SelectState"]
+[node name="Attack" type="Node" parent="BehaviorTreeRoot/SelectState"]
 script = ExtResource( 5 )
 
-[node name="isArrive" type="Node" parent="BehaviorTreeRoot/SelectState/SequenceComposite"]
+[node name="isArrive" type="Node" parent="BehaviorTreeRoot/SelectState/Attack"]
 script = ExtResource( 12 )
 
-[node name="attackAction" type="Node" parent="BehaviorTreeRoot/SelectState/SequenceComposite"]
+[node name="attackAction" type="Node" parent="BehaviorTreeRoot/SelectState/Attack"]
 script = ExtResource( 13 )

@@ -200,16 +200,16 @@ scale = Vector2( 2, 2 )
 script = ExtResource( 3 )
 
 [node name="Run_to_left_sprites" type="Sprite" parent="."]
-visible = false
-position = Vector2( 1, 4 )
+position = Vector2( 1, 0 )
 scale = Vector2( 1.18207, 1.15441 )
 texture = ExtResource( 1 )
 hframes = 6
 frame = 2
 region_enabled = true
-region_rect = Rect2( -1, 0, 143, 34 )
+region_rect = Rect2( 24.1679, -4.6364, 141.056, 36.6145 )
 
 [node name="Run_to_right_sprites" type="Sprite" parent="."]
+visible = false
 position = Vector2( 2, 4.00002 )
 scale = Vector2( 1.1413, 1.07353 )
 texture = ExtResource( 1 )

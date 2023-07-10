@@ -83,7 +83,7 @@ func _physics_process(delta :float) -> void:
 
 func _input(event :InputEvent):
 	
-	if(event.is_action_pressed("num1") ):
+	if(event.is_action_pressed("space") ):
 		playerSpeed = Vector2.ZERO; # impredindo o personagem de continuar correndo enquanto ataca
 		self.isAttacking = true;
 		
