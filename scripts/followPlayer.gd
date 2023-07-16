@@ -11,8 +11,7 @@ func tick(actor, blackboard):
 	var distance_to_target = blackboard.get("playerPosition") - actor.get_child(0).get_global_position();
 	var desired_velocity = distance_to_target.normalized() * self.MAX_VELOCITY; #converte a distancia para valores entre -0.999 ate 0.999
 	actor.distance = distance_to_target;
-	
-	
+
 	var steeringForce = (desired_velocity - self.current_velocity) / blackboard.get("delta");
 	steeringForce = steeringForce.clamped(self.MAX_FORCE);
 	
@@ -26,7 +25,7 @@ func tick(actor, blackboard):
 	var pos = blackboard.get("playerPosition");  									# get_viewport().get_mouse_position();
 	var newAngle = rad2deg( actor.get_global_position().angle_to_point( pos) );    #print( rad2deg( posi.angle_to_point( actor.get_child(0).position ) ) );
 	
-	#print(newAngle);
+	print(newAngle);
 	#print("pos of player: ",pos);
 	#print("pos of player: ",pos);
 	
