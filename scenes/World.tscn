@@ -53,7 +53,6 @@ __meta__ = {
 }
 
 [node name="Waterfall" parent="." instance=ExtResource( 14 )]
-visible = false
 position = Vector2( 1161, -176 )
 scale = Vector2( 2, 2 )
 
@@ -2364,6 +2363,7 @@ position = Vector2( -212, 1017 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10030" type="AnimatedSprite" parent="."]
@@ -2371,7 +2371,6 @@ position = Vector2( -303, 941 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "lava"
-frame = 1
 playing = true
 
 [node name="Lava_bubble10029" type="AnimatedSprite" parent="."]
@@ -2379,6 +2378,7 @@ position = Vector2( -271, 853 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10019" type="AnimatedSprite" parent="."]
@@ -2386,7 +2386,6 @@ position = Vector2( -303, 1101 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
-frame = 1
 playing = true
 
 [node name="Lava_bubble10018" type="AnimatedSprite" parent="."]
@@ -2394,6 +2393,7 @@ position = Vector2( -216, 1175 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10028" type="AnimatedSprite" parent="."]
@@ -2401,6 +2401,7 @@ position = Vector2( -148, 680 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble9999" type="AnimatedSprite" parent="."]
@@ -2408,7 +2409,6 @@ position = Vector2( -230, 568 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
-frame = 1
 playing = true
 
 [node name="lava_tile3" type="Sprite" parent="."]
@@ -2423,6 +2423,7 @@ position = Vector2( -239, 714 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10032" type="AnimatedSprite" parent="."]
@@ -2430,6 +2431,7 @@ position = Vector2( -242, 1356 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10033" type="AnimatedSprite" parent="."]
@@ -2437,7 +2439,6 @@ position = Vector2( -203, 1281 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
-frame = 1
 playing = true
 
 [node name="Lava_bubble10035" type="AnimatedSprite" parent="."]
@@ -2445,6 +2446,7 @@ position = Vector2( -336, 1517 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10042" type="AnimatedSprite" parent="."]
@@ -2452,7 +2454,6 @@ position = Vector2( 76, 1552 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
-frame = 1
 playing = true
 
 [node name="Lava_bubble10045" type="AnimatedSprite" parent="."]
@@ -2460,7 +2461,6 @@ position = Vector2( 281, 1560 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "lava"
-frame = 1
 playing = true
 
 [node name="Lava_bubble10046" type="AnimatedSprite" parent="."]
@@ -2468,6 +2468,7 @@ position = Vector2( 163, 1594 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10043" type="AnimatedSprite" parent="."]
@@ -2475,7 +2476,6 @@ position = Vector2( 592, 1635 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
-frame = 1
 playing = true
 
 [node name="Lava_bubble10044" type="AnimatedSprite" parent="."]
@@ -2483,6 +2483,7 @@ position = Vector2( 483, 1608 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10036" type="AnimatedSprite" parent="."]
@@ -2490,6 +2491,7 @@ position = Vector2( -325, 1510 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10041" type="AnimatedSprite" parent="."]
@@ -2497,6 +2499,7 @@ position = Vector2( 373, 1627 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10040" type="AnimatedSprite" parent="."]
@@ -2504,6 +2507,7 @@ position = Vector2( 664, 1574 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10038" type="AnimatedSprite" parent="."]
@@ -2511,6 +2515,7 @@ position = Vector2( -36, 1534 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10039" type="AnimatedSprite" parent="."]
@@ -2518,6 +2523,7 @@ position = Vector2( -200, 1485 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10037" type="AnimatedSprite" parent="."]
@@ -2525,7 +2531,6 @@ position = Vector2( -112, 1586 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "lava"
-frame = 1
 playing = true
 
 [node name="Lava_bubble10034" type="AnimatedSprite" parent="."]
@@ -2533,6 +2538,7 @@ position = Vector2( -225, 1588 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10001" type="AnimatedSprite" parent="."]
@@ -2540,7 +2546,6 @@ position = Vector2( -311, 1416 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "lava"
-frame = 1
 playing = true
 
 [node name="Lava_bubble10002" type="AnimatedSprite" parent="."]
@@ -2548,7 +2553,6 @@ position = Vector2( -215, 805 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "lava"
-frame = 1
 playing = true
 
 [node name="PokemonExteriorTileset192" type="Sprite" parent="."]
@@ -10335,7 +10339,6 @@ position = Vector2( 321, 556 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "lava"
-frame = 1
 playing = true
 
 [node name="Lava_bubble10024" type="AnimatedSprite" parent="."]
@@ -10343,6 +10346,7 @@ position = Vector2( 333, 516 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10003" type="AnimatedSprite" parent="."]
@@ -10350,7 +10354,6 @@ position = Vector2( 61, 1069 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
-frame = 1
 playing = true
 
 [node name="Lava_bubble10023" type="AnimatedSprite" parent="."]
@@ -10358,7 +10361,6 @@ position = Vector2( 323, 645 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "lava"
-frame = 1
 playing = true
 
 [node name="Lava_bubble10004" type="AnimatedSprite" parent="."]
@@ -10366,7 +10368,6 @@ position = Vector2( 61, 1034 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "lava"
-frame = 1
 playing = true
 
 [node name="Lava_bubble10022" type="AnimatedSprite" parent="."]
@@ -10374,6 +10375,7 @@ position = Vector2( 334, 601 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10027" type="AnimatedSprite" parent="."]
@@ -10381,6 +10383,7 @@ position = Vector2( 64, 647 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10026" type="AnimatedSprite" parent="."]
@@ -10388,6 +10391,7 @@ position = Vector2( 74, 514 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10020" type="AnimatedSprite" parent="."]
@@ -10395,6 +10399,7 @@ position = Vector2( 98, 1056 )
 scale = Vector2( 2.25, 2.25 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10005" type="AnimatedSprite" parent="."]
@@ -10402,6 +10407,7 @@ position = Vector2( 74, 594 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10021" type="AnimatedSprite" parent="."]
@@ -10409,7 +10415,6 @@ position = Vector2( 62, 552 )
 scale = Vector2( 1.8, 1.8 )
 frames = SubResource( 1 )
 animation = "lava"
-frame = 1
 playing = true
 
 [node name="Lava_bubble10010" type="AnimatedSprite" parent="."]
@@ -10417,6 +10422,7 @@ position = Vector2( 566, 930 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10007" type="AnimatedSprite" parent="."]
@@ -10424,6 +10430,7 @@ position = Vector2( 352, 1153 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10008" type="AnimatedSprite" parent="."]
@@ -10431,7 +10438,6 @@ position = Vector2( 348, 814 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "lava"
-frame = 1
 playing = true
 
 [node name="Lava_bubble10009" type="AnimatedSprite" parent="."]
@@ -10439,6 +10445,7 @@ position = Vector2( 313, 841 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10011" type="AnimatedSprite" parent="."]
@@ -10446,7 +10453,6 @@ position = Vector2( 641, 925 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
-frame = 1
 playing = true
 
 [node name="Lava_bubble10012" type="AnimatedSprite" parent="."]
@@ -10454,7 +10460,6 @@ position = Vector2( 698, 988 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
-frame = 1
 playing = true
 
 [node name="Lava_bubble10015" type="AnimatedSprite" parent="."]
@@ -10462,6 +10467,7 @@ position = Vector2( 630, 799 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10014" type="AnimatedSprite" parent="."]
@@ -10469,7 +10475,6 @@ position = Vector2( 676, 720 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
-frame = 1
 playing = true
 
 [node name="Lava_bubble10013" type="AnimatedSprite" parent="."]
@@ -10477,6 +10482,7 @@ position = Vector2( 597, 873 )
 scale = Vector2( 2.3, 2.3 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10006" type="AnimatedSprite" parent="."]
@@ -10484,7 +10490,6 @@ position = Vector2( 316, 1178 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
-frame = 1
 playing = true
 
 [node name="Lava_bubble10017" type="AnimatedSprite" parent="."]
@@ -10492,6 +10497,7 @@ position = Vector2( 531, 666 )
 scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Lava_bubble10016" type="AnimatedSprite" parent="."]
@@ -10499,6 +10505,7 @@ position = Vector2( 597, 717 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
 animation = "lava"
+frame = 1
 playing = true
 
 [node name="Little_lava_rock12" parent="." instance=ExtResource( 18 )]
