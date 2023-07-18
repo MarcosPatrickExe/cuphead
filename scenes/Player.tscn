@@ -226,11 +226,11 @@ hframes = 60
 frame = 21
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( -3.98859, 12.2421 )
 rotation = 3.07352
 z_index = 1
 shape = SubResource( 1 )
-disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 3 )

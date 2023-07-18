@@ -53,6 +53,7 @@ __meta__ = {
 }
 
 [node name="Waterfall" parent="." instance=ExtResource( 14 )]
+visible = false
 position = Vector2( 1161, -176 )
 scale = Vector2( 2, 2 )
 
@@ -10123,7 +10124,7 @@ region_enabled = true
 region_rect = Rect2( 503.949, 75.0055, 32.1123, 47.9599 )
 
 [node name="Pilar3" type="Sprite" parent="."]
-position = Vector2( 1122, -344 )
+position = Vector2( 1068, -316 )
 scale = Vector2( 1.83594, 1.83594 )
 texture = ExtResource( 23 )
 region_enabled = true
