@@ -1,6 +1,8 @@
 extends Node;
 
 var age = 18;
+var isAttacking = false;
+
 
 
 func printName( node :KinematicBody2D )->void:
