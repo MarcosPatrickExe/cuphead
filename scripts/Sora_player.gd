@@ -44,10 +44,10 @@ func _physics_process(delta:float) -> void:
 		
 	# adicionando X e Y de "playerCood" na sua posicao atual:
 	self.move_and_collide(playerCood);
-	
-	
-	
-	
+
+
+
+
 func idleAnimations():
 	
 	# ocultando as sprites do personagem correndo:
@@ -75,6 +75,7 @@ func _input(event):
 	if(event.is_action_pressed("space") ):
 		self.playerCood = Vector2.ZERO; # impredindo o personagem de continuar correndo enquanto ataca
 		self.isAttacking = true;
+		$Sora_stopped.visible = true;		
 		
 		match self.currentDirection:
 			Directions.LEFT:
