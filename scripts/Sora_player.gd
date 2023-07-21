@@ -13,6 +13,7 @@ var isAttacking = false;
 
 func attackFinished():
 	self.isAttacking = false;
+	
 
 
 func _ready():
@@ -22,8 +23,8 @@ func _ready():
 		"stopped_down": $Sora_stopped_down,
 		"stopped_up": $Sora_stopped_up
 	}
-	
-	
+
+
 func _physics_process(delta:float) -> void:
 	
 	self.directionValues.x = Input.get_action_strength("d") - Input.get_action_strength("a");
