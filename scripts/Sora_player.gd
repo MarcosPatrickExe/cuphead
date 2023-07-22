@@ -13,7 +13,7 @@ var isAttacking = false;
 
 func attackFinished():
 	self.isAttacking = false;
-	
+	print("animation finished");
 
 
 func _ready():
