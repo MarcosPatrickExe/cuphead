@@ -55,18 +55,19 @@ func idleAnimations():
 	for count in range(0, 4):
 		self.get_child(count).visible = false;
 	
+	$Sora_stopped.visible = true;
 	
 	match self.currentDirection:
 		Directions.UP:
-			$Sora_stopped_up.visible = true;
+			$AnimationPlayer.play("idle_up");
 		Directions.DOWN:
-			$Sora_stopped_down.visible = true;
+			$AnimationPlayer.play("idle_down");
 		Directions.LEFT:
 			$Sora_stopped.set_flip_h(false);
-			$Sora_stopped.visible = true;
+			$AnimationPlayer.play("idle_left")
 		Directions.RIGHT:
 			$Sora_stopped.set_flip_h(true);
-			$Sora_stopped.visible = true;
+			$AnimationPlayer.play("idle_left")
 
 
 
