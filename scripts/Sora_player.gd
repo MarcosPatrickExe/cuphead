@@ -13,7 +13,6 @@ var isAttacking = false;
 
 func attackFinished():
 	self.isAttacking = false;
-	print("animation finished");
 
 
 func _ready():
@@ -38,7 +37,7 @@ func _physics_process(delta:float) -> void:
 	self.playerCood = playerCood.move_toward(directionValues*4, delta*20.0);
 
 
-	if(self.playerCood != Vector2.ZERO):
+	if(self.playerCood != Vector2.ZERO and (not self.isAttacking) ):
 		Globals.runAnimations(directionValues.x, directionValues.y, self, self.actionsNode);
 	elif( not self.isAttacking ):
 		self.idleAnimations();
@@ -74,10 +73,12 @@ func idleAnimations():
 
 func _input(event):
 
-	if(event.is_action_pressed("space") ):
+	
+	if( event.is_action_released("space") ):
+		
 		self.playerCood = Vector2.ZERO; # impredindo o personagem de continuar correndo enquanto ataca
 		self.isAttacking = true;
-		$Sora_stopped.visible = true;		
+		$Sora_stopped.visible = true;
 		
 		match self.currentDirection:
 			Directions.LEFT:
