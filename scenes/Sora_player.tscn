@@ -70,8 +70,8 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id=9]
 resource_name = "attack_down"
-length = 0.6
-step = 0.01
+length = 0.4
+step = 0.005
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sora_stopped:region_rect")
 tracks/0/interp = 1
@@ -79,7 +79,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.43 ),
+"times": PoolRealArray( 0, 0.075, 0.135, 0.205, 0.265 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ Rect2( 236, 625, 31, 76 ), Rect2( 265, 625, 32, 76 ), Rect2( 294, 625, 36, 76 ), Rect2( 328, 625, 58, 76 ), Rect2( 383, 625, 60, 76 ) ]
@@ -91,7 +91,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.59 ),
+"times": PoolRealArray( 0.395 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -101,8 +101,8 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=7]
 resource_name = "attack_left"
-length = 0.5
-step = 0.01
+length = 0.4
+step = 0.005
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sora_stopped:region_rect")
 tracks/0/interp = 1
@@ -110,7 +110,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.07, 0.15, 0.24, 0.34 ),
+"times": PoolRealArray( 0, 0.06, 0.12, 0.18, 0.245 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ Rect2( 280, 935, 46, 79 ), Rect2( 223, 935, 56, 79 ), Rect2( 323, 935, 45, 79 ), Rect2( 367, 935, 67, 79 ), Rect2( 427, 935, 61, 79 ) ]
@@ -122,7 +122,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.5 ),
+"times": PoolRealArray( 0.395 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -132,8 +132,8 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=8]
 resource_name = "attack_up"
-length = 0.5
-step = 0.01
+length = 0.4
+step = 0.005
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sora_stopped:region_rect")
 tracks/0/interp = 1
@@ -141,7 +141,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.08, 0.15, 0.23, 0.31 ),
+"times": PoolRealArray( 0, 0.07, 0.13, 0.19, 0.25 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ Rect2( 236, 769, 30, 84 ), Rect2( 263, 769, 32, 84 ), Rect2( 296, 769, 39, 84 ), Rect2( 335, 769, 53, 84 ), Rect2( 387, 769, 60, 84 ) ]
@@ -153,7 +153,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.49 ),
+"times": PoolRealArray( 0.39 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],

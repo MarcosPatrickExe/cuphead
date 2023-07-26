@@ -49,7 +49,6 @@ func _physics_process(delta:float) -> void:
 
 
 func idleAnimations():
-	
 	# ocultando as sprites do personagem correndo:
 	for count in range(0, 4):
 		self.get_child(count).visible = false;
@@ -71,9 +70,9 @@ func idleAnimations():
 
 
 
+
 func _input(event):
 
-	
 	if( event.is_action_released("space") ):
 		
 		self.playerCood = Vector2.ZERO; # impredindo o personagem de continuar correndo enquanto ataca
