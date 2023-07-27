@@ -29,6 +29,7 @@ func _physics_process(delta:float) -> void:
 	self.directionValues.x = Input.get_action_strength("d") - Input.get_action_strength("a");
 	self.directionValues.y = Input.get_action_strength("s") - Input.get_action_strength("w");
 	
+	
 	# impedindo o personagem de andar na diagonal:
 	if( (directionValues.x !=0) && (directionValues.y!=0)):
 		self.directionValues = Vector2.ZERO;
@@ -66,6 +67,7 @@ func idleAnimations():
 		Directions.RIGHT:
 			$Sora_stopped.set_flip_h(true);
 			$AnimationPlayer.play("idle_left")
+
 
 
 

@@ -7,13 +7,12 @@ var bossDirection = Vector2(0, 0);
 
 
 func _on_Area2D_body_entered(body):
-	
 	if(body is KinematicBody2D and body.name=="Link_player"):
 		self.playerIsCloser = true;
 
 	
-func _on_Area2D_body_exited(body):
 	
+func _on_Area2D_body_exited(body):
 	if(body is KinematicBody2D and body.name=="Link_player"):
 		self.playerIsCloser = false;
 
