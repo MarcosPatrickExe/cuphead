@@ -18,7 +18,7 @@ func getName() ->String:
 func runAnimations(X: int, Y: int, playerNode :KinematicBody2D, actionsNode :Dictionary):
 
 	# ocultando as sprites do personagem quando parado
-	actionsNode["stopped"].visible = true;
+	actionsNode["stopped"].visible = false;
 	actionsNode["stopped_up"].visible = false;
 	actionsNode["stopped_down"].visible = false;
 
