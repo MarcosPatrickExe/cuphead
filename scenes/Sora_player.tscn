@@ -222,6 +222,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [ Rect2( 1, 65, 29, 35 ), Rect2( 34, 61, 26, 39 ), Rect2( 66, 58, 25, 42 ), Rect2( 98, 58, 28, 42 ), Rect2( 131, 65, 29, 35 ), Rect2( 167, 61, 26, 39 ), Rect2( 199, 58, 25, 42 ), Rect2( 232, 58, 28, 42 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sora_stopped:region_rect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Rect2( 1, 65, 29, 35 ), Rect2( 34, 61, 26, 39 ), Rect2( 66, 58, 25, 42 ), Rect2( 98, 58, 28, 42 ), Rect2( 131, 65, 29, 35 ), Rect2( 167, 61, 26, 39 ), Rect2( 199, 58, 25, 42 ), Rect2( 232, 58, 56, 79 ) ]
+}
 
 [sub_resource type="Animation" id=2]
 resource_name = "run_to_left"
