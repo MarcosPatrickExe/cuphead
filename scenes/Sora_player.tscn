@@ -245,6 +245,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [ Rect2( 2, 583, 32, 42 ), Rect2( 36, 582, 42, 43 ), Rect2( 83, 583, 47, 42 ), Rect2( 133, 582, 40, 43 ), Rect2( 177, 582, 31, 43 ), Rect2( 213, 580, 42, 45 ), Rect2( 261, 586, 47, 39 ), Rect2( 310, 583, 34, 42 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sora_stopped:region_rect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "run_to_up"

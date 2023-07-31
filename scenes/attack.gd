@@ -4,7 +4,6 @@ extends ActionLeaf
 
 func tick(actor, blackboard):
 	
-
 	# SEMPRE ATUALIZANDO A DISTANCE ENTRE O PLAYER E O JACKAL BOSS ENQUANTO O ULTIMO ATACA:
 	var distance_to_target = actor.enemyBody.get_global_position() - actor.get_child(0).get_global_position();
 	actor.distance = distance_to_target;
