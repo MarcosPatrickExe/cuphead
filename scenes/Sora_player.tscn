@@ -8,48 +8,12 @@
 [sub_resource type="Animation" id=3]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sora_run_to_left:region_rect")
+tracks/0/path = NodePath("Sora_stopped:region_rect")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Rect2( 2, 583, 32, 42 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sora_run_to_up:region_rect")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Rect2( 1, 309, 29, 50 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Sora_run_to_right:region_rect")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Rect2( 2, 583, 32, 42 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Sora_stopped:region_rect")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
@@ -268,25 +232,6 @@ tracks/0/keys = {
 position = Vector2( 465, 293 )
 script = ExtResource( 2 )
 
-[node name="Sora_run_to_up" type="Sprite" parent="."]
-visible = false
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 1, 309, 29, 50 )
-
-[node name="Sora_run_to_left" type="Sprite" parent="."]
-visible = false
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 2, 583, 32, 42 )
-
-[node name="Sora_run_to_right" type="Sprite" parent="."]
-visible = false
-texture = ExtResource( 1 )
-flip_h = true
-region_enabled = true
-region_rect = Rect2( 2, 583, 32, 42 )
-
 [node name="Sora_stopped_up" type="Sprite" parent="."]
 visible = false
 texture = ExtResource( 1 )
@@ -300,6 +245,7 @@ region_enabled = true
 region_rect = Rect2( 2, 2, 28, 52 )
 
 [node name="Sora_stopped" type="Sprite" parent="."]
+visible = false
 position = Vector2( 0, 2.79462 )
 scale = Vector2( 1, 1.07842 )
 texture = ExtResource( 1 )

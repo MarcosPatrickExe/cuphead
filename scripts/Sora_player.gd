@@ -13,7 +13,6 @@ var isAttacking = false;
 
 func attackFinished():
 	self.isAttacking = false;
-	print("is not attacking");
 
 
 func _ready():
