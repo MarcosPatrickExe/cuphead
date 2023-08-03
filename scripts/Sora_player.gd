@@ -34,12 +34,12 @@ func _physics_process(delta:float) -> void:
 	if( (directionValues.x !=0) && (directionValues.y!=0)):
 		self.directionValues = Vector2.ZERO;
 		 
-		
 	self.playerCood = playerCood.move_toward(directionValues*4, delta*20.0);
-
 
 	if(self.playerCood != Vector2.ZERO and (not self.isAttacking) ):
 		Globals.runAnimations(directionValues.x, directionValues.y, self, self.actionsNode);
+	
+	
 	elif( not self.isAttacking ):
 		self.idleAnimations();
 		
@@ -51,10 +51,10 @@ func _physics_process(delta:float) -> void:
 
 func idleAnimations():
 	# ocultando as sprites do personagem correndo:
-	for count in range(0, 4):
-		self.get_child(count).visible = false;
+#	for count in range(0, 4):
+#		self.get_child(count).visible = false;
 	
-	$Sora_stopped.visible = true;
+	#$Sora_stopped.visible = true;
 	
 	match self.currentDirection:
 		Directions.UP:
@@ -79,7 +79,6 @@ func _input(event):
 		
 		self.playerCood = Vector2.ZERO; # impredindo o personagem de continuar correndo enquanto ataca
 		self.isAttacking = true;
-		$Sora_stopped.visible = true;
 		
 		match self.currentDirection:
 			Directions.LEFT:

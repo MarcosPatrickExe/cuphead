@@ -19,8 +19,8 @@ func runAnimations(X: int, Y: int, playerNode :KinematicBody2D, actionsNode :Dic
 
 	# ocultando as sprites do personagem quando parado
 	actionsNode["stopped"].visible = true;
-	actionsNode["stopped_up"].visible = false;
-	actionsNode["stopped_down"].visible = false;
+#	actionsNode["stopped_up"].visible = false;
+#	actionsNode["stopped_down"].visible = false;
 
 	
 	match X:
@@ -44,8 +44,8 @@ func runAnimations(X: int, Y: int, playerNode :KinematicBody2D, actionsNode :Dic
 	
 	
 	# ocultando as sprites com animacoes desnecessarias:
-	for count in range(0, 4):
-		if(count == playerNode.dirCod):
-			playerNode.get_child(count).visible = true;
-		else:
-			playerNode.get_child(count).visible = false;
+	#for count in range(0, 4):
+	#	if(count == playerNode.dirCod):
+	#		playerNode.get_child(count).visible = true;
+	#	else:
+	#		playerNode.get_child(count).visible = false;
