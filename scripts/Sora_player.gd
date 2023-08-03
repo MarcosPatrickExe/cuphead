@@ -38,8 +38,6 @@ func _physics_process(delta:float) -> void:
 
 	if(self.playerCood != Vector2.ZERO and (not self.isAttacking) ):
 		Globals.runAnimations(directionValues.x, directionValues.y, self, self.actionsNode);
-	
-	
 	elif( not self.isAttacking ):
 		self.idleAnimations();
 		
