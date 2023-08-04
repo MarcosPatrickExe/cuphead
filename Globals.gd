@@ -25,12 +25,12 @@ func runAnimations(X: int, Y: int, playerNode :KinematicBody2D, actionsNode :Dic
 	
 	match X:
 		-1:
-			playerNode.get_child(2).set_flip_h(false);
+			playerNode.get_child(0).set_flip_h(false);
 			playerNode.animations.play("run_to_left");
 			playerNode.dirCod = 1;
 			playerNode.currentDirection = playerNode.Directions.LEFT;
 		1:
-			playerNode.get_child(2).set_flip_h(true);
+			playerNode.get_child(0).set_flip_h(true);
 			playerNode.animations.play("run_to_right");
 			playerNode.dirCod = 2;
 			playerNode.currentDirection = playerNode.Directions.RIGHT;
