@@ -11,11 +11,6 @@ var actionsNode :Dictionary = {};
 
 func _ready() -> void:
 	self.currentDirection = Directions.DOWN;
-	self.actionsNode = {
-		"stopped": $Ayla_stopped,
-		"stopped_down": $Ayla_stopped_down,
-		"stopped_up": $Ayla_stopped_up
-	}
 
 
 func _physics_process(delta :float) -> void:
@@ -29,7 +24,7 @@ func _physics_process(delta :float) -> void:
 
 
 	if(playerCood != Vector2.ZERO):
-		Globals.runAnimations(directionValues.x, directionValues.y, self, self.actionsNode );
+		Globals.runAnimations(directionValues.x, directionValues.y, self);
 	else:
 		self.idleAnimations();
 	

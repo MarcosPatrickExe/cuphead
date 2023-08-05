@@ -32,7 +32,7 @@ func _physics_process(delta:float) -> void:
 	self.playerCood = playerCood.move_toward(directionValues*4, delta*20.0);
 
 	if(self.playerCood != Vector2.ZERO and (not self.isAttacking) ):
-		Globals.runAnimations(directionValues.x, directionValues.y, self, self.actionsNode);
+		Globals.runAnimations(directionValues.x, directionValues.y, self);
 	elif( not self.isAttacking ):
 		self.idleAnimations();
 		

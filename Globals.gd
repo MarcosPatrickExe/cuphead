@@ -15,8 +15,7 @@ func getName() ->String:
 
 
 
-func runAnimations(X: int, Y: int, playerNode :KinematicBody2D, actionsNode :Dictionary):
-
+func runAnimations(X: int, Y: int, playerNode :KinematicBody2D):
 
 	match X:
 		-1:
