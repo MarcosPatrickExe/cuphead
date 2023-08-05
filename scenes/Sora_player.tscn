@@ -240,7 +240,6 @@ region_enabled = true
 region_rect = Rect2( 223, 935, 56, 79 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

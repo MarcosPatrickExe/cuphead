@@ -17,11 +17,6 @@ func attackFinished():
 
 func _ready():
 	self.currentDirection = Directions.RIGHT;
-	self.actionsNode = {
-		"stopped": $Sora_stopped,
-		"stopped_down": $Sora_stopped_down,
-		"stopped_up": $Sora_stopped_up
-	}
 
 
 
