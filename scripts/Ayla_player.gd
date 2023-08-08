@@ -35,16 +35,15 @@ func _physics_process(delta :float) -> void:
 	
 	# aqui o "playerCood" eh adicionando a posicao (X, Y) anterior do persoangem
 	self.move_and_collide(playerCood);
-	
-	
-	
-	
+
+
+
+
 func idleAnimations() -> void:
 	
 	# ocultando sprites do personagem quando esta correndo:
 	for count in range(0, 4):
 		self.get_child(count).visible = false;
-	
 	
 	match self.currentDirection:
 		Directions.DOWN:
@@ -58,6 +57,11 @@ func idleAnimations() -> void:
 		Directions.RIGHT:
 			self.get_node("Ayla_stopped").set_flip_h(false);
 			self.get_node("Ayla_stopped").visible = true;
+			self.animations.play("stopped_left_right");
+			
 		Directions.LEFT:
 			self.get_node("Ayla_stopped").set_flip_h(true);
 			self.get_node("Ayla_stopped").visible = true;
+			self.animations.play("stopped_left_right");
+			
+			
