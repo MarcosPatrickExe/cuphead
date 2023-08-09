@@ -104,24 +104,12 @@ tracks/0/path = NodePath("Ayla_run_to_down_sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
-tracks/0/enabled = false
+tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.15, 0.35 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ 2, 0, 1 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Ayla_stopped:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 1,
-"values": [  ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -261,6 +249,7 @@ region_rect = Rect2( 118, 167, 90, 28 )
 region_filter_clip = true
 
 [node name="Ayla_run_to_down_sprite" type="Sprite" parent="."]
+visible = false
 position = Vector2( 2, 0 )
 texture = ExtResource( 1 )
 hframes = 3
@@ -269,7 +258,6 @@ region_enabled = true
 region_rect = Rect2( 59, 125, 69, 37 )
 
 [node name="Ayla_stopped_down" type="Sprite" parent="."]
-visible = false
 texture = ExtResource( 1 )
 hframes = 3
 frame = 1
