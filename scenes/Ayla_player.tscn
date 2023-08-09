@@ -220,7 +220,7 @@ tracks/0/keys = {
 [node name="Ayla_player" type="KinematicBody2D"]
 position = Vector2( 465, 293 )
 script = ExtResource( 2 )
-ACCELERATION = 20
+ACCELERATION = 10
 
 [node name="Ayla_run_to_up_sprite" type="Sprite" parent="."]
 visible = false
