@@ -75,7 +75,6 @@ func runAnimations(x :int, y :int) -> void:
 	for count in range(4, 7):
 		get_child(count).visible = false;
 
-
 	match x:
 		-1:
 			animations.play("run_to_left");
@@ -95,4 +94,10 @@ func runAnimations(x :int, y :int) -> void:
 			self.currentDirection = self.Directions.UP;
 			get_child(0).visible = true;
 
+
+
+func _input(event):
+	
+	if( Input.is_action_pressed("space") ):
+		print("atacou");
 
